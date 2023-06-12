@@ -1,0 +1,69 @@
+{
+    "chain_name": "gitopia",
+    "chain_id": "gitopia",
+    "assets": [
+        {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "type_asset": "ics20",
+            "supply": 200000,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-781",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-781",
+                        "chain_name": "osmosis",
+                        "base_supply": 595048354109907
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ulore",
+            "type_asset": "sdk.coin",
+            "supply": 511178631614141,
+            "description": "The native staking token of the Gitopia Hub.",
+            "denom_units": [
+                {
+                    "denom": "ulore",
+                    "exponent": 0,
+                    "aliases": [
+                        "microlore"
+                    ]
+                },
+                {
+                    "denom": "lore",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "lore",
+            "name": "lore",
+            "symbol": "lore"
+        }
+    ]
+}

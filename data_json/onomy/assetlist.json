@@ -1,0 +1,73 @@
+{
+    "chain_name": "onomy",
+    "chain_id": "onomy-mainnet-1",
+    "assets": [
+        {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "type_asset": "ics20",
+            "supply": 1000000,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-525",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-525",
+                        "chain_name": "osmosis",
+                        "base_supply": 595048354109907
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "anom",
+            "type_asset": "sdk.coin",
+            "supply": 140668285206301339215438926,
+            "description": "NOM coin",
+            "denom_units": [
+                {
+                    "denom": "anom",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "nom",
+                    "exponent": 18,
+                    "aliases": []
+                }
+            ],
+            "display": "nom",
+            "name": "NOM",
+            "symbol": "NOM"
+        },
+        {
+            "base": "gravity0x6B175474E89094C44Da98b954EedeAC495271d0F",
+            "type_asset": "erc20",
+            "supply": 1000000000000000000,
+            "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+{
+    "chain_name": "medasdigital",
+    "chain_id": "medasdigital-1",
+    "assets": [
+        {
+            "base": "ibc/92E4AB82E3B2AF2D5181AC69C74F9F6D890442C7B7B02CC8634B9D3ED7CF936D",
+            "type_asset": "ics20",
+            "supply": 1000000000000000000,
+            "ibc": {
+                "source_channel": "channel-5",
+                "dst_channel": "channel-89",
+                "source_denom": "rowan"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "sifchain-1",
+                        "base_denom": "rowan",
+                        "channel_id": "channel-89",
+                        "chain_name": "sifchain",
+                        "base_supply": 3603194533185774847731680468
+                    },
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/rowan"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/B7489F796F582168A256F44B1B2AB93DD2E868487DA91F28FD2BA967E97F5712",
+            "type_asset": "ics20",
+            "supply": 2000000,
+            "description": "The native staking token of the Sentinel Hub.",
+            "denom_units": [
+                {
+                    "denom": "dvpn",
+                    "exponent": 6,
+                    "aliases": []
+                },
+                {
+                    "denom": "mdvpn",
+                    "exponent": 3,
+                    "aliases": [
+                        "millidvpn"
+                    ]
+                },
+                {
+                    "denom": "udvpn",
+                    "exponent": 0,
+                    "aliases": [
+                        "microdvpn"
+                    ]
+                }
+            ],
+            "display": "dvpn",
+            "ibc": {
+                "source_channel": "channel-4",
+                "dst_channel": "channel-60",
+                "source_denom": "udvpn"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "sentinelhub-2",
+                        "base_denom": "udvpn",
+                        "channel_id": "channel-60",
+                        "chain_name": "sentinel",
+                        "base_supply": 23801695456708403
+                    },
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/udvpn"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "type_asset": "ics20",
+            "supply": 1000000,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-519",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-519",
+                        "chain_name": "osmosis",
+                        "base_supply": 595048354109907
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "umedas",
+            "type_asset": "sdk.coin",
+            "supply": 398318954418978
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+PUSSY_CHAIN_ID = 'space-pussy'
+PUSSY_CHAIN_NAME = 'space-pussy'
+PUSSY_NODE_LCD_URL = 'https://lcd.space-pussy.cybernode.ai'
+
+INIT_CHAIN_ID_NAME_DICT = {PUSSY_CHAIN_ID: PUSSY_CHAIN_NAME}
+INIT_CHAIN_ID_LCD_DICT = {PUSSY_CHAIN_ID: [PUSSY_NODE_LCD_URL]}
