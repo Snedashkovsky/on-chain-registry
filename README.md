@@ -11,6 +11,16 @@ Differences from [chain-registry asset data structure](chain-registry/assetlist.
 - add `chain_id` required property in asset traces section
 - set `chain_name` property in asset traces section as optional
 
+## How to deploy
+clone repo
+```bash 
+git clone https://github.com/Snedashkovsky/cosmos-sdk-asset-list && cosmos-sdk-asset-list
+```
+update asset list
+```bash
+make update
+```
+
 ## Data Sources (Rest API)
 - /cosmos/bank/v1beta1/supply
     - `denom`

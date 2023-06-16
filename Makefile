@@ -1,7 +1,6 @@
-init:
-	git submodule init
 extract:
 	@echo "pull chain-registry"
+	git submodule init
 	git submodule update --remote
 	python3 asset_data.py extract
 export:
