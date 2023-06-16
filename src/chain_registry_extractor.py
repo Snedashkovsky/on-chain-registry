@@ -1,7 +1,7 @@
 import os
 import json
 
-from config import INIT_CHAIN_ID_NAME_DICT, INIT_CHAIN_ID_LCD_DICT
+from config import INIT_CHAIN_ID_NAME_DICT, INIT_CHAIN_ID_LCD_DICT, logging
 
 
 def get_chain_names_and_lcd_dicts(directory: str = 'chain-registry',
@@ -27,5 +27,5 @@ def get_chain_names_and_lcd_dicts(directory: str = 'chain-registry',
                  for rest_api in chain_json['apis']['rest']]
             chain_id_name_dict[chain_json['chain_id']] = chain_json['chain_name']
         except KeyError:
-            print(f'no lcd api for {chain_directory.split("/")[1]}')
+            logging.error(f'no lcd api for {chain_directory.split("/")[1]}')
     return chain_id_name_dict, chain_id_lcd_dict, chain_directories

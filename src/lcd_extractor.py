@@ -1,11 +1,13 @@
 import pandas as pd
 from warnings import filterwarnings
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import requests
 from typing import Optional, Union
 import json
 from urllib3.exceptions import TimeoutError
 from requests.exceptions import ConnectionError, ReadTimeout
+
+from config import logging
 
 
 filterwarnings('ignore')
@@ -25,7 +27,7 @@ def get_denom_info(denom: str, node_lcd_url: str) -> [str, Optional[str]]:
                 'denom_trace']
             return _res_json['base_denom'], _res_json['path']
         except Exception as _e:
-            print(f'Error: {_e}')
+            logging.error(f'Error: {_e}')
             return denom, 'Not found'
     else:
         return denom, None
@@ -109,8 +111,8 @@ def get_chain_id_counterparty_dict(channels: Union[list[str], set[str]],
                 url=f'{node_lcd_url}/ibc/core/channel/v1/channels/{channel}/ports/{port_id}/client_state'
                 ).json()['identified_client_state']['client_state']['chain_id']
         except KeyError:
-            print(f'Key error in get_chain_id_counterparty_dict: '
-                  f'channel {channel}, node_lcd_url {node_lcd_url}, port_id {port_id}')
+            logging.error(f'Key error in get_chain_id_counterparty_dict: '
+                          f'channel {channel}, node_lcd_url {node_lcd_url}, port_id {port_id}')
             return None
     return {_channel: _get_counterparty_chain_id(channel=_channel, port_id=port_id, node_lcd_url=node_lcd_url)
             for _channel in tqdm(channels)}
@@ -182,11 +184,11 @@ def extract_assets(chain_id: str, node_lcd_url_list: list[str]) -> Optional[pd.D
     _asset_df = None
     for _node_lcd_url in node_lcd_url_list[::-1]:
         try:
-            print(f'node lcd url:  {_node_lcd_url}')
+            logging.info(f'node lcd url:  {_node_lcd_url}')
             _asset_df = get_assets(chain_id=chain_id, node_lcd_url=_node_lcd_url)
             break
         except (ConnectionError, ReadTimeout, TimeoutError, json.JSONDecodeError):
-            print(f'no connection for {chain_id} to lcd {_node_lcd_url}')
+            logging.error(f'no connection for {chain_id} to lcd {_node_lcd_url}')
         except Exception as e:
-            print(f'no connection for {chain_id} to lcd {_node_lcd_url}. Error: {e}')
+            logging.error(f'no connection for {chain_id} to lcd {_node_lcd_url}. Error: {e}')
     return _asset_df

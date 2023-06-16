@@ -1,3 +1,13 @@
+import logging
+import sys
+
+
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    datefmt='%d-%m-%Y %H:%M:%S',
+                    handlers=[logging.FileHandler("arbitrage_osmosis.log"),
+                              logging.StreamHandler(sys.stdout)])
+
 PUSSY_CHAIN_ID = 'space-pussy'
 PUSSY_CHAIN_NAME = 'space-pussy'
 PUSSY_NODE_LCD_URL = 'https://lcd.space-pussy.cybernode.ai'
