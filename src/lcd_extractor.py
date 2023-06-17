@@ -41,7 +41,7 @@ def get_type_asset(denom: str) -> str:
     """
     if denom[:4] == 'ibc/':
         return 'ics20'
-    if denom[:4] == 'pool':
+    if denom[:4] == 'pool' or denom[:10] == 'gamm/pool/':
         return 'pool'
     if denom[:5] == 'cw20:':
         return 'cw20'
