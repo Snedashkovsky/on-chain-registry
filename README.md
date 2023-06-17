@@ -10,11 +10,12 @@ Differences from [chain-registry asset data structure](chain-registry/assetlist.
 - `denom_units`, `display`, `name` and `symbol` asset object properties are optional
 - add `chain_id` required property in asset traces section
 - set `chain_name` property in asset traces section as optional
+- add `supply` optional property in asset section and `base_supply` optional property in asset traces section
 
 ## How to deploy
 clone repo
 ```bash 
-git clone https://github.com/Snedashkovsky/cosmos-sdk-asset-list && cosmos-sdk-asset-list
+git clone https://github.com/Snedashkovsky/cosmos-sdk-asset-list && cd cosmos-sdk-asset-list
 ```
 update asset list
 ```bash
