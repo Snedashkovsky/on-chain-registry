@@ -37,12 +37,13 @@ def load_csv_files(dir_csv: str = 'data_csv') -> pd.DataFrame:
     return _assets_df
 
 
-def enrich_asset_df(assets_df: pd.DataFrame) -> pd.DataFrame:
+def enrich_asset_df(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> pd.DataFrame:
     _assets_one_channel_df = \
         assets_df[assets_df.one_channel == True][['denom', 'supply', 'chain_id', 'denom_base', 'path', 'channels',
                                                   'chain_id_counterparty', 'channel_id_counterparty', 'type_asset',
                                                   'one_channel', 'type_asset_base']].merge(
-            assets_df[['denom', 'supply', 'chain_id', 'description', 'denom_units', 'display', 'name', 'symbol']].rename(
+            assets_df[
+                ['denom', 'supply', 'chain_id', 'description', 'denom_units', 'display', 'name', 'symbol']].rename(
                 columns={'supply': 'supply_base', 'chain_id': 'chain_id_base', 'denom': 'denom_base'}),
             how='left',
             left_on=['chain_id_counterparty', 'denom_base'],
@@ -54,22 +55,26 @@ def enrich_asset_df(assets_df: pd.DataFrame) -> pd.DataFrame:
     _assets_not_one_channel_df['chain_id_base'] = _assets_not_one_channel_df.apply(
         lambda _row: _row['chain_id'] if _row['one_channel'] == True else None, axis=1)
 
-    return pd.concat([
+    _assets_df = pd.concat([
         _assets_one_channel_df,
-        _assets_not_one_channel_df]).reset_index(drop=True)[[
-            'chain_id', 'denom', 'type_asset', 'supply', 'description', 'denom_units', 'display', 'name', 'symbol', 'uri',
-            'denom_base', 'type_asset_base', 'path', 'channels', 'chain_id_counterparty', 'channel_id_counterparty',
-            'supply_base', 'chain_id_base', 'one_channel']]
+        _assets_not_one_channel_df]).reset_index(drop=True)
+
+    _assets_df['chain_name'] = _assets_df.chain_id.map(
+        lambda _chain_id: chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else '')
+
+    return _assets_df[[
+        'chain_name', 'chain_id', 'denom', 'type_asset', 'supply', 'description', 'denom_units', 'display', 'name',
+        'symbol', 'uri', 'denom_base', 'type_asset_base', 'path', 'channels', 'chain_id_counterparty',
+        'channel_id_counterparty', 'supply_base', 'chain_id_base', 'one_channel']]
 
 
 def save_to_csv(assets_df: pd.DataFrame) -> None:
     assets_df.to_csv('data_csv/all_assets.csv')
 
 
-def save_to_json(assets_df: pd.DataFrame) -> None:
-    _chain_id_name_dict, _, _ = get_chain_names_and_lcd_dicts()
-    _assets_json = get_asset_json_dict(assets_df=assets_df, chain_id_name_dict=_chain_id_name_dict)
-    logging.info(f'chains in chain-registry: {len(_chain_id_name_dict.keys())}, '
+def save_to_json(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> None:
+    _assets_json = get_asset_json_dict(assets_df=assets_df, chain_id_name_dict=chain_id_name_dict)
+    logging.info(f'chains in chain-registry: {len(chain_id_name_dict.keys())}, '
                  f'chain indexed: {len(_assets_json.keys())}')
 
     with open('assetlist.schema.json', 'r') as asset_list_schema_file:
@@ -79,17 +84,22 @@ def save_to_json(assets_df: pd.DataFrame) -> None:
 
     for _chain_id in _assets_json.keys():
         try:
-            os.mkdir(path=f'data_json/{_chain_id_name_dict[_chain_id]}')
+            os.mkdir(
+                path=f'data_json/'
+                     f'{chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else _chain_id}')
         except FileExistsError:
             pass
-        with open(f'data_json/{_chain_id_name_dict[_chain_id]}/assetlist.json', 'w') as _assetlist_file:
+        with open(
+                f'data_json/{chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else _chain_id}'
+                f'/assetlist.json',
+                'w') as _assetlist_file:
             json.dump(obj=_assets_json[_chain_id], fp=_assetlist_file, ensure_ascii=False, indent=4)
     with open(f'data_json/all_assets.json', 'w') as all_assets_file:
         json.dump(obj=[_assets_json[chain_id] for chain_id in _assets_json.keys()],
                   fp=all_assets_file, ensure_ascii=False, indent=4)
 
 
-def run_extract():
+def run_extract() -> None:
     # extract chain names and lcd paths from chain-registry
     _chain_id_name_dict, _chain_id_lcd_dict, _ = get_chain_names_and_lcd_dicts()
     logging.info(msg=f'start extraction {len(_chain_id_name_dict.keys()):>,} chains')
@@ -105,13 +115,15 @@ def run_extract():
         logging.info(msg=f'extract {len(_asset_df):>,} assets for `{_chain_id}` chain_id')
 
 
-def run_export():
-    assets_df = load_csv_files()
-    assets_df = enrich_asset_df(assets_df=assets_df)
-    assets_df = assets_df.fillna(value={'description': '', 'denom_units': '', 'display': '', 'name': '', 'symbol': ''})
-    save_to_csv(assets_df=assets_df)
-    save_to_json(assets_df=assets_df)
-    logging.info(msg=f'extracted {len(assets_df):>,} assets for {len(set(assets_df.chain_id.to_list()))} chains')
+def run_export() -> None:
+    _chain_id_name_dict, _, _ = get_chain_names_and_lcd_dicts()
+    _assets_df = load_csv_files()
+    _assets_df = enrich_asset_df(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
+    _assets_df = _assets_df.fillna(
+        value={'description': '', 'denom_units': '', 'display': '', 'name': '', 'symbol': ''})
+    save_to_csv(assets_df=_assets_df)
+    save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
+    logging.info(msg=f'extracted {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
 
 
 if __name__ == '__main__':

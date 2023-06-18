@@ -47,7 +47,7 @@ def get_type_asset(denom: str) -> str:
         return 'cw20'
     if denom[:9] == 'gravity0x':
         return 'erc20'
-    if denom[:8] == 'factory:':
+    if denom[:8] == 'factory/':
         return 'factory'
     return 'sdk.coin'
 
