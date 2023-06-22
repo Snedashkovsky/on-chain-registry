@@ -3,9 +3,49 @@
     "chain_id": "realionetwork_3301-1",
     "assets": [
         {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "type_asset": "ics20",
+            "supply": 1000,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-1011",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-1011",
+                        "chain_name": "osmosis",
+                        "base_supply": 600710454566457
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ario",
             "type_asset": "sdk.coin",
-            "supply": 45579382190195041325170231,
+            "supply": 45635417593201271613021472,
             "description": "The native utility, gas, evm, governance and staking token of the Realio Network",
             "denom_units": [
                 {
