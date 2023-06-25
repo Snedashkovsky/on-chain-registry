@@ -54,13 +54,22 @@
         },
         "type_asset": {
           "type": "string",
-          "enum": ["sdk.coin", "cw20", "erc20", "ics20", "snip20", "snip25", "pool", "factory"],
+          "enum": [
+            "sdk.coin",
+            "cw20",
+            "erc20",
+            "ics20",
+            "snip20",
+            "snip25",
+            "pool",
+            "factory"
+          ],
           "default": "sdk.coin",
           "description": "[OPTIONAL] The potential options for type of asset. By default, assumes sdk.coin"
         },
         "address": {
           "type": "string",
-          "description": "[OPTIONAL] The address of the asset. Only required for type_asset : erc20, cw20, snip20"
+          "description": "[OPTIONAL] The address of the asset. Only required for type_asset : erc20, cw20, snip20, factory"
         },
         "base": {
           "type": "string",
@@ -158,8 +167,8 @@
                 "type": "object",
                 "properties": {
                   "primary_color_hex": {
-                   "type": "string",
-                   "pattern": "^#[0-9a-fA-F]{6}$"
+                    "type": "string",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
                   }
                 },
                 "additionalProperties": false
@@ -183,25 +192,49 @@
         }
       },
       "additionalProperties": false,
-      "if": {
-        "required": [
-          "type_asset"
-        ],
-        "properties": {
-          "type_asset": {
-            "enum": [
-              "erc20",
-              "cw20",
-              "snip20"
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "type_asset"
+            ],
+            "properties": {
+              "type_asset": {
+                "enum": [
+                  "erc20",
+                  "cw20",
+                  "snip20",
+                  "factory"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "address"
+            ]
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "type_asset"
+            ],
+            "properties": {
+              "type_asset": {
+                "enum": [
+                  "factory"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "admin"
             ]
           }
         }
-      },
-      "then": {
-        "required": [
-          "address"
-        ]
-      }
+      ]
     },
     "denom_unit": {
       "type": "object",
@@ -260,36 +293,36 @@
           ]
         },
         "counterparty": {
-            "type": "object",
-            "required": [
-              "chain_id",
-              "base_denom",
-              "channel_id"
-            ],
-            "properties": {
-              "chain_name": {
-                "type": "string",
-                "description": "[Optional] The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"
-              },
-              "chain_id": {
-                "type": "string",
-                "description": "The id of the counterparty chain."
-              },
-              "base_denom": {
-                "type": "string",
-                "description": "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."
-              },
-              "channel_id": {
-                "type": "string",
-                "pattern": "^channel-\\d+$",
-                "description": "The counterparty IBC transfer channel(, e.g., 'channel-1')."
-              },
-              "base_supply": {
-                "type": "integer",
-                "description": "[OPTIONAL]  The supply of the asset on its source platform."
-              }
+          "type": "object",
+          "required": [
+            "chain_id",
+            "base_denom",
+            "channel_id"
+          ],
+          "properties": {
+            "chain_name": {
+              "type": "string",
+              "description": "[Optional] The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"
             },
-            "additionalProperties": false
+            "chain_id": {
+              "type": "string",
+              "description": "The id of the counterparty chain."
+            },
+            "base_denom": {
+              "type": "string",
+              "description": "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."
+            },
+            "channel_id": {
+              "type": "string",
+              "pattern": "^channel-\\d+$",
+              "description": "The counterparty IBC transfer channel(, e.g., 'channel-1')."
+            },
+            "base_supply": {
+              "type": "integer",
+              "description": "[OPTIONAL]  The supply of the asset on its source platform."
+            }
+          },
+          "additionalProperties": false
         },
         "chain": {
           "type": "object",
@@ -305,7 +338,7 @@
             },
             "path": {
               "type": "string",
-              "description": "The port/channel/denom input string that generates the 'ibc/...' denom." 
+              "description": "The port/channel/denom input string that generates the 'ibc/...' denom."
             }
           },
           "additionalProperties": false
@@ -379,7 +412,7 @@
             },
             "path": {
               "type": "string",
-              "description": "The port/channel/denom input string that generates the 'ibc/...' denom." 
+              "description": "The port/channel/denom input string that generates the 'ibc/...' denom."
             }
           },
           "additionalProperties": false

@@ -32,6 +32,9 @@ def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, s
                 # asset_json['address'] =   # Add
                 pass
 
+            if row['type_asset'] == 'fabric':
+                asset_json['address'] = row['denom']
+
             if row['type_asset'] == 'ics20' and type(row['channels']) == list and \
                     len(row['channels']) == 1 and not pd.isna(row['chain_id_counterparty']):
                 asset_json['ibc'] = {
