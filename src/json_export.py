@@ -47,7 +47,7 @@ def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, s
                         if row['chain_id_counterparty'] in chain_id_name_dict.keys() else None
                 if row['type_asset_base'] in ('sdk.coin', 'pool', 'cw20'):
                     asset_json['traces'] = [{
-                        "type": 'ibc' if row['type_asset_base'] in ('sdk.coin', 'pool') else 'ibc-cw20',
+                        "type": 'ibc' if row['type_asset_base'] in ('sdk.coin', 'pool', 'factory') else 'ibc-cw20',
                         "counterparty": {
                             "chain_id": row['chain_id_counterparty'],
                             "base_denom": row['denom_base'],

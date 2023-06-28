@@ -4,6 +4,7 @@ from tqdm import tqdm
 import requests
 from typing import Optional, Union
 import json
+import base64
 from urllib3.exceptions import TimeoutError
 from requests.exceptions import ConnectionError, ReadTimeout
 
@@ -25,12 +26,12 @@ def get_denom_info(denom: str, node_lcd_url: str) -> [str, Optional[str]]:
         try:
             _res_json = requests.get(f'{node_lcd_url}/ibc/apps/transfer/v1/denom_traces/{denom[4:]}').json()[
                 'denom_trace']
-            return _res_json['base_denom'], _res_json['path']
+            return str(_res_json['base_denom']), _res_json['path']
         except Exception as _e:
             logging.error(f'Error: {_e}')
-            return denom, 'Not found'
+            return str(denom), 'Not found'
     else:
-        return denom, None
+        return str(denom), None
 
 
 def get_type_asset(denom: str) -> str:
@@ -116,6 +117,32 @@ def get_chain_id_counterparty_dict(channels: Union[list[str], set[str]],
             return None
     return {_channel: _get_counterparty_chain_id(channel=_channel, port_id=port_id, node_lcd_url=node_lcd_url)
             for _channel in tqdm(channels)}
+
+
+def get_cw20_token_info(contract_address: str,
+                        node_lcd_url: str,
+                        query: Optional[dict] = None) -> dict:
+    """
+    Get cw20 token info for given contract
+    :param contract_address: a contract address
+    :param node_lcd_url: node LCD url
+    :param query: a contract query for getting info
+    :return: a token info
+    """
+    if query is None:
+        query = {"token_info": {}}
+
+    _query_msg = base64.b64encode(json.dumps(query).encode("utf-8")).decode("utf-8")
+    _query = f'{node_lcd_url}/cosmwasm/wasm/v1/contract/{contract_address}/smart/{_query_msg}'
+    _res = requests.get(_query).json()
+
+    if 'data' in _res.keys():
+        return _res['data']
+    if 'code' in _res.keys():
+        print(f'{contract_address} {node_lcd_url} Not Implemented')
+        return _res
+    print(_res)
+    return {}
 
 
 def get_assets(chain_id: str,
