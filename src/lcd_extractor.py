@@ -170,6 +170,10 @@ def get_assets(chain_id: str,
                 _channels) > 0 else None)
     _assets_df['type_asset'] = _assets_df.denom.map(get_type_asset)
     _assets_df['type_asset_base'] = _assets_df.denom_base.map(get_type_asset)
+    # TODO  change to a `authority_metadata` request result
+    _assets_df['admin'] = _assets_df.apply(
+        lambda x: x['denom'].split('/')[1] if x.type_asset == 'factory' else None,
+        axis=1)
     _assets_df['chain_id'] = chain_id
     return _assets_df
 

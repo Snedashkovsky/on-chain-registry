@@ -11,6 +11,7 @@ Differences from [chain-registry asset data structure](chain-registry/assetlist.
 - add `chain_id` required property in asset traces section
 - set `chain_name` property in asset traces section as optional
 - add `supply` optional property in asset section and `base_supply` optional property in asset traces section
+- add `admin` required property for `factory` asset type in asset section
 
 ## How to deploy
 clone repo

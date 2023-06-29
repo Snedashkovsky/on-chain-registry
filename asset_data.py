@@ -43,8 +43,8 @@ def enrich_asset_df(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str])
                                                   'chain_id_counterparty', 'channel_id_counterparty', 'type_asset',
                                                   'one_channel', 'type_asset_base']].merge(
             assets_df[
-                ['denom', 'supply', 'chain_id', 'description', 'denom_units', 'display', 'name', 'symbol']].rename(
-                columns={'supply': 'supply_base', 'chain_id': 'chain_id_base', 'denom': 'denom_base'}),
+                ['denom', 'supply', 'chain_id', 'description', 'denom_units', 'display', 'name', 'symbol', 'admin']]
+            .rename(columns={'supply': 'supply_base', 'chain_id': 'chain_id_base', 'denom': 'denom_base'}),
             how='left',
             left_on=['chain_id_counterparty', 'denom_base'],
             right_on=['chain_id_base', 'denom_base']
@@ -65,7 +65,7 @@ def enrich_asset_df(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str])
     return _assets_df[[
         'chain_name', 'chain_id', 'denom', 'type_asset', 'supply', 'description', 'denom_units', 'display', 'name',
         'symbol', 'uri', 'denom_base', 'type_asset_base', 'path', 'channels', 'chain_id_counterparty',
-        'channel_id_counterparty', 'supply_base', 'chain_id_base', 'one_channel']]
+        'channel_id_counterparty', 'supply_base', 'chain_id_base', 'one_channel', 'admin']]
 
 
 def save_to_csv(assets_df: pd.DataFrame) -> None:
@@ -120,7 +120,7 @@ def run_export() -> None:
     _assets_df = load_csv_files()
     _assets_df = enrich_asset_df(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
     _assets_df = _assets_df.fillna(
-        value={'description': '', 'denom_units': '', 'display': '', 'name': '', 'symbol': ''})
+        value={'description': '', 'denom_units': '', 'display': '', 'name': '', 'symbol': '', 'admin': ''})
     save_to_csv(assets_df=_assets_df)
     save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
     logging.info(msg=f'extracted {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
