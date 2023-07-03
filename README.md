@@ -16,7 +16,7 @@ Differences from [chain-registry asset data structure](chain-registry/assetlist.
 ## How to deploy
 clone repo
 ```bash 
-git clone https://github.com/Snedashkovsky/cosmos-sdk-asset-list && cd cosmos-sdk-asset-list
+git clone https://github.com/Snedashkovsky/on-chain-registry && cd on-chain-registry
 ```
 update asset list
 ```bash
