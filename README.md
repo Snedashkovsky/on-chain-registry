@@ -1,7 +1,9 @@
 # Asset List of Cosmos-SDK Based Chains
 On-chain based data allows to view all existing assets.<br><br>
-[**chain-registry like data**](data_json)  
-[**csv data**](data_csv)  
+- [**chain-registry like data**](data_json)  
+- [**csv data**](data_csv)  
+- **contracts** ([code](cw-on-chain-registry/contracts/on-chain-registry))
+  - [bostrom](https://cyb.ai/contracts/bostrom1eeahgvdsun8a04rh5vy9je49nllq6nj8ljmaslsvjeyg0j0063mssjcjmt)
 
 ## Asset Data Structure
 We use  chain-registry like [asset data structure](assetlist.schema.json) for better compatibility.  
@@ -18,12 +20,17 @@ clone repo
 ```bash 
 git clone https://github.com/Snedashkovsky/on-chain-registry && cd on-chain-registry
 ```
+install python requirements
+```bash
+pip install -r requirements.txt
+```
+
 update asset list
 ```bash
 make update
 ```
 
-## Data Sources (Rest API)
+## Data Sources (REST APIs)
 - /cosmos/bank/v1beta1/supply
     - `denom`
     - `amount` (`supply`)

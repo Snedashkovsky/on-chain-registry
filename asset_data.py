@@ -183,7 +183,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 0:
         run_extract()
         run_export()
-    elif 'extract' in sys.argv:
+    if 'extract' in sys.argv:
         run_extract()
-    elif 'export' in sys.argv:
+    if 'export' in sys.argv:
         run_export()
