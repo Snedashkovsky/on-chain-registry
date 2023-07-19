@@ -2,12 +2,13 @@
 On-chain based data allows to view all existing assets.<br><br>
 - [**chain-registry like data**](data_json)  
 - [**csv data**](data_csv)  
-- **contracts** ([code](cw-on-chain-registry/contracts/on-chain-registry))
+- **contracts** ([code](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry), 
+[schema](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry/schema))
   - [bostrom](https://cyb.ai/contracts/bostrom1eeahgvdsun8a04rh5vy9je49nllq6nj8ljmaslsvjeyg0j0063mssjcjmt)
 
 ## Asset Data Structure
 We use  chain-registry like [asset data structure](assetlist.schema.json) for better compatibility.  
-Differences from [chain-registry asset data structure](chain-registry/assetlist.schema.json):
+Differences from [chain-registry asset data structure](https://github.com/cosmos/chain-registry/blob/master/assetlist.schema.json):
 - add `chain_id` required property;
 - `denom_units`, `display`, `name` and `symbol` asset object properties are optional
 - add `chain_id` required property in asset traces section

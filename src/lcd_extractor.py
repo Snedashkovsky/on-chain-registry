@@ -139,9 +139,9 @@ def get_cw20_token_info(contract_address: str,
     if 'data' in _res.keys():
         return _res['data']
     if 'code' in _res.keys():
-        print(f'{contract_address} {node_lcd_url} Not Implemented')
+        logging.error(f'{contract_address} {node_lcd_url} Not Implemented')
         return _res
-    print(_res)
+    logging.error(f'{contract_address} {node_lcd_url} Error {_res}')
     return {}
 
 

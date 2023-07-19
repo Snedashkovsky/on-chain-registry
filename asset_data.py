@@ -12,6 +12,7 @@ from config import logging
 from src.lcd_extractor import extract_assets, get_cw20_token_info
 from src.chain_registry_extractor import get_chain_names_and_lcd_dicts
 from src.json_export import get_asset_json_dict
+from src.contract_export import save_to_contract
 
 filterwarnings('ignore')
 tqdm.pandas()
@@ -44,9 +45,9 @@ def add_cw20(assets_df: pd.DataFrame,
     for _chain_id, _assets in assets_df[(assets_df.type_asset_base == 'cw20') & (assets_df.one_channel == True)][
         ['chain_id_counterparty', 'denom_base']].drop_duplicates().groupby('chain_id_counterparty'):
         if _chain_id not in chain_id_lcd_dict.keys():
-            print(f'{_chain_id} not in chain_id_lcd_dict')
+            logging.error(f'{_chain_id} not in chain_id_lcd_dict')
             continue
-        print(_chain_id)
+        logging.info(f'Extract cw20 data for {_chain_id}')
         for _denom in tqdm(_assets['denom_base'].to_list()):
             _contract = _denom[5:]
             _cw20_token_info = None
@@ -67,13 +68,6 @@ def add_cw20(assets_df: pd.DataFrame,
                 _cw20_token_info_list.append(_cw20_token_info)
 
     _cw20_token_info_df = pd.DataFrame(_cw20_token_info_list)
-    print(_cw20_token_info_df.apply(
-        lambda x: [{
-            "denom": x.symbol.lower(),
-            "exponent": x.decimals,
-            "aliases": [x.symbol]
-        }],
-        axis=1))
     _cw20_token_info_df['denom_units'] = _cw20_token_info_df.apply(
         lambda x: [{
             "denom": x.symbol.lower(),
@@ -176,6 +170,7 @@ def run_export() -> None:
                'denom_base': ''})
     save_to_csv(assets_df=_assets_df)
     save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
+    save_to_contract()
     logging.info(msg=f'extracted {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
 
 
