@@ -7,7 +7,9 @@ extract:
 export:
 	@echo "export data"
 	python3 asset_data.py --extract=False --export=True
-update: extract export
+run_notebook:
+	jupyter nbconvert --to=notebook --inplace --execute asset_data.ipynb
+update: extract export run_notebook
 build_code:
 	@echo "build code"
 	python3 contract_deploy.py --build_code=True
