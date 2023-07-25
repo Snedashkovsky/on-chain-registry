@@ -1,13 +1,18 @@
 # Asset List of Cosmos-SDK Based Chains
 On-chain based data allows to view all existing assets.<br>
-<img src="src/img/architecture.png" width="50%" height="50%" alt="architecture">
-
+<p align="center">
+  <img src="src/img/architecture.png" width="50%" height="50%" alt="architecture">
+</p>
 
 - [**chain-registry like data**](data_json)  
 - [**csv data**](data_csv)  
 - **contracts** ([code](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry), 
 [schema](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry/schema))
   - [bostrom](https://cyb.ai/contracts/bostrom1eeahgvdsun8a04rh5vy9je49nllq6nj8ljmaslsvjeyg0j0063mssjcjmt)
+<p align="center">
+  <img src="src/img/chart__assets_by_chains.png" width="70%" height="70%" alt="assets by chains chart">
+  <img src="src/img/chart__assets_by_base_denoms_and_types.png" width="100%" height="100%" alt="assets by base denoms and types charts">
+</p>
 
 ## Asset Data Structure
 We use  chain-registry like [asset data structure](assetlist.schema.json) for better compatibility.  
