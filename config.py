@@ -1,6 +1,7 @@
 import logging
 import sys
 from dotenv import dotenv_values
+import warnings
 
 from cyber_sdk.client.lcd import LCDClient
 from cyber_sdk.key.mnemonic import MnemonicKey
@@ -60,7 +61,9 @@ LCD_CLIENTS = {_network: LCDClient(url=NODE_LCD_URLS[_network],
                                    chain_id=CHAIN_IDS[_network],
                                    prefix=PREFIXES[_network])
                for _network in CHAIN_IDS.keys()}
-WALLET_SEED = dotenv_values('.env')['WALLET_SEED']
+WALLET_SEED = dotenv_values('.env').get('WALLET_SEED', '')
+if not WALLET_SEED:
+    warnings.warn('WALLET_SEED not set. Please add it to `.env` file')
 WALLETS = {_network: LCD_CLIENTS[_network].wallet(MnemonicKey(mnemonic=WALLET_SEED))
            for _network in CHAIN_IDS.keys()}
 WALLET_ADDRESSES = {_network: WALLETS[_network].key.acc_address

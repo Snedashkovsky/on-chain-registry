@@ -11,6 +11,7 @@ On-chain based data allows to view all existing assets.<br>
 
 ## Asset Data Structure
 We use  chain-registry like [asset data structure](assetlist.schema.json) for better compatibility.  
+<img src="src/img/assetlist_schema.png" width="100%" height="100%" alt="assetlist schema">  
 Differences from [chain-registry asset data structure](https://github.com/cosmos/chain-registry/blob/master/assetlist.schema.json):
 - add `chain_id` required property;
 - `denom_units`, `display`, `name` and `symbol` asset object properties are optional
@@ -19,10 +20,16 @@ Differences from [chain-registry asset data structure](https://github.com/cosmos
 - add `supply` optional property in asset section and `base_supply` optional property in asset traces section
 - add `admin` required property for `factory` asset type in asset section
 
+## Contract queries
+[Query schema](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry/schema/query_msg.json)  
+[Query examples](asset_data.ipynb)  
+
 ## How to deploy
-clone repo
+clone repo and optionally edit the `.env` file 
 ```bash 
-git clone https://github.com/Snedashkovsky/on-chain-registry && cd on-chain-registry
+git clone https://github.com/Snedashkovsky/on-chain-registry && \
+cd on-chain-registry && \
+cp .env.example .env
 ```
 install python requirements
 ```bash
