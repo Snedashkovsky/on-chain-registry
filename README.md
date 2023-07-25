@@ -1,7 +1,7 @@
 # Asset List of Cosmos-SDK Based Chains
 On-chain based data allows to view all existing assets.<br>
 <p align="center">
-  <img src="src/img/architecture.png" width="50%" height="50%" alt="architecture">
+  <img src="src/img/architecture.png" width="70%" height="70%" alt="architecture">
 </p>
 
 - [**chain-registry like data**](data_json)  
