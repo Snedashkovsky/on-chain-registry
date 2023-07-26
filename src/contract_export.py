@@ -8,7 +8,7 @@ from cyber_sdk.client.lcd import LCDClient, Wallet
 from cyber_sdk.client.lcd.api.tx import BlockTxBroadcastResult
 from cyberutils.contract import execute_contract
 
-from config import logging, CONTRACT_ADDRESS, LCD_CLIENT, WALLET, WALLET_ADDRESS, NODE_LCD_URL
+from config import logging
 
 
 def batch(x: list, batch_size: int) -> list[list]:
@@ -18,7 +18,7 @@ def batch(x: list, batch_size: int) -> list[list]:
 def contract_query(
         contract_address: str,
         query: dict,
-        node_lcd_url: str = NODE_LCD_URL,
+        node_lcd_url: str,
         display_query: bool = False) -> dict:
     """
     Query contract
@@ -36,15 +36,15 @@ def contract_query(
 
 
 def save_to_contract(
+        contract_address: str,
+        lcd_client: LCDClient,
+        wallet: Wallet,
+        wallet_address: str,
+        fee_denom: str,
         all_asset_path: str = 'data_json/all_assets.json',
         batch_size: int = 150,
-        contract_address: str = CONTRACT_ADDRESS,
-        lcd_client: LCDClient = LCD_CLIENT,
-        wallet: Wallet = WALLET,
-        wallet_address: str = WALLET_ADDRESS,
-        fee_denom: str = 'boot',
         gas: int = 20_000_000,
-        memo: str = 'update assets in on-chain-registry') -> list[BlockTxBroadcastResult]:
+        memo: str = 'update assets in on-chain registry') -> list[BlockTxBroadcastResult]:
     """
     Save asset data to a contract
     :param all_asset_path: path of file with all assets

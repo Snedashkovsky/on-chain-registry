@@ -1,14 +1,14 @@
 import json
 import os
 import ast
-import sys
+from argparse import ArgumentParser
 
 import pandas as pd
 from warnings import filterwarnings
 from tqdm import tqdm
 from jsonschema import validate
 
-from config import logging
+from config import logging, CONTRACT_ADDRESSES, LCD_CLIENTS, WALLETS, WALLET_ADDRESSES, FEE_DENOMS, EXPORT_CHAINS
 from src.lcd_extractor import extract_assets, get_cw20_token_info
 from src.chain_registry_extractor import get_chain_names_and_lcd_dicts
 from src.json_export import get_asset_json_dict
@@ -18,7 +18,12 @@ filterwarnings('ignore')
 tqdm.pandas()
 
 
-def load_csv_files(dir_csv: str = 'data_csv') -> pd.DataFrame:
+def load_intermediate_csv_files(dir_csv: str = 'data_csv') -> pd.DataFrame:
+    """
+    Load data from intermediate csv files
+    :param dir_csv: path of a directory with intermediate csv files
+    :return: dataframe with asset metadata
+    """
     _assets_df = pd.DataFrame(columns=['denom', 'supply', 'denom_base', 'path', 'channels', 'one_channel',
                                        'chain_id_counterparty', 'channel_id_counterparty', 'type_asset',
                                        'type_asset_base', 'chain_id'])
@@ -38,9 +43,17 @@ def load_csv_files(dir_csv: str = 'data_csv') -> pd.DataFrame:
     return _assets_df
 
 
-def add_cw20(assets_df: pd.DataFrame,
-             chain_id_lcd_dict: dict[str, str],
-             chain_id_name_dict: dict[str, str]) -> pd.DataFrame:
+def add_cw20(
+        assets_df: pd.DataFrame,
+        chain_id_lcd_dict: dict[str, list[str]],
+        chain_id_name_dict: dict[str, str]) -> pd.DataFrame:
+    """
+    Add cw20 metadata for cw20 assets transferred by ibc protocol
+    :param assets_df: dataframe with asset metadata
+    :param chain_id_lcd_dict: dictionary of lcd apis by chain names
+    :param chain_id_name_dict: dictionary of chain ids by chain names
+    :return: asset metadata dataframe with cw20 assets
+    """
     _cw20_token_info_list = []
     for _chain_id, _assets in assets_df[(assets_df.type_asset_base == 'cw20') & (assets_df.one_channel == True)][
         ['chain_id_counterparty', 'denom_base']].drop_duplicates().groupby('chain_id_counterparty'):
@@ -81,7 +94,15 @@ def add_cw20(assets_df: pd.DataFrame,
     return assets_df.append(_cw20_token_info_df)
 
 
-def enrich_asset_df(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> pd.DataFrame:
+def enrich_asset_df(
+        assets_df: pd.DataFrame,
+        chain_id_name_dict: dict[str, str]) -> pd.DataFrame:
+    """
+    Enrich ics20 asset metadata by adding base asset metadata
+    :param assets_df: dataframe with asset metadata
+    :param chain_id_name_dict: dictionary of chain ids by chain names
+    :return: asset metadata dataframe with ics20 base asset metadata
+    """
     _assets_one_channel_df = \
         assets_df[assets_df.one_channel == True][['denom', 'supply', 'chain_id', 'denom_base', 'path', 'channels',
                                                   'chain_id_counterparty', 'channel_id_counterparty', 'type_asset',
@@ -112,11 +133,27 @@ def enrich_asset_df(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str])
         'channel_id_counterparty', 'supply_base', 'chain_id_base', 'one_channel', 'admin']]
 
 
-def save_to_csv(assets_df: pd.DataFrame) -> None:
-    assets_df.to_csv('data_csv/all_assets.csv')
+def save_to_csv(
+        assets_df: pd.DataFrame,
+        file_path: str = 'data_csv/all_assets.csv') -> None:
+    """
+    Save an assets metadata dataframe to a csv file
+    :param assets_df: an assets metadata dataframe
+    :param file_path: csv file path
+    :return: none
+    """
+    assets_df.to_csv(file_path)
 
 
-def save_to_json(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> None:
+def save_to_json(
+        assets_df: pd.DataFrame,
+        chain_id_name_dict: dict[str, str]) -> None:
+    """
+    Save an assets metadata dataframe to a json files
+    :param assets_df: an assets metadata dataframe
+    :param chain_id_name_dict: dictionary of chain ids by chain names
+    :return: none
+    """
     _assets_json = get_asset_json_dict(assets_df=assets_df, chain_id_name_dict=chain_id_name_dict)
     logging.info(f'chains in chain-registry: {len(chain_id_name_dict.keys())}, '
                  f'chain indexed: {len(_assets_json.keys())}')
@@ -144,6 +181,10 @@ def save_to_json(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) ->
 
 
 def run_extract() -> None:
+    """
+    Extract asset metadata and store it to intermediate csv files
+    :return: none
+    """
     # extract chain names and lcd paths from chain-registry
     _chain_id_name_dict, _chain_id_lcd_dict, _ = get_chain_names_and_lcd_dicts()
     logging.info(msg=f'start extraction {len(_chain_id_name_dict.keys()):>,} chains')
@@ -160,8 +201,12 @@ def run_extract() -> None:
 
 
 def run_export() -> None:
+    """
+    Export asset metadata to the csv file, json files and contracts
+    :return: none
+    """
     _chain_id_name_dict, chain_id_lcd_dict, _ = get_chain_names_and_lcd_dicts()
-    _assets_df = load_csv_files()
+    _assets_df = load_intermediate_csv_files()
     _assets_df = add_cw20(assets_df=_assets_df, chain_id_lcd_dict=chain_id_lcd_dict,
                           chain_id_name_dict=_chain_id_name_dict)
     _assets_df = enrich_asset_df(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
@@ -170,15 +215,28 @@ def run_export() -> None:
                'denom_base': ''})
     save_to_csv(assets_df=_assets_df)
     save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
-    save_to_contract()
-    logging.info(msg=f'extracted {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
+    for _chain_name in EXPORT_CHAINS:
+        save_to_contract(
+            contract_address=CONTRACT_ADDRESSES[_chain_name],
+            lcd_client=LCD_CLIENTS[_chain_name],
+            wallet=WALLETS[_chain_name],
+            wallet_address=WALLET_ADDRESSES[_chain_name],
+            fee_denom=FEE_DENOMS[_chain_name],
+        )
+    logging.info(msg=f'exported {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
 
 
 if __name__ == '__main__':
-    if len(sys.argv) == 0:
+
+    parser = ArgumentParser()
+    parser.add_argument("--extract", default=True)
+    parser.add_argument("--export", default=True)
+    args = parser.parse_args()
+
+    extract_bool = bool(args.extract)
+    export_bool = bool(args.export)
+
+    if extract_bool:
         run_extract()
-        run_export()
-    if 'extract' in sys.argv:
-        run_extract()
-    if 'export' in sys.argv:
+    if export_bool:
         run_export()
