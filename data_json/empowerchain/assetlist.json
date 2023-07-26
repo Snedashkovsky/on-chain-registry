@@ -1,0 +1,107 @@
+{
+    "chain_name": "empowerchain",
+    "chain_id": "empowerchain-1",
+    "assets": [
+        {
+            "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+            "type_asset": "ics20",
+            "supply": 6780010,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-1411",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-1411",
+                        "chain_name": "osmosis",
+                        "base_supply": 606920500228337
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+            "type_asset": "ics20",
+            "supply": 100000,
+            "description": "The native staking token of the Cosmos Hub.",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "atom",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-621",
+                "source_denom": "uatom"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "base_denom": "uatom",
+                        "channel_id": "channel-621",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 355894211829561
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/67F03A45EFF31FD5924007A8954A13C28B6F6CAA707D163D0FAB102366FCD9BD",
+            "type_asset": "ics20",
+            "supply": 100
+        },
+        {
+            "base": "umpwr",
+            "type_asset": "sdk.coin",
+            "supply": 202941039543100
+        }
+    ]
+}
