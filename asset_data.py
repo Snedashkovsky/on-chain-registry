@@ -2,6 +2,7 @@ import json
 import os
 import ast
 from argparse import ArgumentParser
+from multiprocessing import Pool
 
 import pandas as pd
 from warnings import filterwarnings
@@ -180,7 +181,11 @@ def save_to_json(
                   fp=all_assets_file, ensure_ascii=False, indent=4)
 
 
-def run_extract() -> None:
+def extract_assets_star(args):
+    return extract_assets(*args)
+
+
+def run_extract(number_of_treads: int = 10) -> None:
     """
     Extract asset metadata and store it to intermediate csv files
     :return: none
@@ -190,14 +195,15 @@ def run_extract() -> None:
     logging.info(msg=f'start extraction {len(_chain_id_name_dict.keys()):>,} chains')
 
     # extract asset data from lcd apis
-    for _chain_id, _node_lcd_url_list in list(_chain_id_lcd_dict.items()):
-        logging.info(_chain_id)
-        _asset_df = extract_assets(_chain_id, _node_lcd_url_list)
-        if _asset_df is None:
-            logging.info(f'data has not been loaded for {_chain_id}, lcd apis not work')
-            continue
-        _asset_df.to_csv(f'data_csv/assets_{_chain_id}.csv')
-        logging.info(msg=f'extract {len(_asset_df):>,} assets for `{_chain_id}` chain_id')
+    _tasks = [[_chain_id, _node_lcd_url_list] for _chain_id, _node_lcd_url_list in _chain_id_lcd_dict.items()]
+    logging.info(f'lcd extract. first task: {_tasks[0][0]}  last task: {_tasks[-1][0]}  total tasks: {len(_tasks)}  '
+                 f'threads: {number_of_treads:>,}')
+    with Pool(processes=number_of_treads) as pool:
+        _res = list(tqdm(pool.imap(extract_assets_star, _tasks, 1), total=len(_tasks)))
+    logging.info(
+        f'! extracted chains {sum(_res)} not extracted {len(_tasks) - sum(_res)} total {len(_tasks)}.'
+        f'not extracted: {", ".join([_item[0] for _i, _item in enumerate(_tasks) if _res[_i] == False])}'
+    )
 
 
 def run_export() -> None:
@@ -223,7 +229,7 @@ def run_export() -> None:
             wallet_address=WALLET_ADDRESSES[_chain_name],
             fee_denom=FEE_DENOMS[_chain_name],
         )
-    logging.info(msg=f'exported {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
+    logging.info(msg=f'! exported {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
 
 
 if __name__ == '__main__':
@@ -233,10 +239,12 @@ if __name__ == '__main__':
     parser.add_argument("--export", default=True)
     args = parser.parse_args()
 
-    extract_bool = bool(args.extract)
-    export_bool = bool(args.export)
+    extract_bool = True if args.extract not in ('False', 'false', 'none') else False
+    export_bool = True if args.export not in ('False', 'false', 'none') else False
 
     if extract_bool:
+        logging.info('! start extraction')
         run_extract()
     if export_bool:
+        logging.info('! start export')
         run_export()
