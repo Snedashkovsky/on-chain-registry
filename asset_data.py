@@ -235,16 +235,13 @@ def run_export() -> None:
 if __name__ == '__main__':
 
     parser = ArgumentParser()
-    parser.add_argument("--extract", default=True)
-    parser.add_argument("--export", default=True)
+    parser.add_argument("--extract", action='store_true')
+    parser.add_argument("--export", action='store_true')
     args = parser.parse_args()
 
-    extract_bool = True if args.extract not in ('False', 'false', 'none') else False
-    export_bool = True if args.export not in ('False', 'false', 'none') else False
-
-    if extract_bool:
+    if args.extract:
         logging.info('! start extraction')
         run_extract()
-    if export_bool:
+    if args.export:
         logging.info('! start export')
         run_export()
