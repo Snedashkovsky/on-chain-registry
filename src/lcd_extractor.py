@@ -1,6 +1,5 @@
 import pandas as pd
 from warnings import filterwarnings
-from tqdm import tqdm
 import requests
 from typing import Optional, Union
 import json
@@ -12,7 +11,6 @@ from config import logging
 
 
 filterwarnings('ignore')
-tqdm.pandas()
 
 
 def get_denom_info(denom: str, node_lcd_url: str) -> [str, Optional[str]]:
@@ -28,7 +26,7 @@ def get_denom_info(denom: str, node_lcd_url: str) -> [str, Optional[str]]:
                 'denom_trace']
             return str(_res_json['base_denom']), _res_json['path']
         except Exception as _e:
-            logging.error(f'Error: {_e}')
+            logging.error(f'Not found denom {denom} node lcd url {node_lcd_url}. Error: {_e}')
             return str(denom), 'Not found'
     else:
         return str(denom), None
@@ -116,7 +114,7 @@ def get_chain_id_counterparty_dict(channels: Union[list[str], set[str]],
                           f'channel {channel}, node_lcd_url {node_lcd_url}, port_id {port_id}')
             return None
     return {_channel: _get_counterparty_chain_id(channel=_channel, port_id=port_id, node_lcd_url=node_lcd_url)
-            for _channel in tqdm(channels)}
+            for _channel in channels}
 
 
 def get_cw20_token_info(contract_address: str,
@@ -139,9 +137,9 @@ def get_cw20_token_info(contract_address: str,
     if 'data' in _res.keys():
         return _res['data']
     if 'code' in _res.keys():
-        logging.error(f'{contract_address} {node_lcd_url} Not Implemented')
+        logging.error(f'contract address {contract_address} node lcd url {node_lcd_url}. Not Implemented')
         return _res
-    logging.error(f'{contract_address} {node_lcd_url} Error {_res}')
+    logging.error(f'contract address {contract_address} node lcd url {node_lcd_url}. Error {_res}')
     return {}
 
 
@@ -168,7 +166,7 @@ def get_assets(chain_id: str,
         _assets_df = _assets_supply_df
 
     _assets_df.loc[:, ['denom_base', 'path']] = \
-        _assets_df.progress_apply(
+        _assets_df.apply(
             lambda row: pd.Series(
                 data=get_denom_info(
                     denom=row['denom'],
@@ -205,7 +203,7 @@ def get_assets(chain_id: str,
     return _assets_df
 
 
-def extract_assets(chain_id: str, node_lcd_url_list: list[str]) -> Optional[pd.DataFrame]:
+def extract_assets(chain_id: str, node_lcd_url_list: list[str]) -> bool:
     """
     Get dataframe with assets data for a given network by lcd list
     :param chain_id: network chain id
@@ -215,11 +213,17 @@ def extract_assets(chain_id: str, node_lcd_url_list: list[str]) -> Optional[pd.D
     _asset_df = None
     for _node_lcd_url in node_lcd_url_list[::-1]:
         try:
-            logging.info(f'node lcd url:  {_node_lcd_url}')
+            logging.info(f'extract lcd for chain id: {chain_id}  node lcd url: {_node_lcd_url}')
             _asset_df = get_assets(chain_id=chain_id, node_lcd_url=_node_lcd_url)
             break
-        except (ConnectionError, ReadTimeout, TimeoutError, json.JSONDecodeError):
-            logging.error(f'no connection for {chain_id} to lcd {_node_lcd_url}')
+        except (ConnectionError, ReadTimeout, TimeoutError, json.JSONDecodeError) as e:
+            logging.error(f'no connection for {chain_id} to lcd {_node_lcd_url}. Error: {e}')
         except Exception as e:
             logging.error(f'no connection for {chain_id} to lcd {_node_lcd_url}. Error: {e}')
-    return _asset_df
+
+    if _asset_df is None:
+        logging.info(f'data has not been loaded for {chain_id}, lcd apis not work')
+        return False
+    _asset_df.to_csv(f'data_csv/assets_{chain_id}.csv')
+    logging.info(msg=f'extracted {len(_asset_df):>,} assets for chain_id: `{chain_id}`  node lcd url: {_node_lcd_url}')
+    return True

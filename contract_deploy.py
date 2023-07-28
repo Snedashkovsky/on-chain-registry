@@ -147,23 +147,19 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
     parser.add_argument("--chain_name", default='bostrom')
-    parser.add_argument("--build_code", default=False)
-    parser.add_argument("--store_code", default=False)
-    parser.add_argument("--init_contract", default=False)
+    parser.add_argument("--build_code", action='store_true')
+    parser.add_argument("--store_code", action='store_true')
+    parser.add_argument("--init_contract", action='store_true')
     args = parser.parse_args()
 
     chain_name = args.chain_name if args.chain_name else 'bostrom'
-    build_code_bool = bool(args.build_code)
-    store_code_bool = bool(args.store_code)
-    init_contract_bool = bool(args.init_contract)
-
     assert chain_name in CHAIN_IDS.keys()
 
-    if build_code_bool:
+    if args.build_code:
         build_code()
         logging.info(f'the code has been built')
 
-    if store_code_bool:
+    if args.store_code:
         code_id = store_code(
             wallet_address=WALLET_ADDRESSES[chain_name],
             note=CONTRACT_NAMES[chain_name],
@@ -175,7 +171,7 @@ if __name__ == '__main__':
     else:
         code_id = CODE_IDS[chain_name]
 
-    if init_contract_bool:
+    if args.init_contract:
         contract_address = init_on_chain_registry_contract(
             executors_addresses=[WALLET_ADDRESSES[chain_name]],
             admins_addresses=[WALLET_ADDRESSES[chain_name]],
