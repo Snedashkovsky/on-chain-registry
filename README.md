@@ -1,8 +1,34 @@
 # Asset List of Cosmos-SDK Based Chains
-On-chain based data allows to view all existing assets.<br>
-<p align="center">
-  <img src="src/img/architecture.png" width="70%" height="70%" alt="architecture">
-</p>
+The evolving blockchain ecosystem demands trustworthy data access and decentralised interoperability across all chains. 
+To meet this necessity, an On-Chain Registry (OCP) has been developed, specifically designed for Cosmos-SDK based chains. 
+This registry, acting as a unique access point, aggregates and handles data from all connected assets, 
+thereby laying the groundwork for a robust and efficient data infrastructure in the world of blockchain.
+
+## Conceptualization
+
+OCP is more than just a list; it's a dynamic, evolving, and self-sustaining system that fetches data directly from nodes. 
+This mechanism leads to:
+ - **Accuracy**: The registry furnishes complete and precise data, crucial for meaningful and successful blockchain transactions.
+ - **Reliability**: By ruling out the chance of human error, the registry delivers consistent information that users can rely on.
+ - **Inclusivity**: It leaves out no data not specified in the chains, thereby offering a comprehensive overview of the blockchain environment.
+
+<br>
+<img src="src/img/architecture.png" width="50%" height="50%" alt="architecture">
+
+## Functionality
+
+OCP provides an interface for updating, storing, and accessing data on-chain. 
+This enables it to dynamically adapt to the ever-changing state of the chains.
+
+API & IBC Tokens Verification. OCP functions as a robust and secure API, offering users the capability to verify 
+Inter-Blockchain Communication (IBC) tokens with trusted and verified metadata. 
+This feature further enhances the transparency and security of cross-chain transactions.
+
+Integration of External Registries. In the pursuit of providing an all-encompassing data access point, 
+OCP integrates data from other registries as well. 
+This guarantees that users have a comprehensive, unified, and updated view of the entire blockchain ecosystem.
+
+On-chain based data allows to view all existing assets:
 
 - [**chain-registry like data**](data_json)  
 - [**csv data**](data_csv)  
