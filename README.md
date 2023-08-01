@@ -13,7 +13,7 @@ This mechanism leads to:
  - **Inclusivity**: It leaves out no data not specified in the chains, thereby offering a comprehensive overview of the blockchain environment.
 
 <br>
-<img src="src/img/architecture.png" width="50%" height="50%" alt="architecture">
+<img src="src/img/architecture.png" width="80%" height="80%" alt="architecture">
 
 ## Functionality
 
