@@ -1,16 +1,13 @@
-# Asset List of Cosmos-SDK Based Chains
-The evolving blockchain ecosystem demands trustworthy data access and decentralised interoperability across all chains. 
-To meet this necessity, an On-Chain Registry (OCP) has been developed, specifically designed for Cosmos-SDK based chains. 
-This registry, acting as a unique access point, aggregates and handles data from all connected assets, 
-thereby laying the groundwork for a robust and efficient data infrastructure in the world of blockchain.
+# On-Chain Registry: Asset List of Cosmos-SDK Based Chains
+As assets shift between different chains within the Cosmos ecosystem and the broader cross-chain world, a clear and straightforward tool for tracking this data becomes necessary. The On-Chain Registry (OCR) gathers all the proof-of-nodes data for these assets as they navigate various chains, providing a real-time snapshot and comprehensive overview of the asset ecosystem.
 
-## Conceptualization
+## Proof-of-Nodes Conceptualization
 
-OCP is more than just a list; it's a dynamic, evolving, and self-sustaining system that fetches data directly from nodes. 
+OCR is more than just a list; it’s a dynamic, evolving, and self-sustaining protocol that fetches data directly from nodes.
 This mechanism leads to:
  - **Accuracy**: The registry furnishes complete and precise data, crucial for meaningful and successful blockchain transactions.
- - **Reliability**: By ruling out the chance of human error, the registry delivers consistent information that users can rely on.
- - **Inclusivity**: It leaves out no data not specified in the chains, thereby offering a comprehensive overview of the blockchain environment.
+ - **Reliability**: By ruling out the chance of human error, the registry delivers consistent information that users can rely on.
+ - **Inclusivity**: It leaves out no data not specified in the chains, thereby offering a comprehensive overview of the blockchain environment.
 
 <br>
 <p align="center">
@@ -19,15 +16,15 @@ This mechanism leads to:
 
 ## Functionality
 
-OCP provides an interface for updating, storing, and accessing data on-chain. 
+OCR provides an interface for updating, storing, and accessing data on-chain. 
 This enables it to dynamically adapt to the ever-changing state of the chains.
 
-API & IBC Tokens Verification. OCP functions as a robust and secure API, offering users the capability to verify 
+API & IBC Tokens Verification. OCR functions as a robust and secure API, offering users the capability to verify 
 Inter-Blockchain Communication (IBC) tokens with trusted and verified metadata. 
 This feature further enhances the transparency and security of cross-chain transactions.
 
 Integration of External Registries. In the pursuit of providing an all-encompassing data access point, 
-OCP integrates data from other registries as well. 
+OCR integrates data from other registries as well. 
 This guarantees that users have a comprehensive, unified, and updated view of the entire blockchain ecosystem.
 
 On-chain based data allows to view all existing assets:
