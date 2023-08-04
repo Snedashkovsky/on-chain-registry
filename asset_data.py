@@ -19,9 +19,10 @@ filterwarnings('ignore')
 tqdm.pandas()
 
 
-def load_intermediate_csv_files(dir_csv: str = 'data_csv') -> pd.DataFrame:
+def load_intermediate_csv_files(chain_id_name_dict: dict[str, str], dir_csv: str = 'data_csv') -> pd.DataFrame:
     """
     Load data from intermediate csv files
+    :param chain_id_name_dict: dictionary of chain ids by chain names
     :param dir_csv: path of a directory with intermediate csv files
     :return: dataframe with asset metadata
     """
@@ -32,8 +33,13 @@ def load_intermediate_csv_files(dir_csv: str = 'data_csv') -> pd.DataFrame:
     _asset_raw_file_names = [f.path for f in os.scandir(dir_csv)
                              if not f.is_dir() if
                              f.path.split('/')[1][0] not in ('_', '.') and f.path.split('/')[1] != 'all_assets.csv']
-    for _asset_raw_file_name in _asset_raw_file_names:
-        _asset_df = pd.read_csv(_asset_raw_file_name)
+    _asset_filtered_file_names = [_item for _item in _asset_raw_file_names
+                                  if _item.split('/')[1][7:-4] in chain_id_name_dict.keys()]
+    if len(_asset_raw_file_names) > len(_asset_filtered_file_names):
+        logging.info(f'! please remove deprecated files: '
+                     f'{", ".join([_item for _item in _asset_raw_file_names if _item not in _asset_filtered_file_names])}')
+    for _asset_filtered_file_name in _asset_filtered_file_names:
+        _asset_df = pd.read_csv(_asset_filtered_file_name)
         _asset_df = _asset_df.drop_duplicates()
         if 'channels' in _asset_df.columns:
             _asset_df['channels'] = _asset_df.channels.map(lambda x: ast.literal_eval(x) if type(x) == str else None)
@@ -212,7 +218,7 @@ def run_export() -> None:
     :return: none
     """
     _chain_id_name_dict, chain_id_lcd_dict, _ = get_chain_names_and_lcd_dicts()
-    _assets_df = load_intermediate_csv_files()
+    _assets_df = load_intermediate_csv_files(chain_id_name_dict=_chain_id_name_dict)
     _assets_df = add_cw20(assets_df=_assets_df, chain_id_lcd_dict=chain_id_lcd_dict,
                           chain_id_name_dict=_chain_id_name_dict)
     _assets_df = enrich_asset_df(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
