@@ -1,5 +1,7 @@
 import pandas as pd
 
+from config import logging
+
 
 def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> dict[str, dict]:
     assets_json = {}
@@ -67,9 +69,12 @@ def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, s
                         asset_json['traces'][0]["counterparty"]["port"] = 'transfer'
 
             asset_json_list.append(asset_json)
-        assets_json[chain_id] = {
-            "chain_name": chain_id_name_dict[chain_id],
-            "chain_id": chain_id,
-            "assets": asset_json_list
-        }
+        try:
+            assets_json[chain_id] = {
+                "chain_name": chain_id_name_dict[chain_id],
+                "chain_id": chain_id,
+                "assets": asset_json_list
+            }
+        except KeyError:
+            logging.info(f'! no have chain_id {chain_id}, assets in on-chain registry {asset_json_list}')
     return assets_json
