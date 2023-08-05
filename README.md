@@ -14,7 +14,7 @@ This mechanism leads to:
 
 <br>
 <p align="center">
-  <img src="src/img/architecture.png" width="90%" height="90%" alt="architecture">
+  <img src="src/img/architecture.png" width="80%" height="80%" alt="architecture">
 </p>
 
 ## Functionality
