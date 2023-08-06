@@ -1,4 +1,4 @@
-# On-Chain Registry: Asset List of Cosmos-SDK Based Chains
+# On-Chain Registry: Cosmos-SDK Asset List
 As assets shift between different chains within the Cosmos ecosystem and the broader cross-chain world, a clear 
 and straightforward tool for tracking this data becomes necessary. 
 The On-Chain Registry (OCR) gathers all the proof-of-nodes data for these assets as they navigate various chains, 
