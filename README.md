@@ -19,11 +19,9 @@ This mechanism leads to:
 
 OCR provides an interface for updating, storing, and accessing data on-chain. This enables it to dynamically adapt to the ever-changing state of the chains.
 
-**API & IBC Tokens Verification.**  
-OCR functions as a robust and secure API, offering users the capability to verify Inter-Blockchain Communication (IBC) tokens with trusted and verified metadata. This feature further enhances the transparency and security of cross-chain transactions.
+**API & IBC Tokens Verification.** OCR functions as a robust and secure API, offering users the capability to verify Inter-Blockchain Communication (IBC) tokens with trusted and verified metadata. This feature further enhances the transparency and security of cross-chain transactions.
 
-**Integration of External Registries.**  
-In the pursuit of providing an all-encompassing data access point, OCR integrates data from other registries as well. This guarantees that users have a comprehensive, unified, and updated view of the entire blockchain ecosystem.
+**Integration of External Registries.** In the pursuit of providing an all-encompassing data access point, OCR integrates data from other registries as well. This guarantees that users have a comprehensive, unified, and updated view of the entire blockchain ecosystem.
 
 ## Assets
 
