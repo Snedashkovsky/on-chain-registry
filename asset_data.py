@@ -191,7 +191,7 @@ def extract_assets_star(args):
     return extract_assets(*args)
 
 
-def run_extract(number_of_treads: int = 10) -> None:
+def run_extract(number_of_treads: int = 20) -> None:
     """
     Extract asset metadata and store it to intermediate csv files
     :return: none
