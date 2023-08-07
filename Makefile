@@ -26,7 +26,7 @@ run_notebook:  # run asset_data.ipynb notebook
 update: extract export run_notebook  # extract from node apis and export metadata, run asset_data.ipynb notebook
 
 commit:  # commit updates
-ifeq (CURRENT_BRANCH, TARGET_BRANCH)
+ifeq (${CURRENT_BRANCH}, ${TARGET_BRANCH})
 	@echo "commit updates"
 	git commit -am "- update asset list"
 	git push origin ${TARGET_BRANCH}
