@@ -38,7 +38,7 @@ On-chain based data allows viewing of all existing assets:
 [schema](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry/schema))
   - [bostrom](https://cyb.ai/contracts/bostrom1eeahgvdsun8a04rh5vy9je49nllq6nj8ljmaslsvjeyg0j0063mssjcjmt)
 <p align="center">
-  <img src="src/img/charts.png" width="100%" height="100%" alt="assets charts">
+  <img src="charts/charts.png" width="100%" height="100%" alt="assets charts">
 </p>
 
 ## Asset Data Structure
