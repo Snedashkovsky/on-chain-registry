@@ -3,9 +3,35 @@
     "chain_id": "kyve-1",
     "assets": [
         {
+            "base": "ibc/0E1517E2771CA7C03F2ED3F9BAECCAEADF0BFD79B89679E834933BC0F179AD98",
+            "type_asset": "ics20",
+            "supply": 1000,
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-75",
+                "source_denom": "uaxl"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "axelar-dojo-1",
+                        "base_denom": "uaxl",
+                        "channel_id": "channel-75",
+                        "chain_name": "axelar",
+                        "base_supply": 1084849428853551
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uaxl"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ukyve",
             "type_asset": "sdk.coin",
-            "supply": 1039068893190130,
+            "supply": 1040225865723859,
             "description": "The native utility token of the KYVE network.",
             "denom_units": [
                 {
