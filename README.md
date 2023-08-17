@@ -11,8 +11,7 @@ This mechanism leads to:
  - **Accuracy**: The registry furnishes complete and precise data, crucial for meaningful and successful blockchain transactions.
  - **Reliability**: By ruling out the chance of human error, the registry delivers consistent information that users can rely on.
  - **Inclusivity**: It leaves out no data not specified in the chains, thereby offering a comprehensive overview of the blockchain environment.
-
-<br>
+### Workflow:
 <p align="center">
   <img src="src/img/architecture.png" width="80%" height="80%" alt="architecture">
 </p>
@@ -30,7 +29,9 @@ Integration of External Registries. In the pursuit of providing an all-encompass
 OCR integrates data from other registries as well. 
 This guarantees that users have a comprehensive, unified, and updated view of the entire blockchain ecosystem.
 
-On-chain based data allows viewing of all existing assets:
+## Assets
+
+On-chain based data allows viewing of **all existing assets**:
 
 - [**chain-registry like data**](data_json)  
 - [**csv data**](data_csv)  
@@ -42,7 +43,7 @@ On-chain based data allows viewing of all existing assets:
 </p>
 
 ## Asset Data Structure
-We use  chain-registry like [asset data structure](assetlist.schema.json) for better compatibility.  
+OCR uses a chain-registry like [asset data structure](assetlist.schema.json) for better compatibility.  
 <img src="src/img/assetlist_schema.png" width="100%" height="100%" alt="assetlist schema">  
 Differences from the [chain-registry asset data structure](https://github.com/cosmos/chain-registry/blob/master/assetlist.schema.json):
 - add `chain_id` required property;
