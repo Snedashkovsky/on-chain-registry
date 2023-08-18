@@ -21,7 +21,7 @@ export:  # export metadata to jsons, csv and contracts
 	python3 asset_data.py --export
 
 run_notebook:  # run asset_data.ipynb notebook
-	jupyter nbconvert --to=notebook --inplace --execute asset_data.ipynb
+	. venv/bin/activate; jupyter nbconvert --to=notebook --inplace --execute asset_data.ipynb
 
 update: extract export run_notebook  # extract from node apis and export metadata, run asset_data.ipynb notebook
 
