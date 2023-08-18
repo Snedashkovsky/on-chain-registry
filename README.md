@@ -64,9 +64,9 @@ git clone https://github.com/Snedashkovsky/on-chain-registry && \
 cd on-chain-registry && \
 cp .env.example .env
 ```
-install python requirements
+install python virtual environment and requirements in it
 ```bash
-pip install -r requirements.txt
+make install_venv
 ```
 
 update asset list

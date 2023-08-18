@@ -1,6 +1,6 @@
 default: help
 
-all : help extract export run_notebook update commit update_and_commit build_code store_code init_contract deploy_contract
+all : help install_venv clean_venv extract export run_notebook update commit update_and_commit build_code store_code init_contract deploy_contract
 .PHONY : all
 
 CURRENT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
@@ -9,19 +9,26 @@ TARGET_BRANCH = update_asset_list
 help:  # show help for each of the makefile recipes
 	@grep -E '^[a-zA-Z0-9 -_]+:.*#'  Makefile | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
 
+install_venv:  # install python virtual environment and requirements in it
+	test -d venv || python3 -m venv venv
+	. venv/bin/activate; pip install -Ur requirements.txt
+
+clean_venv:  # clean python virtual environment and requirements in it
+	rm -rf venv
+
 extract:  # extract metadata from node apis
 	@echo "pull chain-registry"
 	git submodule init
 	git submodule update --remote
 	@echo "extract data"
-	python3 asset_data.py --extract --export
+	. venv/bin/activate; python3 asset_data.py --extract --export
 
 export:  # export metadata to jsons, csv and contracts
 	@echo "export metadata to jsons, csv and contracts"
-	python3 asset_data.py --export
+	. venv/bin/activate; python3 asset_data.py --export
 
 run_notebook:  # run asset_data.ipynb notebook
-	jupyter nbconvert --to=notebook --inplace --execute asset_data.ipynb
+	. venv/bin/activate; jupyter nbconvert --to=notebook --inplace --execute asset_data.ipynb
 
 update: extract export run_notebook  # extract from node apis and export metadata, run asset_data.ipynb notebook
 
@@ -38,16 +45,16 @@ update_and_commit: update commit  # extract from node apis and export metadata, 
 
 build_code:  # build cw-on-chain-registry code
 	@echo "build cw-on-chain-registry code"
-	python3 contract_deploy.py --build_code
+	. venv/bin/activate; python3 contract_deploy.py --build_code
 
 store_code:  # store cw-on-chain-registry code to a chain
 	@echo "store cw-on-chain-registry code"
-	python3 contract_deploy.py --chain_name=$(chain_name) --store_code
+	. venv/bin/activate; python3 contract_deploy.py --chain_name=$(chain_name) --store_code
 
 init_contract:  # instantiate a contract in a chain
 	@echo "instantiate a contract"
-	python3 contract_deploy.py --chain_name=$(chain_name) --init_contract
+	. venv/bin/activate; python3 contract_deploy.py --chain_name=$(chain_name) --init_contract
 
 deploy_contract:  # build and store cw-on-chain-registry code, instantiate a contract from it
 	@echo "build and store cw-on-chain-registry code, instantiate a contract from it"
-	python3 contract_deploy.py --chain_name=$(chain_name) --build_code --store_code --init_contract
+	. venv/bin/activate; python3 contract_deploy.py --chain_name=$(chain_name) --build_code --store_code --init_contract
