@@ -94,7 +94,8 @@ def save_to_contract(
             wallet=wallet,
             sender=wallet_address,
             memo=memo,
-            gas=gas
+            gas=gas,
+            fee_amount=int(gas * 0.001) if wallet_address[:4] == 'osmo' else 0
         )
         _res_list.append(_res)
         if len(str(_res)) < 500:
