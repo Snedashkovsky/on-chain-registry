@@ -22,39 +22,47 @@ INIT_CHAIN_ID_LCD_DICT = {PUSSY_CHAIN_ID: [PUSSY_NODE_LCD_URL]}
 
 # for contract instantiations
 CONTRACT_NAMES = {
-    'bostrom': 'test-on-chain-registry',
-    'localbostrom': 'test-on-chain-registry'
+    'bostrom': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry',
+    'localbostrom': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry',
+    'osmosis-testnet': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry'
 }
 CODE_IDS = {
-    'bostrom': '28',
-    'localbostrom': '46'
+    'bostrom': '33',
+    'localbostrom': '57',
+    'osmosis-testnet': '3352'
 }
 
 # for export to contracts
-EXPORT_CHAINS = ['bostrom']
+EXPORT_CHAINS = ['bostrom', 'osmosis-testnet']
 CHAIN_IDS = {
     'bostrom': 'bostrom',
-    'localbostrom': 'localbostrom'
+    'localbostrom': 'localbostrom',
+    'osmosis-testnet': 'osmo-test-5'
 }
 PREFIXES = {
     'bostrom': 'bostrom',
-    'localbostrom': 'bostrom'
+    'localbostrom': 'bostrom',
+    'osmosis-testnet': 'osmo'
 }
 FEE_DENOMS = {
     'bostrom': 'boot',
-    'localbostrom': 'boot'
+    'localbostrom': 'boot',
+    'osmosis-testnet': 'uosmo'
 }
 NODE_RPC_URLS = {
     'bostrom': 'https://rpc.bostrom.cybernode.ai:443',
-    'localbostrom': 'http://localhost:26657'
+    'localbostrom': 'http://localhost:26657',
+    'osmosis-testnet': 'https://rpc.testnet.osmosis.zone:443'
 }
 NODE_LCD_URLS = {
     'bostrom': 'https://lcd.bostrom.cybernode.ai',
-    'localbostrom': 'http://localhost:1317'
+    'localbostrom': 'http://localhost:1317',
+    'osmosis-testnet': 'https://lcd.testnet.osmosis.zone'
 }
 CONTRACT_ADDRESSES = {
-    'bostrom': 'bostrom1eeahgvdsun8a04rh5vy9je49nllq6nj8ljmaslsvjeyg0j0063mssjcjmt',
-    'localbostrom': 'bostrom1jskphr9zxs2yp3e9vwamyeqwxkfkg5zghyv52qcy4tlql3qjjwgsk2d9vp'
+    'bostrom': 'bostrom1w33tanvadg6fw04suylew9akcagcwngmkvns476wwu40fpq36pms92re6u',
+    'localbostrom': 'bostrom1l2rs0hxzfy343z8n6punpj9gwzrsq644nzzls6dql52jjj2nxncqjn5vg3',
+    'osmosis-testnet': 'osmo1nwesd2xe6cnvtpqd29xg7qeznlm65x02lfjfg20wlvkdze20hcxsftxtzz'
 }
 
 LCD_CLIENTS = {_network: LCDClient(url=NODE_LCD_URLS[_network],
