@@ -3,6 +3,7 @@ import pandas as pd
 from tqdm import tqdm
 import requests
 import base64
+from time import sleep
 
 from cyber_sdk.client.lcd import LCDClient, Wallet
 from cyber_sdk.client.lcd.api.tx import BlockTxBroadcastResult
@@ -42,9 +43,9 @@ def save_to_contract(
         wallet_address: str,
         fee_denom: str,
         all_asset_path: str = 'data_json/all_assets.json',
-        batch_size: int = 150,
+        batch_size: int = 250,
         gas: int = 20_000_000,
-        memo: str = 'update assets in on-chain registry') -> list[BlockTxBroadcastResult]:
+        memo: str = 'update assets in on-chain registry  github.com/Snedashkovsky/on-chain-registry') -> list[BlockTxBroadcastResult]:
     """
     Save asset data to a contract
     :param all_asset_path: path of file with all assets
@@ -95,8 +96,10 @@ def save_to_contract(
             sender=wallet_address,
             memo=memo,
             gas=gas,
-            fee_amount=int(gas * 0.001) if wallet_address[:4] == 'osmo' else 0
+            fee_amount=int(gas * 0.0025) if wallet_address[:4] == 'osmo' else 0
         )
+        if _res is None:
+            sleep(10)
         _res_list.append(_res)
         if len(str(_res)) < 500:
             logging.error(_res)

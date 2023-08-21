@@ -47,7 +47,8 @@ def store_code(
                      f"--gas={gas} -y -o=json --node={node_rpc_url}",
         shell=True)
     try:
-        _code_id = json.loads(_res)['logs'][0]['events'][-1]['attributes'][0]['value']
+        _attributes = json.loads(_res)['logs'][0]['events'][-1]['attributes']
+        _code_id = [item['value'] for item in _attributes if item['key'] == 'code_id'][0]
         return _code_id
     except IndexError:
         logging.error(_res)
