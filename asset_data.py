@@ -212,6 +212,22 @@ def run_extract(number_of_treads: int = 20) -> None:
     )
 
 
+def save_to_contracts() -> None:
+    """
+    Save metadata to contracts
+    :return: none
+    """
+    for _chain_name in EXPORT_CHAINS:
+        logging.info(f'Export to {_chain_name} contract')
+        save_to_contract(
+            contract_address=CONTRACT_ADDRESSES[_chain_name],
+            lcd_client=LCD_CLIENTS[_chain_name],
+            wallet=WALLETS[_chain_name],
+            wallet_address=WALLET_ADDRESSES[_chain_name],
+            fee_denom=FEE_DENOMS[_chain_name],
+        )
+
+
 def run_export() -> None:
     """
     Export asset metadata to the csv file, json files and contracts
@@ -227,15 +243,7 @@ def run_export() -> None:
                'denom_base': ''})
     save_to_csv(assets_df=_assets_df)
     save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
-    for _chain_name in EXPORT_CHAINS:
-        logging.info(f'Export to {_chain_name} contract')
-        save_to_contract(
-            contract_address=CONTRACT_ADDRESSES[_chain_name],
-            lcd_client=LCD_CLIENTS[_chain_name],
-            wallet=WALLETS[_chain_name],
-            wallet_address=WALLET_ADDRESSES[_chain_name],
-            fee_denom=FEE_DENOMS[_chain_name],
-        )
+    save_to_contracts()
     logging.info(msg=f'! exported {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
 
 
@@ -244,6 +252,7 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--extract", action='store_true')
     parser.add_argument("--export", action='store_true')
+    parser.add_argument("--export_to_contracts", action='store_true')
     args = parser.parse_args()
 
     if args.extract:
@@ -252,3 +261,6 @@ if __name__ == '__main__':
     if args.export:
         logging.info('! start export')
         run_export()
+    elif args.export_to_contracts:
+        logging.info('! start export to contracts')
+        save_to_contracts()
