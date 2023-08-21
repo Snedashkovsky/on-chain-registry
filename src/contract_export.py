@@ -43,7 +43,7 @@ def save_to_contract(
         wallet_address: str,
         fee_denom: str,
         all_asset_path: str = 'data_json/all_assets.json',
-        batch_size: int = 250,
+        batch_size: int = 200,
         gas: int = 20_000_000,
         memo: str = 'update assets in on-chain registry  github.com/Snedashkovsky/on-chain-registry') -> list[BlockTxBroadcastResult]:
     """
