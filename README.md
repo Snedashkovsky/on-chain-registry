@@ -31,7 +31,8 @@ On-chain based data allows viewing of **all existing assets**:
 - [**csv data**](data_csv)  
 - **contracts** ([code](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry), 
 [schema](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry/schema))
-  - [bostrom](https://cyb.ai/contracts/bostrom1eeahgvdsun8a04rh5vy9je49nllq6nj8ljmaslsvjeyg0j0063mssjcjmt)
+  - [bostrom](https://cyb.ai/contracts/bostrom1t33kxpypdlnp28fl4sttj59jj6e5tg6sxl3423s6sjp79ldqaucqzf6y3v)
+  - [osmosis-testnet](https://testnet.mintscan.io/osmosis-testnet/wasm/contract/osmo1me45lxajuhe5g0rqqwsn4rw4hm26d05q5f395742ztngu647yy2qrqwxq7)
 <p align="center">
   <img src="charts/charts.png" width="100%" height="100%" alt="assets charts">
 </p>

@@ -26,7 +26,7 @@ def store_code(
         note: str,
         node_rpc_url: str,
         cli_name: str = 'cyber',
-        gas: int = 20_000_000) -> Optional[str]:
+        gas: int = 10_000_000) -> Optional[str]:
     """
     Store a code to a chain by a cli
     :param wallet_address: sender address
@@ -43,10 +43,12 @@ def store_code(
     _res, _ = execute_bash(
         bash_command=f"{cli_name} tx wasm store ./cw-on-chain-registry/artifacts/on_chain_registry-aarch64.wasm "
                      f"--from={wallet_address} --chain-id={chain_id} --broadcast-mode=block --note='{note}' "
+                     f"{'--fees=30000uosmo ' if chain_id[:4] == 'osmo' else ''}"
                      f"--gas={gas} -y -o=json --node={node_rpc_url}",
         shell=True)
     try:
-        _code_id = json.loads(_res)['logs'][0]['events'][-1]['attributes'][0]['value']
+        _attributes = json.loads(_res)['logs'][0]['events'][-1]['attributes']
+        _code_id = [item['value'] for item in _attributes if item['key'] == 'code_id'][0]
         return _code_id
     except IndexError:
         logging.error(_res)
@@ -84,6 +86,7 @@ def instantiate_contract(
             && {cli_name} tx wasm instantiate {code_id} "$INIT" --from={from_address} \
             {'--amount=' + amount if amount else ''} --label="{contract_label}" \
             {'--admin=' + contract_admin if contract_admin else '--no-admin'} \
+            {'--fees=10000uosmo ' if chain_id[:4] == 'osmo' else ''} \
             -y --gas={gas} --broadcast-mode=block -o=json --chain-id={chain_id} --node={node_rpc_url}''',
         shell=True)
     if display_data:
@@ -164,7 +167,8 @@ if __name__ == '__main__':
             wallet_address=WALLET_ADDRESSES[chain_name],
             note=CONTRACT_NAMES[chain_name],
             chain_id=CHAIN_IDS[chain_name],
-            node_rpc_url=NODE_RPC_URLS[chain_name]
+            node_rpc_url=NODE_RPC_URLS[chain_name],
+            cli_name='osmosisd' if chain_name[:7] == 'osmosis' else 'cyber'
         )
         if code_id:
             logging.info(f'the code has been stored in {chain_name}, code id {code_id}.\nplease update `config.py`')
@@ -179,7 +183,8 @@ if __name__ == '__main__':
             code_id=code_id,
             contract_label=CONTRACT_NAMES[chain_name],
             chain_id=CHAIN_IDS[chain_name],
-            node_rpc_url=NODE_RPC_URLS[chain_name]
+            node_rpc_url=NODE_RPC_URLS[chain_name],
+            cli_name='osmosisd' if chain_name[:7] == 'osmosis' else 'cyber'
         )
         if contract_address:
             logging.info(f'the contract has been instantiated in {chain_name} network, '

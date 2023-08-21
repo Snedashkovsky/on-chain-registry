@@ -228,6 +228,7 @@ def run_export() -> None:
     save_to_csv(assets_df=_assets_df)
     save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
     for _chain_name in EXPORT_CHAINS:
+        logging.info(f'Export to {_chain_name} contract')
         save_to_contract(
             contract_address=CONTRACT_ADDRESSES[_chain_name],
             lcd_client=LCD_CLIENTS[_chain_name],
