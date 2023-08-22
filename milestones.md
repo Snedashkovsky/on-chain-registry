@@ -1,13 +1,13 @@
 # Milestones
 
 ## 1. Metadata improvements
-- Add full IBC traces and front traces (Issue #11)
-- Clarify factory tokens metadata (Issue #3)
+- Add full IBC traces and front traces [#11](https://github.com/Snedashkovsky/on-chain-registry/issues/11)
+- Clarify factory tokens metadata [#3](https://github.com/Snedashkovsky/on-chain-registry/issues/3)
 - Another improvement
 
 ## 2. New metadata sections
-- Add IBC channels metadata (Issue #1)
-- Add chain parameters (Issue #38)
+- Add IBC channels metadata [#1](https://github.com/Snedashkovsky/on-chain-registry/issues/1)
+- Add chain parameters [#38](https://github.com/Snedashkovsky/on-chain-registry/issues/38)
 - Add `Markets` section into assets metadata
 
 ## 3. Multi-Registry contract
@@ -23,7 +23,7 @@ This will make it possible to have a common access point to all registries of th
 Create a DAO and transfer control to it.
 
 ## 5. OCR webApp
-Develop webApp with interactive queries to OCR contracts and charts (Issue #27)
+Develop webApp with interactive queries to OCR contracts and charts [#27](https://github.com/Snedashkovsky/on-chain-registry/issues/27)
 
 ## 6. Add updating metadata from other chains by interchain queries
 
