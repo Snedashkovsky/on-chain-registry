@@ -52,12 +52,12 @@ FEE_DENOMS = {
 NODE_RPC_URLS = {
     'bostrom': 'https://rpc.bostrom.cybernode.ai:443',
     'localbostrom': 'http://localhost:26657',
-    'osmosis-testnet': 'https://rpc.testnet.osmosis.zone:443'
+    'osmosis-testnet': 'https://osmosis-testnet-rpc.polkachu.com:443'
 }
 NODE_LCD_URLS = {
     'bostrom': 'https://lcd.bostrom.cybernode.ai',
     'localbostrom': 'http://localhost:1317',
-    'osmosis-testnet': 'https://lcd.testnet.osmosis.zone'
+    'osmosis-testnet': 'https://osmosis-testnet-api.polkachu.com'
 }
 CONTRACT_ADDRESSES = {
     'bostrom': 'bostrom1w33tanvadg6fw04suylew9akcagcwngmkvns476wwu40fpq36pms92re6u',
