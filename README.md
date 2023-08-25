@@ -31,8 +31,8 @@ On-chain based data allows viewing of **all existing assets**:
 - [**csv data**](data_csv)  
 - **contracts** ([code](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry), 
 [schema](https://github.com/Snedashkovsky/cw-on-chain-registry/tree/main/contracts/on-chain-registry/schema))
-  - [bostrom](https://cyb.ai/contracts/bostrom1w33tanvadg6fw04suylew9akcagcwngmkvns476wwu40fpq36pms92re6u)
-  - [osmosis-testnet](https://testnet.mintscan.io/osmosis-testnet/wasm/contract/osmo1nwesd2xe6cnvtpqd29xg7qeznlm65x02lfjfg20wlvkdze20hcxsftxtzz)
+  - [bostrom](https://cyb.ai/contracts/bostrom1w33tanvadg6fw04suylew9akcagcwngmkvns476wwu40fpq36pms92re6u) ([example of asset query](https://lcd.bostrom.cybernode.ai/cosmwasm/wasm/v1/contract/bostrom1w33tanvadg6fw04suylew9akcagcwngmkvns476wwu40fpq36pms92re6u/smart/eyJnZXRfYXNzZXRzX2J5X2NoYWluIjogeyJjaGFpbl9uYW1lIjogIm9zbW9zaXMiLCAibGltaXQiOiA0LCAic3RhcnRfYWZ0ZXJfYmFzZSI6ICJpYmMvRkY2RjQ3NzRBQkMyNDc4ODMyQTZENjY4MURCOUE3QThEREM0NDg1MjEyQThBRUQ4NDY0MkVGQ0Q2M0M3NDhBOSJ9fQ==))
+  - [osmosis-testnet](https://testnet.mintscan.io/osmosis-testnet/wasm/contract/osmo1nwesd2xe6cnvtpqd29xg7qeznlm65x02lfjfg20wlvkdze20hcxsftxtzz) ([example of asset query](https://lcd.testnet.osmosis.zone/cosmwasm/wasm/v1/contract/osmo1nwesd2xe6cnvtpqd29xg7qeznlm65x02lfjfg20wlvkdze20hcxsftxtzz/smart/eyJnZXRfYXNzZXRzX2J5X2NoYWluIjogeyJjaGFpbl9uYW1lIjogIm9zbW9zaXMiLCAibGltaXQiOiA0LCAic3RhcnRfYWZ0ZXJfYmFzZSI6ICJpYmMvRkY2RjQ3NzRBQkMyNDc4ODMyQTZENjY4MURCOUE3QThEREM0NDg1MjEyQThBRUQ4NDY0MkVGQ0Q2M0M3NDhBOSJ9fQ==))
 <p align="center">
   <img src="charts/charts.png" width="100%" height="100%" alt="assets charts">
 </p>
