@@ -23,14 +23,18 @@ extract:  # extract metadata from node apis
 	@echo "extract data"
 	. venv/bin/activate; python3 asset_data.py --extract --export
 
-export:  # export metadata to jsons, csv and contracts
-	@echo "export metadata to jsons, csv and contracts"
+export:  # export metadata to jsons and csv
+	@echo "export metadata to jsons and csv"
 	. venv/bin/activate; python3 asset_data.py --export
+
+export_to_contracts:  # export metadata to contracts
+	@echo "export metadata to contracts"
+	. venv/bin/activate; python3 asset_data.py --export_to_contracts
 
 run_notebook:  # run asset_data.ipynb notebook
 	. venv/bin/activate; jupyter nbconvert --to=notebook --inplace --execute asset_data.ipynb
 
-update: extract export run_notebook  # extract from node apis and export metadata, run asset_data.ipynb notebook
+update: extract export run_notebook export_to_contracts # extract from node apis and export metadata, run asset_data.ipynb notebook
 
 commit:  # commit updates
 ifeq (${CURRENT_BRANCH}, ${TARGET_BRANCH})

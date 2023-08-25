@@ -19,7 +19,9 @@ filterwarnings('ignore')
 tqdm.pandas()
 
 
-def load_intermediate_csv_files(chain_id_name_dict: dict[str, str], dir_csv: str = 'data_csv') -> pd.DataFrame:
+def load_intermediate_csv_files(
+        chain_id_name_dict: dict[str, str],
+        dir_csv: str = 'data_csv') -> pd.DataFrame:
     """
     Load data from intermediate csv files
     :param chain_id_name_dict: dictionary of chain ids by chain names
@@ -191,7 +193,7 @@ def extract_assets_star(args):
     return extract_assets(*args)
 
 
-def run_extract(number_of_treads: int = 20) -> None:
+def run_extract(number_of_treads: int = 25) -> None:
     """
     Extract asset metadata and store it to intermediate csv files
     :return: none
@@ -230,7 +232,7 @@ def save_to_contracts() -> None:
 
 def run_export() -> None:
     """
-    Export asset metadata to the csv file, json files and contracts
+    Export asset metadata to the csv file and json files
     :return: none
     """
     _chain_id_name_dict, chain_id_lcd_dict, _ = get_chain_names_and_lcd_dicts()
@@ -243,7 +245,6 @@ def run_export() -> None:
                'denom_base': ''})
     save_to_csv(assets_df=_assets_df)
     save_to_json(assets_df=_assets_df, chain_id_name_dict=_chain_id_name_dict)
-    save_to_contracts()
     logging.info(msg=f'! exported {len(_assets_df):>,} assets for {len(set(_assets_df.chain_id.to_list()))} chains')
 
 
@@ -259,8 +260,8 @@ if __name__ == '__main__':
         logging.info('! start extraction')
         run_extract()
     if args.export:
-        logging.info('! start export')
+        logging.info('! start export to the csv file and json files')
         run_export()
-    elif args.export_to_contracts:
+    if args.export_to_contracts:
         logging.info('! start export to contracts')
         save_to_contracts()
