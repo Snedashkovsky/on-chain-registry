@@ -9,6 +9,8 @@ This mechanism leads to:
  - **Reliability**: By ruling out the chance of human error, the registry delivers consistent information that users can rely on.
  - **Inclusivity**: It leaves out no data not specified in the chains, thereby offering a comprehensive overview of the blockchain environment.
 
+### [Milestones](milestones.md)
+
 ### Workflow:
 
 <p align="center">
