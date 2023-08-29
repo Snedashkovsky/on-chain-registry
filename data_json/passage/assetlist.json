@@ -3,9 +3,49 @@
     "chain_id": "passage-2",
     "assets": [
         {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "type_asset": "ics20",
+            "supply": 3,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-2494",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-2494",
+                        "chain_name": "osmosis",
+                        "base_supply": 613130545890217
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ]
+        },
+        {
             "base": "upasg",
             "type_asset": "sdk.coin",
-            "supply": 1199981361075431
+            "supply": 1199980801075431
         }
     ]
 }
