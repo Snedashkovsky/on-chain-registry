@@ -3,9 +3,60 @@
     "chain_id": "pirin-1",
     "assets": [
         {
+            "base": "ibc/24432A997977F16CC3AD3035EB0C0A1B155EC954D3DEDF3301888015F8E40704",
+            "type_asset": "ics20",
+            "supply": 10000,
+            "description": "The native staking token of Terra 2.0",
+            "denom_units": [
+                {
+                    "denom": "uluna",
+                    "exponent": 0,
+                    "aliases": [
+                        "microluna"
+                    ]
+                },
+                {
+                    "denom": "mluna",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliluna"
+                    ]
+                },
+                {
+                    "denom": "luna",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "luna",
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "ibc": {
+                "source_channel": "channel-466",
+                "dst_channel": "channel-209",
+                "source_denom": "uluna"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "phoenix-1",
+                        "base_denom": "uluna",
+                        "channel_id": "channel-209",
+                        "chain_name": "terra2",
+                        "base_supply": 1113166727333652
+                    },
+                    "chain": {
+                        "channel_id": "channel-466",
+                        "path": "transfer/channel-466/uluna"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "type_asset": "ics20",
-            "supply": 2553744991,
+            "supply": 2545203238,
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -33,7 +84,7 @@
                         "base_denom": "uosmo",
                         "channel_id": "channel-783",
                         "chain_name": "osmosis",
-                        "base_supply": 613495842693857
+                        "base_supply": 614224836301137
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -60,12 +111,12 @@
         {
             "base": "ibc/6CDD4663F2F09CD62285E2D45891FC149A3568E316CE3EBBE201A71A78A69388",
             "type_asset": "ics20",
-            "supply": 299948444
+            "supply": 313180934
         },
         {
             "base": "ibc/7FBDBEEEBA9C50C4BCDF7BF438EAB99E64360833D240B32655C96E319559E911",
             "type_asset": "ics20",
-            "supply": 385862044992
+            "supply": 345671537532
         },
         {
             "base": "ibc/84E70F4A34FB2DE135FD3A04FDDF53B7DA4206080AA785C8BAB7F8B26299A221",
@@ -90,17 +141,17 @@
         {
             "base": "ibc/AF5559D128329B6C753F15481BEC26E533B847A471074703FA4903E7E6F61BA1",
             "type_asset": "ics20",
-            "supply": 473908738
+            "supply": 513908738
         },
         {
             "base": "ibc/FCFF8B19C61677F3B78E2A5AE3B4A34A8D23858D16905F253B8438B3AFD07FF8",
             "type_asset": "ics20",
-            "supply": 14304599
+            "supply": 21015619
         },
         {
             "base": "unls",
             "type_asset": "sdk.coin",
-            "supply": 862154315059176
+            "supply": 862623361009980
         }
     ]
 }
