@@ -3,6 +3,57 @@
     "chain_id": "sommelier-3",
     "assets": [
         {
+            "base": "ibc/A774188B0C835803FC0C5897AD8761EBBDE2D228A4E9528EFA87AE81F7F090A4",
+            "type_asset": "ics20",
+            "supply": 100000,
+            "description": "The native staking token of Terra 2.0",
+            "denom_units": [
+                {
+                    "denom": "uluna",
+                    "exponent": 0,
+                    "aliases": [
+                        "microluna"
+                    ]
+                },
+                {
+                    "denom": "mluna",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliluna"
+                    ]
+                },
+                {
+                    "denom": "luna",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "luna",
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "ibc": {
+                "source_channel": "channel-70",
+                "dst_channel": "channel-222",
+                "source_denom": "uluna"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "phoenix-1",
+                        "base_denom": "uluna",
+                        "channel_id": "channel-222",
+                        "chain_name": "terra2",
+                        "base_supply": 1113424281016274
+                    },
+                    "chain": {
+                        "channel_id": "channel-70",
+                        "path": "transfer/channel-70/uluna"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/BFAAB7870A9AAABF64A7366DAAA0B8E5065EAA1FCE762F45677DC24BE796EF65",
             "type_asset": "ics20",
             "supply": 1000000,
@@ -19,7 +70,7 @@
                         "base_denom": "uusdc",
                         "channel_id": "channel-72",
                         "chain_name": "axelar",
-                        "base_supply": 41906255684372
+                        "base_supply": 42017033280670
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -45,7 +96,7 @@
                         "base_denom": "uaxl",
                         "channel_id": "channel-72",
                         "chain_name": "axelar",
-                        "base_supply": 1091322196966281
+                        "base_supply": 1092007748307296
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -71,7 +122,7 @@
                         "base_denom": "inj",
                         "channel_id": "channel-93",
                         "chain_name": "injective",
-                        "base_supply": 72851053882989224999419928
+                        "base_supply": 72889350746989800049535671
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -111,7 +162,7 @@
                         "base_denom": "uosmo",
                         "channel_id": "channel-165",
                         "chain_name": "osmosis",
-                        "base_supply": 614224836301137
+                        "base_supply": 614407484702957
                     },
                     "chain": {
                         "channel_id": "channel-0",
