@@ -1,10 +1,12 @@
 default: help
 
-all : help install_venv clean_venv extract export run_notebook update commit update_and_commit build_code store_code init_contract deploy_contract
+all : help install_venv clean_venv extract export run_notebook update commit create_pr update_and_commit build_code store_code init_contract deploy_contract
 .PHONY : all
 
+ASSET_BRANCH = update_asset_list
 CURRENT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
-TARGET_BRANCH = update_asset_list
+BASE_BRANCH := main
+PR_BASE_BRANCH := $(shell gh pr list --head="${ASSET_BRANCH}" --json=baseRefName | jq '.[].baseRefName' | tr -d '"')
 
 help:  # show help for each of the makefile recipes
 	@grep -E '^[a-zA-Z0-9 -_]+:.*#'  Makefile | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
@@ -37,15 +39,23 @@ run_notebook:  # run asset_data.ipynb notebook
 update: extract export run_notebook export_to_contracts # extract from node apis and export metadata, run asset_data.ipynb notebook
 
 commit:  # commit updates
-ifeq (${CURRENT_BRANCH}, ${TARGET_BRANCH})
+ifeq (${CURRENT_BRANCH}, ${ASSET_BRANCH})
 	@echo "commit updates"
 	git commit -am "- update asset list"
-	git push origin ${TARGET_BRANCH}
+	git push origin ${ASSET_BRANCH}
 else
-	@echo "please change current branch from '${CURRENT_BRANCH}' to '${TARGET_BRANCH}' and run 'make commit'"
+	@echo "please change current branch from '${CURRENT_BRANCH}' to '${ASSET_BRANCH}' and run 'make commit'"
 endif
 
-update_and_commit: update commit  # extract from node apis and export metadata, run asset_data.ipynb notebook and commit updates
+create_pr:  # create a pull request
+ifeq (${PR_BASE_BRANCH}, ${BASE_BRANCH})
+	@echo "The PR exists"
+else
+	@echo "create PR from ${PR_BASE_BRANCH} to ${BASE_BRANCH}"
+	gh pr create --title="Update Asset list" --base=main --head=update_asset_list --body=""
+endif
+
+update_and_commit: update commit create_pr # extract from node apis and export metadata, run asset_data.ipynb notebook, commit updates, and create PR
 
 build_code:  # build cw-on-chain-registry code
 	@echo "build cw-on-chain-registry code"
