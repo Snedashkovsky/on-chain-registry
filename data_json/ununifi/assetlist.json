@@ -3,9 +3,59 @@
     "chain_id": "ununifi-beta-v1",
     "assets": [
         {
+            "base": "ibc/05AC4BBA78C5951339A47DD1BC1E7FC922A9311DF81C85745B1C162F516FF2F1",
+            "type_asset": "ics20",
+            "supply": 190000100,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-4",
+                "dst_channel": "channel-2638",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "base_denom": "uosmo",
+                        "channel_id": "channel-2638",
+                        "chain_name": "osmosis",
+                        "base_supply": 615136878310237
+                    },
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uosmo"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/20D06D04E1BC1FAC482FECC06C2E2879A596904D64D8BA3285B4A3789DEAF910",
+            "type_asset": "ics20",
+            "supply": 17000101
+        },
+        {
+            "base": "ibc/A01367FF44D9DE359A984FC14EC5227AA96ED08B8B4B31B539BB63B9B9305F80",
+            "type_asset": "ics20",
+            "supply": 100000102
+        },
+        {
             "base": "uguu",
             "type_asset": "sdk.coin",
-            "supply": 1082173415349083,
+            "supply": 1082350354266470,
             "description": "UnUniFi governance token",
             "denom_units": [
                 {
