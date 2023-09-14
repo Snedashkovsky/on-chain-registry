@@ -3,6 +3,69 @@
     "chain_id": "shentu-2.2",
     "assets": [
         {
+            "base": "ibc/295459767B618BB9788FAAD54EFCB7822860DF2EAA0CFC86D4E2C53AD582AA9F",
+            "type_asset": "ics20",
+            "supply": 10000,
+            "description": "The native staking token of the Persistence Core.",
+            "denom_units": [
+                {
+                    "denom": "uxprt",
+                    "exponent": 0,
+                    "aliases": [
+                        "microxprt"
+                    ]
+                },
+                {
+                    "denom": "mxprt",
+                    "exponent": 3,
+                    "aliases": [
+                        "millixprt"
+                    ]
+                },
+                {
+                    "denom": "xprt",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "xprt",
+            "ibc": {
+                "source_channel": "channel-8",
+                "dst_channel": "channel-146",
+                "source_denom": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-146",
+                        "base_denom": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293",
+                        "chain_name": "osmosis",
+                        "base_supply": 1404924845312
+                    },
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-4/uxprt"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "core-1",
+                        "channel_id": "channel-6",
+                        "base_denom": "uxprt",
+                        "chain_name": "persistence",
+                        "base_supply": 187029870573325
+                    },
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uxprt"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
             "type_asset": "ics20",
             "supply": 20,
@@ -30,10 +93,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
-                        "base_denom": "uosmo",
                         "channel_id": "channel-100",
+                        "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 615867471917517
+                        "base_supply": 616050120319337
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -56,10 +119,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "comdex-1",
-                        "base_denom": "ucmdx",
                         "channel_id": "channel-6",
+                        "base_denom": "ucmdx",
                         "chain_name": "comdex",
-                        "base_supply": 167833506908937
+                        "base_supply": 167958094313817
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -96,10 +159,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
-                        "base_denom": "uosmo",
                         "channel_id": "channel-146",
+                        "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 615867471917517
+                        "base_supply": 616050120319337
                     },
                     "chain": {
                         "channel_id": "channel-8",
@@ -109,14 +172,9 @@
             ]
         },
         {
-            "base": "ibc/295459767B618BB9788FAAD54EFCB7822860DF2EAA0CFC86D4E2C53AD582AA9F",
-            "type_asset": "ics20",
-            "supply": 10000
-        },
-        {
             "base": "uctk",
             "type_asset": "sdk.coin",
-            "supply": 124543241765034,
+            "supply": 124583012216634,
             "description": "The native staking token of the CertiK Chain.",
             "denom_units": [
                 {

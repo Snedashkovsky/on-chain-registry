@@ -3,6 +3,125 @@
     "chain_id": "space-pussy",
     "assets": [
         {
+            "base": "ibc/64A940AF730E6946AB915A46E2CED66B3CA72405938616CB348A06D1DBC45632",
+            "type_asset": "ics20",
+            "supply": 3540000,
+            "description": "The native staking token of the Cosmos Hub.",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "atom",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "ibc/15E9C5CF5969080539DB395FA7D9C0868265217EFC528433671AAF9B1912D159"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "bostrom",
+                        "channel_id": "channel-11",
+                        "base_denom": "ibc/15E9C5CF5969080539DB395FA7D9C0868265217EFC528433671AAF9B1912D159",
+                        "chain_name": "bostrom",
+                        "base_supply": 12805942717
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-8/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-341",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 364344630863510
+                    },
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/uatom"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/A9956B5C1B862098A5643C951DCF8687800A70E72B40043C37C68B0EE7C356E1",
+            "type_asset": "ics20",
+            "supply": 4800000,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "bostrom",
+                        "channel_id": "channel-11",
+                        "base_denom": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
+                        "chain_name": "bostrom",
+                        "base_supply": 56167082590
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-2/uosmo"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-95",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis",
+                        "base_supply": 616050120319337
+                    },
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uosmo"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/086AF4DB5E016C65D4805EADA33998D7A58D494F39EE9FCFB3107FC22F87F5A9",
             "type_asset": "ics20",
             "supply": 17,
@@ -16,8 +135,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool5D5734E54F485FBAF21DF886EC396F2CBC72203BF050BDE0F99EB94EA37D39E8",
                         "channel_id": "channel-11",
+                        "base_denom": "pool5D5734E54F485FBAF21DF886EC396F2CBC72203BF050BDE0F99EB94EA37D39E8",
                         "chain_name": "bostrom",
                         "base_supply": 521117703093236
                     },
@@ -60,10 +179,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "milliampere",
                         "channel_id": "channel-11",
+                        "base_denom": "milliampere",
                         "chain_name": "bostrom",
-                        "base_supply": 7724479341
+                        "base_supply": 7724696413
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -86,8 +205,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "poolB02CE42B202A71419D2F9EB4996B36C52F1B5B60DAF7D7B1474660A95656C126",
                         "channel_id": "channel-11",
+                        "base_denom": "poolB02CE42B202A71419D2F9EB4996B36C52F1B5B60DAF7D7B1474660A95656C126",
                         "chain_name": "bostrom",
                         "base_supply": 77732078168029
                     },
@@ -101,7 +220,7 @@
         {
             "base": "ibc/2C8F023AF00F2B97F3FBD629DD28204F5F8EA0B4028F1D57A39F04AD20BCCF47",
             "type_asset": "ics20",
-            "supply": 1942266876,
+            "supply": 1942266878,
             "description": "The staking token of Bostrom",
             "denom_units": [
                 {
@@ -125,10 +244,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "boot",
                         "channel_id": "channel-11",
+                        "base_denom": "boot",
                         "chain_name": "bostrom",
-                        "base_supply": 1162866933803293
+                        "base_supply": 1163011099451057
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -151,8 +270,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool79B9E8E233B61B84EA5AE564AB080FC492B4C953A9D8B409F300D9E29716459F",
                         "channel_id": "channel-11",
+                        "base_denom": "pool79B9E8E233B61B84EA5AE564AB080FC492B4C953A9D8B409F300D9E29716459F",
                         "chain_name": "bostrom",
                         "base_supply": 526078639786973
                     },
@@ -190,10 +309,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "hydrogen",
                         "channel_id": "channel-11",
+                        "base_denom": "hydrogen",
                         "chain_name": "bostrom",
-                        "base_supply": 299025341462750
+                        "base_supply": 299051227810635
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -216,8 +335,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool27BBCA67F42ED27DFFB6A450966C7EA206ADAA42BA0A1871FADC6C59569F6E8D",
                         "channel_id": "channel-11",
+                        "base_denom": "pool27BBCA67F42ED27DFFB6A450966C7EA206ADAA42BA0A1871FADC6C59569F6E8D",
                         "chain_name": "bostrom",
                         "base_supply": 1374481625556
                     },
@@ -242,8 +361,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool1A492174015ABA47066C8569AFF7582C551980840AAE7EBAEFB667347EDDB601",
                         "channel_id": "channel-11",
+                        "base_denom": "pool1A492174015ABA47066C8569AFF7582C551980840AAE7EBAEFB667347EDDB601",
                         "chain_name": "bostrom",
                         "base_supply": 453744109153
                     },
@@ -268,8 +387,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool5D83035BE0E7AB904379161D3C52FB4C1C392265AC19CE39A864146198610628",
                         "channel_id": "channel-11",
+                        "base_denom": "pool5D83035BE0E7AB904379161D3C52FB4C1C392265AC19CE39A864146198610628",
                         "chain_name": "bostrom",
                         "base_supply": 2537244623810
                     },
@@ -294,8 +413,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool98692450C039BDD30563475A7699A7805075F592A36837A04357F20B0D59C90F",
                         "channel_id": "channel-11",
+                        "base_denom": "pool98692450C039BDD30563475A7699A7805075F592A36837A04357F20B0D59C90F",
                         "chain_name": "bostrom",
                         "base_supply": 137968748660266
                     },
@@ -320,8 +439,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "poolE479A51F998E2979F89DA9AB897ED45A9AFE4E7DE32BE3D30FB456E58F80D4E9",
                         "channel_id": "channel-11",
+                        "base_denom": "poolE479A51F998E2979F89DA9AB897ED45A9AFE4E7DE32BE3D30FB456E58F80D4E9",
                         "chain_name": "bostrom",
                         "base_supply": 45105583598193
                     },
@@ -364,10 +483,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "millivolt",
                         "channel_id": "channel-11",
+                        "base_denom": "millivolt",
                         "chain_name": "bostrom",
-                        "base_supply": 801524505
+                        "base_supply": 802004983
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -390,8 +509,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "tocyb",
                         "channel_id": "channel-11",
+                        "base_denom": "tocyb",
                         "chain_name": "bostrom",
                         "base_supply": 1000000000000000
                     },
@@ -416,10 +535,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool70D7610CBA8E94B27BAD7806EBD826F5626C486BBF5C490D1463D72314353C66",
                         "channel_id": "channel-11",
+                        "base_denom": "pool70D7610CBA8E94B27BAD7806EBD826F5626C486BBF5C490D1463D72314353C66",
                         "chain_name": "bostrom",
-                        "base_supply": 1107259302899906
+                        "base_supply": 1107259307456715
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -442,8 +561,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "bostrom",
-                        "base_denom": "pool906F3CC4C0F4634031990DB81761BD390890F8A8A80460EBDC6B151254DE7D1D",
                         "channel_id": "channel-11",
+                        "base_denom": "pool906F3CC4C0F4634031990DB81761BD390890F8A8A80460EBDC6B151254DE7D1D",
                         "chain_name": "bostrom",
                         "base_supply": 78226750621827
                     },
@@ -455,19 +574,9 @@
             ]
         },
         {
-            "base": "ibc/64A940AF730E6946AB915A46E2CED66B3CA72405938616CB348A06D1DBC45632",
-            "type_asset": "ics20",
-            "supply": 3540000
-        },
-        {
-            "base": "ibc/A9956B5C1B862098A5643C951DCF8687800A70E72B40043C37C68B0EE7C356E1",
-            "type_asset": "ics20",
-            "supply": 4800000
-        },
-        {
             "base": "liquidpussy",
             "type_asset": "sdk.coin",
-            "supply": 47668550660713471,
+            "supply": 47781415660713471,
             "description": "The liquid staking token of Space-pussy",
             "denom_units": [
                 {
@@ -485,7 +594,7 @@
         {
             "base": "milliampere",
             "type_asset": "sdk.coin",
-            "supply": 348106713847,
+            "supply": 348329468327,
             "description": "The power token of Space-pussy",
             "denom_units": [
                 {
@@ -508,7 +617,7 @@
         {
             "base": "millivolt",
             "type_asset": "sdk.coin",
-            "supply": 69676939520,
+            "supply": 69676940525,
             "description": "The bandwidth token of Space-pussy",
             "denom_units": [
                 {
@@ -556,7 +665,7 @@
         {
             "base": "pussy",
             "type_asset": "sdk.coin",
-            "supply": 1023816527570922302,
+            "supply": 1023887220408551045,
             "description": "The staking token of space-pussy",
             "denom_units": [
                 {
