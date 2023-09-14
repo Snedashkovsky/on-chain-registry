@@ -76,3 +76,6 @@ WALLETS = {_network: LCD_CLIENTS[_network].wallet(MnemonicKey(mnemonic=WALLET_SE
            for _network in CHAIN_IDS.keys()}
 WALLET_ADDRESSES = {_network: WALLETS[_network].key.acc_address
                     for _network in CHAIN_IDS.keys()}
+
+CSV_INTERMEDIATE_DIR = 'data_csv'
+CSV_FILE_PATH = 'data_csv/all_assets.csv'

@@ -9,7 +9,7 @@ from cyber_sdk.client.lcd import LCDClient, Wallet
 from cyber_sdk.client.lcd.api.tx import BlockTxBroadcastResult
 from cyberutils.contract import execute_contract
 
-from config import logging
+from config import logging, CONTRACT_ADDRESSES, LCD_CLIENTS, WALLETS, WALLET_ADDRESSES, FEE_DENOMS, EXPORT_CHAINS
 
 
 def batch(x: list, batch_size: int) -> list[list]:
@@ -105,3 +105,19 @@ def save_to_contract(
             logging.error(_res)
 
     return _res_list
+
+
+def save_to_contracts() -> None:
+    """
+    Save metadata to OCR contracts
+    :return: none
+    """
+    for _chain_name in EXPORT_CHAINS:
+        logging.info(f'Export to {_chain_name} contract')
+        save_to_contract(
+            contract_address=CONTRACT_ADDRESSES[_chain_name],
+            lcd_client=LCD_CLIENTS[_chain_name],
+            wallet=WALLETS[_chain_name],
+            wallet_address=WALLET_ADDRESSES[_chain_name],
+            fee_denom=FEE_DENOMS[_chain_name],
+        )

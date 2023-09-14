@@ -1,80 +1,95 @@
 import pandas as pd
+import json
+import os
+from jsonschema import validate
 
 from config import logging
 
 
+def get_asset_json(row: pd.Series) -> dict:
+    """
+    Get json for asset
+    :param row: an asset row
+    :return: an asset json
+    """
+    _asset_json = {
+        "base": row['denom'],
+        "type_asset": row['type_asset'],
+        "supply": int(row['supply']) if row['supply'] and not pd.isna(row['supply']) else 0
+    }
+    for _field in ['description', 'denom_units', 'display', 'name', 'symbol', 'ibc', 'traces']:
+        if row[_field]:
+            _asset_json[_field] = row[_field]
+
+    if row['type_asset'] == 'cw20':
+        _asset_json['address'] = row['denom_base'][5:]
+
+    if row['type_asset'] == 'erc20' and row['denom'][:9] == 'gravity0x':
+        _asset_json['address'] = row['denom_base'][7:]
+
+    if row['type_asset'] == 'snip20':
+        # asset_json['address'] =   # Add
+        pass
+
+    if row['type_asset'] == 'factory':
+        _asset_json['address'] = row['denom']
+        _asset_json['admin'] = row['admin']
+
+    return _asset_json
+
+
 def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> dict[str, dict]:
-    assets_json = {}
-    for chain_id, assets_item_df in assets_df.groupby('chain_id'):
-        asset_json_list = []
-        for _, row in assets_item_df.iterrows():
-            asset_json = {
-                "base": row['denom'],
-                "type_asset": row['type_asset'],
-                "supply": int(row['supply']) if row['supply'] and not pd.isna(row['supply']) else 0
-            }
-            if row['description']:
-                asset_json['description'] = row['description']
-            if row['denom_units']:
-                asset_json['denom_units'] = row['denom_units']
-            if row['display']:
-                asset_json['display'] = row['display']
-            if row['name']:
-                asset_json['name'] = row['name']
-            if row['symbol']:
-                asset_json['symbol'] = row['symbol']
-
-            if row['type_asset'] == 'cw20':
-                asset_json['address'] = row['denom_base'][5:]
-
-            if row['type_asset'] == 'erc20' and row['denom'][:9] == 'gravity0x':
-                asset_json['address'] = row['denom_base'][7:]
-
-            if row['type_asset'] == 'snip20':
-                # asset_json['address'] =   # Add
-                pass
-
-            if row['type_asset'] == 'factory':
-                asset_json['address'] = row['denom']
-                asset_json['admin'] = row['admin']
-
-            if row['type_asset'] == 'ics20' and type(row['channels']) == list and \
-                    len(row['channels']) == 1 and not pd.isna(row['chain_id_counterparty']):
-                asset_json['ibc'] = {
-                    "source_channel": row['channels'][0],
-                    "dst_channel": row['channel_id_counterparty'],
-                    "source_denom": row['denom_base']}  # Add source_denom calculation
-                chain_name_counterparty = \
-                    chain_id_name_dict[row['chain_id_counterparty']] \
-                        if row['chain_id_counterparty'] in chain_id_name_dict.keys() else None
-                if row['type_asset_base'] in ('sdk.coin', 'pool', 'cw20'):
-                    asset_json['traces'] = [{
-                        "type": 'ibc' if row['type_asset_base'] in ('sdk.coin', 'pool', 'factory') else 'ibc-cw20',
-                        "counterparty": {
-                            "chain_id": row['chain_id_counterparty'],
-                            "base_denom": row['denom_base'],
-                            "channel_id": row['channel_id_counterparty']
-                        },
-                        "chain": {
-                            "channel_id": row['channels'][0],
-                            "path": f"transfer/{row['channels'][0]}/{row['denom_base']}"
-                        }
-                    }]
-                    if chain_name_counterparty:
-                        asset_json['traces'][0]["counterparty"]["chain_name"] = chain_name_counterparty
-                    if row['supply_base'] and not pd.isna(row['supply_base']):
-                        asset_json['traces'][0]["counterparty"]["base_supply"] = int(row['supply_base'])
-                    if row['type_asset_base'] == 'cw20':
-                        asset_json['traces'][0]["chain"]["port"] = 'transfer'
-                        asset_json['traces'][0]["counterparty"]["port"] = 'transfer'
-
-            asset_json_list.append(asset_json)
+    """
+    Get json with all assets
+    :param assets_df: an assets dataframe
+    :param chain_id_name_dict: dictionary of chain ids by chain names
+    :return: json with all assets
+    """
+    _assets_json = {}
+    for _chain_id, _assets_item_df in assets_df.groupby('chain_id'):
+        _asset_json_list = [get_asset_json(row=row) for _, row in
+                            _assets_item_df.iterrows()]
         try:
-            assets_json[chain_id] = {
-                "chain_name": chain_id_name_dict[chain_id],
-                "chain_id": chain_id,
-                "assets": asset_json_list
+            _assets_json[_chain_id] = {
+                "chain_name": chain_id_name_dict[_chain_id],
+                "chain_id": _chain_id,
+                "assets": _asset_json_list
             }
         except KeyError:
-            logging.info(f'! no have chain_id {chain_id}, assets in on-chain registry {asset_json_list}')
-    return assets_json
+            logging.info(f'! no have chain_id {_chain_id}, assets in on-chain registry {_asset_json_list}')
+    return _assets_json
+
+
+def save_to_json(
+        assets_df: pd.DataFrame,
+        chain_id_name_dict: dict[str, str]) -> None:
+    """
+    Save an assets metadata dataframe to a json files
+    :param assets_df: an assets metadata dataframe
+    :param chain_id_name_dict: dictionary of chain ids by chain names
+    :return: none
+    """
+    _assets_json = get_asset_json_dict(assets_df=assets_df, chain_id_name_dict=chain_id_name_dict)
+    logging.info(f'chains in chain-registry: {len(chain_id_name_dict.keys())}, '
+                 f'chain indexed: {len(_assets_json.keys())}')
+
+    with open('assetlist.schema.json', 'r') as asset_list_schema_file:
+        _assetlist_schema_json = json.load(asset_list_schema_file)
+    for _chain_id in _assets_json.keys():
+        validate(instance=_assets_json[_chain_id], schema=_assetlist_schema_json)
+
+    for _chain_id in _assets_json.keys():
+        try:
+            os.mkdir(
+                path=f'data_json/'
+                     f'{chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else _chain_id}')
+        except FileExistsError:
+            pass
+        with open(
+                f'data_json/{chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else _chain_id}'
+                f'/assetlist.json',
+                'w') as _assetlist_file:
+            json.dump(obj=_assets_json[_chain_id], fp=_assetlist_file, ensure_ascii=False, indent=4)
+    with open(f'data_json/all_assets.json', 'w') as all_assets_file:
+        json.dump(obj=[_assets_json[chain_id] for chain_id in _assets_json.keys()],
+                  fp=all_assets_file, ensure_ascii=False, indent=4)
