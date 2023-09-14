@@ -6,6 +6,7 @@ import json
 import base64
 from urllib3.exceptions import TimeoutError
 from requests.exceptions import ConnectionError, ReadTimeout
+from tqdm import tqdm
 
 from config import logging
 
@@ -77,6 +78,7 @@ def get_assets_metadata(node_lcd_url: str,
     _assets_metadata_json = requests.get(
         url=f'{node_lcd_url}/cosmos/bank/v1beta1/denoms_metadata?pagination.limit={limit}'
     ).json()['metadatas']
+    _assets_metadata_json = {_item['base']: _item for _item in _assets_metadata_json}.values()
     return pd.DataFrame(_assets_metadata_json).rename(columns={'base': 'denom'})
 
 
@@ -176,9 +178,9 @@ def get_assets(chain_id: str,
     _assets_df['channels'] = \
         _assets_df.path.map(
             lambda path: path.replace('/transfer/', 'transfer/').split('transfer/')[1:] if path is not None else None)
-    _assets_df['one_channel'] = \
+    _assets_df['channels_number'] = \
         _assets_df.channels.map(
-            lambda _channels: len(_channels) == 1 if _channels is not None else None)
+            lambda _channels: len(_channels) if _channels is not None else 0)
 
     _channel_set = set([item[0] for item in _assets_df.channels.to_list() if item is not None and len(item) > 0])
     _channel_chain_id_dict = get_chain_id_counterparty_dict(channels=_channel_set,
@@ -227,3 +229,58 @@ def extract_assets(chain_id: str, node_lcd_url_list: list[str]) -> bool:
     _asset_df.to_csv(f'data_csv/assets_{chain_id}.csv')
     logging.info(msg=f'extracted {len(_asset_df):>,} assets for chain_id: `{chain_id}`  node lcd url: {_node_lcd_url}')
     return True
+
+
+def extract_assets_star(args):
+    return extract_assets(*args)
+
+
+def add_cw20(
+        assets_df: pd.DataFrame,
+        chain_id_lcd_dict: dict[str, list[str]],
+        chain_id_name_dict: dict[str, str]) -> pd.DataFrame:
+    """
+    Add cw20 metadata for cw20 assets transferred by ibc protocol
+    :param assets_df: dataframe with asset metadata
+    :param chain_id_lcd_dict: dictionary of lcd apis by chain names
+    :param chain_id_name_dict: dictionary of chain ids by chain names
+    :return: asset metadata dataframe with cw20 assets
+    """
+    _cw20_token_info_list = []
+    for _chain_id, _assets in assets_df[(assets_df.type_asset_base == 'cw20') & (assets_df.channels_number == 1)][
+        ['chain_id_counterparty', 'denom_base']].drop_duplicates().groupby('chain_id_counterparty'):
+        if _chain_id not in chain_id_lcd_dict.keys():
+            logging.error(f'{_chain_id} not in chain_id_lcd_dict')
+            continue
+        logging.info(f'Extract cw20 data for {_chain_id}')
+        for _denom in tqdm(_assets['denom_base'].to_list()):
+            _contract = _denom[5:]
+            _cw20_token_info = None
+            for _node_lcd_url in chain_id_lcd_dict[_chain_id]:
+                try:
+                    _cw20_token_info = get_cw20_token_info(contract_address=_denom[5:], node_lcd_url=_node_lcd_url)
+                except KeyError:
+                    print(f'KeyError: chain_id {_chain_id}, _node_lcd_url {_node_lcd_url} contract_address {_contract}')
+                except Exception as e:
+                    print(f'{e}: chain_id {_chain_id}, _node_lcd_url {_node_lcd_url} contract_address {_contract}')
+                if _cw20_token_info:
+                    break
+            if _cw20_token_info and 'code' not in _cw20_token_info.keys():
+                _cw20_token_info['denom'] = _denom
+                _cw20_token_info['chain_id'] = _chain_id
+                _cw20_token_info['chain_name'] = chain_id_name_dict[_chain_id]
+                _cw20_token_info['type_asset'] = 'cw20'
+                _cw20_token_info_list.append(_cw20_token_info)
+
+    _cw20_token_info_df = pd.DataFrame(_cw20_token_info_list)
+    _cw20_token_info_df['denom_units'] = _cw20_token_info_df.apply(
+        lambda x: [{
+            "denom": x.symbol.lower(),
+            "exponent": x.decimals,
+            "aliases": [x.symbol]
+        }],
+        axis=1)
+    _cw20_token_info_df = _cw20_token_info_df.rename(columns={'total_supply': 'supply'})[
+        ['chain_name', 'chain_id', 'denom', 'type_asset', 'supply', 'denom_units', 'name', 'symbol']]
+
+    return assets_df.append(_cw20_token_info_df)
