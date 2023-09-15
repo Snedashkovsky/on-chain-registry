@@ -3,6 +3,78 @@
     "chain_id": "empowerchain-1",
     "assets": [
         {
+            "base": "ibc/67F03A45EFF31FD5924007A8954A13C28B6F6CAA707D163D0FAB102366FCD9BD",
+            "type_asset": "ics20",
+            "supply": 100,
+            "description": "The native token of Stargaze",
+            "denom_units": [
+                {
+                    "denom": "ustars",
+                    "exponent": 0,
+                    "aliases": [
+                        "microstars"
+                    ]
+                },
+                {
+                    "denom": "stars",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "stars",
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-621",
+                "source_denom": "ibc/240E59485022F57916B18D4711CD0126215903EA84A0798DD619AB23A5F9345F"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-621",
+                        "base_denom": "ibc/240E59485022F57916B18D4711CD0126215903EA84A0798DD619AB23A5F9345F",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 10500000
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-207/transfer/channel-20/ustars"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "juno-1",
+                        "channel_id": "channel-1",
+                        "base_denom": "ibc/F6B367385300865F654E110976B838502504231705BAC0849B0651C226385885",
+                        "chain_name": "juno",
+                        "base_supply": 2705075244820
+                    },
+                    "chain": {
+                        "channel_id": "channel-207",
+                        "path": "transfer/channel-207/transfer/channel-20/ustars"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "stargaze-1",
+                        "channel_id": "channel-5",
+                        "base_denom": "ustars",
+                        "chain_name": "stargaze",
+                        "base_supply": 2383504127281355
+                    },
+                    "chain": {
+                        "channel_id": "channel-20",
+                        "path": "transfer/channel-20/ustars"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "type_asset": "ics20",
             "supply": 7830010,
@@ -30,10 +102,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
-                        "base_denom": "uosmo",
                         "channel_id": "channel-1411",
+                        "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 615867471917517
+                        "base_supply": 616050120319337
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -81,10 +153,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "cosmoshub-4",
-                        "base_denom": "uatom",
                         "channel_id": "channel-621",
+                        "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 364183547570212
+                        "base_supply": 364344630863510
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -94,14 +166,9 @@
             ]
         },
         {
-            "base": "ibc/67F03A45EFF31FD5924007A8954A13C28B6F6CAA707D163D0FAB102366FCD9BD",
-            "type_asset": "ics20",
-            "supply": 100
-        },
-        {
             "base": "umpwr",
             "type_asset": "sdk.coin",
-            "supply": 211344177934145
+            "supply": 211514542460402
         }
     ]
 }

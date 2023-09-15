@@ -3,6 +3,102 @@
     "chain_id": "coreum-mainnet-1",
     "assets": [
         {
+            "base": "ibc/8E2FCB4549D7A0CE4778BB9438373264427C24FB4A86EC493D99AAF44D23BE9F",
+            "type_asset": "ics20",
+            "supply": 500,
+            "description": "ucore coin",
+            "denom_units": [
+                {
+                    "denom": "ucore",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "core",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "core",
+            "name": "ucore",
+            "symbol": "UCORE",
+            "ibc": {
+                "source_channel": "channel-9",
+                "dst_channel": "channel-660",
+                "source_denom": "ibc/D402C166BA4A40A69188819EAA027AA9C66CD77EE05F873C5D84E177464F350E"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-660",
+                        "base_denom": "ibc/D402C166BA4A40A69188819EAA027AA9C66CD77EE05F873C5D84E177464F350E",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 48500
+                    },
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/transfer/channel-654/ucore"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "coreum-mainnet-1",
+                        "channel_id": "channel-5",
+                        "base_denom": "ucore",
+                        "chain_name": "coreum",
+                        "base_supply": 529241128211172
+                    },
+                    "chain": {
+                        "channel_id": "channel-654",
+                        "path": "transfer/channel-654/ucore"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/BB1E34ACA8877CACC89AAB13A4FA6A4FC0FB12120F97F161A56D58F679458E13",
+            "type_asset": "ics20",
+            "supply": 1000,
+            "ibc": {
+                "source_channel": "channel-9",
+                "dst_channel": "channel-660",
+                "source_denom": "ibc/932D6003DA334ECBC5B23A071B4287D0A5CC97331197FE9F1C0689BA002A8421"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-660",
+                        "base_denom": "ibc/932D6003DA334ECBC5B23A071B4287D0A5CC97331197FE9F1C0689BA002A8421",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 7977903669
+                    },
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/transfer/channel-293/uusdc"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "axelar-dojo-1",
+                        "channel_id": "channel-2",
+                        "base_denom": "uusdc",
+                        "chain_name": "axelar",
+                        "base_supply": 41919835325023
+                    },
+                    "chain": {
+                        "channel_id": "channel-293",
+                        "path": "transfer/channel-293/uusdc"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
             "type_asset": "ics20",
             "supply": 1495,
@@ -30,10 +126,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
-                        "base_denom": "uosmo",
                         "channel_id": "channel-2188",
+                        "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 615867471917517
+                        "base_supply": 616050120319337
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -81,10 +177,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "cosmoshub-4",
-                        "base_denom": "uatom",
                         "channel_id": "channel-660",
+                        "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 364183547570212
+                        "base_supply": 364344630863510
                     },
                     "chain": {
                         "channel_id": "channel-9",
@@ -121,10 +217,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
-                        "base_denom": "uosmo",
                         "channel_id": "channel-2169",
+                        "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 615867471917517
+                        "base_supply": 616050120319337
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -197,16 +293,6 @@
             "symbol": "MYFT"
         },
         {
-            "base": "ibc/8E2FCB4549D7A0CE4778BB9438373264427C24FB4A86EC493D99AAF44D23BE9F",
-            "type_asset": "ics20",
-            "supply": 500
-        },
-        {
-            "base": "ibc/BB1E34ACA8877CACC89AAB13A4FA6A4FC0FB12120F97F161A56D58F679458E13",
-            "type_asset": "ics20",
-            "supply": 1000
-        },
-        {
             "base": "microusds-core17z02cx2xxz2rehq6qay3rc06g5ksa9nxjwh5uv",
             "type_asset": "sdk.coin",
             "supply": 10000000000000,
@@ -251,7 +337,7 @@
         {
             "base": "ucore",
             "type_asset": "sdk.coin",
-            "supply": 529051732714879,
+            "supply": 529241128211172,
             "description": "ucore coin",
             "denom_units": [
                 {

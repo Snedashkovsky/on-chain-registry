@@ -3,6 +3,111 @@
     "chain_id": "meme-1",
     "assets": [
         {
+            "base": "ibc/37B7C1AABC243067278C28C77973A28D7844EF5465ACD0EBE6E506BE4C6816C2",
+            "type_asset": "ics20",
+            "supply": 300000000000000,
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-238",
+                "source_denom": "ibc/EA1D43981D5C9A1C4AAEA9C23BB1D4FA126BA9BC7020A25E0AE4AA841EA25DC5"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-238",
+                        "base_denom": "ibc/EA1D43981D5C9A1C4AAEA9C23BB1D4FA126BA9BC7020A25E0AE4AA841EA25DC5",
+                        "chain_name": "osmosis",
+                        "base_supply": 3270545179935896181641
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-208/weth-wei"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "axelar-dojo-1",
+                        "channel_id": "channel-3",
+                        "base_denom": "weth-wei",
+                        "chain_name": "axelar",
+                        "base_supply": 5136447378257261314380
+                    },
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/weth-wei"
+                    }
+                }
+            ]
+        },
+        {
+            "base": "ibc/815FC81EB6BD612206BD9A9909A02F7691D24A5B97CDFE2124B1BDCA9D4AB14C",
+            "type_asset": "ics20",
+            "supply": 58856311223,
+            "description": "The native staking token of the Terra Columbus.",
+            "denom_units": [
+                {
+                    "denom": "uluna",
+                    "exponent": 0,
+                    "aliases": [
+                        "microluna"
+                    ]
+                },
+                {
+                    "denom": "mluna",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliluna"
+                    ]
+                },
+                {
+                    "denom": "luna",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "luna",
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-238",
+                "source_denom": "ibc/0EF15DF2F02480ADE0BB6E85D9EBB5DAEA2836D3860E9F97F9AADE4F57A31AA0"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-238",
+                        "base_denom": "ibc/0EF15DF2F02480ADE0BB6E85D9EBB5DAEA2836D3860E9F97F9AADE4F57A31AA0",
+                        "chain_name": "osmosis",
+                        "base_supply": 9534360115086240
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-72/uluna"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "columbus-5",
+                        "channel_id": "channel-1",
+                        "base_denom": "uluna",
+                        "chain_name": "terra",
+                        "base_supply": 6836562588670231385
+                    },
+                    "chain": {
+                        "channel_id": "channel-72",
+                        "path": "transfer/channel-72/uluna"
+                    }
+                }
+            ]
+        },
+        {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "type_asset": "ics20",
             "supply": 6411305,
@@ -30,10 +135,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
-                        "base_denom": "uosmo",
                         "channel_id": "channel-238",
+                        "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 615867471917517
+                        "base_supply": 616050120319337
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -76,10 +181,10 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "gravity-bridge-3",
-                        "base_denom": "ugraviton",
                         "channel_id": "channel-87",
+                        "base_denom": "ugraviton",
                         "chain_name": "gravitybridge",
-                        "base_supply": 2592685276624573
+                        "base_supply": 2593150550153600
                     },
                     "chain": {
                         "channel_id": "channel-6",
@@ -102,8 +207,8 @@
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "kaiyo-1",
-                        "base_denom": "ukuji",
                         "channel_id": "channel-29",
+                        "base_denom": "ukuji",
                         "chain_name": "kujira",
                         "base_supply": 122350701024496
                     },
@@ -125,19 +230,9 @@
             }
         },
         {
-            "base": "ibc/37B7C1AABC243067278C28C77973A28D7844EF5465ACD0EBE6E506BE4C6816C2",
-            "type_asset": "ics20",
-            "supply": 300000000000000
-        },
-        {
-            "base": "ibc/815FC81EB6BD612206BD9A9909A02F7691D24A5B97CDFE2124B1BDCA9D4AB14C",
-            "type_asset": "ics20",
-            "supply": 58856311223
-        },
-        {
             "base": "umeme",
             "type_asset": "sdk.coin",
-            "supply": 10811613236035317
+            "supply": 10820884188989238
         }
     ]
 }
