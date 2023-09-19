@@ -33,10 +33,8 @@ def run_extract(number_of_treads: int = 25) -> None:
                  f'threads: {number_of_treads:>,}')
     with Pool(processes=number_of_treads) as pool:
         _res = list(tqdm(pool.imap(extract_assets_star, _tasks, 1), total=len(_tasks)))
-    logging.info(
-        f'! extracted chains {sum(_res)} not extracted {len(_tasks) - sum(_res)} total {len(_tasks)}.'
-        f'not extracted: {", ".join([_item[0] for _i, _item in enumerate(_tasks) if _res[_i] == False])}'
-    )
+    logging.info(f'! extracted chains {sum(_res)} not extracted {len(_tasks) - sum(_res)} total {len(_tasks)}.'
+                 f'not extracted: {", ".join([_item[0] for _i, _item in enumerate(_tasks) if _res[_i] == False])}')
 
 
 def load_intermediate_csv_files(
@@ -69,8 +67,6 @@ def load_intermediate_csv_files(
         if 'denom_units' in _asset_df.columns:
             _asset_df['denom_units'] = _asset_df.denom_units.map(
                 lambda x: ast.literal_eval(x) if type(x) == str else None)
-        if 'one_channel' in _asset_df.columns:
-            _asset_df.drop(columns=['one_channel'])
         _assets_df = pd.concat([_assets_df, _asset_df])
     return _assets_df
 

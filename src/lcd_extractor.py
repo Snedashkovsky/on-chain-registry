@@ -280,7 +280,8 @@ def add_cw20(
             "aliases": [x.symbol]
         }],
         axis=1)
+    _cw20_token_info_df['channels_number'] = 0
     _cw20_token_info_df = _cw20_token_info_df.rename(columns={'total_supply': 'supply'})[
-        ['chain_name', 'chain_id', 'denom', 'type_asset', 'supply', 'denom_units', 'name', 'symbol']]
+        ['chain_name', 'chain_id', 'denom', 'type_asset', 'supply', 'denom_units', 'name', 'symbol', 'channels_number']]
 
     return assets_df.append(_cw20_token_info_df)
