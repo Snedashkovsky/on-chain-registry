@@ -6,11 +6,75 @@
             "base": "ibc/049EE504B5BE4DA33F938EC47266F53270C6EBFDACBF93761CCDF265709220F9",
             "type_asset": "ics20",
             "supply": 564000000000,
+            "description": "The native token of FUND mainchain.",
+            "denom_units": [
+                {
+                    "denom": "nund",
+                    "exponent": 0,
+                    "aliases": [
+                        "nanofund"
+                    ]
+                },
+                {
+                    "denom": "fund",
+                    "exponent": 9,
+                    "aliases": [
+                        "FUND"
+                    ]
+                }
+            ],
+            "display": "fund",
+            "name": "FUND",
+            "symbol": "FUND",
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-98",
-                "source_denom": ""
-            }
+                "source_denom": "ibc/769660689311183E821E1D00F67C52362BD5AFBD1DA66CE8FDB14AEFE52570A8"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-98",
+                        "base_denom": "ibc/769660689311183E821E1D00F67C52362BD5AFBD1DA66CE8FDB14AEFE52570A8",
+                        "chain_name": "gravitybridge",
+                        "base_supply": 570000000000
+                    },
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-10/transfer/channel-382/nund"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-144",
+                        "base_denom": "ibc/608EF5C0CE64FEA097500DB39657BDD36CA708CC5DCC2E250A024B6981DD36BC",
+                        "chain_name": "osmosis",
+                        "base_supply": 11165841891643
+                    },
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-382/nund"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "FUND-MainNet-2",
+                        "channel_id": "channel-0",
+                        "base_denom": "nund",
+                        "chain_name": "unification",
+                        "base_supply": 127403430563021599
+                    },
+                    "chain": {
+                        "channel_id": "channel-382",
+                        "path": "transfer/channel-382/nund"
+                    }
+                }
+            ]
         },
         {
             "base": "ibc/D81201B24DB98254C2C76BE25D25A656B8B9EA15057A75521E5FF22BF2A5DAAD",
@@ -63,7 +127,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "nund",
                         "chain_name": "unification",
-                        "base_supply": 127396615563021599
+                        "base_supply": 127403430563021599
                     },
                     "chain": {
                         "channel_id": "channel-99",
@@ -119,7 +183,7 @@
                         "channel_id": "channel-98",
                         "base_denom": "ugraviton",
                         "chain_name": "gravitybridge",
-                        "base_supply": 2601138717981605
+                        "base_supply": 2601598695824573
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -131,7 +195,7 @@
         {
             "base": "nund",
             "type_asset": "sdk.coin",
-            "supply": 127396615563021599,
+            "supply": 127403430563021599,
             "description": "The native token of FUND mainchain.",
             "denom_units": [
                 {
