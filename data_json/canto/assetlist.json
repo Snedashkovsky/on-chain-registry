@@ -159,7 +159,7 @@
                         "channel_id": "channel-141",
                         "base_denom": "ibc/5BD358D2143FD9F696119ECF9A24C86E6FE8402E1FCF252156ED1C7539481C77",
                         "chain_name": "cosmoshub",
-                        "base_supply": 9285370466
+                        "base_supply": 9295370466
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -255,7 +255,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/CBF67A2BCF6CAE343FDF251E510C8E18C361FC02B23430C121116E0811835DEF",
                         "chain_name": "terra2",
-                        "base_supply": 513705343851
+                        "base_supply": 514750143851
                     },
                     "chain": {
                         "channel_id": "channel-339",
@@ -269,7 +269,7 @@
                         "channel_id": "channel-11",
                         "base_denom": "uusdt",
                         "chain_name": "axelar",
-                        "base_supply": 2318203138642
+                        "base_supply": 2300743923223
                     },
                     "chain": {
                         "channel_id": "channel-6",
@@ -351,7 +351,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/47CAF2DB8C016FAC960F33BC492FD8E454593B65CC59D70FA9D9F30424F9C32F",
                         "chain_name": "osmosis",
-                        "base_supply": 1811757284217230916190
+                        "base_supply": 1764433020444208027024
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -365,7 +365,7 @@
                         "channel_id": "channel-5",
                         "base_denom": "acanto",
                         "chain_name": "canto",
-                        "base_supply": 1057605122968947803385511835
+                        "base_supply": 1057662735653352419137294378
                     },
                     "chain": {
                         "channel_id": "channel-550",
@@ -378,11 +378,122 @@
             "base": "ibc/89870DDF39D8B9641C5E02934471BF69F1D646EE116DABD75D161D42E5CA2C39",
             "type_asset": "ics20",
             "supply": 50000,
+            "description": "The native staking token of the Cosmos Hub.",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "atom",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-88",
-                "source_denom": ""
-            }
+                "source_denom": "ibc/AD7CA920770E0AD3190713F883A978534C4AF338E57741269459819C4E5CE7FC"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-88",
+                        "base_denom": "ibc/AD7CA920770E0AD3190713F883A978534C4AF338E57741269459819C4E5CE7FC",
+                        "chain_name": "gravitybridge",
+                        "base_supply": 50000
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-17/transfer/channel-141/transfer/channel-144/transfer/channel-88/transfer/channel-2/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-281",
+                        "base_denom": "ibc/D48A9E1980AACF633BE3E9CB30D7D6EDFC333A6BDA6CD45D1DAC6583A13F9D5E",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 650000
+                    },
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/transfer/channel-141/transfer/channel-144/transfer/channel-88/transfer/channel-2/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "ibc/8FC4AA100A97EC27BE421217863F4AE0F2139C307294F77B45CA1B24CAA99B44",
+                        "chain_name": "osmosis",
+                        "base_supply": 3795587
+                    },
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-144/transfer/channel-88/transfer/channel-2/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-10",
+                        "base_denom": "ibc/1522D21410864D0319DC9EEB2B9762E162E75CDD47AAFAFCAEA20C5E897362C9",
+                        "chain_name": "gravitybridge",
+                        "base_supply": 1273472459
+                    },
+                    "chain": {
+                        "channel_id": "channel-144",
+                        "path": "transfer/channel-144/transfer/channel-88/transfer/channel-2/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "canto_7700-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "ibc/9117A26BA81E29FA4F78F57DC2BD90CD3D26848101BA880445F119B22A1E254E",
+                        "chain_name": "canto",
+                        "base_supply": 383583825653
+                    },
+                    "chain": {
+                        "channel_id": "channel-88",
+                        "path": "transfer/channel-88/transfer/channel-2/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-358",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub",
+                        "base_supply": 368984625742791
+                    },
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uatom"
+                    }
+                }
+            ]
         },
         {
             "base": "ibc/F7B02529D796FD0836899228280F3D1FABFAF1ACCC55AF1951D43CD5C6975FB6",
@@ -457,7 +568,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
                         "chain_name": "osmosis",
-                        "base_supply": 22655716545959
+                        "base_supply": 22507049232656
                     },
                     "chain": {
                         "channel_id": "channel-141",
@@ -471,7 +582,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-208",
@@ -578,7 +689,7 @@
                         "channel_id": "channel-281",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-17",
@@ -657,7 +768,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/9117A26BA81E29FA4F78F57DC2BD90CD3D26848101BA880445F119B22A1E254E",
                         "chain_name": "canto",
-                        "base_supply": 378637078083
+                        "base_supply": 383583825653
                     },
                     "chain": {
                         "channel_id": "channel-88",
@@ -671,7 +782,7 @@
                         "channel_id": "channel-358",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -779,7 +890,7 @@
                         "channel_id": "channel-5",
                         "base_denom": "ibc/4F6A2DEFEA52CD8D90966ADCB2BD0593D3993AB0DF7F6AEB3EFD6167D79237B0",
                         "chain_name": "canto",
-                        "base_supply": 10822416074912
+                        "base_supply": 10764133362872
                     },
                     "chain": {
                         "channel_id": "channel-550",
@@ -833,7 +944,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "ibc/17CD484EE7D9723B847D95015FA3EBD1572FD13BC84FB838F55B18A57450F25B",
                         "chain_name": "canto",
-                        "base_supply": 25284350606646
+                        "base_supply": 25110337593808
                     },
                     "chain": {
                         "channel_id": "channel-358",
@@ -887,7 +998,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "ibc/4F6A2DEFEA52CD8D90966ADCB2BD0593D3993AB0DF7F6AEB3EFD6167D79237B0",
                         "chain_name": "canto",
-                        "base_supply": 10822416074912
+                        "base_supply": 10764133362872
                     },
                     "chain": {
                         "channel_id": "channel-358",
@@ -966,7 +1077,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
                         "chain_name": "osmosis",
-                        "base_supply": 3878413151764
+                        "base_supply": 3841154672138
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -980,7 +1091,7 @@
                         "channel_id": "channel-141",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -1034,7 +1145,7 @@
                         "channel_id": "channel-5",
                         "base_denom": "ibc/17CD484EE7D9723B847D95015FA3EBD1572FD13BC84FB838F55B18A57450F25B",
                         "chain_name": "canto",
-                        "base_supply": 25284350606646
+                        "base_supply": 25110337593808
                     },
                     "chain": {
                         "channel_id": "channel-550",
@@ -1065,48 +1176,6 @@
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/transfer/channel-281/transfer/channel-62/transfer/channel-4/uusdc"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-17",
-                        "base_denom": "ibc/486F0121DC37A26793580A9E0009A0A005E3E8365211A0160DFED83982947A0C",
-                        "chain_name": "gravitybridge",
-                        "base_supply": 76448191
-                    },
-                    "chain": {
-                        "channel_id": "channel-281",
-                        "path": "transfer/channel-281/transfer/channel-62/transfer/channel-4/uusdc"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "crescent-1",
-                        "channel_id": "channel-2",
-                        "base_denom": "ibc/BFF0D3805B50D93E2FA5C0B2DDF7E0B30A631076CD80BC12A48C0E95404B4A41",
-                        "chain_name": "crescent",
-                        "base_supply": 129535550836
-                    },
-                    "chain": {
-                        "channel_id": "channel-62",
-                        "path": "transfer/channel-62/transfer/channel-4/uusdc"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-7",
-                        "base_denom": "uusdc",
-                        "chain_name": "axelar",
-                        "base_supply": 38424432150279
-                    },
-                    "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/uusdc"
                     }
                 }
             ]
@@ -1142,7 +1211,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "ibc/4DF678EF85F1FD3CEFF41429E14B22E5D7730B00230688E6783AF06112415620",
                         "chain_name": "crescent",
-                        "base_supply": 40829967362427436288005
+                        "base_supply": 38458232761480448839703
                     },
                     "chain": {
                         "channel_id": "channel-62",
@@ -1156,7 +1225,7 @@
                         "channel_id": "channel-9",
                         "base_denom": "acanto",
                         "chain_name": "canto",
-                        "base_supply": 1057605122968947803385511835
+                        "base_supply": 1057662735653352419137294378
                     },
                     "chain": {
                         "channel_id": "channel-34",
@@ -1196,7 +1265,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/9F9B07EF9AD291167CF5700628145DE1DEB777C2CFC7907553B24446515F6D0E",
                         "chain_name": "osmosis",
-                        "base_supply": 43830176975
+                        "base_supply": 42541775767
                     },
                     "chain": {
                         "channel_id": "channel-141",
@@ -1256,7 +1325,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/E97634A40119F1898989C2A23224ED83FDD0A57EA46B3A094E287288D1672B44",
                         "chain_name": "osmosis",
-                        "base_supply": 21593716135528
+                        "base_supply": 21486538686919
                     },
                     "chain": {
                         "channel_id": "channel-141",
@@ -1270,7 +1339,7 @@
                         "channel_id": "channel-10",
                         "base_denom": "ugraviton",
                         "chain_name": "gravitybridge",
-                        "base_supply": 2605110015301382
+                        "base_supply": 2605451175214152
                     },
                     "chain": {
                         "channel_id": "channel-144",
@@ -1310,7 +1379,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/C140AFD542AE77BD7DCC83F13FDD8C5E5BB8C4929785E6EC2F4C636F98F17901",
                         "chain_name": "osmosis",
-                        "base_supply": 1569721654938
+                        "base_supply": 1554357468075
                     },
                     "chain": {
                         "channel_id": "channel-141",
@@ -1324,7 +1393,7 @@
                         "channel_id": "channel-5",
                         "base_denom": "stuatom",
                         "chain_name": "stride",
-                        "base_supply": 3446340223098
+                        "base_supply": 3449523280303
                     },
                     "chain": {
                         "channel_id": "channel-326",
@@ -1364,7 +1433,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/71B441E27F1BBB44DD0891BCD370C2794D404D60A4FFE5AECCD9B1E28BC89805",
                         "chain_name": "osmosis",
-                        "base_supply": 16233155328
+                        "base_supply": 21290450591
                     },
                     "chain": {
                         "channel_id": "channel-141",
@@ -1404,7 +1473,7 @@
                         "channel_id": "channel-750",
                         "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
                         "chain_name": "osmosis",
-                        "base_supply": 22655716545959
+                        "base_supply": 22507049232656
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -1418,7 +1487,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-208",
@@ -1458,7 +1527,7 @@
                         "channel_id": "channel-23",
                         "base_denom": "ibc/E910718AB26DC0E05677D9B034CF23F17B5B468A464B0CB873A0BE65398DBFBD",
                         "chain_name": "comdex",
-                        "base_supply": 1241980632730772957830
+                        "base_supply": 1265130944734299267718
                     },
                     "chain": {
                         "channel_id": "channel-21",
@@ -1472,7 +1541,7 @@
                         "channel_id": "channel-7",
                         "base_denom": "acanto",
                         "chain_name": "canto",
-                        "base_supply": 1057605122968947803385511835
+                        "base_supply": 1057662735653352419137294378
                     },
                     "chain": {
                         "channel_id": "channel-58",
@@ -1537,7 +1606,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/9BBA9A1C257E971E38C1422780CE6F0B0686F0A3085E2D61118D904BFE0F5F5E",
                         "chain_name": "osmosis",
-                        "base_supply": 7575230722808
+                        "base_supply": 7563796784751
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -1591,7 +1660,7 @@
                         "channel_id": "channel-87",
                         "base_denom": "ibc/47CAF2DB8C016FAC960F33BC492FD8E454593B65CC59D70FA9D9F30424F9C32F",
                         "chain_name": "osmosis",
-                        "base_supply": 1811757284217230916190
+                        "base_supply": 1764433020444208027024
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -1605,7 +1674,7 @@
                         "channel_id": "channel-5",
                         "base_denom": "acanto",
                         "chain_name": "canto",
-                        "base_supply": 1057605122968947803385511835
+                        "base_supply": 1057662735653352419137294378
                     },
                     "chain": {
                         "channel_id": "channel-550",
@@ -1670,7 +1739,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
                         "chain_name": "osmosis",
-                        "base_supply": 3878413151764
+                        "base_supply": 3841154672138
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -1684,7 +1753,7 @@
                         "channel_id": "channel-141",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -1724,7 +1793,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
                         "chain_name": "osmosis",
-                        "base_supply": 22655716545959
+                        "base_supply": 22507049232656
                     },
                     "chain": {
                         "channel_id": "channel-141",
@@ -1738,7 +1807,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-208",
@@ -1803,7 +1872,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
                         "chain_name": "crescent",
-                        "base_supply": 105967333767
+                        "base_supply": 105251896869
                     },
                     "chain": {
                         "channel_id": "channel-62",
@@ -1817,7 +1886,7 @@
                         "channel_id": "channel-326",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -1857,7 +1926,7 @@
                         "channel_id": "channel-31",
                         "base_denom": "ibc/EAC38D55372F38F1AFD68DF7FE9EF762DCF69F26520643CF3F9D292A738D8034",
                         "chain_name": "juno",
-                        "base_supply": 1428746935590
+                        "base_supply": 1428410075305
                     },
                     "chain": {
                         "channel_id": "channel-8",
@@ -1871,7 +1940,7 @@
                         "channel_id": "channel-4",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-71",
@@ -1925,7 +1994,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "weth-wei",
                         "chain_name": "axelar",
-                        "base_supply": 5206326395022872954167
+                        "base_supply": 5266382766120107593599
                     },
                     "chain": {
                         "channel_id": "channel-293",
@@ -1965,7 +2034,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
                         "chain_name": "kujira",
-                        "base_supply": 2482233495682
+                        "base_supply": 2558831483370
                     },
                     "chain": {
                         "channel_id": "channel-259",
@@ -1979,7 +2048,7 @@
                         "channel_id": "channel-14",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-9",
@@ -2019,7 +2088,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/1480B8FD20AD5FCAE81EA87584D269547DD4D436843C1D20F15E00EB64743EF4",
                         "chain_name": "osmosis",
-                        "base_supply": 6786761379283
+                        "base_supply": 6845594201725
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -2033,7 +2102,7 @@
                         "channel_id": "channel-9",
                         "base_denom": "uakt",
                         "chain_name": "akash",
-                        "base_supply": 219675425040099
+                        "base_supply": 219726059373088
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -2087,7 +2156,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-293",
@@ -2127,7 +2196,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
                         "chain_name": "osmosis",
-                        "base_supply": 22655716545959
+                        "base_supply": 22507049232656
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -2141,7 +2210,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-208",
@@ -2157,52 +2226,8 @@
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-88",
-                "source_denom": "ibc/486F0121DC37A26793580A9E0009A0A005E3E8365211A0160DFED83982947A0C"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-88",
-                        "base_denom": "ibc/486F0121DC37A26793580A9E0009A0A005E3E8365211A0160DFED83982947A0C",
-                        "chain_name": "gravitybridge",
-                        "base_supply": 76448191
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/transfer/channel-62/transfer/channel-4/uusdc"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "crescent-1",
-                        "channel_id": "channel-2",
-                        "base_denom": "ibc/BFF0D3805B50D93E2FA5C0B2DDF7E0B30A631076CD80BC12A48C0E95404B4A41",
-                        "chain_name": "crescent",
-                        "base_supply": 129535550836
-                    },
-                    "chain": {
-                        "channel_id": "channel-62",
-                        "path": "transfer/channel-62/transfer/channel-4/uusdc"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-7",
-                        "base_denom": "uusdc",
-                        "chain_name": "axelar",
-                        "base_supply": 38424432150279
-                    },
-                    "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/uusdc"
-                    }
-                }
-            ]
+                "source_denom": ""
+            }
         },
         {
             "base": "ibc/E7161AF15D5E89F0E0DBA52A2DE00E6F70F83880E6F8F41240D208EC7F6A9258",
@@ -2235,7 +2260,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "ibc/47CAF2DB8C016FAC960F33BC492FD8E454593B65CC59D70FA9D9F30424F9C32F",
                         "chain_name": "osmosis",
-                        "base_supply": 1811757284217230916190
+                        "base_supply": 1764433020444208027024
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -2249,7 +2274,7 @@
                         "channel_id": "channel-5",
                         "base_denom": "acanto",
                         "chain_name": "canto",
-                        "base_supply": 1057605122968947803385511835
+                        "base_supply": 1057662735653352419137294378
                     },
                     "chain": {
                         "channel_id": "channel-550",
@@ -2303,7 +2328,7 @@
                         "channel_id": "channel-7",
                         "base_denom": "weth-wei",
                         "chain_name": "axelar",
-                        "base_supply": 5206326395022872954167
+                        "base_supply": 5266382766120107593599
                     },
                     "chain": {
                         "channel_id": "channel-4",
@@ -2357,7 +2382,7 @@
                         "channel_id": "channel-56",
                         "base_denom": "ucmdx",
                         "chain_name": "comdex",
-                        "base_supply": 171384907532565
+                        "base_supply": 171513729234253
                     },
                     "chain": {
                         "channel_id": "channel-112",
@@ -2383,7 +2408,7 @@
                         "channel_id": "channel-80",
                         "base_denom": "ibc/A6E3AF63B3C906416A9AF7A556C59EA4BD50E617EFFE6299B99700CCB780E444",
                         "chain_name": "persistence",
-                        "base_supply": 16317246916343763741764933
+                        "base_supply": 16317246917254555719612447
                     },
                     "chain": {
                         "channel_id": "channel-17",
@@ -2443,7 +2468,7 @@
                         "channel_id": "channel-17",
                         "base_denom": "ugraviton",
                         "chain_name": "gravitybridge",
-                        "base_supply": 2605110015301382
+                        "base_supply": 2605451175214152
                     },
                     "chain": {
                         "channel_id": "channel-281",
@@ -2494,7 +2519,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
                         "chain_name": "osmosis",
-                        "base_supply": 3878413151764
+                        "base_supply": 3841154672138
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -2508,7 +2533,7 @@
                         "channel_id": "channel-141",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -2534,7 +2559,7 @@
                         "channel_id": "channel-358",
                         "base_denom": "ibc/3D1E70D2B3F6029E3CA939D18F81179515D88E6404C736F780366B3A2C11CE56",
                         "chain_name": "cosmoshub",
-                        "base_supply": 10912876062
+                        "base_supply": 862027022
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -2585,7 +2610,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/9BBA9A1C257E971E38C1422780CE6F0B0686F0A3085E2D61118D904BFE0F5F5E",
                         "chain_name": "osmosis",
-                        "base_supply": 7575230722808
+                        "base_supply": 7563796784751
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -2639,7 +2664,7 @@
                         "channel_id": "channel-4",
                         "base_denom": "ubld",
                         "chain_name": "agoric",
-                        "base_supply": 1052547813682770
+                        "base_supply": 1052666866415051
                     },
                     "chain": {
                         "channel_id": "channel-91",
@@ -2693,7 +2718,7 @@
                         "channel_id": "channel-144",
                         "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 620978026168477
+                        "base_supply": 621160674570297
                     },
                     "chain": {
                         "channel_id": "channel-10",
@@ -2719,7 +2744,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/1480B8FD20AD5FCAE81EA87584D269547DD4D436843C1D20F15E00EB64743EF4",
                         "chain_name": "osmosis",
-                        "base_supply": 6786761379283
+                        "base_supply": 6845594201725
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -2733,7 +2758,7 @@
                         "channel_id": "channel-9",
                         "base_denom": "uakt",
                         "chain_name": "akash",
-                        "base_supply": 219675425040099
+                        "base_supply": 219726059373088
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -2759,7 +2784,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
                         "chain_name": "osmosis",
-                        "base_supply": 22655716545959
+                        "base_supply": 22507049232656
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -2773,7 +2798,7 @@
                         "channel_id": "channel-3",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-208",
@@ -2817,7 +2842,7 @@
                         "channel_id": "channel-88",
                         "base_denom": "ibc/6B207CDA2448604B83A0674AADD830C490C1AAB7D568135E52589E96A00B6EEF",
                         "chain_name": "gravitybridge",
-                        "base_supply": 926743445834521954986
+                        "base_supply": 1026743445834521954986
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -2831,7 +2856,7 @@
                         "channel_id": "channel-8",
                         "base_denom": "aevmos",
                         "chain_name": "evmos",
-                        "base_supply": 773900030186341468677819996
+                        "base_supply": 774336674021957907033984380
                     },
                     "chain": {
                         "channel_id": "channel-65",
@@ -2857,7 +2882,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/57AA1A70A4BC9769C525EBF6386F7A21536E04A79D62E1981EFCEF9428EBB205",
                         "chain_name": "osmosis",
-                        "base_supply": 191827812464
+                        "base_supply": 186485119752
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -2871,7 +2896,7 @@
                         "channel_id": "channel-1",
                         "base_denom": "ukava",
                         "chain_name": "kava",
-                        "base_supply": 833613101609858
+                        "base_supply": 836298811725088
                     },
                     "chain": {
                         "channel_id": "channel-143",
@@ -2911,7 +2936,7 @@
                         "channel_id": "channel-15",
                         "base_denom": "uhuahua",
                         "chain_name": "chihuahua",
-                        "base_supply": 108834634648861916
+                        "base_supply": 108862307671490732
                     },
                     "chain": {
                         "channel_id": "channel-34",
@@ -2976,7 +3001,7 @@
                         "channel_id": "channel-281",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-17",
@@ -3028,7 +3053,7 @@
                         "channel_id": "channel-358",
                         "base_denom": "ibc/5BD358D2143FD9F696119ECF9A24C86E6FE8402E1FCF252156ED1C7539481C77",
                         "chain_name": "cosmoshub",
-                        "base_supply": 9285370466
+                        "base_supply": 9295370466
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -3068,7 +3093,7 @@
                         "channel_id": "channel-31",
                         "base_denom": "ujuno",
                         "chain_name": "juno",
-                        "base_supply": 108917872641004
+                        "base_supply": 108967867002179
                     },
                     "chain": {
                         "channel_id": "channel-8",
@@ -3094,7 +3119,7 @@
                         "channel_id": "channel-34",
                         "base_denom": "ibc/BFF0D3805B50D93E2FA5C0B2DDF7E0B30A631076CD80BC12A48C0E95404B4A41",
                         "chain_name": "crescent",
-                        "base_supply": 129535550836
+                        "base_supply": 127330778464
                     },
                     "chain": {
                         "channel_id": "channel-9",
@@ -3108,7 +3133,7 @@
                         "channel_id": "channel-7",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-4",
@@ -3134,7 +3159,7 @@
                         "channel_id": "channel-358",
                         "base_denom": "ibc/B05539B66B72E2739B986B86391E5D08F12B8D5D2C2A7F8F8CF9ADF674DFA231",
                         "chain_name": "cosmoshub",
-                        "base_supply": 114357476929
+                        "base_supply": 114374949556
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -3148,7 +3173,7 @@
                         "channel_id": "channel-0",
                         "base_denom": "stuatom",
                         "chain_name": "stride",
-                        "base_supply": 3446340223098
+                        "base_supply": 3449523280303
                     },
                     "chain": {
                         "channel_id": "channel-391",
@@ -3188,7 +3213,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "ucre",
                         "chain_name": "crescent",
-                        "base_supply": 415501433573621
+                        "base_supply": 416092194722084
                     },
                     "chain": {
                         "channel_id": "channel-62",
@@ -3228,7 +3253,7 @@
                         "channel_id": "channel-2",
                         "base_denom": "uusdc",
                         "chain_name": "axelar",
-                        "base_supply": 38424432150279
+                        "base_supply": 38241393002937
                     },
                     "chain": {
                         "channel_id": "channel-293",
@@ -3279,7 +3304,7 @@
                         "channel_id": "channel-58",
                         "base_denom": "ibc/961FA3E54F5DCCA639F37A7C45F7BBE41815579EF1513B5AFBEFCFEB8F256352",
                         "chain_name": "comdex",
-                        "base_supply": 20402376363
+                        "base_supply": 19982389144
                     },
                     "chain": {
                         "channel_id": "channel-7",
@@ -3293,7 +3318,7 @@
                         "channel_id": "channel-400",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-37",
@@ -3351,7 +3376,7 @@
                         "channel_id": "channel-9",
                         "base_denom": "uumee",
                         "chain_name": "umee",
-                        "base_supply": 12277650875629984
+                        "base_supply": 12280549644465635
                     },
                     "chain": {
                         "channel_id": "channel-28",
@@ -3397,7 +3422,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/E97634A40119F1898989C2A23224ED83FDD0A57EA46B3A094E287288D1672B44",
                         "chain_name": "osmosis",
-                        "base_supply": 21593716135528
+                        "base_supply": 21486538686919
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -3411,7 +3436,7 @@
                         "channel_id": "channel-10",
                         "base_denom": "ugraviton",
                         "chain_name": "gravitybridge",
-                        "base_supply": 2605110015301382
+                        "base_supply": 2605451175214152
                     },
                     "chain": {
                         "channel_id": "channel-144",
@@ -3437,7 +3462,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "ibc/9F9B07EF9AD291167CF5700628145DE1DEB777C2CFC7907553B24446515F6D0E",
                         "chain_name": "osmosis",
-                        "base_supply": 43830176975
+                        "base_supply": 42541775767
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -3499,7 +3524,7 @@
                         "channel_id": "channel-87",
                         "base_denom": "ukava",
                         "chain_name": "kava",
-                        "base_supply": 833613101609858
+                        "base_supply": 836298811725088
                     },
                     "chain": {
                         "channel_id": "channel-13",
@@ -3511,7 +3536,7 @@
         {
             "base": "ibc/17CD484EE7D9723B847D95015FA3EBD1572FD13BC84FB838F55B18A57450F25B",
             "type_asset": "ics20",
-            "supply": 25284350606646,
+            "supply": 25110337593808,
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-88",
@@ -3622,7 +3647,7 @@
                         "channel_id": "channel-34",
                         "base_denom": "ucre",
                         "chain_name": "crescent",
-                        "base_supply": 415501433573621
+                        "base_supply": 416092194722084
                     },
                     "chain": {
                         "channel_id": "channel-9",
@@ -3658,7 +3683,7 @@
                         "channel_id": "channel-74",
                         "base_denom": "stustars",
                         "chain_name": "stride",
-                        "base_supply": 33063120170268
+                        "base_supply": 33065564194500
                     },
                     "chain": {
                         "channel_id": "channel-18",
@@ -3684,7 +3709,7 @@
                         "channel_id": "channel-99",
                         "base_denom": "inj",
                         "chain_name": "injective",
-                        "base_supply": 73861376413638923920534629
+                        "base_supply": 73872941664599083101695344
                     },
                     "chain": {
                         "channel_id": "channel-8",
@@ -3696,7 +3721,7 @@
         {
             "base": "ibc/4F6A2DEFEA52CD8D90966ADCB2BD0593D3993AB0DF7F6AEB3EFD6167D79237B0",
             "type_asset": "ics20",
-            "supply": 10822416074912,
+            "supply": 10764133362872,
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-88",
@@ -3743,7 +3768,7 @@
                         "channel_id": "channel-71",
                         "base_denom": "udvpn",
                         "chain_name": "sentinel",
-                        "base_supply": 25256723263002462
+                        "base_supply": 25267216076541372
                     },
                     "chain": {
                         "channel_id": "channel-16",
@@ -3779,7 +3804,7 @@
                         "channel_id": "channel-12",
                         "base_denom": "ppica",
                         "chain_name": "composable",
-                        "base_supply": 1398696224039780722786
+                        "base_supply": 1400007040763983522786
                     },
                     "chain": {
                         "channel_id": "channel-23",
@@ -3805,7 +3830,7 @@
                         "channel_id": "channel-74",
                         "base_denom": "ustrd",
                         "chain_name": "stride",
-                        "base_supply": 87684417150712
+                        "base_supply": 87695573328784
                     },
                     "chain": {
                         "channel_id": "channel-18",
@@ -3856,7 +3881,7 @@
                         "channel_id": "channel-219",
                         "base_denom": "uluna",
                         "chain_name": "terra2",
-                        "base_supply": 1122706119149600
+                        "base_supply": 1122967071081557
                     },
                     "chain": {
                         "channel_id": "channel-24",
@@ -3882,7 +3907,7 @@
                         "channel_id": "channel-101",
                         "base_denom": "inj",
                         "chain_name": "injective",
-                        "base_supply": 73861376413638923920534629
+                        "base_supply": 73872941664599083101695344
                     },
                     "chain": {
                         "channel_id": "channel-12",
@@ -3908,7 +3933,7 @@
                         "channel_id": "channel-74",
                         "base_denom": "stujuno",
                         "chain_name": "stride",
-                        "base_supply": 2904029026223
+                        "base_supply": 2904631569991
                     },
                     "chain": {
                         "channel_id": "channel-18",
@@ -3920,7 +3945,7 @@
         {
             "base": "ibc/9117A26BA81E29FA4F78F57DC2BD90CD3D26848101BA880445F119B22A1E254E",
             "type_asset": "ics20",
-            "supply": 378637078083,
+            "supply": 383583825653,
             "description": "The native staking token of the Cosmos Hub.",
             "denom_units": [
                 {
@@ -3959,7 +3984,7 @@
                         "channel_id": "channel-358",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-2",
@@ -3985,7 +4010,7 @@
                         "channel_id": "channel-74",
                         "base_denom": "stuosmo",
                         "chain_name": "stride",
-                        "base_supply": 8341461120146
+                        "base_supply": 8445455781850
                     },
                     "chain": {
                         "channel_id": "channel-18",
@@ -4037,7 +4062,7 @@
                         "channel_id": "channel-24",
                         "base_denom": "uqck",
                         "chain_name": "quicksilver",
-                        "base_supply": 227553952581538
+                        "base_supply": 227690938882907
                     },
                     "chain": {
                         "channel_id": "channel-19",
@@ -4088,7 +4113,7 @@
                         "channel_id": "channel-443",
                         "base_denom": "uatom",
                         "chain_name": "cosmoshub",
-                        "base_supply": 368819352574679
+                        "base_supply": 368984625742791
                     },
                     "chain": {
                         "channel_id": "channel-3",
@@ -4132,7 +4157,7 @@
                         "channel_id": "channel-62",
                         "base_denom": "aevmos",
                         "chain_name": "evmos",
-                        "base_supply": 773900030186341468677819996
+                        "base_supply": 774336674021957907033984380
                     },
                     "chain": {
                         "channel_id": "channel-15",
@@ -4158,7 +4183,7 @@
                         "channel_id": "channel-58",
                         "base_denom": "ucmdx",
                         "chain_name": "comdex",
-                        "base_supply": 171384907532565
+                        "base_supply": 171513729234253
                     },
                     "chain": {
                         "channel_id": "channel-7",
@@ -4207,7 +4232,7 @@
                         "channel_id": "channel-80",
                         "base_denom": "uxprt",
                         "chain_name": "persistence",
-                        "base_supply": 189372344136143
+                        "base_supply": 189459133190929
                     },
                     "chain": {
                         "channel_id": "channel-17",
@@ -4233,7 +4258,7 @@
                         "channel_id": "channel-59",
                         "base_denom": "uakt",
                         "chain_name": "akash",
-                        "base_supply": 219675425040099
+                        "base_supply": 219726059373088
                     },
                     "chain": {
                         "channel_id": "channel-11",
@@ -4273,7 +4298,7 @@
                         "channel_id": "channel-550",
                         "base_denom": "uosmo",
                         "chain_name": "osmosis",
-                        "base_supply": 620978026168477
+                        "base_supply": 621160674570297
                     },
                     "chain": {
                         "channel_id": "channel-5",
@@ -4285,7 +4310,7 @@
         {
             "base": "ibc/DC186CA7A8C009B43774EBDC825C935CABA9743504CE6037507E6E5CCE12858A",
             "type_asset": "ics20",
-            "supply": 2810094251729025599916,
+            "supply": 2800029090429025599916,
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-88",
@@ -4295,7 +4320,7 @@
         {
             "base": "ibc/E341F178AB30AC89CF18B9559D90EF830419B5A4B50945EF800FD68DE840A91E",
             "type_asset": "ics20",
-            "supply": 580562737821,
+            "supply": 579712319543,
             "description": "The native staking token of the Sommelier Chain",
             "denom_units": [
                 {
@@ -4360,7 +4385,7 @@
                         "channel_id": "channel-74",
                         "base_denom": "stuatom",
                         "chain_name": "stride",
-                        "base_supply": 3446340223098
+                        "base_supply": 3449523280303
                     },
                     "chain": {
                         "channel_id": "channel-18",
@@ -4386,7 +4411,7 @@
                         "channel_id": "channel-74",
                         "base_denom": "staevmos",
                         "chain_name": "stride",
-                        "base_supply": 14679804008913718497553320
+                        "base_supply": 14804371220508826451603433
                     },
                     "chain": {
                         "channel_id": "channel-18",
@@ -4412,7 +4437,7 @@
                         "channel_id": "channel-80",
                         "base_denom": "stk/uatom",
                         "chain_name": "persistence",
-                        "base_supply": 414387448227
+                        "base_supply": 414495641887
                     },
                     "chain": {
                         "channel_id": "channel-17",
@@ -4438,7 +4463,7 @@
                         "channel_id": "channel-87",
                         "base_denom": "erc20/tether/usdt",
                         "chain_name": "kava",
-                        "base_supply": 17863890839774
+                        "base_supply": 18158497838285
                     },
                     "chain": {
                         "channel_id": "channel-13",
@@ -4450,7 +4475,7 @@
         {
             "base": "ibc/FC9D92EC12BC974E8B6179D411351524CD5C2EBC3CE29D5BA856414FEFA47093",
             "type_asset": "ics20",
-            "supply": 5484045883923,
+            "supply": 5484493373993,
             "description": "The native staking token of the Gravity Bridge Blockchain",
             "denom_units": [
                 {
@@ -4484,7 +4509,7 @@
                         "channel_id": "channel-88",
                         "base_denom": "ugraviton",
                         "chain_name": "gravitybridge",
-                        "base_supply": 2605110015301382
+                        "base_supply": 2605451175214152
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -4496,7 +4521,7 @@
         {
             "base": "acanto",
             "type_asset": "sdk.coin",
-            "supply": 1057605122968947803385511835
+            "supply": 1057662735653352419137294378
         },
         {
             "base": "lpt-1",
