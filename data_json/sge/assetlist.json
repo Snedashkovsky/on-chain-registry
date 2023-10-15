@@ -3,6 +3,46 @@
     "chain_id": "sgenet-1",
     "assets": [
         {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "type_asset": "ics20",
+            "supply": 92,
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-5485",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-5485",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis",
+                        "base_supply": 621707019775757
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ]
+        },
+        {
             "base": "usge",
             "type_asset": "sdk.coin",
             "supply": 1130000000000000
