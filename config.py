@@ -24,12 +24,14 @@ INIT_CHAIN_ID_LCD_DICT = {PUSSY_CHAIN_ID: [PUSSY_NODE_LCD_URL]}
 CONTRACT_NAMES = {
     'bostrom': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry',
     'localbostrom': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry',
-    'osmosis-testnet': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry'
+    'osmosis-testnet': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry',
+    'neutron-testnet': 'on-chain-registry  github.com/Snedashkovsky/on-chain-registry'
 }
 CODE_IDS = {
     'bostrom': '33',
     'localbostrom': '57',
-    'osmosis-testnet': '3352'
+    'osmosis-testnet': '3352',
+    'neutron-testnet': '1697'
 }
 
 # for export to contracts
@@ -37,32 +39,44 @@ EXPORT_CHAINS = ['bostrom', 'osmosis-testnet']
 CHAIN_IDS = {
     'bostrom': 'bostrom',
     'localbostrom': 'localbostrom',
-    'osmosis-testnet': 'osmo-test-5'
+    'osmosis-testnet': 'osmo-test-5',
+    'neutron-testnet': 'pion-1'
 }
 PREFIXES = {
     'bostrom': 'bostrom',
     'localbostrom': 'bostrom',
-    'osmosis-testnet': 'osmo'
+    'osmosis-testnet': 'osmo',
+    'neutron-testnet': 'neutron'
 }
 FEE_DENOMS = {
     'bostrom': 'boot',
     'localbostrom': 'boot',
-    'osmosis-testnet': 'uosmo'
+    'osmosis-testnet': 'uosmo',
+    'neutron-testnet': 'untrn'
+}
+CLI_NAME = {
+    'bostrom': 'cyber',
+    'localbostrom': 'cyber',
+    'osmosis-testnet': 'osmosisd',
+    'neutron-testnet': 'neutrond'
 }
 NODE_RPC_URLS = {
     'bostrom': 'https://rpc.bostrom.cybernode.ai:443',
     'localbostrom': 'http://localhost:26657',
-    'osmosis-testnet': 'https://osmosis-testnet-rpc.polkachu.com:443'
+    'osmosis-testnet': 'https://osmosis-testnet-rpc.polkachu.com:443',
+    'neutron-testnet': 'https://rpc-falcron.pion-1.ntrn.tech:443'
 }
 NODE_LCD_URLS = {
     'bostrom': 'https://lcd.bostrom.cybernode.ai',
     'localbostrom': 'http://localhost:1317',
-    'osmosis-testnet': 'https://osmosis-testnet-api.polkachu.com'
+    'osmosis-testnet': 'https://osmosis-testnet-api.polkachu.com',
+    'neutron-testnet': 'https://rest-falcron.pion-1.ntrn.tech'
 }
 CONTRACT_ADDRESSES = {
     'bostrom': 'bostrom1w33tanvadg6fw04suylew9akcagcwngmkvns476wwu40fpq36pms92re6u',
     'localbostrom': 'bostrom1l2rs0hxzfy343z8n6punpj9gwzrsq644nzzls6dql52jjj2nxncqjn5vg3',
-    'osmosis-testnet': 'osmo1nwesd2xe6cnvtpqd29xg7qeznlm65x02lfjfg20wlvkdze20hcxsftxtzz'
+    'osmosis-testnet': 'osmo1nwesd2xe6cnvtpqd29xg7qeznlm65x02lfjfg20wlvkdze20hcxsftxtzz',
+    'neutron-testnet': 'neutron10v5u2pqce59j0sm6nzv6a42qfus2rdcsxr5y2g27qawulqdss57qjsta8y'
 }
 
 LCD_CLIENTS = {_network: LCDClient(url=NODE_LCD_URLS[_network],

@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 
 from cyberutils.bash import execute_bash
 
-from config import logging, CHAIN_IDS, NODE_RPC_URLS, WALLET_ADDRESSES, CONTRACT_NAMES, CODE_IDS
+from config import logging, CHAIN_IDS, NODE_RPC_URLS, WALLET_ADDRESSES, CONTRACT_NAMES, CODE_IDS, CLI_NAME
 
 
 def build_code(
@@ -157,18 +157,20 @@ if __name__ == '__main__':
 
     chain_name = args.chain_name if args.chain_name else 'bostrom'
     assert chain_name in CHAIN_IDS.keys()
-
+    logging.info('!!! start')
     if args.build_code:
+        logging.info(f'start code building')
         build_code()
         logging.info(f'the code has been built')
 
     if args.store_code:
+        logging.info('start storing of code')
         code_id = store_code(
             wallet_address=WALLET_ADDRESSES[chain_name],
             note=CONTRACT_NAMES[chain_name],
             chain_id=CHAIN_IDS[chain_name],
             node_rpc_url=NODE_RPC_URLS[chain_name],
-            cli_name='osmosisd' if chain_name[:7] == 'osmosis' else 'cyber'
+            cli_name=CLI_NAME[chain_name]
         )
         if code_id:
             logging.info(f'the code has been stored in {chain_name}, code id {code_id}.\nplease update `config.py`')
@@ -176,6 +178,7 @@ if __name__ == '__main__':
         code_id = CODE_IDS[chain_name]
 
     if args.init_contract:
+        logging.info('start contract instantiating')
         contract_address = init_on_chain_registry_contract(
             executors_addresses=[WALLET_ADDRESSES[chain_name]],
             admins_addresses=[WALLET_ADDRESSES[chain_name]],
@@ -184,7 +187,7 @@ if __name__ == '__main__':
             contract_label=CONTRACT_NAMES[chain_name],
             chain_id=CHAIN_IDS[chain_name],
             node_rpc_url=NODE_RPC_URLS[chain_name],
-            cli_name='osmosisd' if chain_name[:7] == 'osmosis' else 'cyber'
+            cli_name=CLI_NAME[chain_name]
         )
         if contract_address:
             logging.info(f'the contract has been instantiated in {chain_name} network, '

@@ -3,11 +3,11 @@ import pandas as pd
 from tqdm import tqdm
 import requests
 import base64
-from time import sleep
 
 from cyber_sdk.client.lcd import LCDClient, Wallet
 from cyber_sdk.client.lcd.api.tx import BlockTxBroadcastResult
 from cyberutils.contract import execute_contract
+from cyberutils.bash import display_sleep
 
 from config import logging, CONTRACT_ADDRESSES, LCD_CLIENTS, WALLETS, WALLET_ADDRESSES, FEE_DENOMS, EXPORT_CHAINS
 
@@ -99,10 +99,11 @@ def save_to_contract(
             fee_amount=int(gas * 0.0025) if wallet_address[:4] == 'osmo' else 0
         )
         if _res is None:
-            sleep(10)
+            display_sleep(10)
         _res_list.append(_res)
         if len(str(_res)) < 500:
             logging.error(_res)
+            display_sleep(10)
 
     return _res_list
 
