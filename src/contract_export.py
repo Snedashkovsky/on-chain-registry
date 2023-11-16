@@ -4,6 +4,9 @@ from tqdm import tqdm
 import requests
 import base64
 from time import sleep
+from typing import Union
+from base64 import b64decode
+import binascii
 
 from cyber_sdk.client.lcd import LCDClient, Wallet
 from cyber_sdk.client.lcd.api.tx import BlockTxBroadcastResult
@@ -68,6 +71,42 @@ def get_asset_json_list(
     return _assets_list
 
 
+def remove_none_values(data: Union[dict, list]) -> Union[dict, list]:
+    """
+    Remove fields from json with `None` value
+    :param data: json or list of jsons
+    :return: json or list of jsons
+    """
+    if isinstance(data, dict):
+        return {k: remove_none_values(v) for k, v in data.items() if v is not None}
+    elif isinstance(data, list):
+        return [remove_none_values(i) for i in data]
+    else:
+        return data
+
+
+def get_assets_state(node_lcd_url: str,
+                     contract_address: str,
+                     asset_state_index: str = '\x00\x06assets',
+                     pagination_limit: int = 100_000) -> list[dict]:
+    """
+    Get contract state of asset index
+    :param node_lcd_url: node LCD url
+    :param contract_address: contract address
+    :param asset_state_index: key index prefix
+    :param pagination_limit: pagination limit
+    :return: list of asset jsons
+    """
+    _query = f'{node_lcd_url}/cosmwasm/wasm/v1/contract/{contract_address}/state?pagination.limit={pagination_limit}'
+    res = requests.get(_query).json()
+    state_raw = [{'key': binascii.unhexlify(item['key']).decode('utf-8'),
+                  'value': json.loads(b64decode(item['value']).decode('utf-8'))}
+                 for item in res['models']]
+    return [remove_none_values(item['value'])
+            for item in state_raw
+            if item['key'][:len(asset_state_index)] == asset_state_index]
+
+
 def save_to_contract(
         contract_address: str,
         lcd_client: LCDClient,
@@ -95,7 +134,11 @@ def save_to_contract(
     """
 
     _assets_list = get_asset_json_list(all_asset_path=all_asset_path, save_supply=save_supply)
-
+    _assets_state_list = get_assets_state(node_lcd_url=lcd_client.url, contract_address=contract_address)
+    _assets_list = [_asset for _asset in _assets_list if remove_none_values(_asset) not in _assets_state_list]
+    logging.info(
+        f'Total {len(_assets_list)} assets in {len(set([_asset["chain_name"] for _asset in _assets_list]))} chains'
+    )
     _res_list = []
     for _assets_batch in tqdm(batch(_assets_list, batch_size)):
         logging.info(
