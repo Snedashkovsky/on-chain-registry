@@ -5,7 +5,34 @@
         {
             "base": "ibc/19FE4199D5E206A756AA8656D6CCECA3A50AECB081CC73126060D592BD93A15B",
             "type_asset": "ics20",
-            "supply": 2,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-585",
+                        "base_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-141/uosmo"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/uosmo"
+                    }
+                }
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -24,42 +51,26 @@
                 "source_channel": "channel-10",
                 "dst_channel": "channel-585",
                 "source_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC"
-            },
+            }
+        },
+        {
+            "base": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+            "type_asset": "ics20",
             "traces": [
                 {
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "cosmoshub-4",
                         "channel_id": "channel-585",
-                        "base_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC",
-                        "chain_name": "cosmoshub",
-                        "base_supply": 135823521017
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
                     },
                     "chain": {
                         "channel_id": "channel-10",
-                        "path": "transfer/channel-10/transfer/channel-141/uosmo"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-0",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627542168633997
-                    },
-                    "chain": {
-                        "channel_id": "channel-141",
-                        "path": "transfer/channel-141/uosmo"
+                        "path": "transfer/channel-10/uatom"
                     }
                 }
-            ]
-        },
-        {
-            "base": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
-            "type_asset": "ics20",
-            "supply": 60005,
+            ],
             "description": "The native staking token of the Cosmos Hub.",
             "denom_units": [
                 {
@@ -89,28 +100,26 @@
                 "source_channel": "channel-10",
                 "dst_channel": "channel-585",
                 "source_denom": "uatom"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-585",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub",
-                        "base_supply": 374908775525350
-                    },
-                    "chain": {
-                        "channel_id": "channel-10",
-                        "path": "transfer/channel-10/uatom"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "ibc/BE612CFB5445AD2F56FAE496C0848FA381F967970A4CA586B1F90123AA62C4D4",
             "type_asset": "ics20",
-            "supply": 50000000000000000,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-2716",
+                        "base_denom": "gamm/pool/1",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/gamm/pool/1"
+                    }
+                }
+            ],
             "description": "The share token of the gamm pool 1",
             "denom_units": [
                 {
@@ -131,28 +140,26 @@
                 "source_channel": "channel-19",
                 "dst_channel": "channel-2716",
                 "source_denom": "gamm/pool/1"
-            },
+            }
+        },
+        {
+            "base": "ibc/D7B22A85AB15F44A3152EBF7F2D37B6061F66FAF637E42C287FC649F1F5CA348",
+            "type_asset": "ics20",
             "traces": [
                 {
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
                         "channel_id": "channel-2716",
-                        "base_denom": "gamm/pool/1",
-                        "chain_name": "osmosis",
-                        "base_supply": 89564043231113749000896757
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
                     },
                     "chain": {
                         "channel_id": "channel-19",
-                        "path": "transfer/channel-19/gamm/pool/1"
+                        "path": "transfer/channel-19/uosmo"
                     }
                 }
-            ]
-        },
-        {
-            "base": "ibc/D7B22A85AB15F44A3152EBF7F2D37B6061F66FAF637E42C287FC649F1F5CA348",
-            "type_asset": "ics20",
-            "supply": 6210003,
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -171,28 +178,11 @@
                 "source_channel": "channel-19",
                 "dst_channel": "channel-2716",
                 "source_denom": "uosmo"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2716",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627542168633997
-                    },
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/uosmo"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "ibc/F08B62C2C1BE9E52942617489CAB1E94537FE3849F8EEC910B142468C340EB0D",
             "type_asset": "ics20",
-            "supply": 350860756386587380154439309,
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-0",
@@ -202,7 +192,6 @@
         {
             "base": "FX",
             "type_asset": "sdk.coin",
-            "supply": 666249914101174234246062111,
             "description": "The native staking token of the Function X",
             "denom_units": [
                 {
@@ -218,7 +207,6 @@
         {
             "base": "atom/osmo",
             "type_asset": "sdk.coin",
-            "supply": 50000000000000000,
             "description": "The cross chain token of Function X",
             "denom_units": [
                 {
@@ -240,33 +228,27 @@
         },
         {
             "base": "avalanche0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
-            "type_asset": "sdk.coin",
-            "supply": 191548909000000000
+            "type_asset": "sdk.coin"
         },
         {
             "base": "avalanche0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5",
-            "type_asset": "sdk.coin",
-            "supply": 127360317621000000000
+            "type_asset": "sdk.coin"
         },
         {
             "base": "avalanche0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
-            "type_asset": "sdk.coin",
-            "supply": 15914057036
+            "type_asset": "sdk.coin"
         },
         {
             "base": "avalanche0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
-            "type_asset": "sdk.coin",
-            "supply": 224814680000000000
+            "type_asset": "sdk.coin"
         },
         {
             "base": "avalanche0xe19A1684873faB5Fb694CfD06607100A632fF21c",
-            "type_asset": "sdk.coin",
-            "supply": 8346255452754233431554192
+            "type_asset": "sdk.coin"
         },
         {
             "base": "bava",
             "type_asset": "sdk.coin",
-            "supply": 8346255452754233431554192,
             "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
@@ -288,13 +270,11 @@
         },
         {
             "base": "bsc0x55d398326f99059fF775485246999027B3197955",
-            "type_asset": "sdk.coin",
-            "supply": 119702295230
+            "type_asset": "sdk.coin"
         },
         {
             "base": "dai",
             "type_asset": "sdk.coin",
-            "supply": 2500000000000000000,
             "description": "Cross chain token of Function X",
             "denom_units": [
                 {
@@ -317,7 +297,6 @@
         {
             "base": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
             "type_asset": "sdk.coin",
-            "supply": 32086143532104448555220069,
             "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
@@ -337,38 +316,31 @@
         },
         {
             "base": "eth0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-            "type_asset": "sdk.coin",
-            "supply": 2735394
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0x514910771AF9Ca656af840dff83E8264EcF986CA",
-            "type_asset": "sdk.coin",
-            "supply": 90484316465382197266
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0x6B175474E89094C44Da98b954EedeAC495271d0F",
-            "type_asset": "sdk.coin",
-            "supply": 2500000000000000000
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-            "type_asset": "sdk.coin",
-            "supply": 3010000
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-            "type_asset": "sdk.coin",
-            "supply": 203526729023086082091
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0xdAC17F958D2ee523a2206206994597C13D831ec7",
-            "type_asset": "sdk.coin",
-            "supply": 624162496329
+            "type_asset": "sdk.coin"
         },
         {
             "base": "link",
             "type_asset": "sdk.coin",
-            "supply": 90484316465382197266,
             "description": "The cross chain token of Function X",
             "denom_units": [
                 {
@@ -390,13 +362,11 @@
         },
         {
             "base": "polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-            "type_asset": "sdk.coin",
-            "supply": 87442600242
+            "type_asset": "sdk.coin"
         },
         {
             "base": "qi",
             "type_asset": "sdk.coin",
-            "supply": 127360317621000000000,
             "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
@@ -419,7 +389,6 @@
         {
             "base": "savax",
             "type_asset": "sdk.coin",
-            "supply": 191548909000000000,
             "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
@@ -441,13 +410,11 @@
         },
         {
             "base": "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
-            "type_asset": "sdk.coin",
-            "supply": 48128766576
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uatom",
             "type_asset": "sdk.coin",
-            "supply": 50003,
             "description": "The cross chain token of Function X",
             "denom_units": [
                 {
@@ -470,7 +437,6 @@
         {
             "base": "uosmo",
             "type_asset": "sdk.coin",
-            "supply": 6000003,
             "description": "The cross chain token of Function X",
             "denom_units": [
                 {
@@ -494,7 +460,6 @@
         {
             "base": "usdc",
             "type_asset": "sdk.coin",
-            "supply": 3010000,
             "description": "The cross chain token of Function X",
             "denom_units": [
                 {
@@ -517,7 +482,6 @@
         {
             "base": "usdt",
             "type_asset": "sdk.coin",
-            "supply": 895225938916,
             "description": "Cross chain token Function X",
             "denom_units": [
                 {
@@ -546,7 +510,6 @@
         {
             "base": "wavax",
             "type_asset": "sdk.coin",
-            "supply": 224814680000000000,
             "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
@@ -569,7 +532,6 @@
         {
             "base": "wbtc",
             "type_asset": "sdk.coin",
-            "supply": 2735394,
             "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
@@ -592,7 +554,6 @@
         {
             "base": "weth",
             "type_asset": "sdk.coin",
-            "supply": 203526729023086082091,
             "description": "The cross chain token of Function X",
             "denom_units": [
                 {
