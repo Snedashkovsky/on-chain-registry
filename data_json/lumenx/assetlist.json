@@ -5,7 +5,34 @@
         {
             "base": "ibc/222DB17F50A8985D194A442496805CEBC59FF4BCFBD630EDB49475E15C41027C",
             "type_asset": "ics20",
-            "supply": 2769000000,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-286",
+                        "base_denom": "ibc/A32403CF6E7B3F6DF2177E91B59F554FCBE540875FA80E4FE50C7F6D504C5614",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-278/ulumen"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "LumenX",
+                        "channel_id": "channel-0",
+                        "base_denom": "ulumen",
+                        "chain_name": "lumenx"
+                    },
+                    "chain": {
+                        "channel_id": "channel-278",
+                        "path": "transfer/channel-278/ulumen"
+                    }
+                }
+            ],
             "description": "Demon units of the LumenX",
             "denom_units": [
                 {
@@ -37,42 +64,26 @@
                 "source_channel": "channel-3",
                 "dst_channel": "channel-286",
                 "source_denom": "ibc/A32403CF6E7B3F6DF2177E91B59F554FCBE540875FA80E4FE50C7F6D504C5614"
-            },
+            }
+        },
+        {
+            "base": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
+            "type_asset": "ics20",
             "traces": [
                 {
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
                         "channel_id": "channel-286",
-                        "base_denom": "ibc/A32403CF6E7B3F6DF2177E91B59F554FCBE540875FA80E4FE50C7F6D504C5614",
-                        "chain_name": "osmosis",
-                        "base_supply": 419914000000
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
                     },
                     "chain": {
                         "channel_id": "channel-3",
-                        "path": "transfer/channel-3/transfer/channel-278/ulumen"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "LumenX",
-                        "channel_id": "channel-0",
-                        "base_denom": "ulumen",
-                        "chain_name": "lumenx",
-                        "base_supply": 2596387206601220
-                    },
-                    "chain": {
-                        "channel_id": "channel-278",
-                        "path": "transfer/channel-278/ulumen"
+                        "path": "transfer/channel-3/uosmo"
                     }
                 }
-            ]
-        },
-        {
-            "base": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
-            "type_asset": "ics20",
-            "supply": 100020,
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -91,28 +102,11 @@
                 "source_channel": "channel-3",
                 "dst_channel": "channel-286",
                 "source_denom": "uosmo"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-286",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627359520232177
-                    },
-                    "chain": {
-                        "channel_id": "channel-3",
-                        "path": "transfer/channel-3/uosmo"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "ulumen",
             "type_asset": "sdk.coin",
-            "supply": 2596387206601220,
             "description": "Demon units of the LumenX",
             "denom_units": [
                 {

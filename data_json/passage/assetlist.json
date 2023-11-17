@@ -5,12 +5,6 @@
         {
             "base": "ibc/DA6CED68121F74F55E60497FD1C8F3B856969643674786F0393BB9D54D49EC20",
             "type_asset": "ics20",
-            "supply": 100000000,
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-64",
-                "source_denom": "uhuahua"
-            },
             "traces": [
                 {
                     "type": "ibc",
@@ -18,20 +12,38 @@
                         "chain_id": "chihuahua-1",
                         "channel_id": "channel-64",
                         "base_denom": "uhuahua",
-                        "chain_name": "chihuahua",
-                        "base_supply": 109762640533936938
+                        "chain_name": "chihuahua"
                     },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/uhuahua"
                     }
                 }
-            ]
+            ],
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-64",
+                "source_denom": "uhuahua"
+            }
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "type_asset": "ics20",
-            "supply": 2003,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-2494",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -50,28 +62,11 @@
                 "source_channel": "channel-0",
                 "dst_channel": "channel-2494",
                 "source_denom": "uosmo"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2494",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627359520232177
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "upasg",
-            "type_asset": "sdk.coin",
-            "supply": 1215041930193008
+            "type_asset": "sdk.coin"
         }
     ]
 }

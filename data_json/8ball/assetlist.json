@@ -5,7 +5,21 @@
         {
             "base": "ibc/4A3AAD07BC4EBEBC10FC2560EAA3B7A1D3B541B5264ED8E5E13E6B74AC76127B",
             "type_asset": "ics20",
-            "supply": 6200911,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-641",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-16",
+                        "path": "transfer/channel-16/uosmo"
+                    }
+                }
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -24,28 +38,26 @@
                 "source_channel": "channel-16",
                 "dst_channel": "channel-641",
                 "source_denom": "uosmo"
-            },
+            }
+        },
+        {
+            "base": "ibc/65F2AFA2F7AC0FC1ACA0EC1710A5AB381BF87B25CB74E903C5847ED86CAE213A",
+            "type_asset": "ics20",
             "traces": [
                 {
                     "type": "ibc",
                     "counterparty": {
                         "chain_id": "osmosis-1",
                         "channel_id": "channel-641",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627359520232177
+                        "base_denom": "uion",
+                        "chain_name": "osmosis"
                     },
                     "chain": {
                         "channel_id": "channel-16",
-                        "path": "transfer/channel-16/uosmo"
+                        "path": "transfer/channel-16/uion"
                     }
                 }
-            ]
-        },
-        {
-            "base": "ibc/65F2AFA2F7AC0FC1ACA0EC1710A5AB381BF87B25CB74E903C5847ED86CAE213A",
-            "type_asset": "ics20",
-            "supply": 500,
+            ],
             "denom_units": [
                 {
                     "denom": "uion",
@@ -63,28 +75,11 @@
                 "source_channel": "channel-16",
                 "dst_channel": "channel-641",
                 "source_denom": "uion"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-641",
-                        "base_denom": "uion",
-                        "chain_name": "osmosis",
-                        "base_supply": 21294000000
-                    },
-                    "chain": {
-                        "channel_id": "channel-16",
-                        "path": "transfer/channel-16/uion"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "uebl",
-            "type_asset": "sdk.coin",
-            "supply": 77473976339013
+            "type_asset": "sdk.coin"
         }
     ]
 }

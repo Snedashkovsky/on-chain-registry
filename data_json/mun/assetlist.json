@@ -5,12 +5,6 @@
         {
             "base": "ibc/FA7775734CC73176B7425910DE001A1D2AD9B6D9E93129A5D0750EAD13E4E63A",
             "type_asset": "ics20",
-            "supply": 2963892764,
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-2012",
-                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
-            },
             "traces": [
                 {
                     "type": "ibc",
@@ -18,8 +12,7 @@
                         "chain_id": "osmosis-1",
                         "channel_id": "channel-2012",
                         "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
-                        "chain_name": "osmosis",
-                        "base_supply": 23750250680692
+                        "chain_name": "osmosis"
                     },
                     "chain": {
                         "channel_id": "channel-1",
@@ -32,20 +25,38 @@
                         "chain_id": "axelar-dojo-1",
                         "channel_id": "channel-3",
                         "base_denom": "uusdc",
-                        "chain_name": "axelar",
-                        "base_supply": 54128899034851
+                        "chain_name": "axelar"
                     },
                     "chain": {
                         "channel_id": "channel-208",
                         "path": "transfer/channel-208/uusdc"
                     }
                 }
-            ]
+            ],
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-2012",
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+            }
         },
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "type_asset": "ics20",
-            "supply": 7275927,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-2012",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    }
+                }
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -64,28 +75,26 @@
                 "source_channel": "channel-1",
                 "dst_channel": "channel-2012",
                 "source_denom": "uosmo"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2012",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627359520232177
-                    },
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uosmo"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
             "type_asset": "ics20",
-            "supply": 3069164,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-641",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    }
+                }
+            ],
             "description": "The native staking token of the Cosmos Hub.",
             "denom_units": [
                 {
@@ -115,33 +124,11 @@
                 "source_channel": "channel-0",
                 "dst_channel": "channel-641",
                 "source_denom": "uatom"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-641",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub",
-                        "base_supply": 374736184024873
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uatom"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "ibc/D7E00A6C8B5616358FE5A0CFF2D3B3CDA5DEA3D4432B6CC767A52A5C296302D5",
             "type_asset": "ics20",
-            "supply": 100000,
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-123",
-                "source_denom": "ukava"
-            },
             "traces": [
                 {
                     "type": "ibc",
@@ -149,20 +136,23 @@
                         "chain_id": "kava_2222-10",
                         "channel_id": "channel-123",
                         "base_denom": "ukava",
-                        "chain_name": "kava",
-                        "base_supply": 932638836756454
+                        "chain_name": "kava"
                     },
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/ukava"
                     }
                 }
-            ]
+            ],
+            "ibc": {
+                "source_channel": "channel-2",
+                "dst_channel": "channel-123",
+                "source_denom": "ukava"
+            }
         },
         {
             "base": "umun",
-            "type_asset": "sdk.coin",
-            "supply": 104951793095629
+            "type_asset": "sdk.coin"
         }
     ]
 }

@@ -5,12 +5,6 @@
         {
             "base": "ibc/4DE84C92C714009D07AFEA7350AB3EC383536BB0FAAD7AF9C0F1A0BEA169304E",
             "type_asset": "ics20",
-            "supply": 100000000000000000,
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-2694",
-                "source_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273"
-            },
             "traces": [
                 {
                     "type": "ibc",
@@ -18,8 +12,7 @@
                         "chain_id": "osmosis-1",
                         "channel_id": "channel-2694",
                         "base_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273",
-                        "chain_name": "osmosis",
-                        "base_supply": 68702313332167906508763
+                        "chain_name": "osmosis"
                     },
                     "chain": {
                         "channel_id": "channel-0",
@@ -32,20 +25,38 @@
                         "chain_id": "injective-1",
                         "channel_id": "channel-8",
                         "base_denom": "inj",
-                        "chain_name": "injective",
-                        "base_supply": 74641746606637871476260540
+                        "chain_name": "injective"
                     },
                     "chain": {
                         "channel_id": "channel-122",
                         "path": "transfer/channel-122/inj"
                     }
                 }
-            ]
+            ],
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-2694",
+                "source_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273"
+            }
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "type_asset": "ics20",
-            "supply": 3110000,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-2694",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -64,28 +75,11 @@
                 "source_channel": "channel-0",
                 "dst_channel": "channel-2694",
                 "source_denom": "uosmo"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2694",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627359520232177
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "peaka",
-            "type_asset": "sdk.coin",
-            "supply": 1000000000000000000000000000
+            "type_asset": "sdk.coin"
         }
     ]
 }

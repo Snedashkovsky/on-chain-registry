@@ -5,12 +5,6 @@
         {
             "base": "ibc/0E1517E2771CA7C03F2ED3F9BAECCAEADF0BFD79B89679E834933BC0F179AD98",
             "type_asset": "ics20",
-            "supply": 1000,
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-75",
-                "source_denom": "uaxl"
-            },
             "traces": [
                 {
                     "type": "ibc",
@@ -18,20 +12,38 @@
                         "chain_id": "axelar-dojo-1",
                         "channel_id": "channel-75",
                         "base_denom": "uaxl",
-                        "chain_name": "axelar",
-                        "base_supply": 1115515137154979
+                        "chain_name": "axelar"
                     },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/uaxl"
                     }
                 }
-            ]
+            ],
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-75",
+                "source_denom": "uaxl"
+            }
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "type_asset": "ics20",
-            "supply": 39652925,
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-767",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ],
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
@@ -50,28 +62,11 @@
                 "source_channel": "channel-0",
                 "dst_channel": "channel-767",
                 "source_denom": "uosmo"
-            },
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-767",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis",
-                        "base_supply": 627359520232177
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
-                    }
-                }
-            ]
+            }
         },
         {
             "base": "ukyve",
             "type_asset": "sdk.coin",
-            "supply": 1066741038354393,
             "description": "The native utility token of the KYVE network.",
             "denom_units": [
                 {
