@@ -4,6 +4,9 @@ from tqdm import tqdm
 import requests
 import base64
 from time import sleep
+from typing import Union
+from base64 import b64decode
+import binascii
 
 from cyber_sdk.client.lcd import LCDClient, Wallet
 from cyber_sdk.client.lcd.api.tx import BlockTxBroadcastResult
@@ -36,6 +39,74 @@ def contract_query(
     return requests.get(_query).json()
 
 
+def get_asset_json_list(
+        all_asset_path: str = 'data_json/all_assets.json',
+        save_supply: bool = False) -> list[dict]:
+    """
+    Get list of asset data
+    :param all_asset_path: path of file with all assets
+    :param save_supply: save or not `supply` and `base_supply`
+    :return: list of asset jsons
+    """
+    with open(all_asset_path, 'r') as _all_assets_file:
+        _all_assets_json = json.load(_all_assets_file)
+
+    _assets_list = []
+    for _assets_json in tqdm(_all_assets_json):
+        _assets = _assets_json['assets']
+        for i in range(len(_assets)):
+            _assets[i]['supply'] = str(_assets[i]['supply']) if save_supply else None
+            _assets[i]['chain_name'] = _assets_json['chain_name']
+            _assets[i]['chain_id'] = _assets_json['chain_id']
+            if 'traces' in _assets[i].keys():
+                for _trace in _assets[i]['traces']:
+                    if 'base_supply' in _trace.keys() and save_supply:
+                        _trace['base_supply'] = str(_trace['base_supply'])
+                    if 'counterparty' in _trace.keys() and 'base_supply' in _trace['counterparty'].keys():
+                        _trace['counterparty']['base_supply'] = \
+                            str(_trace['counterparty']['base_supply']) if save_supply else None
+                    if 'type' in _trace.keys():
+                        _trace['trace_type'] = _trace.pop('type')
+        _assets_list.extend(_assets)
+    return _assets_list
+
+
+def remove_none_values(data: Union[dict, list]) -> Union[dict, list]:
+    """
+    Remove fields from json with `None` value
+    :param data: json or list of jsons
+    :return: json or list of jsons
+    """
+    if isinstance(data, dict):
+        return {k: remove_none_values(v) for k, v in data.items() if v is not None}
+    elif isinstance(data, list):
+        return [remove_none_values(i) for i in data]
+    else:
+        return data
+
+
+def get_assets_state(node_lcd_url: str,
+                     contract_address: str,
+                     asset_state_index: str = '\x00\x06assets',
+                     pagination_limit: int = 100_000) -> list[dict]:
+    """
+    Get contract state of asset index
+    :param node_lcd_url: node LCD url
+    :param contract_address: contract address
+    :param asset_state_index: key index prefix
+    :param pagination_limit: pagination limit
+    :return: list of asset jsons
+    """
+    _query = f'{node_lcd_url}/cosmwasm/wasm/v1/contract/{contract_address}/state?pagination.limit={pagination_limit}'
+    res = requests.get(_query).json()
+    state_raw = [{'key': binascii.unhexlify(item['key']).decode('utf-8'),
+                  'value': json.loads(b64decode(item['value']).decode('utf-8'))}
+                 for item in res['models']]
+    return [remove_none_values(item['value'])
+            for item in state_raw
+            if item['key'][:len(asset_state_index)] == asset_state_index]
+
+
 def save_to_contract(
         contract_address: str,
         lcd_client: LCDClient,
@@ -45,7 +116,8 @@ def save_to_contract(
         all_asset_path: str = 'data_json/all_assets.json',
         batch_size: int = 128,
         gas: int = 24_000_000,
-        memo: str = 'update assets in on-chain registry  github.com/Snedashkovsky/on-chain-registry') -> list[BlockTxBroadcastResult]:
+        memo: str = 'update assets in on-chain registry  github.com/Snedashkovsky/on-chain-registry',
+        save_supply: bool = False) -> list[BlockTxBroadcastResult]:
     """
     Save asset data to a contract
     :param all_asset_path: path of file with all assets
@@ -57,33 +129,23 @@ def save_to_contract(
     :param fee_denom: transaction fee denom
     :param gas: gas amount
     :param memo: transaction memo
+    :param save_supply: save or not `supply` and `base_supply`
     :return: list of transaction results
     """
-    with open(all_asset_path, 'r') as _all_assets_file:
-        _all_assets_json = json.load(_all_assets_file)
 
-    _assets_list = []
-    for _assets_json in tqdm(_all_assets_json):
-        _assets = _assets_json['assets']
-        for i in range(len(_assets)):
-            _assets[i]['supply'] = str(_assets[i]['supply'])
-            _assets[i]['chain_name'] = _assets_json['chain_name']
-            _assets[i]['chain_id'] = _assets_json['chain_id']
-            if 'traces' in _assets[i].keys():
-                for _trace in _assets[i]['traces']:
-                    if 'base_supply' in _trace.keys():
-                        _trace['base_supply'] = str(_trace['base_supply'])
-                    if 'counterparty' in _trace.keys() and 'base_supply' in _trace['counterparty'].keys():
-                        _trace['counterparty']['base_supply'] = str(_trace['counterparty']['base_supply'])
-                    if 'type' in _trace.keys():
-                        _trace['trace_type'] = _trace.pop('type')
-        _assets_list.extend(_assets)
-
+    _assets_list = get_asset_json_list(all_asset_path=all_asset_path, save_supply=save_supply)
+    _assets_state_list = get_assets_state(node_lcd_url=lcd_client.url, contract_address=contract_address)
+    _assets_list = [_asset for _asset in _assets_list if remove_none_values(_asset) not in _assets_state_list]
+    logging.info(
+        f'Total {len(_assets_list)} assets in {len(set([_asset["chain_name"] for _asset in _assets_list]))} chains'
+    )
     _res_list = []
     for _assets_batch in tqdm(batch(_assets_list, batch_size)):
-        logging.info('Export to contract   ' + ', '.join(
-            [f'{k} {v:>,}'
-             for k, v in pd.DataFrame(_assets_batch).groupby('chain_name')['chain_name'].agg(pd.value_counts).to_dict().items()]
+        logging.info(
+            'Export to contract   ' + ', '.join(
+                [f'{k} {v:>,}'
+                 for k, v in
+                 pd.DataFrame(_assets_batch).groupby('chain_name')['chain_name'].agg(pd.value_counts).to_dict().items()]
             )
         )
         _res = execute_contract(
@@ -107,9 +169,10 @@ def save_to_contract(
     return _res_list
 
 
-def save_to_contracts() -> None:
+def save_to_contracts(save_supply: bool = False) -> None:
     """
     Save metadata to OCR contracts
+    :param save_supply: save or not `supply` and `base_supply`
     :return: none
     """
     for _chain_name in EXPORT_CHAINS:
@@ -120,4 +183,5 @@ def save_to_contracts() -> None:
             wallet=WALLETS[_chain_name],
             wallet_address=WALLET_ADDRESSES[_chain_name],
             fee_denom=FEE_DENOMS[_chain_name],
+            save_supply=save_supply
         )

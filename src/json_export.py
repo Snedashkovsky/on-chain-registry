@@ -6,18 +6,33 @@ from jsonschema import validate
 from config import logging
 
 
-def get_asset_json(row: pd.Series) -> dict:
+def get_asset_json(
+        row: pd.Series,
+        save_supply: bool = False) -> dict:
     """
     Get json for asset
     :param row: an asset row
+    :param save_supply: save or not `supply` and `base_supply`
     :return: an asset json
     """
     _asset_json = {
         "base": row['denom'],
-        "type_asset": row['type_asset'],
-        "supply": int(row['supply']) if row['supply'] and not pd.isna(row['supply']) else 0
+        "type_asset": row['type_asset']
     }
-    for _field in ['description', 'denom_units', 'display', 'name', 'symbol', 'ibc', 'traces']:
+
+    if save_supply:
+        _asset_json['supply'] = int(row['supply']) if row['supply'] and not pd.isna(row['supply']) else 0
+
+    if row['traces']:
+        if save_supply:
+            _asset_json['traces'] = row['traces']
+        else:
+            _traces = row['traces'].copy()
+            for _trace in _traces:
+                _trace['counterparty'].pop('base_supply', None)
+            _asset_json['traces'] = _traces
+
+    for _field in ['description', 'denom_units', 'display', 'name', 'symbol', 'ibc']:
         if row[_field]:
             _asset_json[_field] = row[_field]
 
@@ -38,16 +53,20 @@ def get_asset_json(row: pd.Series) -> dict:
     return _asset_json
 
 
-def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, str]) -> dict[str, dict]:
+def get_asset_json_dict(
+        assets_df: pd.DataFrame,
+        chain_id_name_dict: dict[str, str],
+        save_supply: bool = False) -> dict[str, dict]:
     """
     Get json with all assets
     :param assets_df: an assets dataframe
     :param chain_id_name_dict: dictionary of chain ids by chain names
+    :param save_supply: save or not `supply` and `base_supply`
     :return: json with all assets
     """
     _assets_json = {}
     for _chain_id, _assets_item_df in assets_df.groupby('chain_id'):
-        _asset_json_list = [get_asset_json(row=row) for _, row in
+        _asset_json_list = [get_asset_json(row=row, save_supply=save_supply) for _, row in
                             _assets_item_df.iterrows()]
         try:
             _assets_json[_chain_id] = {
@@ -62,14 +81,19 @@ def get_asset_json_dict(assets_df: pd.DataFrame, chain_id_name_dict: dict[str, s
 
 def save_to_json(
         assets_df: pd.DataFrame,
-        chain_id_name_dict: dict[str, str]) -> None:
+        chain_id_name_dict: dict[str, str],
+        save_supply: bool = False) -> None:
     """
     Save an assets metadata dataframe to a json files
     :param assets_df: an assets metadata dataframe
     :param chain_id_name_dict: dictionary of chain ids by chain names
+    :param save_supply: save or not `supply` and `base_supply`
     :return: none
     """
-    _assets_json = get_asset_json_dict(assets_df=assets_df, chain_id_name_dict=chain_id_name_dict)
+    _assets_json = get_asset_json_dict(
+        assets_df=assets_df,
+        chain_id_name_dict=chain_id_name_dict,
+        save_supply=save_supply)
     logging.info(f'chains in chain-registry: {len(chain_id_name_dict.keys())}, '
                  f'chain indexed: {len(_assets_json.keys())}')
 

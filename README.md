@@ -1,4 +1,8 @@
 # On-Chain Registry: Cosmos-SDK Asset List
+<p>
+    <img alt="GitHub" src="https://img.shields.io/github/license/Snedashkovsky/on-chain-registry">
+    <img alt="Python" src="https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue">
+</p>
 As blockchain assets transition between various chains within the Cosmos ecosystem and beyond, the need arises for a precise tool to monitor this intricate data flow. Meet the **On-Chain Registry (OCR)** – meticulously designed to compile all proof-of-nodes data, offering a timely and detailed snapshot of the current asset landscape.
 
 ## Proof-of-Nodes Concept
