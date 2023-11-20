@@ -6690,10 +6690,56 @@
         {
             "base": "ibc/E1C4A096B9352ACE077BE02E6FC1369A264952F40D722CF1C28965FC608681C1",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-65",
+                        "base_denom": "ibc/774E8FD332D0A0CF0D8B71E0086DDCC09820C11B400E6B1399E770936932983D",
+                        "chain_name": "gravitybridge"
+                    },
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-106/aacre"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "acre_9052-1",
+                        "channel_id": "channel-6",
+                        "base_denom": "aacre",
+                        "chain_name": "acrechain"
+                    },
+                    "chain": {
+                        "channel_id": "channel-106",
+                        "path": "transfer/channel-106/aacre"
+                    }
+                }
+            ],
+            "description": "The native staking and governance token of the Acrechain",
+            "denom_units": [
+                {
+                    "denom": "aacre",
+                    "exponent": 0,
+                    "aliases": [
+                        "aacre"
+                    ]
+                },
+                {
+                    "denom": "ACRE",
+                    "exponent": 18,
+                    "aliases": []
+                }
+            ],
+            "display": "ACRE",
+            "name": "ACRE",
+            "symbol": "ACRE",
             "ibc": {
                 "source_channel": "channel-8",
                 "dst_channel": "channel-65",
-                "source_denom": ""
+                "source_denom": "ibc/774E8FD332D0A0CF0D8B71E0086DDCC09820C11B400E6B1399E770936932983D"
             }
         },
         {
@@ -9524,6 +9570,30 @@
             }
         },
         {
+            "base": "ibc/B5AB26FB63C08E1C14B91B4DDC15CA4FE59737052B4432D8A3B328B66F6FE7A1",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "crescent-1",
+                        "channel_id": "channel-7",
+                        "base_denom": "ucre",
+                        "chain_name": "crescent"
+                    },
+                    "chain": {
+                        "channel_id": "channel-11",
+                        "path": "transfer/channel-11/ucre"
+                    }
+                }
+            ],
+            "ibc": {
+                "source_channel": "channel-11",
+                "dst_channel": "channel-7",
+                "source_denom": "ucre"
+            }
+        },
+        {
             "base": "ibc/B926F947F6602A60D007CD12424D39FE9EB86641024E007857999C36967ADAA2",
             "type_asset": "ics20",
             "ibc": {
@@ -10371,28 +10441,6 @@
             "display": "NEOKingdomDAO",
             "name": "erc20/0x655ecB57432CC1370f65e5dc2309588b71b473A9",
             "symbol": "NEOK"
-        },
-        {
-            "base": "ibc/B5AB26FB63C08E1C14B91B4DDC15CA4FE59737052B4432D8A3B328B66F6FE7A1",
-            "type_asset": "ics20",
-            "description": "The native staking and governance token of the CrescentNetwork",
-            "denom_units": [
-                {
-                    "denom": "ibc/B5AB26FB63C08E1C14B91B4DDC15CA4FE59737052B4432D8A3B328B66F6FE7A1",
-                    "exponent": 0,
-                    "aliases": [
-                        "ucre"
-                    ]
-                },
-                {
-                    "denom": "CRE",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "CRE",
-            "name": "Crescent Network",
-            "symbol": "CRE"
         }
     ]
 }
