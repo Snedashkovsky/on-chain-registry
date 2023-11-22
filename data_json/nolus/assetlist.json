@@ -3,6 +3,61 @@
     "chain_id": "pirin-1",
     "assets": [
         {
+            "base": "ibc/11E3CF372E065ACB1A39C531A3C7E7E03F60B5D0653AD2139D31128ACD2772B5",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-783",
+                        "base_denom": "ibc/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-75/ustars"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "stargaze-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "ustars",
+                        "chain_name": "stargaze"
+                    },
+                    "chain": {
+                        "channel_id": "channel-75",
+                        "path": "transfer/channel-75/ustars"
+                    }
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "denom_units": [
+                {
+                    "denom": "ustars",
+                    "exponent": 0,
+                    "aliases": [
+                        "microstars"
+                    ]
+                },
+                {
+                    "denom": "stars",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "stars",
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-783",
+                "source_denom": "ibc/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4"
+            }
+        },
+        {
             "base": "ibc/1B03A71B8E6F6EF424411DC9326A8E0D25D096E4D2616425CFAF2AF06F0FE717",
             "type_asset": "ics20",
             "traces": [
