@@ -769,6 +769,19 @@
                         "channel_id": "channel-17",
                         "path": "transfer/channel-17/transfer/channel-358/transfer/channel-0/gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "canto_7700-1",
+                        "channel_id": "channel-2",
+                        "base_denom": "ibc/DC186CA7A8C009B43774EBDC825C935CABA9743504CE6037507E6E5CCE12858A",
+                        "chain_name": "canto"
+                    },
+                    "chain": {
+                        "channel_id": "channel-358",
+                        "path": "transfer/channel-358/transfer/channel-0/gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+                    }
                 }
             ],
             "ibc": {
@@ -1448,8 +1461,59 @@
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/transfer/channel-88/transfer/channel-2/uatom"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "canto_7700-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "ibc/9117A26BA81E29FA4F78F57DC2BD90CD3D26848101BA880445F119B22A1E254E",
+                        "chain_name": "canto"
+                    },
+                    "chain": {
+                        "channel_id": "channel-88",
+                        "path": "transfer/channel-88/transfer/channel-2/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-358",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uatom"
+                    }
                 }
             ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "atom",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-62",
@@ -2477,51 +2541,10 @@
         {
             "base": "ibc/BF15DD5D7A56E637000D3B4AC21B2559D7FC7FAD2DDC9CB49794FC714DE10920",
             "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-62",
-                        "base_denom": "ibc/BFFE5A22450AB53580906F6023F88E308873A1B8D9FE058929063C20C928D1A8",
-                        "chain_name": "gravitybridge"
-                    },
-                    "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/transfer/channel-10/transfer/channel-208/weth-wei"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-144",
-                        "base_denom": "ibc/EA1D43981D5C9A1C4AAEA9C23BB1D4FA126BA9BC7020A25E0AE4AA841EA25DC5",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-10",
-                        "path": "transfer/channel-10/transfer/channel-208/weth-wei"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-3",
-                        "base_denom": "weth-wei",
-                        "chain_name": "axelar"
-                    },
-                    "chain": {
-                        "channel_id": "channel-208",
-                        "path": "transfer/channel-208/weth-wei"
-                    }
-                }
-            ],
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-62",
-                "source_denom": "ibc/BFFE5A22450AB53580906F6023F88E308873A1B8D9FE058929063C20C928D1A8"
+                "source_denom": ""
             }
         },
         {
