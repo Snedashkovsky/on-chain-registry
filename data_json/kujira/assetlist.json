@@ -2985,10 +2985,51 @@
         {
             "base": "ibc/E35DA08E7BEF94E658C961F7BDC4F7E81731C565E09B92B2BA2B195B25778662",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-107",
+                        "base_denom": "ibc/BFFE5A22450AB53580906F6023F88E308873A1B8D9FE058929063C20C928D1A8",
+                        "chain_name": "gravitybridge"
+                    },
+                    "chain": {
+                        "channel_id": "channel-50",
+                        "path": "transfer/channel-50/transfer/channel-10/transfer/channel-208/weth-wei"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-144",
+                        "base_denom": "ibc/EA1D43981D5C9A1C4AAEA9C23BB1D4FA126BA9BC7020A25E0AE4AA841EA25DC5",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-208/weth-wei"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "axelar-dojo-1",
+                        "channel_id": "channel-3",
+                        "base_denom": "weth-wei",
+                        "chain_name": "axelar"
+                    },
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/weth-wei"
+                    }
+                }
+            ],
             "ibc": {
                 "source_channel": "channel-50",
                 "dst_channel": "channel-107",
-                "source_denom": ""
+                "source_denom": "ibc/BFFE5A22450AB53580906F6023F88E308873A1B8D9FE058929063C20C928D1A8"
             }
         },
         {
@@ -8800,6 +8841,46 @@
             }
         },
         {
+            "base": "ibc/7D9D28CABB49A4BB1A50C3B7E4544BFDBC5DDFAEB84A7787755A34CE7196CE15",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "wormchain",
+                        "channel_id": "channel-9",
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+                        "chain_name": "gateway"
+                    },
+                    "chain": {
+                        "channel_id": "channel-113",
+                        "path": "transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp"
+                    }
+                }
+            ],
+            "description": "Wrapped Ether (Wormhole), WETH, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+            "denom_units": [
+                {
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "wormhole/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp/8",
+                    "exponent": 8,
+                    "aliases": []
+                }
+            ],
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+            "name": "Wrapped Ether (Wormhole)",
+            "symbol": "WETH",
+            "ibc": {
+                "source_channel": "channel-113",
+                "dst_channel": "channel-9",
+                "source_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp"
+            }
+        },
+        {
             "base": "ibc/7DC74E1AAAC995B931890405DAD2796996B23273BC5836825745FC041D0AD013",
             "type_asset": "ics20",
             "traces": [
@@ -10626,6 +10707,15 @@
                 "source_channel": "channel-50",
                 "dst_channel": "channel-107",
                 "source_denom": "gravity0xa0b93B9e90aB887E53F9FB8728c009746e989B53"
+            }
+        },
+        {
+            "base": "ibc/CB95F3D1449858A77DAC28D660404698BC9F70561907820705FE9E4AE9DC4E9B",
+            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-113",
+                "dst_channel": "channel-9",
+                "source_denom": ""
             }
         },
         {
@@ -12508,6 +12598,19 @@
             "admin": "kujira15pk8c09vcsgsdq4xlh2qfqxtu2r8pgdy7nggkqj8p3h2phke80pqwnvtzk"
         },
         {
+            "base": "factory/kujira1622xuv8unv22xzazljvqh8uukcdz3yzmrp6axgerh7vxg4kum5tqcwcqmv/ulp",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira1622xuv8unv22xzazljvqh8uukcdz3yzmrp6axgerh7vxg4kum5tqcwcqmv/ulp",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira1622xuv8unv22xzazljvqh8uukcdz3yzmrp6axgerh7vxg4kum5tqcwcqmv/ulp",
+            "admin": "kujira1622xuv8unv22xzazljvqh8uukcdz3yzmrp6axgerh7vxg4kum5tqcwcqmv"
+        },
+        {
             "base": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
             "type_asset": "factory",
             "denom_units": [
@@ -12558,6 +12661,19 @@
             ],
             "address": "factory/kujira168pnd5cyadhppfxvug4gchd52vuau5vkletxtfld7hdavwtgcu9sjem6z5/bKUJIaxlUSDC",
             "admin": "kujira168pnd5cyadhppfxvug4gchd52vuau5vkletxtfld7hdavwtgcu9sjem6z5"
+        },
+        {
+            "base": "factory/kujira16rujrka8vk3c7l7raa37km8eqcxv9z583p3c6e288q879rwp23ksy6efce/bFUZN01",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira16rujrka8vk3c7l7raa37km8eqcxv9z583p3c6e288q879rwp23ksy6efce/bFUZN01",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira16rujrka8vk3c7l7raa37km8eqcxv9z583p3c6e288q879rwp23ksy6efce/bFUZN01",
+            "admin": "kujira16rujrka8vk3c7l7raa37km8eqcxv9z583p3c6e288q879rwp23ksy6efce"
         },
         {
             "base": "factory/kujira16wvvrvl5qgx9x0kdj8tqr6jz5dncmt3a9xh5pl4fa9q0pwt3t7zsuy9hu5/urcpt",
@@ -13078,6 +13194,32 @@
             ],
             "address": "factory/kujira1ejcmcak0yxsqxy94w62gu74n3gp557hf5d200y022zrnq7jr7udsrwuk0n/urcpt",
             "admin": "kujira1ejcmcak0yxsqxy94w62gu74n3gp557hf5d200y022zrnq7jr7udsrwuk0n"
+        },
+        {
+            "base": "factory/kujira1el8eh78r8g6dyhrp0t6kffyyemfpu52xkx96u6qhwnru5ryg6t9su9az2q/ulp",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira1el8eh78r8g6dyhrp0t6kffyyemfpu52xkx96u6qhwnru5ryg6t9su9az2q/ulp",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira1el8eh78r8g6dyhrp0t6kffyyemfpu52xkx96u6qhwnru5ryg6t9su9az2q/ulp",
+            "admin": "kujira1el8eh78r8g6dyhrp0t6kffyyemfpu52xkx96u6qhwnru5ryg6t9su9az2q"
+        },
+        {
+            "base": "factory/kujira1eqd96322ec258w7k9n9cfqkusrlvzwv38jkph3qs720egdv0epmq70j2zl/ulp",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira1eqd96322ec258w7k9n9cfqkusrlvzwv38jkph3qs720egdv0epmq70j2zl/ulp",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira1eqd96322ec258w7k9n9cfqkusrlvzwv38jkph3qs720egdv0epmq70j2zl/ulp",
+            "admin": "kujira1eqd96322ec258w7k9n9cfqkusrlvzwv38jkph3qs720egdv0epmq70j2zl"
         },
         {
             "base": "factory/kujira1euap7mtdpkggl478pv03e630gwft3yh4h9ewtdtjmvc7760gs4wsynutx7/ulp",
@@ -14224,6 +14366,32 @@
             "admin": "kujira1sx99fxy4lqx0nv3ys86tkdrch82qygxyec5c8dxsk9raz4at5zpq72gypx"
         },
         {
+            "base": "factory/kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln/udebt",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln/udebt",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln/udebt",
+            "admin": "kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln"
+        },
+        {
+            "base": "factory/kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln/urcpt",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln/urcpt",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln/urcpt",
+            "admin": "kujira1t6anuwgxf22av6kna33tyyfapetca243zydvkahmv252f03gvapqsjv2ln"
+        },
+        {
             "base": "factory/kujira1t7n87wexjcg348d0s06kjd7nd2w37ergtd2lx24uffka7sc8l2qqtf70hq/ulp",
             "type_asset": "factory",
             "denom_units": [
@@ -14430,6 +14598,19 @@
             ],
             "address": "factory/kujira1v2f5ahvhtkn5k5a3jlf6qeqmhzr55ne8724cdnpapt6dva2vgtnqxwzvsk/ulp",
             "admin": "kujira1v2f5ahvhtkn5k5a3jlf6qeqmhzr55ne8724cdnpapt6dva2vgtnqxwzvsk"
+        },
+        {
+            "base": "factory/kujira1vcmh95lje5dln782pxckma65eujs4sv960w22whgsp7a2ajsc6lsvnlhgd/ulp",
+            "type_asset": "factory",
+            "denom_units": [
+                {
+                    "denom": "factory/kujira1vcmh95lje5dln782pxckma65eujs4sv960w22whgsp7a2ajsc6lsvnlhgd/ulp",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "address": "factory/kujira1vcmh95lje5dln782pxckma65eujs4sv960w22whgsp7a2ajsc6lsvnlhgd/ulp",
+            "admin": "kujira1vcmh95lje5dln782pxckma65eujs4sv960w22whgsp7a2ajsc6lsvnlhgd"
         },
         {
             "base": "factory/kujira1vj36ntsqd3msc69lxldcv9dd50jngknmael9e07rz4fpn5kyq0jsglvz2m/ulp",
