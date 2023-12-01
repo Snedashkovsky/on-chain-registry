@@ -29,10 +29,56 @@
         {
             "base": "ibc/0D2C6CD8F9AAB7C928AC86AAA2CEF0F10571890E69EC92F3AF1CC2F39F954A3D",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-57",
+                        "base_denom": "ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602",
+                        "chain_name": "gravitybridge"
+                    },
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-7/ustars"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "stargaze-1",
+                        "channel_id": "channel-6",
+                        "base_denom": "ustars",
+                        "chain_name": "stargaze"
+                    },
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/ustars"
+                    }
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "display": "stars",
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-57",
-                "source_denom": ""
+                "source_denom": "ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602"
             }
         },
         {
