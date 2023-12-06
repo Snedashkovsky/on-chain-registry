@@ -7,6 +7,7 @@ import base64
 from urllib3.exceptions import TimeoutError
 from requests.exceptions import ConnectionError, ReadTimeout
 from tqdm import tqdm
+from enum import Enum
 
 from config import logging
 
@@ -14,21 +15,35 @@ from config import logging
 filterwarnings('ignore')
 
 
-def get_denom_info(denom: str, node_lcd_url: str) -> [str, Optional[str]]:
+class AssetType(Enum):
+    ICS20 = 'ics20'
+    POOL = 'pool'
+    CW20 = 'cw20'
+    ERC20 = 'erc20'
+    FACTORY = 'factory'
+    SDK_COIN = 'sdk.coin'
+
+
+def get_denom_info(denom: str,
+                   node_lcd_url: str,
+                   node_lcd_url_list: Optional[list[str]] = None) -> [str, Optional[str]]:
     """
-    Get a base demon and a path for ics20 asset
+    Get a base demon and a path for ics20 asset and denom in another cases
     :param denom: an asset denom in a network
-    :param node_lcd_url: a node LCD url
+    :param node_lcd_url: a node lcd url
+    :param node_lcd_url_list: list of node lcd urls
     :return: a base demon and a path
     """
     if denom[:4] == 'ibc/':
-        try:
-            _res_json = requests.get(f'{node_lcd_url}/ibc/apps/transfer/v1/denom_traces/{denom[4:]}').json()[
-                'denom_trace']
-            return str(_res_json['base_denom']), _res_json['path']
-        except Exception as _e:
-            logging.error(f'Not found denom {denom} node lcd url {node_lcd_url}. Error: {_e}')
-            return str(denom), 'Not found'
+        _node_lcd_url_list = [node_lcd_url] if node_lcd_url_list is None else [node_lcd_url] + node_lcd_url_list
+        for _node_lcd_url in _node_lcd_url_list:
+            try:
+                _res_json = requests.get(f'{_node_lcd_url}/ibc/apps/transfer/v1/denom_traces/{denom[4:]}').json()[
+                    'denom_trace']
+                return str(_res_json['base_denom']), _res_json['path']
+            except Exception as _e:
+                logging.error(f'Not found denom {denom} node lcd url {_node_lcd_url}. Error: {_e}')
+        return str(denom), 'Not found'
     else:
         return str(denom), None
 
@@ -40,16 +55,16 @@ def get_type_asset(denom: str) -> str:
     :return: an asset type
     """
     if denom[:4] == 'ibc/':
-        return 'ics20'
+        return AssetType.ICS20.value
     if denom[:4] == 'pool' or denom[:10] == 'gamm/pool/' or denom[:8] == 'cl/pool/':
-        return 'pool'
+        return AssetType.POOL.value
     if denom[:5] == 'cw20:':
-        return 'cw20'
+        return AssetType.CW20.value
     if denom[:9] == 'gravity0x':
-        return 'erc20'
+        return AssetType.ERC20.value
     if denom[:8] == 'factory/':
-        return 'factory'
-    return 'sdk.coin'
+        return AssetType.FACTORY.value
+    return AssetType.SDK_COIN.value
 
 
 def get_assets_supply(node_lcd_url: str,
@@ -147,12 +162,14 @@ def get_cw20_token_info(contract_address: str,
 
 def get_assets(chain_id: str,
                node_lcd_url: str,
+               node_lcd_url_list: list[str],
                port_id: str = 'transfer',
                limit: int = 10_000) -> pd.DataFrame:
     """
     Get dataframe with assets data for a given network and a given network lcd
     :param chain_id: chain id
-    :param node_lcd_url: node LCD url
+    :param node_lcd_url: node lcd url
+    :param node_lcd_url_list: list of node lcd urls
     :param port_id: connection port id
     :param limit: maximum amount of assets
     :return: dataframe with asset data
@@ -172,7 +189,8 @@ def get_assets(chain_id: str,
             lambda row: pd.Series(
                 data=get_denom_info(
                     denom=row['denom'],
-                    node_lcd_url=node_lcd_url)),
+                    node_lcd_url=node_lcd_url,
+                    node_lcd_url_list=node_lcd_url_list)),
             axis=1).to_numpy()
 
     _assets_df['channels'] = \
@@ -216,7 +234,7 @@ def extract_assets(chain_id: str, node_lcd_url_list: list[str]) -> bool:
     for _node_lcd_url in node_lcd_url_list[::-1]:
         try:
             logging.info(f'extract lcd for chain id: {chain_id}  node lcd url: {_node_lcd_url}')
-            _asset_df = get_assets(chain_id=chain_id, node_lcd_url=_node_lcd_url)
+            _asset_df = get_assets(chain_id=chain_id, node_lcd_url=_node_lcd_url, node_lcd_url_list=node_lcd_url_list)
             break
         except (ConnectionError, ReadTimeout, TimeoutError, json.JSONDecodeError) as e:
             logging.error(f'no connection for {chain_id} to lcd {_node_lcd_url}. Error: {e}')
