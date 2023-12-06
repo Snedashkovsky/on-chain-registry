@@ -23,6 +23,34 @@ class AssetType(Enum):
     FACTORY = 'factory'
     SDK_COIN = 'sdk.coin'
 
+    @classmethod
+    def get_asset_type(cls, denom: str) -> "AssetType":
+        """
+        Get an AssetType object by a denom
+        :param denom: an asset denom
+        :return: an AssetType object
+        """
+        if denom[:4] == 'ibc/':
+            return AssetType.ICS20
+        if denom[:4] == 'pool' or denom[:10] == 'gamm/pool/' or denom[:8] == 'cl/pool/':
+            return AssetType.POOL
+        if denom[:5] == 'cw20:':
+            return AssetType.CW20
+        if denom[:9] == 'gravity0x':
+            return AssetType.ERC20
+        if denom[:8] == 'factory/':
+            return AssetType.FACTORY
+        return AssetType.SDK_COIN
+
+
+def get_asset_type_str(denom: str) -> str:
+    """
+    Get an asset type by a denom
+    :param denom: an asset denom
+    :return: an asset type in string
+    """
+    return AssetType.get_asset_type(denom=denom).value
+
 
 def get_denom_info(denom: str,
                    node_lcd_url: str,
@@ -46,25 +74,6 @@ def get_denom_info(denom: str,
         return str(denom), 'Not found'
     else:
         return str(denom), None
-
-
-def get_type_asset(denom: str) -> str:
-    """
-    Get an asset type by a denom
-    :param denom: an asset denom
-    :return: an asset type
-    """
-    if denom[:4] == 'ibc/':
-        return AssetType.ICS20.value
-    if denom[:4] == 'pool' or denom[:10] == 'gamm/pool/' or denom[:8] == 'cl/pool/':
-        return AssetType.POOL.value
-    if denom[:5] == 'cw20:':
-        return AssetType.CW20.value
-    if denom[:9] == 'gravity0x':
-        return AssetType.ERC20.value
-    if denom[:8] == 'factory/':
-        return AssetType.FACTORY.value
-    return AssetType.SDK_COIN.value
 
 
 def get_assets_supply(node_lcd_url: str,
@@ -213,8 +222,8 @@ def get_assets(chain_id: str,
         _assets_df.channels.map(
             lambda _channels: _channel_id_counterparty_dict[_channels[0]] if _channels is not None and len(
                 _channels) > 0 else None)
-    _assets_df['type_asset'] = _assets_df.denom.map(get_type_asset)
-    _assets_df['type_asset_base'] = _assets_df.denom_base.map(get_type_asset)
+    _assets_df['type_asset'] = _assets_df.denom.map(get_asset_type_str)
+    _assets_df['type_asset_base'] = _assets_df.denom_base.map(get_asset_type_str)
     # TODO  change to a `authority_metadata` request result
     _assets_df['admin'] = _assets_df.apply(
         lambda x: x['denom'].split('/')[1] if x.type_asset == 'factory' else None,
