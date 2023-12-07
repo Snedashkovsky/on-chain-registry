@@ -41,6 +41,7 @@ update: extract export run_notebook export_to_contracts # extract from node apis
 commit:  # commit updates
 ifeq (${CURRENT_BRANCH}, ${ASSET_BRANCH})
 	@echo "commit updates"
+	git add data_json/*
 	git commit -am "- update asset list"
 	git push origin ${ASSET_BRANCH}
 else
