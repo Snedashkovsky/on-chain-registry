@@ -3,43 +3,6 @@
     "chain_id": "crescent-1",
     "assets": [
         {
-            "base": "ibc/F238C825ECFA0CC33C9CE053DCE62A81EDFBB12CF7A30E0D58F532F57268FD1D",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "evmos_9001-2",
-                        "channel_id": "channel-11",
-                        "base_denom": "ibc/F6FF35BFFE819365BFA2A9DFFBC268D59923F739CB464D4FC3F5B5003946B65E",
-                        "chain_name": "evmos"
-                    },
-                    "chain": {
-                        "channel_id": "channel-7",
-                        "path": "transfer/channel-7/transfer/channel-10/transfer/channel-8/transfer/channel-642/transfer/channel-3/transfer/channel-1/transfer/channel-141/transfer/channel-122/transfer/channel-152/utia"
-                    }
-                },
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "injective-1",
-                        "channel_id": "channel-83",
-                        "base_denom": "ibc/79AAED90BC8A3025E4CC344DF8F89D0DBAC646E5E2FD6B60783981BF1FE06DCA",
-                        "chain_name": "injective"
-                    },
-                    "chain": {
-                        "channel_id": "channel-10",
-                        "path": "transfer/channel-10/transfer/channel-8/transfer/channel-642/transfer/channel-3/transfer/channel-1/transfer/channel-141/transfer/channel-122/transfer/channel-152/utia"
-                    }
-                }
-            ],
-            "ibc": {
-                "source_channel": "channel-7",
-                "dst_channel": "channel-11",
-                "source_denom": "ibc/F6FF35BFFE819365BFA2A9DFFBC268D59923F739CB464D4FC3F5B5003946B65E"
-            }
-        },
-        {
             "base": "ibc/E070069B978C758AD03904B8704C4B4D3FB9DBF1227887437B77EAD8E6DE9687",
             "type_asset": "ics20",
             "traces": [
@@ -1993,10 +1956,56 @@
         {
             "base": "ibc/4A9F459970C5146A3B2E5A02D95A3E086C3EC1842ED07467AAA304C4433CCD1C",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "injective-1",
+                        "channel_id": "channel-90",
+                        "base_denom": "ibc/16618B7F7AC551F48C057A13F4CA5503693FBFF507719A85BC6876B8BD75F821",
+                        "chain_name": "injective"
+                    },
+                    "chain": {
+                        "channel_id": "channel-23",
+                        "path": "transfer/channel-23/transfer/channel-83/aevmos"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "evmos_9001-2",
+                        "channel_id": "channel-10",
+                        "base_denom": "aevmos",
+                        "chain_name": "evmos"
+                    },
+                    "chain": {
+                        "channel_id": "channel-83",
+                        "path": "transfer/channel-83/aevmos"
+                    }
+                }
+            ],
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "denom_units": [
+                {
+                    "denom": "aevmos",
+                    "exponent": 0,
+                    "aliases": [
+                        "attoevmos"
+                    ]
+                },
+                {
+                    "denom": "evmos",
+                    "exponent": 18,
+                    "aliases": []
+                }
+            ],
+            "display": "evmos",
+            "name": "Evmos",
+            "symbol": "EVMOS",
             "ibc": {
                 "source_channel": "channel-23",
                 "dst_channel": "channel-90",
-                "source_denom": ""
+                "source_denom": "ibc/16618B7F7AC551F48C057A13F4CA5503693FBFF507719A85BC6876B8BD75F821"
             }
         },
         {
