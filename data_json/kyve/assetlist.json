@@ -18,6 +18,32 @@
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/transfer/channel-3/transfer/channel-53/nanolike"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-208",
+                        "base_denom": "ibc/9989AD6CCA39D1131523DB0617B50F6442081162294B4795E26746292467B525",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-53/nanolike"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "likecoin-mainnet-2",
+                        "channel_id": "channel-3",
+                        "base_denom": "nanolike",
+                        "chain_name": "likecoin"
+                    },
+                    "chain": {
+                        "channel_id": "channel-53",
+                        "path": "transfer/channel-53/nanolike"
+                    }
                 }
             ],
             "ibc": {
@@ -53,10 +79,39 @@
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-767",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-767",
-                "source_denom": ""
+                "source_denom": "uosmo"
             }
         },
         {

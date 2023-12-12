@@ -3,12 +3,83 @@
     "chain_id": "dydx-mainnet-1",
     "assets": [
         {
+            "base": "ibc/3FE70329521E882682D5FE840A1FA0FF65AC1A2FBDEA9B7E38F767FD3C5C90A3",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "umee-1",
+                        "channel_id": "channel-118",
+                        "base_denom": "uumee",
+                        "chain_name": "umee"
+                    },
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/uumee"
+                    }
+                }
+            ],
+            "description": "The native staking token of the Umee network.",
+            "denom_units": [
+                {
+                    "denom": "uumee",
+                    "exponent": 0,
+                    "aliases": [
+                        "microumee"
+                    ]
+                },
+                {
+                    "denom": "UMEE",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "UMEE",
+            "name": "UMEE",
+            "symbol": "UMEE",
+            "ibc": {
+                "source_channel": "channel-8",
+                "dst_channel": "channel-118",
+                "source_denom": "uumee"
+            }
+        },
+        {
             "base": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-6787",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/uosmo"
+                    }
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-3",
                 "dst_channel": "channel-6787",
-                "source_denom": ""
+                "source_denom": "uosmo"
             }
         },
         {
@@ -179,6 +250,46 @@
                 "source_channel": "channel-2",
                 "dst_channel": "channel-89",
                 "source_denom": "uscrt"
+            }
+        },
+        {
+            "base": "ibc/F5C65AF4FAB33C8982AC91DC669F598D02195D654FC6D9BE9B5DB323581486F6",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "coreum-mainnet-1",
+                        "channel_id": "channel-21",
+                        "base_denom": "ucore",
+                        "chain_name": "coreum"
+                    },
+                    "chain": {
+                        "channel_id": "channel-13",
+                        "path": "transfer/channel-13/ucore"
+                    }
+                }
+            ],
+            "description": "ucore coin",
+            "denom_units": [
+                {
+                    "denom": "ucore",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "core",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "core",
+            "name": "ucore",
+            "symbol": "UCORE",
+            "ibc": {
+                "source_channel": "channel-13",
+                "dst_channel": "channel-21",
+                "source_denom": "ucore"
             }
         },
         {
