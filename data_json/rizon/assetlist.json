@@ -67,19 +67,125 @@
         {
             "base": "ibc/30C9FA3DF80892CF4615A84845349EAD427670CB38C6B03B0388BE8543B2AB4D",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-221",
+                        "base_denom": "ibc/BE1BB42D4BE3C30D50B68D7C41DB4DFCE9678E8EF8C539F6E6A9345048894FCC",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-72/uusd"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "columbus-5",
+                        "channel_id": "channel-1",
+                        "base_denom": "uusd",
+                        "chain_name": "terra"
+                    },
+                    "chain": {
+                        "channel_id": "channel-72",
+                        "path": "transfer/channel-72/uusd"
+                    }
+                }
+            ],
+            "description": "The native stable token of the Terra Columbus.",
+            "denom_units": [
+                {
+                    "denom": "uusd",
+                    "exponent": 0,
+                    "aliases": [
+                        "microusd"
+                    ]
+                },
+                {
+                    "denom": "musd",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliusd"
+                    ]
+                },
+                {
+                    "denom": "usd",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "usd",
+            "name": "USD TERRA",
+            "symbol": "UST",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-221",
-                "source_denom": ""
+                "source_denom": "ibc/BE1BB42D4BE3C30D50B68D7C41DB4DFCE9678E8EF8C539F6E6A9345048894FCC"
             }
         },
         {
             "base": "ibc/815FC81EB6BD612206BD9A9909A02F7691D24A5B97CDFE2124B1BDCA9D4AB14C",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-221",
+                        "base_denom": "ibc/0EF15DF2F02480ADE0BB6E85D9EBB5DAEA2836D3860E9F97F9AADE4F57A31AA0",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-72/uluna"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "columbus-5",
+                        "channel_id": "channel-1",
+                        "base_denom": "uluna",
+                        "chain_name": "terra"
+                    },
+                    "chain": {
+                        "channel_id": "channel-72",
+                        "path": "transfer/channel-72/uluna"
+                    }
+                }
+            ],
+            "description": "The native staking token of the Terra Columbus.",
+            "denom_units": [
+                {
+                    "denom": "uluna",
+                    "exponent": 0,
+                    "aliases": [
+                        "microluna"
+                    ]
+                },
+                {
+                    "denom": "mluna",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliluna"
+                    ]
+                },
+                {
+                    "denom": "luna",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "luna",
+            "name": "LUNA",
+            "symbol": "LUNA",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-221",
-                "source_denom": ""
+                "source_denom": "ibc/0EF15DF2F02480ADE0BB6E85D9EBB5DAEA2836D3860E9F97F9AADE4F57A31AA0"
             }
         },
         {
@@ -135,8 +241,35 @@
                         "channel_id": "channel-4",
                         "path": "transfer/channel-4/transfer/channel-10/uosmo"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-144",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/uosmo"
+                    }
                 }
             ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-4",
                 "dst_channel": "channel-53",
@@ -146,10 +279,39 @@
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-221",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    }
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-221",
-                "source_denom": ""
+                "source_denom": "uosmo"
             }
         },
         {
@@ -338,10 +500,38 @@
         {
             "base": "ibc/EA7DF7F779C7F14E07172E5713E07356B55F01496CA649DDE46CF8FBF1A8466D",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-221",
+                        "base_denom": "uion",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uion"
+                    }
+                }
+            ],
+            "denom_units": [
+                {
+                    "denom": "uion",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "ion",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "ion",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-221",
-                "source_denom": ""
+                "source_denom": "uion"
             }
         },
         {

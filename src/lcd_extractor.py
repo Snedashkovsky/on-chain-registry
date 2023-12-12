@@ -107,7 +107,7 @@ def get_assets_metadata(node_lcd_url: str,
 
 
 def get_channel_id_counterparty_dict(node_lcd_url: str,
-                                     limit: int = 10_000) -> dict:
+                                     limit: int = 100_000) -> dict:
     """
     Get a dictionary from channel id to counterparty channel id
     :param node_lcd_url: node LCD url
