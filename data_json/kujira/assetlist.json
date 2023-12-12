@@ -441,6 +441,15 @@
             }
         },
         {
+            "base": "ibc/E0C9AA243D22EF77762143F4256F8B56A57C7C9F6C8A5A2C62790A0DEF284CFD",
+            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-343",
+                "source_denom": ""
+            }
+        },
+        {
             "base": "ibc/09608F068D823F51DB1468B6CF15879BB7EA4CDF1713C6AA96B6614C9FD61A25",
             "type_asset": "ics20",
             "traces": [
@@ -2457,6 +2466,59 @@
             }
         },
         {
+            "base": "ibc/8D3DB85E88408BF08A4FC16582BFE32F12B922FB3B724FE94FCA09683E14085E",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "archway-1",
+                        "channel_id": "channel-11",
+                        "base_denom": "ibc/43897B9739BD63E3A08A88191999C632E052724AB96BD4C74AE31375C991F48D",
+                        "chain_name": "archway"
+                    },
+                    "chain": {
+                        "channel_id": "channel-99",
+                        "path": "transfer/channel-99/transfer/channel-29/uusdc"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "noble-1",
+                        "channel_id": "channel-12",
+                        "base_denom": "uusdc",
+                        "chain_name": "noble"
+                    },
+                    "chain": {
+                        "channel_id": "channel-29",
+                        "path": "transfer/channel-29/uusdc"
+                    }
+                }
+            ],
+            "description": "USD Coin",
+            "denom_units": [
+                {
+                    "denom": "uusdc",
+                    "exponent": 0,
+                    "aliases": [
+                        "microusdc"
+                    ]
+                },
+                {
+                    "denom": "usdc",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "name": "usdc",
+            "ibc": {
+                "source_channel": "channel-99",
+                "dst_channel": "channel-11",
+                "source_denom": "ibc/43897B9739BD63E3A08A88191999C632E052724AB96BD4C74AE31375C991F48D"
+            }
+        },
+        {
             "base": "ibc/8DF26C5A15910E96268BC3FAF7B64BCC32075DCB0C05C9457AF33D0922FC4531",
             "type_asset": "ics20",
             "traces": [
@@ -3314,6 +3376,46 @@
                 "source_channel": "channel-9",
                 "dst_channel": "channel-14",
                 "source_denom": "pepe-wei"
+            }
+        },
+        {
+            "base": "ibc/04C6F4B1AC75B338CFF91ADBDB4A5BAA3026301C5F15FD28F89BF61A2B0E5462",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "wormchain",
+                        "channel_id": "channel-9",
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT",
+                        "chain_name": "gateway"
+                    },
+                    "chain": {
+                        "channel_id": "channel-113",
+                        "path": "transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT"
+                    }
+                }
+            ],
+            "description": "Wrapped Ether (Wormhole), WETH, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT",
+            "denom_units": [
+                {
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "wormhole/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT/8",
+                    "exponent": 8,
+                    "aliases": []
+                }
+            ],
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT",
+            "name": "Wrapped Ether (Wormhole)",
+            "symbol": "WETH",
+            "ibc": {
+                "source_channel": "channel-113",
+                "dst_channel": "channel-9",
+                "source_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/6wMmXNYNi8tYB32cCAGPoPrr6nHLKx4j9kpGv5moBnuT"
             }
         },
         {
@@ -5150,6 +5252,37 @@
                 "source_channel": "channel-54",
                 "dst_channel": "channel-98",
                 "source_denom": "inj"
+            }
+        },
+        {
+            "base": "ibc/5AC4326C7FC7A84864FA5631928811F58C92475C429FEF4F1FCB3328D68039D1",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "neutron-1",
+                        "channel_id": "channel-3",
+                        "base_denom": "factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe",
+                        "chain_name": "neutron"
+                    },
+                    "chain": {
+                        "channel_id": "channel-75",
+                        "path": "transfer/channel-75/factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe"
+                    }
+                }
+            ],
+            "denom_units": [
+                {
+                    "denom": "factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe",
+                    "exponent": 0,
+                    "aliases": []
+                }
+            ],
+            "ibc": {
+                "source_channel": "channel-75",
+                "dst_channel": "channel-3",
+                "source_denom": "factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe"
             }
         },
         {
@@ -7522,6 +7655,30 @@
             }
         },
         {
+            "base": "ibc/CEA34137DEBFFFB534CAAD7CEB5A96A9F8847CBD8CAE9030DB987437DC324362",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "kava_2222-10",
+                        "channel_id": "channel-116",
+                        "base_denom": "hard",
+                        "chain_name": "kava"
+                    },
+                    "chain": {
+                        "channel_id": "channel-95",
+                        "path": "transfer/channel-95/hard"
+                    }
+                }
+            ],
+            "ibc": {
+                "source_channel": "channel-95",
+                "dst_channel": "channel-116",
+                "source_denom": "hard"
+            }
+        },
+        {
             "base": "ibc/CF90BCBEDFF409F9187A0C3A69C1082D56908DC3F7FC342ED82455A504AD8AA9",
             "type_asset": "ics20",
             "traces": [
@@ -7903,6 +8060,46 @@
                 "source_channel": "channel-46",
                 "dst_channel": "channel-9",
                 "source_denom": "eth.1.2.942d87"
+            }
+        },
+        {
+            "base": "ibc/DF2EE65970C03A37C3CA55884601329BEDB32B155B52F9B6B1D5D4CBB8AD9BA4",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "coreum-mainnet-1",
+                        "channel_id": "channel-17",
+                        "base_denom": "ucore",
+                        "chain_name": "coreum"
+                    },
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/ucore"
+                    }
+                }
+            ],
+            "description": "ucore coin",
+            "denom_units": [
+                {
+                    "denom": "ucore",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "core",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "core",
+            "name": "ucore",
+            "symbol": "UCORE",
+            "ibc": {
+                "source_channel": "channel-122",
+                "dst_channel": "channel-17",
+                "source_denom": "ucore"
             }
         },
         {
