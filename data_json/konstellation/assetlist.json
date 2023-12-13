@@ -18,6 +18,32 @@
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/transfer/channel-10/transfer/channel-171/udarc"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-144",
+                        "base_denom": "ibc/346786EA82F41FE55FAD14BF69AD8BA9B36985406E43F3CB23E6C45A285A9593",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-171/udarc"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "darchub",
+                        "channel_id": "channel-0",
+                        "base_denom": "udarc",
+                        "chain_name": "konstellation"
+                    },
+                    "chain": {
+                        "channel_id": "channel-171",
+                        "path": "transfer/channel-171/udarc"
+                    }
                 }
             ],
             "ibc": {
@@ -84,10 +110,38 @@
         {
             "base": "ibc/7FBDBEEEBA9C50C4BCDF7BF438EAB99E64360833D240B32655C96E319559E911",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-171",
+                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-208/uusdc"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "axelar-dojo-1",
+                        "channel_id": "channel-3",
+                        "base_denom": "uusdc",
+                        "chain_name": "axelar"
+                    },
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/uusdc"
+                    }
+                }
+            ],
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-171",
-                "source_denom": ""
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
             }
         },
         {
@@ -373,19 +427,76 @@
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-171",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    }
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-171",
-                "source_denom": ""
+                "source_denom": "uosmo"
             }
         },
         {
             "base": "ibc/F7E92EE59B5428793F3EF5C1A4CB2494F61A9D0C9A69469D02390714A1372E16",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-171",
+                        "base_denom": "uion",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uion"
+                    }
+                }
+            ],
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uion",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "ion",
+                    "exponent": 6
+                }
+            ],
+            "display": "ion",
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-171",
-                "source_denom": ""
+                "source_denom": "uion"
             }
         },
         {

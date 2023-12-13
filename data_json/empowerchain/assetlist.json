@@ -18,6 +18,32 @@
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/transfer/channel-141/transfer/channel-188/swth"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "ibc/8FEFAE6AECF6E2A255585617F781F35A8D5709A545A804482A261C0C9548A9D3",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-188/swth"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "carbon-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "swth",
+                        "chain_name": "carbon"
+                    },
+                    "chain": {
+                        "channel_id": "channel-188",
+                        "path": "transfer/channel-188/swth"
+                    }
                 }
             ],
             "ibc": {
@@ -97,19 +123,101 @@
         {
             "base": "ibc/30C9FA3DF80892CF4615A84845349EAD427670CB38C6B03B0388BE8543B2AB4D",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-1411",
+                        "base_denom": "ibc/BE1BB42D4BE3C30D50B68D7C41DB4DFCE9678E8EF8C539F6E6A9345048894FCC",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-72/uusd"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "columbus-5",
+                        "channel_id": "channel-1",
+                        "base_denom": "uusd",
+                        "chain_name": "terra"
+                    },
+                    "chain": {
+                        "channel_id": "channel-72",
+                        "path": "transfer/channel-72/uusd"
+                    }
+                }
+            ],
+            "description": "The native stable token of the Terra Columbus.",
+            "denom_units": [
+                {
+                    "denom": "uusd",
+                    "exponent": 0,
+                    "aliases": [
+                        "microusd"
+                    ]
+                },
+                {
+                    "denom": "musd",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliusd"
+                    ]
+                },
+                {
+                    "denom": "usd",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "usd",
+            "name": "USD TERRA",
+            "symbol": "UST",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-1411",
-                "source_denom": ""
+                "source_denom": "ibc/BE1BB42D4BE3C30D50B68D7C41DB4DFCE9678E8EF8C539F6E6A9345048894FCC"
             }
         },
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-1411",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    }
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-1411",
-                "source_denom": ""
+                "source_denom": "uosmo"
             }
         },
         {

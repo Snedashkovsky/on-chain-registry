@@ -18,8 +18,35 @@
                         "channel_id": "channel-10",
                         "path": "transfer/channel-10/transfer/channel-141/uosmo"
                     }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-0",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/uosmo"
+                    }
                 }
             ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-10",
                 "dst_channel": "channel-585",
@@ -78,19 +105,79 @@
         {
             "base": "ibc/BE612CFB5445AD2F56FAE496C0848FA381F967970A4CA586B1F90123AA62C4D4",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-2716",
+                        "base_denom": "gamm/pool/1",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/gamm/pool/1"
+                    }
+                }
+            ],
+            "description": "The share token of the gamm pool 1",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/1",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-1",
+                    "exponent": 18
+                }
+            ],
+            "display": "GAMM-1",
             "ibc": {
                 "source_channel": "channel-19",
                 "dst_channel": "channel-2716",
-                "source_denom": ""
+                "source_denom": "gamm/pool/1"
             }
         },
         {
             "base": "ibc/D7B22A85AB15F44A3152EBF7F2D37B6061F66FAF637E42C287FC649F1F5CA348",
             "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-2716",
+                        "base_denom": "uosmo",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uosmo"
+                    }
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-19",
                 "dst_channel": "channel-2716",
-                "source_denom": ""
+                "source_denom": "uosmo"
             }
         },
         {
