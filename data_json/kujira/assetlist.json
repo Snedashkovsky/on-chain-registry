@@ -3338,6 +3338,56 @@
             }
         },
         {
+            "base": "ibc/C66E3D7D395CC411D2714F4FC53A3E12FAB718C094BEDBD96862E90F59F51A96",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-107",
+                        "base_denom": "ibc/643784752FECB3805887F6E5D881F9B7F04BD4E3A4ED8D256C140D7CFD2FC362",
+                        "chain_name": "gravitybridge"
+                    },
+                    "chain": {
+                        "channel_id": "channel-50",
+                        "path": "transfer/channel-50/transfer/channel-79/transfer/channel-11/uhuahua"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "secret-4",
+                        "channel_id": "channel-17",
+                        "base_denom": "ibc/630E7B10690ADEC9E9CEEE904CE78C522BBCDDC6A081B23FA26A55F6EF40E41E",
+                        "chain_name": "secretnetwork"
+                    },
+                    "chain": {
+                        "channel_id": "channel-79",
+                        "path": "transfer/channel-79/transfer/channel-11/uhuahua"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "chihuahua-1",
+                        "channel_id": "channel-16",
+                        "base_denom": "uhuahua",
+                        "chain_name": "chihuahua"
+                    },
+                    "chain": {
+                        "channel_id": "channel-11",
+                        "path": "transfer/channel-11/uhuahua"
+                    }
+                }
+            ],
+            "ibc": {
+                "source_channel": "channel-50",
+                "dst_channel": "channel-107",
+                "source_denom": "ibc/643784752FECB3805887F6E5D881F9B7F04BD4E3A4ED8D256C140D7CFD2FC362"
+            }
+        },
+        {
             "base": "ibc/CC500105CEEE05DA6327D120A30137F185D9BB0FE156F62223664B2EF4452ED2",
             "type_asset": "ics20",
             "traces": [
@@ -5181,6 +5231,68 @@
                 "source_channel": "channel-9",
                 "dst_channel": "channel-14",
                 "source_denom": "ibc/5B0968D76C6250F0824BD0BB4317DB34E884A14B345C83FB8256809855AC7CA7"
+            }
+        },
+        {
+            "base": "ibc/6D3634157A51B1EE48847CBDD32B42F0811A11B9012E56F9496A9713CC33C389",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "injective-1",
+                        "channel_id": "channel-98",
+                        "base_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
+                        "chain_name": "injective"
+                    },
+                    "chain": {
+                        "channel_id": "channel-54",
+                        "path": "transfer/channel-54/transfer/channel-1/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-220",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    }
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "atom",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "ibc": {
+                "source_channel": "channel-54",
+                "dst_channel": "channel-98",
+                "source_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
             }
         },
         {
@@ -8038,6 +8150,46 @@
                 "source_channel": "channel-3",
                 "dst_channel": "channel-259",
                 "source_denom": "gamm/pool/858"
+            }
+        },
+        {
+            "base": "ibc/2C9D0CC7336DA0CD155ADF5E206EAC8F09F76888ECF1177870583E49F5329DEB",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-259",
+                        "base_denom": "gamm/pool/957",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/gamm/pool/957"
+                    }
+                }
+            ],
+            "description": "The share token of the gamm pool 957",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/957",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-957",
+                    "exponent": 18
+                }
+            ],
+            "display": "GAMM-957",
+            "ibc": {
+                "source_channel": "channel-3",
+                "dst_channel": "channel-259",
+                "source_denom": "gamm/pool/957"
             }
         },
         {
@@ -11495,6 +11647,46 @@
                 "source_channel": "channel-50",
                 "dst_channel": "channel-107",
                 "source_denom": "gravity0x514910771AF9Ca656af840dff83E8264EcF986CA"
+            }
+        },
+        {
+            "base": "ibc/BD9492BC1470FA29CBAEB39BB384CAA2030B190362D0A16641465FCFD8A59FB2",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "wormchain",
+                        "channel_id": "channel-9",
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR",
+                        "chain_name": "gateway"
+                    },
+                    "chain": {
+                        "channel_id": "channel-113",
+                        "path": "transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR"
+                    }
+                }
+            ],
+            "description": "Bonk (Wormhole), Bonk, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR",
+            "denom_units": [
+                {
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "wormhole/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR/5",
+                    "exponent": 5,
+                    "aliases": []
+                }
+            ],
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR",
+            "name": "Bonk (Wormhole)",
+            "symbol": "Bonk",
+            "ibc": {
+                "source_channel": "channel-113",
+                "dst_channel": "channel-9",
+                "source_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/95mnwzvJZJ3fKz77xfGN2nR5to9pZmH8YNvaxgLgw5AR"
             }
         },
         {
