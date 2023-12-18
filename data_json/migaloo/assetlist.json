@@ -959,6 +959,68 @@
             }
         },
         {
+            "base": "ibc/958C08ABCF901F79A49D98851D670F6E322BE5B5A5266BC582645CAA4A2DF497",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "centauri-1",
+                        "channel_id": "channel-19",
+                        "base_denom": "ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0",
+                        "chain_name": "composable"
+                    },
+                    "chain": {
+                        "channel_id": "channel-50",
+                        "path": "transfer/channel-50/transfer/channel-4/uatom"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-617",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uatom"
+                    }
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "display": "atom",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "ibc": {
+                "source_channel": "channel-50",
+                "dst_channel": "channel-19",
+                "source_denom": "ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0"
+            }
+        },
+        {
             "base": "ibc/C801F3E33840F72B09BC3F431D8647216ABBC4CF75AC968AB1E4BAD50560C96A",
             "type_asset": "ics20",
             "traces": [
@@ -1838,15 +1900,39 @@
             ],
             "denom_units": [
                 {
-                    "aliases": [],
                     "denom": "factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO",
-                    "exponent": 0
+                    "exponent": 0,
+                    "aliases": []
                 }
             ],
             "ibc": {
                 "source_channel": "channel-5",
                 "dst_channel": "channel-642",
                 "source_denom": "factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO"
+            }
+        },
+        {
+            "base": "ibc/C7B96F971C31A81811BAF6000F8B8F60C34009619B37C8AC2C40920FB92A192C",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "axelar-dojo-1",
+                        "channel_id": "channel-121",
+                        "base_denom": "shib-wei",
+                        "chain_name": "axelar"
+                    },
+                    "chain": {
+                        "channel_id": "channel-53",
+                        "path": "transfer/channel-53/shib-wei"
+                    }
+                }
+            ],
+            "ibc": {
+                "source_channel": "channel-53",
+                "dst_channel": "channel-121",
+                "source_denom": "shib-wei"
             }
         },
         {
@@ -1879,14 +1965,14 @@
             "description": "The native token of Osmosis",
             "denom_units": [
                 {
-                    "aliases": [],
                     "denom": "uosmo",
-                    "exponent": 0
+                    "exponent": 0,
+                    "aliases": []
                 },
                 {
-                    "aliases": [],
                     "denom": "osmo",
-                    "exponent": 6
+                    "exponent": 6,
+                    "aliases": []
                 }
             ],
             "display": "osmo",
