@@ -3,6 +3,59 @@
     "chain_id": "dydx-mainnet-1",
     "assets": [
         {
+            "base": "ibc/247DEF7C0E022DC3FAF5EB13A38C616252B5B85651803E03710CCBD581673C87",
+            "type_asset": "ics20",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "osmosis-1",
+                        "channel_id": "channel-6787",
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_name": "osmosis"
+                    },
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-750/uusdc"
+                    }
+                },
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "noble-1",
+                        "channel_id": "channel-1",
+                        "base_denom": "uusdc",
+                        "chain_name": "noble"
+                    },
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    }
+                }
+            ],
+            "description": "USD Coin",
+            "denom_units": [
+                {
+                    "denom": "uusdc",
+                    "exponent": 0,
+                    "aliases": [
+                        "microusdc"
+                    ]
+                },
+                {
+                    "denom": "usdc",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "name": "usdc",
+            "ibc": {
+                "source_channel": "channel-3",
+                "dst_channel": "channel-6787",
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
+            }
+        },
+        {
             "base": "ibc/3FE70329521E882682D5FE840A1FA0FF65AC1A2FBDEA9B7E38F767FD3C5C90A3",
             "type_asset": "ics20",
             "traces": [
