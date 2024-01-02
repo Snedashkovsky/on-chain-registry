@@ -32,28 +32,21 @@ def get_asset_json(
                 _trace['counterparty'].pop('base_supply', None)
             _asset_json['traces'] = _traces
 
-    if row['denom_units']:
-        _asset_json['denom_units'] = [dict(sorted(_denom_unit.items())) for _denom_unit in row['denom_units']]
-
     for _field in ['description', 'denom_units', 'display', 'name', 'symbol', 'ibc']:
         if row[_field]:
             _asset_json[_field] = row[_field]
 
     if row['type_asset'] == 'cw20':
         _asset_json['address'] = row['denom_base'][5:]
-
-    if row['type_asset'] == 'erc20' and row['denom'][:9] == 'gravity0x':
+    elif row['type_asset'] == 'erc20' and row['denom'][:9] == 'gravity0x':
         _asset_json['address'] = row['denom_base'][7:]
-
-    if row['type_asset'] == 'snip20':
-        # asset_json['address'] =   # Add
-        pass
-
-    if row['type_asset'] == 'factory':
+    elif row['type_asset'] == 'factory':
         _asset_json['address'] = row['denom']
         _asset_json['admin'] = row['admin']
+    elif row['type_asset'] == 'snip20':
+        pass
 
-    return dict(sorted(_asset_json.items()))
+    return _asset_json
 
 
 def get_asset_json_dict(
@@ -116,7 +109,7 @@ def save_to_json(
                 f'data_json/{chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else _chain_id}'
                 f'/assetlist.json',
                 'w') as _assetlist_file:
-            json.dump(obj=_assets_json[_chain_id], fp=_assetlist_file, ensure_ascii=False, indent=4)
+            json.dump(obj=_assets_json[_chain_id], fp=_assetlist_file, ensure_ascii=False, sort_keys=True, indent=4)
     with open(f'data_json/all_assets.json', 'w') as all_assets_file:
         json.dump(obj=[_assets_json[chain_id] for chain_id in _assets_json.keys()],
-                  fp=all_assets_file, ensure_ascii=False, indent=4)
+                  fp=all_assets_file, ensure_ascii=False, sort_keys=True, indent=4)
