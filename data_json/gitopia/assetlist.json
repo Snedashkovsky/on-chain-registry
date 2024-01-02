@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/CDA5B714CE662DCFF220425E49001332968C6B61990ECDB82E8F570139A6DCF6",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-781",
+                "source_denom": "ibc/35DAE5BF82A2FEFAB1CCF9E1E80F038E5FBA3D92B14CCE13696AEE2A4581F5A3"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -46,15 +50,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-781",
-                "source_denom": "ibc/35DAE5BF82A2FEFAB1CCF9E1E80F038E5FBA3D92B14CCE13696AEE2A4581F5A3"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/4AEA7A5C89B744156996AEE30DAB3CCDCD7039A5625D89C8B7178E6D4C068D57",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-4",
+                "source_denom": "uterp"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -70,15 +74,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-4",
-                "source_denom": "uterp"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/869FC01C559DDC2DC2CD241FBF99115CA60FE7AFC7C56EF0B382CA7B0E1CB5B1",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-4",
+                "source_denom": "uthiol"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -94,15 +98,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-4",
-                "source_denom": "uthiol"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-781",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -118,30 +136,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-781",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ulore",
-            "type_asset": "sdk.coin",
-            "description": "The native staking token of the Gitopia Hub.",
             "denom_units": [
                 {
                     "denom": "ulore",
@@ -156,9 +154,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of the Gitopia Hub.",
             "display": "lore",
             "name": "lore",
-            "symbol": "lore"
+            "symbol": "lore",
+            "type_asset": "sdk.coin"
         }
     ]
 }

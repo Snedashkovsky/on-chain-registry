@@ -4,7 +4,25 @@
     "assets": [
         {
             "base": "ibc/19FE4199D5E206A756AA8656D6CCECA3A50AECB081CC73126060D592BD93A15B",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-10",
+                "dst_channel": "channel-585",
+                "source_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -33,45 +51,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-10",
-                "dst_channel": "channel-585",
-                "source_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-585",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-10",
-                        "path": "transfer/channel-10/uatom"
-                    }
-                }
-            ],
-            "description": "The native staking token of the Cosmos Hub.",
             "denom_units": [
                 {
                     "denom": "uatom",
@@ -93,18 +76,55 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of the Cosmos Hub.",
             "display": "atom",
-            "name": "Cosmos Hub Atom",
-            "symbol": "ATOM",
             "ibc": {
                 "source_channel": "channel-10",
                 "dst_channel": "channel-585",
                 "source_denom": "uatom"
-            }
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-585",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/uatom"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/BE612CFB5445AD2F56FAE496C0848FA381F967970A4CA586B1F90123AA62C4D4",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "gamm/pool/1",
+                    "exponent": 0,
+                    "aliases": [
+                        "attopoolshare"
+                    ]
+                },
+                {
+                    "denom": "GAMM-1",
+                    "exponent": 18,
+                    "aliases": []
+                }
+            ],
+            "description": "The share token of the gamm pool 1",
+            "display": "GAMM-1",
+            "ibc": {
+                "source_channel": "channel-19",
+                "dst_channel": "channel-2716",
+                "source_denom": "gamm/pool/1"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -120,31 +140,29 @@
                     }
                 }
             ],
-            "description": "The share token of the gamm pool 1",
-            "denom_units": [
-                {
-                    "denom": "gamm/pool/1",
-                    "exponent": 0,
-                    "aliases": [
-                        "attopoolshare"
-                    ]
-                },
-                {
-                    "denom": "GAMM-1",
-                    "exponent": 18,
-                    "aliases": []
-                }
-            ],
-            "display": "GAMM-1",
-            "ibc": {
-                "source_channel": "channel-19",
-                "dst_channel": "channel-2716",
-                "source_denom": "gamm/pool/1"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/D7B22A85AB15F44A3152EBF7F2D37B6061F66FAF637E42C287FC649F1F5CA348",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-19",
+                "dst_channel": "channel-2716",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -160,29 +178,15 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-19",
-                "dst_channel": "channel-2716",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/F08B62C2C1BE9E52942617489CAB1E94537FE3849F8EEC910B142468C340EB0D",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-0",
+                "source_denom": "bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -198,16 +202,10 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-0",
-                "source_denom": "bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "FX",
-            "type_asset": "sdk.coin",
-            "description": "The native staking token of the Function X",
             "denom_units": [
                 {
                     "denom": "FX",
@@ -215,14 +213,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of the Function X",
             "display": "FX",
             "name": "Function X",
-            "symbol": "FX"
+            "symbol": "FX",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "atom/osmo",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "atom/osmo",
@@ -237,9 +235,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of Function X",
             "display": "ATOM/OSMO",
             "name": "ATOM/OSMO Liquidity Provider Token",
-            "symbol": "ATOM/OSMO"
+            "symbol": "ATOM/OSMO",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "avalanche0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
@@ -263,8 +263,6 @@
         },
         {
             "base": "bava",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
                     "denom": "bava",
@@ -279,9 +277,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of the Function X",
             "display": "bava",
             "name": "BavaToken",
-            "symbol": "BAVA"
+            "symbol": "BAVA",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "bsc0x55d398326f99059fF775485246999027B3197955",
@@ -289,8 +289,6 @@
         },
         {
             "base": "dai",
-            "type_asset": "sdk.coin",
-            "description": "Cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "dai",
@@ -305,14 +303,14 @@
                     "aliases": []
                 }
             ],
+            "description": "Cross chain token of Function X",
             "display": "dai",
             "name": "Dai Stablecoin",
-            "symbol": "DAI"
+            "symbol": "DAI",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
                     "denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
@@ -325,9 +323,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of the Function X",
             "display": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
             "name": "Pundi X Token",
-            "symbol": "PUNDIX"
+            "symbol": "PUNDIX",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "eth0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -355,8 +355,6 @@
         },
         {
             "base": "link",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "link",
@@ -371,9 +369,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of Function X",
             "display": "link",
             "name": "ChainLink Token",
-            "symbol": "LINK"
+            "symbol": "LINK",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
@@ -381,8 +381,6 @@
         },
         {
             "base": "qi",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
                     "denom": "qi",
@@ -397,14 +395,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of the Function X",
             "display": "qi",
             "name": "BENQI",
-            "symbol": "QI"
+            "symbol": "QI",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "savax",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
                     "denom": "savax",
@@ -419,9 +417,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of the Function X",
             "display": "savax",
             "name": "Staked AVAX",
-            "symbol": "sAVAX"
+            "symbol": "sAVAX",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
@@ -429,8 +429,6 @@
         },
         {
             "base": "uatom",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "uatom",
@@ -445,14 +443,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of Function X",
             "display": "uatom",
             "name": "CosmosHub ATOM",
-            "symbol": "ATOM"
+            "symbol": "ATOM",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uosmo",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "uosmo",
@@ -468,14 +466,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of Function X",
             "display": "uosmo",
             "name": "Osmosis OSMO",
-            "symbol": "OSMO"
+            "symbol": "OSMO",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "usdc",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "usdc",
@@ -490,14 +488,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of Function X",
             "display": "usdc",
             "name": "USD Coin",
-            "symbol": "USDC"
+            "symbol": "USDC",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "usdt",
-            "type_asset": "sdk.coin",
-            "description": "Cross chain token Function X",
             "denom_units": [
                 {
                     "denom": "usdt",
@@ -518,14 +516,14 @@
                     "aliases": []
                 }
             ],
+            "description": "Cross chain token Function X",
             "display": "usdt",
             "name": "Tether USD",
-            "symbol": "USDT"
+            "symbol": "USDT",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "wavax",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
                     "denom": "wavax",
@@ -540,14 +538,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of the Function X",
             "display": "wavax",
             "name": "Wrapped AVAX",
-            "symbol": "WAVAX"
+            "symbol": "WAVAX",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "wbtc",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of the Function X",
             "denom_units": [
                 {
                     "denom": "wbtc",
@@ -562,14 +560,14 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of the Function X",
             "display": "wbtc",
             "name": "Wrapped BTC",
-            "symbol": "WBTC"
+            "symbol": "WBTC",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "weth",
-            "type_asset": "sdk.coin",
-            "description": "The cross chain token of Function X",
             "denom_units": [
                 {
                     "denom": "weth",
@@ -586,9 +584,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The cross chain token of Function X",
             "display": "weth",
             "name": "Wrapped Ether",
-            "symbol": "WETH"
+            "symbol": "WETH",
+            "type_asset": "sdk.coin"
         }
     ]
 }

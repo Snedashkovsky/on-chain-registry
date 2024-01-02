@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/7FBDBEEEBA9C50C4BCDF7BF438EAB99E64360833D240B32655C96E319559E911",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-880",
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -33,15 +37,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-880",
-                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/46F2AFF56A0F50EB006CDBAEDC41350F079CE86AE959FE6D261EFC530351A115",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-5",
+                "dst_channel": "channel-88",
+                "source_denom": "aarch"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -57,15 +61,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-5",
-                "dst_channel": "channel-88",
-                "source_denom": "aarch"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/9463E39D230614B313B487836D13A392BD1731928713D4C8427A083627048DB3",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-3",
+                "dst_channel": "channel-117",
+                "source_denom": "uaxl"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -81,15 +85,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-3",
-                "dst_channel": "channel-117",
-                "source_denom": "uaxl"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-880",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -105,25 +123,7 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-880",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ucoho",
@@ -131,8 +131,6 @@
         },
         {
             "base": "uqwoyn",
-            "type_asset": "sdk.coin",
-            "description": "The native staking token of Qwoyn Network",
             "denom_units": [
                 {
                     "denom": "uqwoyn",
@@ -154,9 +152,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of Qwoyn Network",
             "display": "qwoyn",
             "name": "Qwoyn Network Governance Token",
-            "symbol": "QNQ"
+            "symbol": "QNQ",
+            "type_asset": "sdk.coin"
         }
     ]
 }

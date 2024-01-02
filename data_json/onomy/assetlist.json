@@ -4,7 +4,25 @@
     "assets": [
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-525",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -20,30 +38,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-525",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "anom",
-            "type_asset": "sdk.coin",
-            "description": "NOM coin",
             "denom_units": [
                 {
                     "denom": "anom",
@@ -56,14 +54,16 @@
                     "aliases": []
                 }
             ],
+            "description": "NOM coin",
             "display": "nom",
             "name": "NOM",
-            "symbol": "NOM"
+            "symbol": "NOM",
+            "type_asset": "sdk.coin"
         },
         {
+            "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
             "base": "gravity0x6B175474E89094C44Da98b954EedeAC495271d0F",
-            "type_asset": "erc20",
-            "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+            "type_asset": "erc20"
         }
     ]
 }

@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/689DD6F80E4DBCE14877462B182504037FAEAD0699D5804A7F5CB328D33ED24B",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-12",
+                "source_denom": "uvdl"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -20,15 +24,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-12",
-                "source_denom": "uvdl"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-340",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -44,25 +62,7 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-340",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ubze",

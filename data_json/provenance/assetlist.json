@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/398B3A1DE10411F2BC51FE25AC367CF501385016C1B030C57E624EC46E158F15",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-7",
+                "dst_channel": "channel-222",
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -33,15 +37,28 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-7",
-                "dst_channel": "channel-222",
-                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/FE109DBB332588166D6B27A2DB0BCB162A18E7EBA7DB366096E273BF63292F46",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "boot",
+                    "exponent": 0,
+                    "aliases": [
+                        "BOOT"
+                    ]
+                }
+            ],
+            "description": "The staking token of Bostrom",
+            "display": "boot",
+            "ibc": {
+                "source_channel": "channel-7",
+                "dst_channel": "channel-222",
+                "source_denom": "ibc/FE2CD1E6828EC0FAB8AF39BAC45BC25B965BA67CCBC50C13A14BD610B0D1E2C4"
+            },
+            "name": "Bostrom Boot",
+            "symbol": "BOOT",
             "traces": [
                 {
                     "type": "ibc",
@@ -70,44 +87,10 @@
                     }
                 }
             ],
-            "description": "The staking token of Bostrom",
-            "denom_units": [
-                {
-                    "denom": "boot",
-                    "exponent": 0,
-                    "aliases": [
-                        "BOOT"
-                    ]
-                }
-            ],
-            "display": "boot",
-            "name": "Bostrom Boot",
-            "symbol": "BOOT",
-            "ibc": {
-                "source_channel": "channel-7",
-                "dst_channel": "channel-222",
-                "source_denom": "ibc/FE2CD1E6828EC0FAB8AF39BAC45BC25B965BA67CCBC50C13A14BD610B0D1E2C4"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-127",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uatom"
-                    }
-                }
-            ],
-            "description": "The native staking token of the Cosmos Hub.",
             "denom_units": [
                 {
                     "denom": "uatom",
@@ -129,18 +112,39 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of the Cosmos Hub.",
             "display": "atom",
-            "name": "Cosmos Hub Atom",
-            "symbol": "ATOM",
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-127",
                 "source_denom": "uatom"
-            }
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-127",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-9",
+                "dst_channel": "channel-116",
+                "source_denom": "uusdc"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -156,15 +160,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-116",
-                "source_denom": "uusdc"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C01154C2547F4CB10A985EA78E7CD4BA891C1504360703A37E1D7043F06B5E1F",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-9",
+                "dst_channel": "channel-116",
+                "source_denom": "uaxl"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -180,15 +184,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-116",
-                "source_denom": "uaxl"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/FAC1BAAA6ECDCB88408A6EEEA13AD4736DA687F85ACD22B5BBD00D36754AC0FA",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-7",
+                "dst_channel": "channel-222",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -204,25 +222,7 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-7",
-                "dst_channel": "channel-222",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "BOBASWAP",
@@ -238,7 +238,6 @@
         },
         {
             "base": "cfigurelendingomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "cfigurelendingomni",
@@ -251,11 +250,11 @@
                     "aliases": []
                 }
             ],
-            "display": "figurelendingomni"
+            "display": "figurelendingomni",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cfigureomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "cfigureomni",
@@ -268,11 +267,11 @@
                     "aliases": []
                 }
             ],
-            "display": "figureomni"
+            "display": "figureomni",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cfigurepayomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "cfigurepayomni",
@@ -285,11 +284,11 @@
                     "aliases": []
                 }
             ],
-            "display": "figurepayomni"
+            "display": "figurepayomni",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cguaranteedrateomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "cguaranteedrateomni",
@@ -304,11 +303,11 @@
             ],
             "display": "guaranteedrateomni",
             "name": "GuaranteedRateOmni",
-            "symbol": "GRO"
+            "symbol": "GRO",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "chomebridgeomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "chomebridgeomni",
@@ -323,11 +322,11 @@
             ],
             "display": "homebridgeomni",
             "name": "HomebridgeOmni",
-            "symbol": "HBO"
+            "symbol": "HBO",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "chomepointomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "chomepointomni",
@@ -340,11 +339,11 @@
                     "aliases": []
                 }
             ],
-            "display": "homepointomni"
+            "display": "homepointomni",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "clendingwlomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "clendingwlomni",
@@ -359,7 +358,8 @@
             ],
             "display": "lendingwlomni",
             "name": "LendingWhitelabelOmni",
-            "symbol": "LWO"
+            "symbol": "LWO",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cs.3glreocwfuwqqwgbf94qb.stock",
@@ -367,7 +367,6 @@
         },
         {
             "base": "csynergyoneomni",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
                     "denom": "csynergyoneomni",
@@ -380,12 +379,11 @@
                     "aliases": []
                 }
             ],
-            "display": "synergyoneomni"
+            "display": "synergyoneomni",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cusd.deposit",
-            "type_asset": "sdk.coin",
-            "description": "The USD deposit token.",
             "denom_units": [
                 {
                     "denom": "cusd.deposit",
@@ -398,9 +396,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The USD deposit token.",
             "display": "usd.deposit",
             "name": "usd.deposit",
-            "symbol": "USDDEPOSIT"
+            "symbol": "USDDEPOSIT",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "es.4m0juwwph7fhw7wmxw5x1q.stock",
@@ -464,8 +464,6 @@
         },
         {
             "base": "nhash",
-            "type_asset": "sdk.coin",
-            "description": "Hash is the staking token of the Provenance Blockchain",
             "denom_units": [
                 {
                     "denom": "nhash",
@@ -478,9 +476,11 @@
                     "aliases": []
                 }
             ],
+            "description": "Hash is the staking token of the Provenance Blockchain",
             "display": "hash",
             "name": "Hash",
-            "symbol": "HASH"
+            "symbol": "HASH",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "pb10guxmyk8z64hlk0l7ddnzjr7fct98e7fqeh3sfn7hl3xv2qrpptqjk2q0a.investment",

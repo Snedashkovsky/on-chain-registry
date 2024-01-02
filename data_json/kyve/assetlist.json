@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/6A33576C55CE11F484DDE960D5DAD4691F514AA3BBDAD18A748E6FCFAD1801AD",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-75",
+                "source_denom": "ibc/6A6F524504D43390A563874357766B7938A1C4AF9CFF501535B662D6B0034270"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -46,15 +50,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-75",
-                "source_denom": "ibc/6A6F524504D43390A563874357766B7938A1C4AF9CFF501535B662D6B0034270"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0E1517E2771CA7C03F2ED3F9BAECCAEADF0BFD79B89679E834933BC0F179AD98",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-75",
+                "source_denom": "uaxl"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -70,15 +74,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-75",
-                "source_denom": "uaxl"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-767",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -94,30 +112,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-767",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ukyve",
-            "type_asset": "sdk.coin",
-            "description": "The native utility token of the KYVE network.",
             "denom_units": [
                 {
                     "denom": "ukyve",
@@ -132,9 +130,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The native utility token of the KYVE network.",
             "display": "kyve",
             "name": "KYVE",
-            "symbol": "KYVE"
+            "symbol": "KYVE",
+            "type_asset": "sdk.coin"
         }
     ]
 }

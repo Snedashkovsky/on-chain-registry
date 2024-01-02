@@ -4,7 +4,24 @@
     "assets": [
         {
             "base": "ibc/99F7D89E2D319C6DD9B2CFD6D28443F08F2C8D43CD78A7EABD0478441560AE46",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "boot",
+                    "exponent": 0,
+                    "aliases": [
+                        "BOOT"
+                    ]
+                }
+            ],
+            "description": "The staking token of Bostrom",
+            "display": "boot",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-263",
+                "source_denom": "ibc/FE2CD1E6828EC0FAB8AF39BAC45BC25B965BA67CCBC50C13A14BD610B0D1E2C4"
+            },
+            "name": "Bostrom Boot",
+            "symbol": "BOOT",
             "traces": [
                 {
                     "type": "ibc",
@@ -33,28 +50,38 @@
                     }
                 }
             ],
-            "description": "The staking token of Bostrom",
-            "denom_units": [
-                {
-                    "denom": "boot",
-                    "exponent": 0,
-                    "aliases": [
-                        "BOOT"
-                    ]
-                }
-            ],
-            "display": "boot",
-            "name": "Bostrom Boot",
-            "symbol": "BOOT",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-263",
-                "source_denom": "ibc/FE2CD1E6828EC0FAB8AF39BAC45BC25B965BA67CCBC50C13A14BD610B0D1E2C4"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C8E5515A75654FECCC11BF8D412DD5D0FD4625112E9CECBB918C17D3420D1EC4",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uxprt",
+                    "exponent": 0,
+                    "aliases": [
+                        "microxprt"
+                    ]
+                },
+                {
+                    "denom": "mxprt",
+                    "exponent": 3,
+                    "aliases": [
+                        "millixprt"
+                    ]
+                },
+                {
+                    "denom": "xprt",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native staking token of the Persistence Core.",
+            "display": "xprt",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-263",
+                "source_denom": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -83,38 +110,33 @@
                     }
                 }
             ],
-            "description": "The native staking token of the Persistence Core.",
-            "denom_units": [
-                {
-                    "denom": "uxprt",
-                    "exponent": 0,
-                    "aliases": [
-                        "microxprt"
-                    ]
-                },
-                {
-                    "denom": "mxprt",
-                    "exponent": 3,
-                    "aliases": [
-                        "millixprt"
-                    ]
-                },
-                {
-                    "denom": "xprt",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "xprt",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-263",
-                "source_denom": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/078EAF11288A47609FD894070CA8A1BFCEBD9E08745EA7030F95D7ADEE2E22CA",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "aevmos",
+                    "exponent": 0,
+                    "aliases": [
+                        "attoevmos"
+                    ]
+                },
+                {
+                    "denom": "evmos",
+                    "exponent": 18,
+                    "aliases": []
+                }
+            ],
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "display": "evmos",
+            "ibc": {
+                "source_channel": "channel-8",
+                "dst_channel": "channel-32",
+                "source_denom": "aevmos"
+            },
+            "name": "Evmos",
+            "symbol": "EVMOS",
             "traces": [
                 {
                     "type": "ibc",
@@ -130,7 +152,10 @@
                     }
                 }
             ],
-            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/4B322204B4F59D770680FE4D7A565DDC3F37BFF035474B717476C66A4F83DD72",
             "denom_units": [
                 {
                     "denom": "aevmos",
@@ -145,18 +170,15 @@
                     "aliases": []
                 }
             ],
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
             "display": "evmos",
+            "ibc": {
+                "source_channel": "channel-9",
+                "dst_channel": "channel-34",
+                "source_denom": "aevmos"
+            },
             "name": "Evmos",
             "symbol": "EVMOS",
-            "ibc": {
-                "source_channel": "channel-8",
-                "dst_channel": "channel-32",
-                "source_denom": "aevmos"
-            }
-        },
-        {
-            "base": "ibc/4B322204B4F59D770680FE4D7A565DDC3F37BFF035474B717476C66A4F83DD72",
-            "type_asset": "ics20",
             "traces": [
                 {
                     "type": "ibc",
@@ -172,33 +194,29 @@
                     }
                 }
             ],
-            "description": "The native EVM, governance and staking token of the Evmos Hub",
-            "denom_units": [
-                {
-                    "denom": "aevmos",
-                    "exponent": 0,
-                    "aliases": [
-                        "attoevmos"
-                    ]
-                },
-                {
-                    "denom": "evmos",
-                    "exponent": 18,
-                    "aliases": []
-                }
-            ],
-            "display": "evmos",
-            "name": "Evmos",
-            "symbol": "EVMOS",
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-34",
-                "source_denom": "aevmos"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/646315E3B0461F5FA4C5C8968A88FC45D4D5D04A45B98F1B8294DD82F386DD85",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-6",
+                "dst_channel": "channel-311",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -214,7 +232,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "denom_units": [
                 {
                     "denom": "uosmo",
@@ -227,16 +248,13 @@
                     "aliases": []
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-6",
-                "dst_channel": "channel-311",
+                "source_channel": "channel-0",
+                "dst_channel": "channel-263",
                 "source_denom": "uosmo"
-            }
-        },
-        {
-            "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -252,25 +270,7 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-263",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "utgd",

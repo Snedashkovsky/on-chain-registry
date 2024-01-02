@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/4DE84C92C714009D07AFEA7350AB3EC383536BB0FAAD7AF9C0F1A0BEA169304E",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-2694",
+                "source_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -33,15 +37,31 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-2694",
-                "source_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/1C8A050BBE4C060A4392CC062B2D3B7C3BFD68E0FA6BB5A5D03DEFCBC0FA7C38",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "ucore",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "core",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "ucore coin",
+            "display": "core",
+            "ibc": {
+                "source_channel": "channel-2",
+                "dst_channel": "channel-10",
+                "source_denom": "ucore"
+            },
+            "name": "ucore",
+            "symbol": "UCORE",
             "traces": [
                 {
                     "type": "ibc",
@@ -57,31 +77,15 @@
                     }
                 }
             ],
-            "description": "ucore coin",
-            "denom_units": [
-                {
-                    "denom": "ucore",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "core",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "core",
-            "name": "ucore",
-            "symbol": "UCORE",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-10",
-                "source_denom": "ucore"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C6824D6F41FC8F906D9656AC77B41FCF7CF136DD74A47E11385B021F6D578FE9",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-3",
+                "dst_channel": "channel-4092",
+                "source_denom": "unls"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -97,15 +101,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-3",
-                "dst_channel": "channel-4092",
-                "source_denom": "unls"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-2694",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -121,45 +139,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-2694",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-750",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/uatom"
-                    }
-                }
-            ],
-            "description": "The native staking token of the Cosmos Hub.",
             "denom_units": [
                 {
                     "denom": "uatom",
@@ -181,14 +164,31 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of the Cosmos Hub.",
             "display": "atom",
-            "name": "Cosmos Hub Atom",
-            "symbol": "ATOM",
             "ibc": {
                 "source_channel": "channel-4",
                 "dst_channel": "channel-750",
                 "source_denom": "uatom"
-            }
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "cosmoshub-4",
+                        "channel_id": "channel-750",
+                        "base_denom": "uatom",
+                        "chain_name": "cosmoshub"
+                    },
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uatom"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "peaka",

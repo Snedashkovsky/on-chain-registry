@@ -4,7 +4,25 @@
     "assets": [
         {
             "base": "ibc/AB8268F50B90B767B5A49B12FDD69443AA5E35125D6477CDE9418273B0A25228",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-2",
+                "dst_channel": "channel-10",
+                "source_denom": "ibc/21F78D40D0806B0E76F83A696980BF4A81E308FCF6A044488E8C2E4FDA90BCE8"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -46,29 +64,15 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-10",
-                "source_denom": "ibc/21F78D40D0806B0E76F83A696980BF4A81E308FCF6A044488E8C2E4FDA90BCE8"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0EC5DB3FAB49B2A579A898C82E7D219162A708F469CEB1625BB3496E430891E7",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-93",
+                "source_denom": "ibc/B68C1D2682A8B69E20BB921E34C6A3A2B6D1E13E3E8C0092E373826F546DEE65"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -97,15 +101,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-93",
-                "source_denom": "ibc/B68C1D2682A8B69E20BB921E34C6A3A2B6D1E13E3E8C0092E373826F546DEE65"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/57A75F65E01A7AD211DA7735286452739882D13FEF18AED50FAE8C3D88144BD6",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-5",
+                "dst_channel": "channel-72",
+                "source_denom": "ibc/5B0968D76C6250F0824BD0BB4317DB34E884A14B345C83FB8256809855AC7CA7"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -134,15 +138,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-5",
-                "dst_channel": "channel-72",
-                "source_denom": "ibc/5B0968D76C6250F0824BD0BB4317DB34E884A14B345C83FB8256809855AC7CA7"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/EAA463E93B284ED5B9B89434A67D6009940D92959B38646125B96FEA938BD09E",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-5",
+                "dst_channel": "channel-72",
+                "source_denom": "ibc/9E3EB38E5E157AEBFF4A8EAC66E654BC8ECFCB1F758F4D1C0F2D65945E9E2935"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -171,40 +175,19 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-5",
-                "dst_channel": "channel-72",
-                "source_denom": "ibc/9E3EB38E5E157AEBFF4A8EAC66E654BC8ECFCB1F758F4D1C0F2D65945E9E2935"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/45F556406F06006199D2AE05F35187C21F0A4442DD51611FA545DDD0B42B77DE",
-            "type_asset": "ics20",
             "ibc": {
                 "source_channel": "channel-4",
                 "dst_channel": "channel-69",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/A774188B0C835803FC0C5897AD8761EBBDE2D228A4E9528EFA87AE81F7F090A4",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "phoenix-1",
-                        "channel_id": "channel-222",
-                        "base_denom": "uluna",
-                        "chain_name": "terra2"
-                    },
-                    "chain": {
-                        "channel_id": "channel-70",
-                        "path": "transfer/channel-70/uluna"
-                    }
-                }
-            ],
-            "description": "The native staking token of Terra 2.0",
             "denom_units": [
                 {
                     "denom": "uluna",
@@ -226,18 +209,39 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of Terra 2.0",
             "display": "luna",
-            "name": "LUNA",
-            "symbol": "LUNA",
             "ibc": {
                 "source_channel": "channel-70",
                 "dst_channel": "channel-222",
                 "source_denom": "uluna"
-            }
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "phoenix-1",
+                        "channel_id": "channel-222",
+                        "base_denom": "uluna",
+                        "chain_name": "terra2"
+                    },
+                    "chain": {
+                        "channel_id": "channel-70",
+                        "path": "transfer/channel-70/uluna"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/BFAAB7870A9AAABF64A7366DAAA0B8E5065EAA1FCE762F45677DC24BE796EF65",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-5",
+                "dst_channel": "channel-72",
+                "source_denom": "uusdc"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -253,15 +257,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-5",
-                "dst_channel": "channel-72",
-                "source_denom": "uusdc"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/D934516FBE457F3A98AFABD87E0EFF7F95A15325C191EA8CDD7763C702FDDEC2",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-5",
+                "dst_channel": "channel-72",
+                "source_denom": "uaxl"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -277,15 +281,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-5",
-                "dst_channel": "channel-72",
-                "source_denom": "uaxl"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/DE63D8AC34B752FB7D4CAA7594145EDE1C9FC256AC6D4043D0F12310EB8FC255",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-93",
+                "source_denom": "inj"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -301,15 +305,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-93",
-                "source_denom": "inj"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-165",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -325,64 +343,44 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-165",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/FEB78E59D3328D8BAD67893B13DF86786EAF0531482E780D180C2F10DCDD8B9B",
-            "type_asset": "ics20",
             "ibc": {
                 "source_channel": "channel-4",
                 "dst_channel": "channel-69",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
+            "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
             "base": "gravity0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-            "type_asset": "erc20",
-            "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+            "type_asset": "erc20"
         },
         {
+            "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
             "base": "gravity0x853d955aCEf822Db058eb8505911ED77F175b99e",
-            "type_asset": "erc20",
-            "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e"
+            "type_asset": "erc20"
         },
         {
+            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
             "base": "gravity0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-            "type_asset": "erc20",
-            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+            "type_asset": "erc20"
         },
         {
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
             "base": "gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-            "type_asset": "erc20",
-            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+            "type_asset": "erc20"
         },
         {
+            "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
             "base": "gravity0xdAC17F958D2ee523a2206206994597C13D831ec7",
-            "type_asset": "erc20",
-            "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+            "type_asset": "erc20"
         },
         {
             "base": "usomm",
-            "type_asset": "sdk.coin",
-            "description": "The native staking token of the Sommelier Chain",
             "denom_units": [
                 {
                     "denom": "usomm",
@@ -404,9 +402,11 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of the Sommelier Chain",
             "display": "somm",
             "name": "Somm",
-            "symbol": "SOMM"
+            "symbol": "SOMM",
+            "type_asset": "sdk.coin"
         }
     ]
 }

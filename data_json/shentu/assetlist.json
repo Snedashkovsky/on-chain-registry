@@ -4,7 +4,34 @@
     "assets": [
         {
             "base": "ibc/295459767B618BB9788FAAD54EFCB7822860DF2EAA0CFC86D4E2C53AD582AA9F",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uxprt",
+                    "exponent": 0,
+                    "aliases": [
+                        "microxprt"
+                    ]
+                },
+                {
+                    "denom": "mxprt",
+                    "exponent": 3,
+                    "aliases": [
+                        "millixprt"
+                    ]
+                },
+                {
+                    "denom": "xprt",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native staking token of the Persistence Core.",
+            "display": "xprt",
+            "ibc": {
+                "source_channel": "channel-8",
+                "dst_channel": "channel-146",
+                "source_denom": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -33,38 +60,29 @@
                     }
                 }
             ],
-            "description": "The native staking token of the Persistence Core.",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
             "denom_units": [
                 {
-                    "denom": "uxprt",
+                    "denom": "uosmo",
                     "exponent": 0,
-                    "aliases": [
-                        "microxprt"
-                    ]
+                    "aliases": []
                 },
                 {
-                    "denom": "mxprt",
-                    "exponent": 3,
-                    "aliases": [
-                        "millixprt"
-                    ]
-                },
-                {
-                    "denom": "xprt",
+                    "denom": "osmo",
                     "exponent": 6,
                     "aliases": []
                 }
             ],
-            "display": "xprt",
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
-                "source_channel": "channel-8",
-                "dst_channel": "channel-146",
-                "source_denom": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293"
-            }
-        },
-        {
-            "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
-            "type_asset": "ics20",
+                "source_channel": "channel-2",
+                "dst_channel": "channel-100",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -80,29 +98,15 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-100",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/5DC0FFF9D5BD0E50DB4B08DA7812ACA812F2E99BD8353E1E5409E7AF02154F97",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-6",
+                "source_denom": "ucmdx"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -118,15 +122,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-6",
-                "source_denom": "ucmdx"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/92E0120F15D037353CFB73C14651FC8930ADC05B93100FD7754D3A689E53B333",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-8",
+                "dst_channel": "channel-146",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -142,30 +160,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-8",
-                "dst_channel": "channel-146",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "uctk",
-            "type_asset": "sdk.coin",
-            "description": "The native staking token of the Shentu Chain.",
             "denom_units": [
                 {
                     "denom": "uctk",
@@ -187,7 +185,9 @@
                     "aliases": []
                 }
             ],
-            "display": "ctk"
+            "description": "The native staking token of the Shentu Chain.",
+            "display": "ctk",
+            "type_asset": "sdk.coin"
         }
     ]
 }

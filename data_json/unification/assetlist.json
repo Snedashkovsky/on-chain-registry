@@ -4,7 +4,31 @@
     "assets": [
         {
             "base": "ibc/049EE504B5BE4DA33F938EC47266F53270C6EBFDACBF93761CCDF265709220F9",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "nund",
+                    "exponent": 0,
+                    "aliases": [
+                        "nanofund"
+                    ]
+                },
+                {
+                    "denom": "fund",
+                    "exponent": 9,
+                    "aliases": [
+                        "FUND"
+                    ]
+                }
+            ],
+            "description": "The native token of FUND mainchain.",
+            "display": "fund",
+            "ibc": {
+                "source_channel": "channel-2",
+                "dst_channel": "channel-98",
+                "source_denom": "ibc/769660689311183E821E1D00F67C52362BD5AFBD1DA66CE8FDB14AEFE52570A8"
+            },
+            "name": "FUND",
+            "symbol": "FUND",
             "traces": [
                 {
                     "type": "ibc",
@@ -46,7 +70,10 @@
                     }
                 }
             ],
-            "description": "The native token of FUND mainchain.",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/D81201B24DB98254C2C76BE25D25A656B8B9EA15057A75521E5FF22BF2A5DAAD",
             "denom_units": [
                 {
                     "denom": "nund",
@@ -63,18 +90,15 @@
                     ]
                 }
             ],
+            "description": "The native token of FUND mainchain.",
             "display": "fund",
-            "name": "FUND",
-            "symbol": "FUND",
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-98",
-                "source_denom": "ibc/769660689311183E821E1D00F67C52362BD5AFBD1DA66CE8FDB14AEFE52570A8"
-            }
-        },
-        {
-            "base": "ibc/D81201B24DB98254C2C76BE25D25A656B8B9EA15057A75521E5FF22BF2A5DAAD",
-            "type_asset": "ics20",
+                "source_denom": "ibc/D03A8AA9A3226930D6763BD9578A1CBD8B2A6536FDEDCE33158591F3F7A39359"
+            },
+            "name": "FUND",
+            "symbol": "FUND",
             "traces": [
                 {
                     "type": "ibc",
@@ -103,60 +127,19 @@
                     }
                 }
             ],
-            "description": "The native token of FUND mainchain.",
-            "denom_units": [
-                {
-                    "denom": "nund",
-                    "exponent": 0,
-                    "aliases": [
-                        "nanofund"
-                    ]
-                },
-                {
-                    "denom": "fund",
-                    "exponent": 9,
-                    "aliases": [
-                        "FUND"
-                    ]
-                }
-            ],
-            "display": "fund",
-            "name": "FUND",
-            "symbol": "FUND",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-98",
-                "source_denom": "ibc/D03A8AA9A3226930D6763BD9578A1CBD8B2A6536FDEDCE33158591F3F7A39359"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/3924A79BA22DE73ECFB91DD1168FFC00F30C6BE46B7BF2987DBF1CAF54067C90",
-            "type_asset": "ics20",
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-98",
                 "source_denom": "gravity0x6B175474E89094C44Da98b954EedeAC495271d0F"
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C950356239AD2A205DE09FDF066B1F9FF19A7CA7145EA48A5B19B76EE47E52F7",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-98",
-                        "base_denom": "ugraviton",
-                        "chain_name": "gravitybridge"
-                    },
-                    "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/ugraviton"
-                    }
-                }
-            ],
-            "description": "The native staking token of the Gravity Bridge Blockchain",
             "denom_units": [
                 {
                     "denom": "ugraviton",
@@ -173,19 +156,34 @@
                     ]
                 }
             ],
+            "description": "The native staking token of the Gravity Bridge Blockchain",
             "display": "graviton",
-            "name": "Graviton",
-            "symbol": "GRAV",
             "ibc": {
                 "source_channel": "channel-2",
                 "dst_channel": "channel-98",
                 "source_denom": "ugraviton"
-            }
+            },
+            "name": "Graviton",
+            "symbol": "GRAV",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-98",
+                        "base_denom": "ugraviton",
+                        "chain_name": "gravitybridge"
+                    },
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/ugraviton"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "nund",
-            "type_asset": "sdk.coin",
-            "description": "The native token of FUND mainchain.",
             "denom_units": [
                 {
                     "denom": "nund",
@@ -202,9 +200,11 @@
                     ]
                 }
             ],
+            "description": "The native token of FUND mainchain.",
             "display": "fund",
             "name": "FUND",
-            "symbol": "FUND"
+            "symbol": "FUND",
+            "type_asset": "sdk.coin"
         }
     ]
 }

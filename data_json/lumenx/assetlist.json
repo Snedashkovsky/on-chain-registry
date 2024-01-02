@@ -4,7 +4,38 @@
     "assets": [
         {
             "base": "ibc/222DB17F50A8985D194A442496805CEBC59FF4BCFBD630EDB49475E15C41027C",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "ulumen",
+                    "exponent": 0,
+                    "aliases": [
+                        "microlumen"
+                    ]
+                },
+                {
+                    "denom": "mlumen",
+                    "exponent": 3,
+                    "aliases": [
+                        "millilumen"
+                    ]
+                },
+                {
+                    "denom": "lumen",
+                    "exponent": 6,
+                    "aliases": [
+                        "lumen"
+                    ]
+                }
+            ],
+            "description": "Demon units of the LumenX",
+            "display": "lumen",
+            "ibc": {
+                "source_channel": "channel-3",
+                "dst_channel": "channel-286",
+                "source_denom": "ibc/A32403CF6E7B3F6DF2177E91B59F554FCBE540875FA80E4FE50C7F6D504C5614"
+            },
+            "name": "lumen",
+            "symbol": "LUMEN",
             "traces": [
                 {
                     "type": "ibc",
@@ -33,42 +64,29 @@
                     }
                 }
             ],
-            "description": "Demon units of the LumenX",
-            "denom_units": [
-                {
-                    "denom": "ulumen",
-                    "exponent": 0,
-                    "aliases": [
-                        "microlumen"
-                    ]
-                },
-                {
-                    "denom": "mlumen",
-                    "exponent": 3,
-                    "aliases": [
-                        "millilumen"
-                    ]
-                },
-                {
-                    "denom": "lumen",
-                    "exponent": 6,
-                    "aliases": [
-                        "lumen"
-                    ]
-                }
-            ],
-            "display": "lumen",
-            "name": "lumen",
-            "symbol": "LUMEN",
-            "ibc": {
-                "source_channel": "channel-3",
-                "dst_channel": "channel-286",
-                "source_denom": "ibc/A32403CF6E7B3F6DF2177E91B59F554FCBE540875FA80E4FE50C7F6D504C5614"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-3",
+                "dst_channel": "channel-286",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -84,30 +102,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-3",
-                "dst_channel": "channel-286",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ulumen",
-            "type_asset": "sdk.coin",
-            "description": "Demon units of the LumenX",
             "denom_units": [
                 {
                     "denom": "ulumen",
@@ -131,9 +129,11 @@
                     ]
                 }
             ],
+            "description": "Demon units of the LumenX",
             "display": "lumen",
             "name": "lumen",
-            "symbol": "LUMEN"
+            "symbol": "LUMEN",
+            "type_asset": "sdk.coin"
         }
     ]
 }

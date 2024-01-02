@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/37B7C1AABC243067278C28C77973A28D7844EF5465ACD0EBE6E506BE4C6816C2",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-238",
+                "source_denom": "ibc/EA1D43981D5C9A1C4AAEA9C23BB1D4FA126BA9BC7020A25E0AE4AA841EA25DC5"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -33,15 +37,40 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-238",
-                "source_denom": "ibc/EA1D43981D5C9A1C4AAEA9C23BB1D4FA126BA9BC7020A25E0AE4AA841EA25DC5"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/815FC81EB6BD612206BD9A9909A02F7691D24A5B97CDFE2124B1BDCA9D4AB14C",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uluna",
+                    "exponent": 0,
+                    "aliases": [
+                        "microluna"
+                    ]
+                },
+                {
+                    "denom": "mluna",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliluna"
+                    ]
+                },
+                {
+                    "denom": "luna",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native staking token of the Terra Columbus.",
+            "display": "luna",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-238",
+                "source_denom": "ibc/0EF15DF2F02480ADE0BB6E85D9EBB5DAEA2836D3860E9F97F9AADE4F57A31AA0"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
             "traces": [
                 {
                     "type": "ibc",
@@ -70,40 +99,29 @@
                     }
                 }
             ],
-            "description": "The native staking token of the Terra Columbus.",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "denom_units": [
                 {
-                    "denom": "uluna",
+                    "denom": "uosmo",
                     "exponent": 0,
-                    "aliases": [
-                        "microluna"
-                    ]
+                    "aliases": []
                 },
                 {
-                    "denom": "mluna",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliluna"
-                    ]
-                },
-                {
-                    "denom": "luna",
+                    "denom": "osmo",
                     "exponent": 6,
                     "aliases": []
                 }
             ],
-            "display": "luna",
-            "name": "LUNA",
-            "symbol": "LUNA",
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-1",
                 "dst_channel": "channel-238",
-                "source_denom": "ibc/0EF15DF2F02480ADE0BB6E85D9EBB5DAEA2836D3860E9F97F9AADE4F57A31AA0"
-            }
-        },
-        {
-            "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "type_asset": "ics20",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -119,45 +137,10 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-238",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/3554989531C7DB295D548F373FE93205215CAC2820A62D748E5A3703044D481E",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-87",
-                        "base_denom": "ugraviton",
-                        "chain_name": "gravitybridge"
-                    },
-                    "chain": {
-                        "channel_id": "channel-6",
-                        "path": "transfer/channel-6/ugraviton"
-                    }
-                }
-            ],
-            "description": "The native staking token of the Gravity Bridge Blockchain",
             "denom_units": [
                 {
                     "denom": "ugraviton",
@@ -174,18 +157,39 @@
                     ]
                 }
             ],
+            "description": "The native staking token of the Gravity Bridge Blockchain",
             "display": "graviton",
-            "name": "Graviton",
-            "symbol": "GRAV",
             "ibc": {
                 "source_channel": "channel-6",
                 "dst_channel": "channel-87",
                 "source_denom": "ugraviton"
-            }
+            },
+            "name": "Graviton",
+            "symbol": "GRAV",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "gravity-bridge-3",
+                        "channel_id": "channel-87",
+                        "base_denom": "ugraviton",
+                        "chain_name": "gravitybridge"
+                    },
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/ugraviton"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/6DD0D40C3A5FE38336FC5EF017CC248E11C15E28C76F95C83A8FFE61E1566063",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-7",
+                "dst_channel": "channel-29",
+                "source_denom": "ukuji"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -201,20 +205,16 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-7",
-                "dst_channel": "channel-29",
-                "source_denom": "ukuji"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C66DB8E51FB0B561762CA876B8749A561377F2B45870ED99821A5B74DF1C4309",
-            "type_asset": "ics20",
             "ibc": {
                 "source_channel": "channel-6",
                 "dst_channel": "channel-87",
                 "source_denom": "gravity0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "umeme",

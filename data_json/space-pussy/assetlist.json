@@ -4,7 +4,36 @@
     "assets": [
         {
             "base": "ibc/64A940AF730E6946AB915A46E2CED66B3CA72405938616CB348A06D1DBC45632",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uatom",
+                    "exponent": 0,
+                    "aliases": [
+                        "microatom"
+                    ]
+                },
+                {
+                    "denom": "matom",
+                    "exponent": 3,
+                    "aliases": [
+                        "milliatom"
+                    ]
+                },
+                {
+                    "denom": "atom",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "ibc/15E9C5CF5969080539DB395FA7D9C0868265217EFC528433671AAF9B1912D159"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "type": "ibc",
@@ -33,40 +62,29 @@
                     }
                 }
             ],
-            "description": "The native staking token of the Cosmos Hub.",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A9956B5C1B862098A5643C951DCF8687800A70E72B40043C37C68B0EE7C356E1",
             "denom_units": [
                 {
-                    "denom": "uatom",
+                    "denom": "uosmo",
                     "exponent": 0,
-                    "aliases": [
-                        "microatom"
-                    ]
+                    "aliases": []
                 },
                 {
-                    "denom": "matom",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliatom"
-                    ]
-                },
-                {
-                    "denom": "atom",
+                    "denom": "osmo",
                     "exponent": 6,
                     "aliases": []
                 }
             ],
-            "display": "atom",
-            "name": "Cosmos Hub Atom",
-            "symbol": "ATOM",
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "source_channel": "channel-0",
                 "dst_channel": "channel-11",
-                "source_denom": "ibc/15E9C5CF5969080539DB395FA7D9C0868265217EFC528433671AAF9B1912D159"
-            }
-        },
-        {
-            "base": "ibc/A9956B5C1B862098A5643C951DCF8687800A70E72B40043C37C68B0EE7C356E1",
-            "type_asset": "ics20",
+                "source_denom": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -95,29 +113,15 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/086AF4DB5E016C65D4805EADA33998D7A58D494F39EE9FCFB3107FC22F87F5A9",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool5D5734E54F485FBAF21DF886EC396F2CBC72203BF050BDE0F99EB94EA37D39E8"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -133,15 +137,33 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool5D5734E54F485FBAF21DF886EC396F2CBC72203BF050BDE0F99EB94EA37D39E8"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0DDC29BE9DB61164F7A4AABFA3BB7A196C684DFFA1680AB60265617EA4CC3223",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "milliampere",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "ampere",
+                    "exponent": 3,
+                    "aliases": [
+                        "AMPERE"
+                    ]
+                }
+            ],
+            "description": "The power token of Bostrom",
+            "display": "ampere",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "milliampere"
+            },
+            "name": "Bostrom Ampere",
+            "symbol": "AMPERE",
             "traces": [
                 {
                     "type": "ibc",
@@ -157,33 +179,15 @@
                     }
                 }
             ],
-            "description": "The power token of Bostrom",
-            "denom_units": [
-                {
-                    "denom": "milliampere",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "ampere",
-                    "exponent": 3,
-                    "aliases": [
-                        "AMPERE"
-                    ]
-                }
-            ],
-            "display": "ampere",
-            "name": "Bostrom Ampere",
-            "symbol": "AMPERE",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "milliampere"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/296FC9E00D4BBAEC07CE6B14FD119CFB1E4490B89C0C2106FBE2FE0331211183",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "poolB02CE42B202A71419D2F9EB4996B36C52F1B5B60DAF7D7B1474660A95656C126"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -199,15 +203,28 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "poolB02CE42B202A71419D2F9EB4996B36C52F1B5B60DAF7D7B1474660A95656C126"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/2C8F023AF00F2B97F3FBD629DD28204F5F8EA0B4028F1D57A39F04AD20BCCF47",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "boot",
+                    "exponent": 0,
+                    "aliases": [
+                        "BOOT"
+                    ]
+                }
+            ],
+            "description": "The staking token of Bostrom",
+            "display": "boot",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "boot"
+            },
+            "name": "Bostrom Boot",
+            "symbol": "BOOT",
             "traces": [
                 {
                     "type": "ibc",
@@ -223,28 +240,15 @@
                     }
                 }
             ],
-            "description": "The staking token of Bostrom",
-            "denom_units": [
-                {
-                    "denom": "boot",
-                    "exponent": 0,
-                    "aliases": [
-                        "BOOT"
-                    ]
-                }
-            ],
-            "display": "boot",
-            "name": "Bostrom Boot",
-            "symbol": "BOOT",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "boot"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/41364572B68E86DE7543FEFD92C9D0F7E71162A095009830276BCFFCBB45515F",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool79B9E8E233B61B84EA5AE564AB080FC492B4C953A9D8B409F300D9E29716459F"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -260,15 +264,28 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool79B9E8E233B61B84EA5AE564AB080FC492B4C953A9D8B409F300D9E29716459F"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/430653671B52E24B4020CE2217DBB45BDF4AD85239CAA8C7FC3FC7E72EE812F7",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "hydrogen",
+                    "exponent": 0,
+                    "aliases": [
+                        "HYDROGEN"
+                    ]
+                }
+            ],
+            "description": "The liquid staking token of Bostrom",
+            "display": "hydrogen",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "hydrogen"
+            },
+            "name": "Bostrom Hydrogen",
+            "symbol": "HYDROGEN",
             "traces": [
                 {
                     "type": "ibc",
@@ -284,28 +301,15 @@
                     }
                 }
             ],
-            "description": "The liquid staking token of Bostrom",
-            "denom_units": [
-                {
-                    "denom": "hydrogen",
-                    "exponent": 0,
-                    "aliases": [
-                        "HYDROGEN"
-                    ]
-                }
-            ],
-            "display": "hydrogen",
-            "name": "Bostrom Hydrogen",
-            "symbol": "HYDROGEN",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "hydrogen"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/488A74AC4068DACE2013C37E0F1F2DFEE5444BD2D1F596E9D749C2C43850E260",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool27BBCA67F42ED27DFFB6A450966C7EA206ADAA42BA0A1871FADC6C59569F6E8D"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -321,15 +325,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool27BBCA67F42ED27DFFB6A450966C7EA206ADAA42BA0A1871FADC6C59569F6E8D"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/5F1825C922E098074DD397AE2128BFB65C79CF7C97699B173057EF1C6E546711",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool1A492174015ABA47066C8569AFF7582C551980840AAE7EBAEFB667347EDDB601"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -345,15 +349,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool1A492174015ABA47066C8569AFF7582C551980840AAE7EBAEFB667347EDDB601"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/85AF7F591FF85A2308783992D2B0311D0743A2F2270811038E7FF4A5C969CCC5",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool5D83035BE0E7AB904379161D3C52FB4C1C392265AC19CE39A864146198610628"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -369,15 +373,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool5D83035BE0E7AB904379161D3C52FB4C1C392265AC19CE39A864146198610628"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/85E519F80162CED66E5ACAA45FC0D6A4B3A5BC69C917C5D8A26BB4AE180DC2A7",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool98692450C039BDD30563475A7699A7805075F592A36837A04357F20B0D59C90F"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -393,15 +397,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool98692450C039BDD30563475A7699A7805075F592A36837A04357F20B0D59C90F"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/98AAD892F50676A0DDAA530D9381DB87A0AFFC302D7D58EF3A33C470FC74FDD8",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "poolE479A51F998E2979F89DA9AB897ED45A9AFE4E7DE32BE3D30FB456E58F80D4E9"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -417,15 +421,33 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "poolE479A51F998E2979F89DA9AB897ED45A9AFE4E7DE32BE3D30FB456E58F80D4E9"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/A6E4CCE45FD18BE7F30EC9745A91D0B827ACEF8004CF3CE00967142CB2008531",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "millivolt",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "volt",
+                    "exponent": 3,
+                    "aliases": [
+                        "VOLT"
+                    ]
+                }
+            ],
+            "description": "The bandwidth token of Bostrom",
+            "display": "volt",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "millivolt"
+            },
+            "name": "Bostrom Volt",
+            "symbol": "VOLT",
             "traces": [
                 {
                     "type": "ibc",
@@ -441,33 +463,15 @@
                     }
                 }
             ],
-            "description": "The bandwidth token of Bostrom",
-            "denom_units": [
-                {
-                    "denom": "millivolt",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "volt",
-                    "exponent": 3,
-                    "aliases": [
-                        "VOLT"
-                    ]
-                }
-            ],
-            "display": "volt",
-            "name": "Bostrom Volt",
-            "symbol": "VOLT",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "millivolt"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C09102804C7FD8B527CA9F7EB63D6B040769FB17CA1B29A3E25CC403CD9BD766",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "tocyb"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -483,15 +487,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "tocyb"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/D5EF2773C17035935E45CC36BA50AD5AC8C3D914B6E60F580B136F599465EAA1",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool70D7610CBA8E94B27BAD7806EBD826F5626C486BBF5C490D1463D72314353C66"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -507,15 +511,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool70D7610CBA8E94B27BAD7806EBD826F5626C486BBF5C490D1463D72314353C66"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED9C23716A72146679577F2C67E32A0DCAF2A0DFFA4924A8F77FE10CBE61FDC0",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-0",
+                "dst_channel": "channel-11",
+                "source_denom": "pool906F3CC4C0F4634031990DB81761BD390890F8A8A80460EBDC6B151254DE7D1D"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -531,16 +535,10 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-11",
-                "source_denom": "pool906F3CC4C0F4634031990DB81761BD390890F8A8A80460EBDC6B151254DE7D1D"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "liquidpussy",
-            "type_asset": "sdk.coin",
-            "description": "The liquid staking token of Space-pussy",
             "denom_units": [
                 {
                     "denom": "liquidpussy",
@@ -550,14 +548,14 @@
                     ]
                 }
             ],
+            "description": "The liquid staking token of Space-pussy",
             "display": "liquidpussy",
             "name": "liquidpussy",
-            "symbol": "LIQUIDPUSSY"
+            "symbol": "LIQUIDPUSSY",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "milliampere",
-            "type_asset": "sdk.coin",
-            "description": "The power token of Space-pussy",
             "denom_units": [
                 {
                     "denom": "milliampere",
@@ -572,14 +570,14 @@
                     ]
                 }
             ],
+            "description": "The power token of Space-pussy",
             "display": "ampere",
             "name": "Space-pussy Ampere",
-            "symbol": "AMPERE"
+            "symbol": "AMPERE",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "millivolt",
-            "type_asset": "sdk.coin",
-            "description": "The bandwidth token of Space-pussy",
             "denom_units": [
                 {
                     "denom": "millivolt",
@@ -594,9 +592,11 @@
                     ]
                 }
             ],
+            "description": "The bandwidth token of Space-pussy",
             "display": "volt",
             "name": "Space-pussy Volt",
-            "symbol": "VOLT"
+            "symbol": "VOLT",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "pool097C9EE9FFF1C482FDC9D96317A0BFF85D27333970BE1900E7DBC739D591B1A7",
@@ -624,8 +624,6 @@
         },
         {
             "base": "pussy",
-            "type_asset": "sdk.coin",
-            "description": "The staking token of space-pussy",
             "denom_units": [
                 {
                     "denom": "pussy",
@@ -635,9 +633,11 @@
                     ]
                 }
             ],
+            "description": "The staking token of space-pussy",
             "display": "pussy",
             "name": "Pussy token",
-            "symbol": "PUSSY"
+            "symbol": "PUSSY",
+            "type_asset": "sdk.coin"
         }
     ]
 }

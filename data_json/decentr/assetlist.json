@@ -4,7 +4,11 @@
     "assets": [
         {
             "base": "ibc/15BF17692357FB1F312A8C215A180E88B19E5357ACFD2EF55AC8CD1524E90DC7",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-181",
+                "source_denom": "ibc/98BEE5BA16680E2CD3873B2E8DBE4BA025C20C6982E597F5042B5D61E8A3AAC5"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -46,15 +50,15 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-181",
-                "source_denom": "ibc/98BEE5BA16680E2CD3873B2E8DBE4BA025C20C6982E597F5042B5D61E8A3AAC5"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/1DB7A20DB292A13C49055687F44E0E237C804D351E84955AD3B2D5E91EF0E016",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-181",
+                "source_denom": "ibc/24FCDB27E5C3F83568786A0C4F747CBAAE1BDA24CAF0DE2EED8BD048067503EE"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -96,15 +100,29 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-181",
-                "source_denom": "ibc/24FCDB27E5C3F83568786A0C4F747CBAAE1BDA24CAF0DE2EED8BD048067503EE"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "denom": "uosmo",
+                    "exponent": 0,
+                    "aliases": []
+                },
+                {
+                    "denom": "osmo",
+                    "exponent": 6,
+                    "aliases": []
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "source_channel": "channel-1",
+                "dst_channel": "channel-181",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -120,29 +138,15 @@
                     }
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-181",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/6F31D29E93FA8771F9095D68E8794A8CADD651439A631576D58C1020E2C4FDA2",
-            "type_asset": "ics20",
+            "ibc": {
+                "source_channel": "channel-7",
+                "dst_channel": "channel-36",
+                "source_denom": "aarch"
+            },
             "traces": [
                 {
                     "type": "ibc",
@@ -158,31 +162,10 @@
                     }
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-7",
-                "dst_channel": "channel-36",
-                "source_denom": "aarch"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/A1CA75737A469737878C6A3CCD0D47738E85CCE0C4C341B298928DE7DADE3CDF",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "phoenix-1",
-                        "channel_id": "channel-315",
-                        "base_denom": "uluna",
-                        "chain_name": "terra2"
-                    },
-                    "chain": {
-                        "channel_id": "channel-9",
-                        "path": "transfer/channel-9/uluna"
-                    }
-                }
-            ],
-            "description": "The native staking token of Terra 2.0",
             "denom_units": [
                 {
                     "denom": "uluna",
@@ -204,34 +187,34 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of Terra 2.0",
             "display": "luna",
-            "name": "LUNA",
-            "symbol": "LUNA",
             "ibc": {
                 "source_channel": "channel-9",
                 "dst_channel": "channel-315",
                 "source_denom": "uluna"
-            }
-        },
-        {
-            "base": "ibc/B7489F796F582168A256F44B1B2AB93DD2E868487DA91F28FD2BA967E97F5712",
-            "type_asset": "ics20",
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
             "traces": [
                 {
                     "type": "ibc",
                     "counterparty": {
-                        "chain_id": "sentinelhub-2",
-                        "channel_id": "channel-55",
-                        "base_denom": "udvpn",
-                        "chain_name": "sentinel"
+                        "chain_id": "phoenix-1",
+                        "channel_id": "channel-315",
+                        "base_denom": "uluna",
+                        "chain_name": "terra2"
                     },
                     "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/udvpn"
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/uluna"
                     }
                 }
             ],
-            "description": "The native staking token of the Sentinel Hub.",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B7489F796F582168A256F44B1B2AB93DD2E868487DA91F28FD2BA967E97F5712",
             "denom_units": [
                 {
                     "denom": "dvpn",
@@ -253,32 +236,32 @@
                     ]
                 }
             ],
+            "description": "The native staking token of the Sentinel Hub.",
             "display": "dvpn",
             "ibc": {
                 "source_channel": "channel-4",
                 "dst_channel": "channel-55",
                 "source_denom": "udvpn"
-            }
-        },
-        {
-            "base": "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986",
-            "type_asset": "ics20",
+            },
             "traces": [
                 {
                     "type": "ibc",
                     "counterparty": {
-                        "chain_id": "phoenix-1",
-                        "channel_id": "channel-99",
-                        "base_denom": "uluna",
-                        "chain_name": "terra2"
+                        "chain_id": "sentinelhub-2",
+                        "channel_id": "channel-55",
+                        "base_denom": "udvpn",
+                        "chain_name": "sentinel"
                     },
                     "chain": {
-                        "channel_id": "channel-5",
-                        "path": "transfer/channel-5/uluna"
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/udvpn"
                     }
                 }
             ],
-            "description": "The native staking token of Terra 2.0",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986",
             "denom_units": [
                 {
                     "denom": "uluna",
@@ -300,14 +283,31 @@
                     "aliases": []
                 }
             ],
+            "description": "The native staking token of Terra 2.0",
             "display": "luna",
-            "name": "LUNA",
-            "symbol": "LUNA",
             "ibc": {
                 "source_channel": "channel-5",
                 "dst_channel": "channel-99",
                 "source_denom": "uluna"
-            }
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "type": "ibc",
+                    "counterparty": {
+                        "chain_id": "phoenix-1",
+                        "channel_id": "channel-99",
+                        "base_denom": "uluna",
+                        "chain_name": "terra2"
+                    },
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/uluna"
+                    }
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "udec",

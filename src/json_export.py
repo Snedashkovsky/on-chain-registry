@@ -32,6 +32,9 @@ def get_asset_json(
                 _trace['counterparty'].pop('base_supply', None)
             _asset_json['traces'] = _traces
 
+    if row['denom_units']:
+        _asset_json['denom_units'] = [dict(sorted(_denom_unit.items())) for _denom_unit in row['denom_units']]
+
     for _field in ['description', 'denom_units', 'display', 'name', 'symbol', 'ibc']:
         if row[_field]:
             _asset_json[_field] = row[_field]
@@ -50,7 +53,7 @@ def get_asset_json(
         _asset_json['address'] = row['denom']
         _asset_json['admin'] = row['admin']
 
-    return _asset_json
+    return dict(sorted(_asset_json.items()))
 
 
 def get_asset_json_dict(
