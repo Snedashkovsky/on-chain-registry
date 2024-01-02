@@ -272,6 +272,66 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/95D7732F3B845FCD050C34F66F934BCF88F1507561C6871EC24777CFDB8498BC",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microctk"
+                    ],
+                    "denom": "uctk",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millictk"
+                    ],
+                    "denom": "mctk",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "ctk",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Shentu Chain.",
+            "display": "ctk",
+            "ibc": {
+                "dst_channel": "channel-53",
+                "source_channel": "channel-3",
+                "source_denom": "ibc/7ED954CFFFC06EE8419387F3FC688837FF64EF264DE14219935F724EEEDBF8D3"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-146/uctk"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7ED954CFFFC06EE8419387F3FC688837FF64EF264DE14219935F724EEEDBF8D3",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-53"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-146",
+                        "path": "transfer/channel-146/uctk"
+                    },
+                    "counterparty": {
+                        "base_denom": "uctk",
+                        "chain_id": "shentu-2.2",
+                        "chain_name": "shentu",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/D94CE55336EE76F39515880FD83EEFB2D8DA4755313EF6AE3950EFAC11A38E6F",
             "ibc": {
                 "dst_channel": "channel-53",
