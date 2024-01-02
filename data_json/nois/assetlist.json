@@ -1,26 +1,7 @@
 {
-    "chain_name": "nois",
-    "chain_id": "nois-1",
     "assets": [
         {
             "base": "ibc/1408F847FE7B46A8E9AFF0D5377E3693256865718464CAB0B833B0688B5BD387",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-8277",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-37",
-                        "path": "transfer/channel-37/uosmo"
-                    }
-                }
-            ],
-            "description": "The native token of Osmosis",
             "denom_units": [
                 {
                     "aliases": [],
@@ -33,56 +14,56 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-37",
                 "dst_channel": "channel-8277",
+                "source_channel": "channel-37",
                 "source_denom": "uosmo"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-37",
+                        "path": "transfer/channel-37/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-8277"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/3A8BF65AFC8F1AC2998A80C5D78C355D058C8C755882E85A9BEC75D4E9F09739",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-17",
+                "source_channel": "channel-21",
+                "source_denom": "aarch"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "archway-1",
-                        "channel_id": "channel-17",
-                        "base_denom": "aarch",
-                        "chain_name": "archway"
-                    },
                     "chain": {
                         "channel_id": "channel-21",
                         "path": "transfer/channel-21/aarch"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "aarch",
+                        "chain_id": "archway-1",
+                        "chain_name": "archway",
+                        "channel_id": "channel-17"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-21",
-                "dst_channel": "channel-17",
-                "source_denom": "aarch"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/49BAE4CD2172833F14000627DA87ED8024AD46A38D6ED33F6239F22B5832F958",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "stargaze-1",
-                        "channel_id": "channel-137",
-                        "base_denom": "ustars",
-                        "chain_name": "stargaze"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/ustars"
-                    }
-                }
-            ],
-            "description": "The native token of Stargaze",
             "denom_units": [
                 {
                     "aliases": [
@@ -97,100 +78,119 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Stargaze",
             "display": "stars",
+            "ibc": {
+                "dst_channel": "channel-137",
+                "source_channel": "channel-0",
+                "source_denom": "ustars"
+            },
             "name": "Stargaze STARS",
             "symbol": "STARS",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-137",
-                "source_denom": "ustars"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-137"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/6126FC13EDE64EEB9F09DF55FF1929489769A2274EA857BB8B8C39DB23F03A17",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "umee-1",
-                        "channel_id": "channel-55",
-                        "base_denom": "uumee",
-                        "chain_name": "umee"
-                    },
-                    "chain": {
-                        "channel_id": "channel-15",
-                        "path": "transfer/channel-15/uumee"
-                    }
+                    "aliases": [
+                        "microumee"
+                    ],
+                    "denom": "uumee",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "UMEE",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Umee network.",
-            "denom_units": [
-                {
-                    "denom": "uumee",
-                    "exponent": 0,
-                    "aliases": [
-                        "microumee"
-                    ]
-                },
-                {
-                    "denom": "UMEE",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "UMEE",
+            "ibc": {
+                "dst_channel": "channel-55",
+                "source_channel": "channel-15",
+                "source_denom": "uumee"
+            },
             "name": "UMEE",
             "symbol": "UMEE",
-            "ibc": {
-                "source_channel": "channel-15",
-                "dst_channel": "channel-55",
-                "source_denom": "uumee"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-15",
+                        "path": "transfer/channel-15/uumee"
+                    },
+                    "counterparty": {
+                        "base_denom": "uumee",
+                        "chain_id": "umee-1",
+                        "chain_name": "umee",
+                        "channel_id": "channel-55"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-225",
+                "source_channel": "channel-1",
+                "source_denom": "ujuno"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "juno-1",
-                        "channel_id": "channel-225",
-                        "base_denom": "ujuno",
-                        "chain_name": "juno"
-                    },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/ujuno"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ujuno",
+                        "chain_id": "juno-1",
+                        "chain_name": "juno",
+                        "channel_id": "channel-225"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-225",
-                "source_denom": "ujuno"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "unois",
-            "type_asset": "sdk.coin",
-            "description": "The native token of Nois",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "unois",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "nois",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
+            "description": "The native token of Nois",
             "display": "nois",
             "name": "NOIS",
-            "symbol": "NOIS"
+            "symbol": "NOIS",
+            "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "nois-1",
+    "chain_name": "nois"
 }

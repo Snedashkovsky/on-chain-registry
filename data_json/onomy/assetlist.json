@@ -1,26 +1,7 @@
 {
-    "chain_name": "onomy",
-    "chain_id": "onomy-mainnet-1",
     "assets": [
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-525",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
-                    }
-                }
-            ],
-            "description": "The native token of Osmosis",
             "denom_units": [
                 {
                     "aliases": [],
@@ -33,37 +14,56 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-525",
+                "source_channel": "channel-0",
                 "source_denom": "uosmo"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-525"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "anom",
-            "type_asset": "sdk.coin",
-            "description": "NOM coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "anom",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "nom",
-                    "exponent": 18,
-                    "aliases": []
+                    "exponent": 18
                 }
             ],
+            "description": "NOM coin",
             "display": "nom",
             "name": "NOM",
-            "symbol": "NOM"
+            "symbol": "NOM",
+            "type_asset": "sdk.coin"
         },
         {
+            "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
             "base": "gravity0x6B175474E89094C44Da98b954EedeAC495271d0F",
-            "type_asset": "erc20",
-            "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+            "type_asset": "erc20"
         }
-    ]
+    ],
+    "chain_id": "onomy-mainnet-1",
+    "chain_name": "onomy"
 }

@@ -1,88 +1,69 @@
 {
-    "chain_name": "nyx",
-    "chain_id": "nyx",
     "assets": [
         {
             "base": "ibc/98AD9C5621CDC1EBB7F657AD9D8F1940D3BB192B0DCC079607FC031A4F4377BA",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-18",
-                        "base_denom": "ibc/2E5D0AC026AC1AFA65A23023BA4F24BB8DDF94F118EDC0BAD6F625BFC557CDED",
-                        "chain_name": "gravitybridge"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/transfer/channel-17/uatom"
-                    }
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-281",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-17",
-                        "path": "transfer/channel-17/uatom"
-                    }
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Cosmos Hub.",
-            "denom_units": [
-                {
-                    "denom": "uatom",
-                    "exponent": 0,
-                    "aliases": [
-                        "microatom"
-                    ]
-                },
-                {
-                    "denom": "matom",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliatom"
-                    ]
-                },
-                {
-                    "denom": "atom",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-18",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/2E5D0AC026AC1AFA65A23023BA4F24BB8DDF94F118EDC0BAD6F625BFC557CDED"
+            },
             "name": "Cosmos Hub Atom",
             "symbol": "ATOM",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-18",
-                "source_denom": "ibc/2E5D0AC026AC1AFA65A23023BA4F24BB8DDF94F118EDC0BAD6F625BFC557CDED"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-17/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2E5D0AC026AC1AFA65A23023BA4F24BB8DDF94F118EDC0BAD6F625BFC557CDED",
+                        "chain_id": "gravity-bridge-3",
+                        "chain_name": "gravitybridge",
+                        "channel_id": "channel-18"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-281"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-228",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uosmo"
-                    }
-                }
-            ],
-            "description": "The native token of Osmosis",
             "denom_units": [
                 {
                     "aliases": [],
@@ -95,181 +76,198 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-1",
                 "dst_channel": "channel-228",
+                "source_channel": "channel-1",
                 "source_denom": "uosmo"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-228"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/07D277B0E1EFE052AD46E33CC139C72B2C6207DCF073F2DF6C0F28291E69FC44",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-5",
                 "dst_channel": "channel-41",
+                "source_channel": "channel-5",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/17673E0FA7A3C3F7B6D6CEFEC6588DD8412CE99889CBDC06AD475F0B4BE25CBB",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-3",
                 "dst_channel": "channel-10",
+                "source_channel": "channel-3",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/17CD484EE7D9723B847D95015FA3EBD1572FD13BC84FB838F55B18A57450F25B",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-18",
+                "source_channel": "channel-0",
                 "source_denom": "gravity0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/43DC13F256D806DF763C36D922349DFE3CB0287B5DA064A64FA0E7B90971494F",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-7",
                 "dst_channel": "channel-0",
+                "source_channel": "channel-7",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/790D1C5E1911E7BFD8CC8D7ED0223769CBD7E3986E17B581A88BF57B1D822FE9",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-4",
                 "dst_channel": "channel-40",
+                "source_channel": "channel-4",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/BE4C72028781730B9DF0542466EB26DEA6DDD42C32316D774F943151F6010320",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-5",
                 "dst_channel": "channel-41",
+                "source_channel": "channel-5",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C1F31ABD9112C10AEAE61B00EC8C70433B23435AC3BB64ECB4F0073C8079C2A4",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-18",
+                "source_channel": "channel-0",
                 "source_denom": "gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006"
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C950356239AD2A205DE09FDF066B1F9FF19A7CA7145EA48A5B19B76EE47E52F7",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ugrav"
+                    ],
+                    "denom": "ugraviton",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "grav"
+                    ],
+                    "denom": "graviton",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Gravity Bridge Blockchain",
+            "display": "graviton",
+            "ibc": {
+                "dst_channel": "channel-60",
+                "source_channel": "channel-2",
+                "source_denom": "ugraviton"
+            },
+            "name": "Graviton",
+            "symbol": "GRAV",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-60",
-                        "base_denom": "ugraviton",
-                        "chain_name": "gravitybridge"
-                    },
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/ugraviton"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ugraviton",
+                        "chain_id": "gravity-bridge-3",
+                        "chain_name": "gravitybridge",
+                        "channel_id": "channel-60"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "The native staking token of the Gravity Bridge Blockchain",
-            "denom_units": [
-                {
-                    "denom": "ugraviton",
-                    "exponent": 0,
-                    "aliases": [
-                        "ugrav"
-                    ]
-                },
-                {
-                    "denom": "graviton",
-                    "exponent": 6,
-                    "aliases": [
-                        "grav"
-                    ]
-                }
-            ],
-            "display": "graviton",
-            "name": "Graviton",
-            "symbol": "GRAV",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-60",
-                "source_denom": "ugraviton"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/D956638E52570976F762354757863F60F2AFE4879E849CB1C77B163F0BF11C64",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-6",
                 "dst_channel": "channel-0",
+                "source_channel": "channel-6",
                 "source_denom": ""
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/DC186CA7A8C009B43774EBDC825C935CABA9743504CE6037507E6E5CCE12858A",
-            "type_asset": "ics20",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-18",
+                "source_channel": "channel-0",
                 "source_denom": "gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-            }
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/FC9D92EC12BC974E8B6179D411351524CD5C2EBC3CE29D5BA856414FEFA47093",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-18",
-                        "base_denom": "ugraviton",
-                        "chain_name": "gravitybridge"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/ugraviton"
-                    }
+                    "aliases": [
+                        "ugrav"
+                    ],
+                    "denom": "ugraviton",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "grav"
+                    ],
+                    "denom": "graviton",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Gravity Bridge Blockchain",
-            "denom_units": [
-                {
-                    "denom": "ugraviton",
-                    "exponent": 0,
-                    "aliases": [
-                        "ugrav"
-                    ]
-                },
-                {
-                    "denom": "graviton",
-                    "exponent": 6,
-                    "aliases": [
-                        "grav"
-                    ]
-                }
-            ],
             "display": "graviton",
+            "ibc": {
+                "dst_channel": "channel-18",
+                "source_channel": "channel-0",
+                "source_denom": "ugraviton"
+            },
             "name": "Graviton",
             "symbol": "GRAV",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-18",
-                "source_denom": "ugraviton"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/ugraviton"
+                    },
+                    "counterparty": {
+                        "base_denom": "ugraviton",
+                        "chain_id": "gravity-bridge-3",
+                        "chain_name": "gravitybridge",
+                        "channel_id": "channel-18"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "unym",
@@ -279,5 +277,7 @@
             "base": "unyx",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "nyx",
+    "chain_name": "nyx"
 }

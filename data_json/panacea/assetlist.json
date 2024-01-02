@@ -1,26 +1,7 @@
 {
-    "chain_name": "panacea",
-    "chain_id": "panacea-3",
     "assets": [
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-82",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uosmo"
-                    }
-                }
-            ],
-            "description": "The native token of Osmosis",
             "denom_units": [
                 {
                     "aliases": [],
@@ -33,31 +14,32 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-1",
                 "dst_channel": "channel-82",
+                "source_channel": "channel-1",
                 "source_denom": "uosmo"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-82"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/EA7DF7F779C7F14E07172E5713E07356B55F01496CA649DDE46CF8FBF1A8466D",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-82",
-                        "base_denom": "uion",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uion"
-                    }
-                }
-            ],
             "denom_units": [
                 {
                     "aliases": [],
@@ -72,14 +54,32 @@
             ],
             "display": "ion",
             "ibc": {
-                "source_channel": "channel-1",
                 "dst_channel": "channel-82",
+                "source_channel": "channel-1",
                 "source_denom": "uion"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uion"
+                    },
+                    "counterparty": {
+                        "base_denom": "uion",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-82"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "umed",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "panacea-3",
+    "chain_name": "panacea"
 }

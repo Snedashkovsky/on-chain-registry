@@ -1,220 +1,201 @@
 {
-    "chain_name": "impacthub",
-    "chain_id": "ixo-5",
     "assets": [
         {
             "base": "ibc/C90C3DADD95B11B0F74B16146876597A67A40EAC2351338D82F503EF00C1CC62",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-38",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/BD1CB688D6F386DA5AF36F1FA2D3031DA58BE5EA215EBC196F933CE3A5EF9F6F"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-38",
-                        "base_denom": "ibc/BD1CB688D6F386DA5AF36F1FA2D3031DA58BE5EA215EBC196F933CE3A5EF9F6F",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-4",
                         "path": "transfer/channel-4/transfer/channel-47/transfer/channel-15/uixo"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BD1CB688D6F386DA5AF36F1FA2D3031DA58BE5EA215EBC196F933CE3A5EF9F6F",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-38"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "sifchain-1",
-                        "channel_id": "channel-17",
-                        "base_denom": "ibc/C5C8682EB9AA1313EF1B12C991ADCDA465B80C05733BFB2972E2005E01BCE459",
-                        "chain_name": "sifchain"
-                    },
                     "chain": {
                         "channel_id": "channel-47",
                         "path": "transfer/channel-47/transfer/channel-15/uixo"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C5C8682EB9AA1313EF1B12C991ADCDA465B80C05733BFB2972E2005E01BCE459",
+                        "chain_id": "sifchain-1",
+                        "chain_name": "sifchain",
+                        "channel_id": "channel-17"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-4",
-                "dst_channel": "channel-38",
-                "source_denom": "ibc/BD1CB688D6F386DA5AF36F1FA2D3031DA58BE5EA215EBC196F933CE3A5EF9F6F"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/87B127D828F2E4E021A2922BA90871641682B7A001F25C902899CB500C2DC81E",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-402",
-                        "base_denom": "ibc/B2B5AEE174062FA7804AC95223D8169852F8F58962C51C66391C272C838258B7",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/transfer/channel-204/uixo"
-                    }
+                    "aliases": [
+                        "microixo"
+                    ],
+                    "denom": "uixo",
+                    "exponent": 0
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "ixo-5",
-                        "channel_id": "channel-1",
-                        "base_denom": "uixo",
-                        "chain_name": "impacthub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-204",
-                        "path": "transfer/channel-204/uixo"
-                    }
+                    "aliases": [
+                        "milliixo"
+                    ],
+                    "denom": "mixo",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "ixo",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of ixo.",
-            "denom_units": [
-                {
-                    "denom": "uixo",
-                    "exponent": 0,
-                    "aliases": [
-                        "microixo"
-                    ]
-                },
-                {
-                    "denom": "mixo",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliixo"
-                    ]
-                },
-                {
-                    "denom": "ixo",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "ixo",
             "ibc": {
-                "source_channel": "channel-19",
                 "dst_channel": "channel-402",
+                "source_channel": "channel-19",
                 "source_denom": "ibc/B2B5AEE174062FA7804AC95223D8169852F8F58962C51C66391C272C838258B7"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/transfer/channel-204/uixo"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B2B5AEE174062FA7804AC95223D8169852F8F58962C51C66391C272C838258B7",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-402"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-204",
+                        "path": "transfer/channel-204/uixo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uixo",
+                        "chain_id": "ixo-5",
+                        "chain_name": "impacthub",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/A01367FF44D9DE359A984FC14EC5227AA96ED08B8B4B31B539BB63B9B9305F80",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-38",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-38",
-                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-4",
                         "path": "transfer/channel-4/transfer/channel-208/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-38"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-3",
-                        "base_denom": "uusdc",
-                        "chain_name": "axelar"
-                    },
                     "chain": {
                         "channel_id": "channel-208",
                         "path": "transfer/channel-208/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-4",
-                "dst_channel": "channel-38",
-                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/EFCDD4C4BE40A6162F97DBFE7D834294061E7D8CC62AFB44A96BDD4C2978C366",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-38",
-                        "base_denom": "ibc/B547DC9B897E7C3AA5B824696110B8E3D2C31E3ED3F02FF363DCBAD82457E07E",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/transfer/channel-77/uxki"
-                    }
+                    "aliases": [
+                        "microxki"
+                    ],
+                    "denom": "uxki",
+                    "exponent": 0
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "kichain-2",
-                        "channel_id": "channel-0",
-                        "base_denom": "uxki",
-                        "chain_name": "kichain"
-                    },
-                    "chain": {
-                        "channel_id": "channel-77",
-                        "path": "transfer/channel-77/uxki"
-                    }
+                    "aliases": [
+                        "millixki"
+                    ],
+                    "denom": "mxki",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "xki",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the KiChain.",
-            "denom_units": [
-                {
-                    "denom": "uxki",
-                    "exponent": 0,
-                    "aliases": [
-                        "microxki"
-                    ]
-                },
-                {
-                    "denom": "mxki",
-                    "exponent": 3,
-                    "aliases": [
-                        "millixki"
-                    ]
-                },
-                {
-                    "denom": "xki",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "xki",
             "ibc": {
-                "source_channel": "channel-4",
                 "dst_channel": "channel-38",
+                "source_channel": "channel-4",
                 "source_denom": "ibc/B547DC9B897E7C3AA5B824696110B8E3D2C31E3ED3F02FF363DCBAD82457E07E"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-77/uxki"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B547DC9B897E7C3AA5B824696110B8E3D2C31E3ED3F02FF363DCBAD82457E07E",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-38"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-77",
+                        "path": "transfer/channel-77/uxki"
+                    },
+                    "counterparty": {
+                        "base_denom": "uxki",
+                        "chain_id": "kichain-2",
+                        "chain_name": "kichain",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/05AC4BBA78C5951339A47DD1BC1E7FC922A9311DF81C85745B1C162F516FF2F1",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-38",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/uosmo"
-                    }
-                }
-            ],
-            "description": "The native token of Osmosis",
             "denom_units": [
                 {
                     "aliases": [],
@@ -227,32 +208,32 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-4",
                 "dst_channel": "channel-38",
+                "source_channel": "channel-4",
                 "source_denom": "uosmo"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-38"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/07FA7831E1920D0C87C9388F86B0108677F6ED0C9DE7E4063F05ED675192405C",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "stargaze-1",
-                        "channel_id": "channel-16",
-                        "base_denom": "ustars",
-                        "chain_name": "stargaze"
-                    },
-                    "chain": {
-                        "channel_id": "channel-15",
-                        "path": "transfer/channel-15/ustars"
-                    }
-                }
-            ],
-            "description": "The native token of Stargaze",
             "denom_units": [
                 {
                     "aliases": [
@@ -267,270 +248,289 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Stargaze",
             "display": "stars",
+            "ibc": {
+                "dst_channel": "channel-16",
+                "source_channel": "channel-15",
+                "source_denom": "ustars"
+            },
             "name": "Stargaze STARS",
             "symbol": "STARS",
-            "ibc": {
-                "source_channel": "channel-15",
-                "dst_channel": "channel-16",
-                "source_denom": "ustars"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-15",
+                        "path": "transfer/channel-15/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-16"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0973E5F82D860F674100F65F7FC0EA802CCCDA41908AA02B5062B1ADD185D3D4",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-114",
+                "source_channel": "channel-23",
+                "source_denom": "uaxl"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-114",
-                        "base_denom": "uaxl",
-                        "chain_name": "axelar"
-                    },
                     "chain": {
                         "channel_id": "channel-23",
                         "path": "transfer/channel-23/uaxl"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uaxl",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-114"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-23",
-                "dst_channel": "channel-114",
-                "source_denom": "uaxl"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/2658C97FC74B74AB1898982081523C455561BBE3C705E47707021D47F3D94B38",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-114",
+                "source_channel": "channel-23",
+                "source_denom": "uusdc"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-114",
-                        "base_denom": "uusdc",
-                        "chain_name": "axelar"
-                    },
                     "chain": {
                         "channel_id": "channel-23",
                         "path": "transfer/channel-23/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-114"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-23",
-                "dst_channel": "channel-114",
-                "source_denom": "uusdc"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/6BBE9BD4246F8E04948D5A4EEE7164B2630263B9EBB5E7DC5F0A46C62A2FF97B",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "noble-1",
-                        "channel_id": "channel-15",
-                        "base_denom": "uusdc",
-                        "chain_name": "noble"
-                    },
-                    "chain": {
-                        "channel_id": "channel-26",
-                        "path": "transfer/channel-26/uusdc"
-                    }
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
                 }
             ],
             "description": "USD Coin",
-            "denom_units": [
+            "ibc": {
+                "dst_channel": "channel-15",
+                "source_channel": "channel-26",
+                "source_denom": "uusdc"
+            },
+            "name": "usdc",
+            "traces": [
                 {
-                    "denom": "uusdc",
-                    "exponent": 0,
-                    "aliases": [
-                        "microusdc"
-                    ]
-                },
-                {
-                    "denom": "usdc",
-                    "exponent": 6,
-                    "aliases": []
+                    "chain": {
+                        "channel_id": "channel-26",
+                        "path": "transfer/channel-26/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-15"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "name": "usdc",
-            "ibc": {
-                "source_channel": "channel-26",
-                "dst_channel": "channel-15",
-                "source_denom": "uusdc"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/7D7CC2914A5548991E34CF9850264E214FF5BACC950D662EF3F69D9ED27C7333",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-17",
+                "source_channel": "channel-8",
+                "source_denom": "uiov"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "iov-mainnet-ibc",
-                        "channel_id": "channel-17",
-                        "base_denom": "uiov",
-                        "chain_name": "starname"
-                    },
                     "chain": {
                         "channel_id": "channel-8",
                         "path": "transfer/channel-8/uiov"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uiov",
+                        "chain_id": "iov-mainnet-ibc",
+                        "chain_name": "starname",
+                        "channel_id": "channel-17"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-8",
-                "dst_channel": "channel-17",
-                "source_denom": "uiov"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/8112CB4D6605445BA3EB43CD4845E75E4854E3C91463EAD6B94A4DA226787EC5",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-128",
+                "source_channel": "channel-25",
+                "source_denom": "erc20/tether/usdt"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "kava_2222-10",
-                        "channel_id": "channel-128",
-                        "base_denom": "erc20/tether/usdt",
-                        "chain_name": "kava"
-                    },
                     "chain": {
                         "channel_id": "channel-25",
                         "path": "transfer/channel-25/erc20/tether/usdt"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "erc20/tether/usdt",
+                        "chain_id": "kava_2222-10",
+                        "chain_name": "kava",
+                        "channel_id": "channel-128"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-25",
-                "dst_channel": "channel-128",
-                "source_denom": "erc20/tether/usdt"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/93C021F79186303FBBE7174E01DFD3AA9516F05806A9C50B98CAFC2473A53AA1",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "gravity-bridge-3",
-                        "channel_id": "channel-26",
-                        "base_denom": "ugraviton",
-                        "chain_name": "gravitybridge"
-                    },
-                    "chain": {
-                        "channel_id": "channel-16",
-                        "path": "transfer/channel-16/ugraviton"
-                    }
+                    "aliases": [
+                        "ugrav"
+                    ],
+                    "denom": "ugraviton",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "grav"
+                    ],
+                    "denom": "graviton",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Gravity Bridge Blockchain",
-            "denom_units": [
-                {
-                    "denom": "ugraviton",
-                    "exponent": 0,
-                    "aliases": [
-                        "ugrav"
-                    ]
-                },
-                {
-                    "denom": "graviton",
-                    "exponent": 6,
-                    "aliases": [
-                        "grav"
-                    ]
-                }
-            ],
             "display": "graviton",
+            "ibc": {
+                "dst_channel": "channel-26",
+                "source_channel": "channel-16",
+                "source_denom": "ugraviton"
+            },
             "name": "Graviton",
             "symbol": "GRAV",
-            "ibc": {
-                "source_channel": "channel-16",
-                "dst_channel": "channel-26",
-                "source_denom": "ugraviton"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-16",
+                        "path": "transfer/channel-16/ugraviton"
+                    },
+                    "counterparty": {
+                        "base_denom": "ugraviton",
+                        "chain_id": "gravity-bridge-3",
+                        "chain_name": "gravitybridge",
+                        "channel_id": "channel-26"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-204",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uatom"
-                    }
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Cosmos Hub.",
-            "denom_units": [
-                {
-                    "denom": "uatom",
-                    "exponent": 0,
-                    "aliases": [
-                        "microatom"
-                    ]
-                },
-                {
-                    "denom": "matom",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliatom"
-                    ]
-                },
-                {
-                    "denom": "atom",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-204",
+                "source_channel": "channel-1",
+                "source_denom": "uatom"
+            },
             "name": "Cosmos Hub Atom",
             "symbol": "ATOM",
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-204",
-                "source_denom": "uatom"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-204"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "uixo",
-            "type_asset": "sdk.coin",
-            "description": "The native staking token of ixo.",
             "denom_units": [
                 {
-                    "denom": "uixo",
-                    "exponent": 0,
                     "aliases": [
                         "microixo"
-                    ]
+                    ],
+                    "denom": "uixo",
+                    "exponent": 0
                 },
                 {
-                    "denom": "mixo",
-                    "exponent": 3,
                     "aliases": [
                         "milliixo"
-                    ]
+                    ],
+                    "denom": "mixo",
+                    "exponent": 3
                 },
                 {
+                    "aliases": [],
                     "denom": "ixo",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
-            "display": "ixo"
+            "description": "The native staking token of ixo.",
+            "display": "ixo",
+            "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "ixo-5",
+    "chain_name": "impacthub"
 }

@@ -1,674 +1,701 @@
 {
-    "chain_name": "coreum",
-    "chain_id": "coreum-mainnet-1",
     "assets": [
         {
             "base": "ibc/53C7C2AA9898EA61604CB847177C4B359B1BB5C541A0F333306D7C8EEC11823E",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "ucore",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "core",
+                    "exponent": 6
+                }
+            ],
+            "description": "ucore coin",
+            "display": "core",
+            "ibc": {
+                "dst_channel": "channel-660",
+                "source_channel": "channel-9",
+                "source_denom": "ibc/0A3CC896103EC19335DEB0B7EAB55925BEEC832B56CC88F8DF222434426140C3"
+            },
+            "name": "ucore",
+            "symbol": "UCORE",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-660",
-                        "base_denom": "ibc/0A3CC896103EC19335DEB0B7EAB55925BEEC832B56CC88F8DF222434426140C3",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-9",
                         "path": "transfer/channel-9/transfer/channel-141/transfer/channel-122/transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0A3CC896103EC19335DEB0B7EAB55925BEEC832B56CC88F8DF222434426140C3",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-0",
-                        "base_denom": "ibc/85A879280F7AC44D5D3728104D1F1F09144A0D1C89942D5404FED3CA6CC5B115",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-141",
                         "path": "transfer/channel-141/transfer/channel-122/transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/85A879280F7AC44D5D3728104D1F1F09144A0D1C89942D5404FED3CA6CC5B115",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "injective-1",
-                        "channel_id": "channel-8",
-                        "base_denom": "ibc/478A95ED132D071603C8AD0FC5E1A74717653880144E0D9B2508A230820921EF",
-                        "chain_name": "injective"
-                    },
                     "chain": {
                         "channel_id": "channel-122",
                         "path": "transfer/channel-122/transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/478A95ED132D071603C8AD0FC5E1A74717653880144E0D9B2508A230820921EF",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-220",
-                        "base_denom": "ibc/F8215CF2CD97294057DBECAA45E3ABEB6012D25550750DA8EC56BEC73F0E522F",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F8215CF2CD97294057DBECAA45E3ABEB6012D25550750DA8EC56BEC73F0E522F",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "coreum-mainnet-1",
-                        "channel_id": "channel-9",
-                        "base_denom": "ucore",
-                        "chain_name": "coreum"
-                    },
                     "chain": {
                         "channel_id": "channel-660",
                         "path": "transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ucore",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "ucore coin",
-            "denom_units": [
-                {
-                    "denom": "ucore",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "core",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "core",
-            "name": "ucore",
-            "symbol": "UCORE",
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-660",
-                "source_denom": "ibc/0A3CC896103EC19335DEB0B7EAB55925BEEC832B56CC88F8DF222434426140C3"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/E2621BF421356413AA83D684B3201F61EDFDB3294424A79BA6887ED4A5F41917",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-660",
+                "source_channel": "channel-9",
+                "source_denom": "ibc/A4CE01A486BCABA39AE595FD6BD41ADE4E220E0E6454CAB457D90236F4F1382C"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-660",
-                        "base_denom": "ibc/A4CE01A486BCABA39AE595FD6BD41ADE4E220E0E6454CAB457D90236F4F1382C",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-9",
                         "path": "transfer/channel-9/transfer/channel-141/transfer/channel-2188/transfer/channel-9/uatom"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A4CE01A486BCABA39AE595FD6BD41ADE4E220E0E6454CAB457D90236F4F1382C",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-0",
-                        "base_denom": "ibc/8E3B6D541E7F7AA03217C287933B12AA99FE0067532C5314FBC8086C0FE686D8",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-141",
                         "path": "transfer/channel-141/transfer/channel-2188/transfer/channel-9/uatom"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8E3B6D541E7F7AA03217C287933B12AA99FE0067532C5314FBC8086C0FE686D8",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "coreum-mainnet-1",
-                        "channel_id": "channel-2",
-                        "base_denom": "ibc/45C001A5AE212D09879BE4627C45B64D5636086285590D5145A51E18E9D16722",
-                        "chain_name": "coreum"
-                    },
                     "chain": {
                         "channel_id": "channel-2188",
                         "path": "transfer/channel-2188/transfer/channel-9/uatom"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/45C001A5AE212D09879BE4627C45B64D5636086285590D5145A51E18E9D16722",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-660",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-9",
                         "path": "transfer/channel-9/uatom"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "The native staking token of the Cosmos Hub.",
-            "denom_units": [
-                {
-                    "denom": "uatom",
-                    "exponent": 0,
-                    "aliases": [
-                        "microatom"
-                    ]
-                },
-                {
-                    "denom": "matom",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliatom"
-                    ]
-                },
-                {
-                    "denom": "atom",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "atom",
-            "name": "Cosmos Hub Atom",
-            "symbol": "ATOM",
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-660",
-                "source_denom": "ibc/A4CE01A486BCABA39AE595FD6BD41ADE4E220E0E6454CAB457D90236F4F1382C"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/F000A578697C96F89EDFE98059493C997EF80C1D9BD474A7B57F83A1A7715C50",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "ucore",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "core",
+                    "exponent": 6
+                }
+            ],
+            "description": "ucore coin",
+            "display": "core",
+            "ibc": {
+                "dst_channel": "channel-2188",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/85A879280F7AC44D5D3728104D1F1F09144A0D1C89942D5404FED3CA6CC5B115"
+            },
+            "name": "ucore",
+            "symbol": "UCORE",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2188",
-                        "base_denom": "ibc/85A879280F7AC44D5D3728104D1F1F09144A0D1C89942D5404FED3CA6CC5B115",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/transfer/channel-122/transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/85A879280F7AC44D5D3728104D1F1F09144A0D1C89942D5404FED3CA6CC5B115",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "injective-1",
-                        "channel_id": "channel-8",
-                        "base_denom": "ibc/478A95ED132D071603C8AD0FC5E1A74717653880144E0D9B2508A230820921EF",
-                        "chain_name": "injective"
-                    },
                     "chain": {
                         "channel_id": "channel-122",
                         "path": "transfer/channel-122/transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/478A95ED132D071603C8AD0FC5E1A74717653880144E0D9B2508A230820921EF",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-220",
-                        "base_denom": "ibc/F8215CF2CD97294057DBECAA45E3ABEB6012D25550750DA8EC56BEC73F0E522F",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F8215CF2CD97294057DBECAA45E3ABEB6012D25550750DA8EC56BEC73F0E522F",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "coreum-mainnet-1",
-                        "channel_id": "channel-9",
-                        "base_denom": "ucore",
-                        "chain_name": "coreum"
-                    },
                     "chain": {
                         "channel_id": "channel-660",
                         "path": "transfer/channel-660/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ucore",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "ucore coin",
-            "denom_units": [
-                {
-                    "denom": "ucore",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "core",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "core",
-            "name": "ucore",
-            "symbol": "UCORE",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/86C47890A76159A5342B1D1BC405AF8C5A85270C892B272E9F58527EE52CAD5E",
             "ibc": {
-                "source_channel": "channel-2",
                 "dst_channel": "channel-2188",
-                "source_denom": "ibc/85A879280F7AC44D5D3728104D1F1F09144A0D1C89942D5404FED3CA6CC5B115"
-            }
+                "source_channel": "channel-2",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0E8595C44285144325A131C9A451E63B8E7467914DA5BC194F191151ED27DF30",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-2188",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
+            },
+            "name": "usdc",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2188",
-                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/transfer/channel-750/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "noble-1",
-                        "channel_id": "channel-1",
-                        "base_denom": "uusdc",
-                        "chain_name": "noble"
-                    },
                     "chain": {
                         "channel_id": "channel-750",
                         "path": "transfer/channel-750/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "USD Coin",
-            "denom_units": [
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/2716B3FFEAA9B701193FD9D02D546B841E16B46309BEAF151C2EA9502440B115",
+            "ibc": {
+                "dst_channel": "channel-2188",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/46B44899322F3CD854D2D46DEEF881958467CDD4B3B10086DA49296BBED94BED"
+            },
+            "traces": [
                 {
-                    "denom": "uusdc",
-                    "exponent": 0,
-                    "aliases": [
-                        "microusdc"
-                    ]
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-42/ujuno"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/46B44899322F3CD854D2D46DEEF881958467CDD4B3B10086DA49296BBED94BED",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "denom": "usdc",
-                    "exponent": 6,
-                    "aliases": []
+                    "chain": {
+                        "channel_id": "channel-42",
+                        "path": "transfer/channel-42/ujuno"
+                    },
+                    "counterparty": {
+                        "base_denom": "ujuno",
+                        "chain_id": "juno-1",
+                        "chain_name": "juno",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "name": "usdc",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-2188",
-                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/8E2FCB4549D7A0CE4778BB9438373264427C24FB4A86EC493D99AAF44D23BE9F",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "ucore",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "core",
+                    "exponent": 6
+                }
+            ],
+            "description": "ucore coin",
+            "display": "core",
+            "ibc": {
+                "dst_channel": "channel-660",
+                "source_channel": "channel-9",
+                "source_denom": "ibc/D402C166BA4A40A69188819EAA027AA9C66CD77EE05F873C5D84E177464F350E"
+            },
+            "name": "ucore",
+            "symbol": "UCORE",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-660",
-                        "base_denom": "ibc/D402C166BA4A40A69188819EAA027AA9C66CD77EE05F873C5D84E177464F350E",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-9",
                         "path": "transfer/channel-9/transfer/channel-654/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D402C166BA4A40A69188819EAA027AA9C66CD77EE05F873C5D84E177464F350E",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "coreum-mainnet-1",
-                        "channel_id": "channel-5",
-                        "base_denom": "ucore",
-                        "chain_name": "coreum"
-                    },
                     "chain": {
                         "channel_id": "channel-654",
                         "path": "transfer/channel-654/ucore"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ucore",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "ucore coin",
-            "denom_units": [
-                {
-                    "denom": "ucore",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "core",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
-            "display": "core",
-            "name": "ucore",
-            "symbol": "UCORE",
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-660",
-                "source_denom": "ibc/D402C166BA4A40A69188819EAA027AA9C66CD77EE05F873C5D84E177464F350E"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/BB1E34ACA8877CACC89AAB13A4FA6A4FC0FB12120F97F161A56D58F679458E13",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-660",
+                "source_channel": "channel-9",
+                "source_denom": "ibc/932D6003DA334ECBC5B23A071B4287D0A5CC97331197FE9F1C0689BA002A8421"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-660",
-                        "base_denom": "ibc/932D6003DA334ECBC5B23A071B4287D0A5CC97331197FE9F1C0689BA002A8421",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-9",
                         "path": "transfer/channel-9/transfer/channel-293/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/932D6003DA334ECBC5B23A071B4287D0A5CC97331197FE9F1C0689BA002A8421",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "axelar-dojo-1",
-                        "channel_id": "channel-2",
-                        "base_denom": "uusdc",
-                        "chain_name": "axelar"
-                    },
                     "chain": {
                         "channel_id": "channel-293",
                         "path": "transfer/channel-293/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-660",
-                "source_denom": "ibc/932D6003DA334ECBC5B23A071B4287D0A5CC97331197FE9F1C0689BA002A8421"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/CC516D84A1F658B09B13980937630ED4B3E08AC83EF0716CC0CB48943AF6E777",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "dydx-mainnet-1",
-                        "channel_id": "channel-14",
-                        "base_denom": "ibc/F5C65AF4FAB33C8982AC91DC669F598D02195D654FC6D9BE9B5DB323581486F6",
-                        "chain_name": "dydx"
-                    },
-                    "chain": {
-                        "channel_id": "channel-24",
-                        "path": "transfer/channel-24/transfer/channel-13/ucore"
-                    }
+                    "aliases": [],
+                    "denom": "ucore",
+                    "exponent": 0
                 },
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "coreum-mainnet-1",
-                        "channel_id": "channel-21",
-                        "base_denom": "ucore",
-                        "chain_name": "coreum"
-                    },
-                    "chain": {
-                        "channel_id": "channel-13",
-                        "path": "transfer/channel-13/ucore"
-                    }
+                    "aliases": [],
+                    "denom": "core",
+                    "exponent": 6
                 }
             ],
             "description": "ucore coin",
-            "denom_units": [
-                {
-                    "denom": "ucore",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "core",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "core",
+            "ibc": {
+                "dst_channel": "channel-14",
+                "source_channel": "channel-24",
+                "source_denom": "ibc/F5C65AF4FAB33C8982AC91DC669F598D02195D654FC6D9BE9B5DB323581486F6"
+            },
             "name": "ucore",
             "symbol": "UCORE",
-            "ibc": {
-                "source_channel": "channel-24",
-                "dst_channel": "channel-14",
-                "source_denom": "ibc/F5C65AF4FAB33C8982AC91DC669F598D02195D654FC6D9BE9B5DB323581486F6"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-24",
+                        "path": "transfer/channel-24/transfer/channel-13/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F5C65AF4FAB33C8982AC91DC669F598D02195D654FC6D9BE9B5DB323581486F6",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-14"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-13",
+                        "path": "transfer/channel-13/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ucore",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-21"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/078EAF11288A47609FD894070CA8A1BFCEBD9E08745EA7030F95D7ADEE2E22CA",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "evmos_9001-2",
-                        "channel_id": "channel-87",
-                        "base_denom": "aevmos",
-                        "chain_name": "evmos"
-                    },
-                    "chain": {
-                        "channel_id": "channel-8",
-                        "path": "transfer/channel-8/aevmos"
-                    }
+                    "aliases": [
+                        "attoevmos"
+                    ],
+                    "denom": "aevmos",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "evmos",
+                    "exponent": 18
                 }
             ],
             "description": "The native EVM, governance and staking token of the Evmos Hub",
-            "denom_units": [
-                {
-                    "denom": "aevmos",
-                    "exponent": 0,
-                    "aliases": [
-                        "attoevmos"
-                    ]
-                },
-                {
-                    "denom": "evmos",
-                    "exponent": 18,
-                    "aliases": []
-                }
-            ],
             "display": "evmos",
+            "ibc": {
+                "dst_channel": "channel-87",
+                "source_channel": "channel-8",
+                "source_denom": "aevmos"
+            },
             "name": "Evmos",
             "symbol": "EVMOS",
-            "ibc": {
-                "source_channel": "channel-8",
-                "dst_channel": "channel-87",
-                "source_denom": "aevmos"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/aevmos"
+                    },
+                    "counterparty": {
+                        "base_denom": "aevmos",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-87"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "dst_channel": "channel-2188",
+                "source_channel": "channel-2",
+                "source_denom": "uosmo"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2188",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/uosmo"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "The native token of Osmosis",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "display": "osmo",
-            "ibc": {
-                "source_channel": "channel-2",
-                "dst_channel": "channel-2188",
-                "source_denom": "uosmo"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/45C001A5AE212D09879BE4627C45B64D5636086285590D5145A51E18E9D16722",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-660",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-9",
-                        "path": "transfer/channel-9/uatom"
-                    }
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Cosmos Hub.",
-            "denom_units": [
-                {
-                    "denom": "uatom",
-                    "exponent": 0,
-                    "aliases": [
-                        "microatom"
-                    ]
-                },
-                {
-                    "denom": "matom",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliatom"
-                    ]
-                },
-                {
-                    "denom": "atom",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-660",
+                "source_channel": "channel-9",
+                "source_denom": "uatom"
+            },
             "name": "Cosmos Hub Atom",
             "symbol": "ATOM",
-            "ibc": {
-                "source_channel": "channel-9",
-                "dst_channel": "channel-660",
-                "source_denom": "uatom"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/6C00E4AA0CC7618370F81F7378638AE6C48EFF8C9203CE1C2357012B440EBDB7",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-142",
+                "source_channel": "channel-18",
+                "source_denom": "erc20/tether/usdt"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "kava_2222-10",
-                        "channel_id": "channel-142",
-                        "base_denom": "erc20/tether/usdt",
-                        "chain_name": "kava"
-                    },
                     "chain": {
                         "channel_id": "channel-18",
                         "path": "transfer/channel-18/erc20/tether/usdt"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "erc20/tether/usdt",
+                        "chain_id": "kava_2222-10",
+                        "chain_name": "kava",
+                        "channel_id": "channel-142"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-18",
-                "dst_channel": "channel-142",
-                "source_denom": "erc20/tether/usdt"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "noble-1",
-                        "channel_id": "channel-49",
-                        "base_denom": "uusdc",
-                        "chain_name": "noble"
-                    },
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/uusdc"
-                    }
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
                 }
             ],
             "description": "USD Coin",
-            "denom_units": [
+            "ibc": {
+                "dst_channel": "channel-49",
+                "source_channel": "channel-19",
+                "source_denom": "uusdc"
+            },
+            "name": "usdc",
+            "traces": [
                 {
-                    "denom": "uusdc",
-                    "exponent": 0,
-                    "aliases": [
-                        "microusdc"
-                    ]
-                },
-                {
-                    "denom": "usdc",
-                    "exponent": 6,
-                    "aliases": []
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "name": "usdc",
-            "ibc": {
-                "source_channel": "channel-19",
-                "dst_channel": "channel-49",
-                "source_denom": "uusdc"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-2169",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
-                    }
-                }
-            ],
-            "description": "The native token of Osmosis",
             "denom_units": [
                 {
                     "aliases": [],
@@ -681,648 +708,667 @@
                     "exponent": 6
                 }
             ],
+            "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-2169",
+                "source_channel": "channel-0",
                 "source_denom": "uosmo"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2169"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "auri-core1f8u46xpl2nl6f68syqd7swj57c6l8m3s344w2t",
-            "type_asset": "sdk.coin",
-            "description": "Mystery FT1",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "auri-core1f8u46xpl2nl6f68syqd7swj57c6l8m3s344w2t",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "AURIEL",
-                    "exponent": 4,
-                    "aliases": []
+                    "exponent": 4
                 }
             ],
+            "description": "Mystery FT1",
             "display": "AURIEL",
             "name": "AURIEL",
-            "symbol": "AURIEL"
+            "symbol": "AURIEL",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cibc-core1vwgy2nv8dq9qvr3c5a2qcwqtkw4gmkcu94328v",
-            "type_asset": "sdk.coin",
-            "description": "My first FT token",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "cibc-core1vwgy2nv8dq9qvr3c5a2qcwqtkw4gmkcu94328v",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "MYFTTT",
-                    "exponent": 2,
-                    "aliases": []
+                    "exponent": 2
                 }
             ],
+            "description": "My first FT token",
             "display": "MYFTTT",
             "name": "MYFTTT",
-            "symbol": "MYFTTT"
+            "symbol": "MYFTTT",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "cmsgft-core1u5w0mzyjext7atp56e8vyhxmete54gfegvjyc8",
-            "type_asset": "sdk.coin",
-            "description": "MSG token",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "cmsgft-core1u5w0mzyjext7atp56e8vyhxmete54gfegvjyc8",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "MSGU",
-                    "exponent": 2,
-                    "aliases": []
+                    "exponent": 2
                 }
             ],
+            "description": "MSG token",
             "display": "MSGU",
             "name": "MSGU",
-            "symbol": "MSGU"
+            "symbol": "MSGU",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ctoken-core1xkv90l09g3mmu3tt5ts2jydkh8t47ud35cuat4",
-            "type_asset": "sdk.coin",
-            "description": "My first FT token",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ctoken-core1xkv90l09g3mmu3tt5ts2jydkh8t47ud35cuat4",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "MYFT",
-                    "exponent": 2,
-                    "aliases": []
+                    "exponent": 2
                 }
             ],
+            "description": "My first FT token",
             "display": "MYFT",
             "name": "MYFT",
-            "symbol": "MYFT"
+            "symbol": "MYFT",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "microusds-core17z02cx2xxz2rehq6qay3rc06g5ksa9nxjwh5uv",
-            "type_asset": "sdk.coin",
-            "description": "Stably USD (USDS) is a US Dollar stablecoin backed 1-1 with USD. To learn more about USDS visit https://stably.io/usds",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "microusds-core17z02cx2xxz2rehq6qay3rc06g5ksa9nxjwh5uv",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "USDS",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
+            "description": "Stably USD (USDS) is a US Dollar stablecoin backed 1-1 with USD. To learn more about USDS visit https://stably.io/usds",
             "display": "USDS",
             "name": "USDS",
-            "symbol": "USDS"
+            "symbol": "USDS",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "smart-core1xkv90l09g3mmu3tt5ts2jydkh8t47ud35cuat4",
-            "type_asset": "sdk.coin",
-            "description": "My first FT token",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "smart-core1xkv90l09g3mmu3tt5ts2jydkh8t47ud35cuat4",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "MYFTTT",
-                    "exponent": 2,
-                    "aliases": []
+                    "exponent": 2
                 }
             ],
+            "description": "My first FT token",
             "display": "MYFTTT",
             "name": "MYFTTT",
-            "symbol": "MYFTTT"
+            "symbol": "MYFTTT",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "test-core14ljz7w9lc2yrg66gtfklk94p4jzzmla32ft2s8",
-            "type_asset": "sdk.coin",
-            "description": "this is for testing",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "test-core14ljz7w9lc2yrg66gtfklk94p4jzzmla32ft2s8",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "test",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
+            "description": "this is for testing",
             "display": "test",
             "name": "test",
-            "symbol": "test"
+            "symbol": "test",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uaeg-core1kpq3zw4lf84pr69eajpm7ttal3emhecm4e5qnq5v6g67vgjwumlqynw467",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uaeg-core1kpq3zw4lf84pr69eajpm7ttal3emhecm4e5qnq5v6g67vgjwumlqynw467",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "aeg",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "aeg",
             "name": "aeg",
-            "symbol": "aeg"
+            "symbol": "aeg",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uafg-core1q6xkmz9fr358n654c79n8halm5tvl6aplur80r4cdgezend2yf5sdeedw2",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uafg-core1q6xkmz9fr358n654c79n8halm5tvl6aplur80r4cdgezend2yf5sdeedw2",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "AFG",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "AFG",
             "name": "AFG",
-            "symbol": "AFG"
+            "symbol": "AFG",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uapg-core1g83865w4pe6lrzws8zd0k06w7axsw5ta2fzxjywwdz5sfvd2datsyxkx6q",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uapg-core1g83865w4pe6lrzws8zd0k06w7axsw5ta2fzxjywwdz5sfvd2datsyxkx6q",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "apg",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "apg",
             "name": "apg",
-            "symbol": "apg"
+            "symbol": "apg",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uath-core1ekgg27tk5gks0xm6vhuxzmp5wglew2azcvxwdraaht0vw79fz6uqv9fhcr",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uath-core1ekgg27tk5gks0xm6vhuxzmp5wglew2azcvxwdraaht0vw79fz6uqv9fhcr",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "ath",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "ath",
             "name": "ath",
-            "symbol": "ath"
+            "symbol": "ath",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ucore",
-            "type_asset": "sdk.coin",
-            "description": "ucore coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ucore",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "core",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
+            "description": "ucore coin",
             "display": "core",
             "name": "ucore",
-            "symbol": "UCORE"
+            "symbol": "UCORE",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ucsi-core1xkx4jvqsqm2cmh6jyjtvrp3zr3uq8rgjltwaclelthdqfmy2qhrs6f82gm",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ucsi-core1xkx4jvqsqm2cmh6jyjtvrp3zr3uq8rgjltwaclelthdqfmy2qhrs6f82gm",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "CSI",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "CSI",
             "name": "CSI",
-            "symbol": "CSI"
+            "symbol": "CSI",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uemf-core1flfvp0l2rsh0wq76r5fy48kf8nftj58x4p5r283ckv9453aznzzqlqx7ct",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uemf-core1flfvp0l2rsh0wq76r5fy48kf8nftj58x4p5r283ckv9453aznzzqlqx7ct",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "emf",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "emf",
             "name": "emf",
-            "symbol": "emf"
+            "symbol": "emf",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ueri-core1xkdmkmnetxetx7r0xp8g5k7j8mnkn7pyyajkj2vv46yd64z24xpszev74p",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ueri-core1xkdmkmnetxetx7r0xp8g5k7j8mnkn7pyyajkj2vv46yd64z24xpszev74p",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "eri",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "eri",
             "name": "eri",
-            "symbol": "eri"
+            "symbol": "eri",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ufhamp-core15vzme0wt25l64q5m5q9w0rm9xfz0kaf2u3lgukay69t5q930xclseyl67m",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ufhamp-core15vzme0wt25l64q5m5q9w0rm9xfz0kaf2u3lgukay69t5q930xclseyl67m",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "FHAMP",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "FHAMP",
             "name": "FHAMP",
-            "symbol": "FHAMP"
+            "symbol": "FHAMP",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ufhamp-core165l5qth6dgc4cgpfgzsfprqzzf3lcqfd6dthrs4u0hf5dfvu3frqqu8wh2",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ufhamp-core165l5qth6dgc4cgpfgzsfprqzzf3lcqfd6dthrs4u0hf5dfvu3frqqu8wh2",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "FHAMP",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "FHAMP",
             "name": "FHAMP",
-            "symbol": "FHAMP"
+            "symbol": "FHAMP",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ulnm-core1sr96v94msywfp56eufzscrckhc7dest2egu2stzavapy5adpusuqkpmype",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ulnm-core1sr96v94msywfp56eufzscrckhc7dest2egu2stzavapy5adpusuqkpmype",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "lnm",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "lnm",
             "name": "lnm",
-            "symbol": "lnm"
+            "symbol": "lnm",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ulsi-core132ml56hnr9gs6r85za57rd9fx7macj9xqqg7xp9u3htdlgt3ld8qmyj8ta",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ulsi-core132ml56hnr9gs6r85za57rd9fx7macj9xqqg7xp9u3htdlgt3ld8qmyj8ta",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "lsi",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "lsi",
             "name": "lsi",
-            "symbol": "lsi"
+            "symbol": "lsi",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ulsi4-core1r00rtq835v5yz9rv9kjkadzreuzw4lxpw3fgf925vj5ntku7xmhq9t6wf0",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ulsi4-core1r00rtq835v5yz9rv9kjkadzreuzw4lxpw3fgf925vj5ntku7xmhq9t6wf0",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "lsi4",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "lsi4",
             "name": "lsi4",
-            "symbol": "lsi4"
+            "symbol": "lsi4",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ulsx-core10azltc3hp0p8dg2r4h0kd6renahrt3lwt8cn67x924rs40equx8se5ra2h",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ulsx-core10azltc3hp0p8dg2r4h0kd6renahrt3lwt8cn67x924rs40equx8se5ra2h",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "LSX",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "LSX",
             "name": "LSX",
-            "symbol": "LSX"
+            "symbol": "LSX",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ulsx-core17rjgqkg2ncnmaeznyedsyxa6lxqeuvlak68s6e9qcnvy5euxwlhqv7eefj",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ulsx-core17rjgqkg2ncnmaeznyedsyxa6lxqeuvlak68s6e9qcnvy5euxwlhqv7eefj",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "LSX",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "LSX",
             "name": "LSX",
-            "symbol": "LSX"
+            "symbol": "LSX",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ulsx-core1xe3tg0cynt2k67u7sjk07sxtjyd30genqs4v77h6s4lnv0ky48cspar39r",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "ulsx-core1xe3tg0cynt2k67u7sjk07sxtjyd30genqs4v77h6s4lnv0ky48cspar39r",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "lsx",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "lsx",
             "name": "lsx",
-            "symbol": "lsx"
+            "symbol": "lsx",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "umain-core10lpnd2hgvwzl90sxglk80rmtagmjjr855n0le7madyw4jjhxn65sekhjv2",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "umain-core10lpnd2hgvwzl90sxglk80rmtagmjjr855n0le7madyw4jjhxn65sekhjv2",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "MAIN",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "MAIN",
             "name": "MAIN",
-            "symbol": "MAIN"
+            "symbol": "MAIN",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "umain-core1r53yxhy3fr8yac27807jrmttxhg9a702cqurjke6vx74tnhtdwgqqy3rfe",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "umain-core1r53yxhy3fr8yac27807jrmttxhg9a702cqurjke6vx74tnhtdwgqqy3rfe",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "MAIN",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "MAIN",
             "name": "MAIN",
-            "symbol": "MAIN"
+            "symbol": "MAIN",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "umlo-core1rmedtfn6vpr4qzxhpmx8e6je3un5f0vklls00t2gqasded320y3qwdeqyg",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "umlo-core1rmedtfn6vpr4qzxhpmx8e6je3un5f0vklls00t2gqasded320y3qwdeqyg",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "mlo",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "mlo",
             "name": "mlo",
-            "symbol": "mlo"
+            "symbol": "mlo",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uqsi-core1qs8enufh0ldjun28kx48mvg3y6ekwyzavrju0376mr8apvujlprq7uvf7c",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uqsi-core1qs8enufh0ldjun28kx48mvg3y6ekwyzavrju0376mr8apvujlprq7uvf7c",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "qsi",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "qsi",
             "name": "qsi",
-            "symbol": "qsi"
+            "symbol": "qsi",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uspk-core1hkrsw3nytdquldd5zss0435c0tflc5cjmnvnlem5kdlnrd84glds4grqvv",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uspk-core1hkrsw3nytdquldd5zss0435c0tflc5cjmnvnlem5kdlnrd84glds4grqvv",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "spk",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "spk",
             "name": "spk",
-            "symbol": "spk"
+            "symbol": "spk",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "usxt-core194sthxwgd9r2ygqw06xapm926vq347j3yxkkyaz94yqu0dsp4e4slsmjmj",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "usxt-core194sthxwgd9r2ygqw06xapm926vq347j3yxkkyaz94yqu0dsp4e4slsmjmj",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "sxt",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "sxt",
             "name": "sxt",
-            "symbol": "sxt"
+            "symbol": "sxt",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "utjf-core1gusjnfwl9t30282h05nq720c3hhqa5427n24vvctv567lxkmx00qxjw4xq",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "utjf-core1gusjnfwl9t30282h05nq720c3hhqa5427n24vvctv567lxkmx00qxjw4xq",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "tjf",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "tjf",
             "name": "tjf",
-            "symbol": "tjf"
+            "symbol": "tjf",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uwgo-core1prskgrweld820t0uel2tn45x9ycy2lxg2u0vllapygkrrjsq6xpqdtx3vt",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uwgo-core1prskgrweld820t0uel2tn45x9ycy2lxg2u0vllapygkrrjsq6xpqdtx3vt",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "wgo",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "wgo",
             "name": "wgo",
-            "symbol": "wgo"
+            "symbol": "wgo",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uxyz-core126c47d34ag7qtjvf6dvaq0ry5kgtgnp0vfh3l5",
-            "type_asset": "sdk.coin",
-            "description": "My first ft token",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uxyz-core126c47d34ag7qtjvf6dvaq0ry5kgtgnp0vfh3l5",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "XYZ",
-                    "exponent": 1,
-                    "aliases": []
+                    "exponent": 1
                 }
             ],
+            "description": "My first ft token",
             "display": "XYZ",
             "name": "XYZ",
-            "symbol": "XYZ"
+            "symbol": "XYZ",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "uzen-core12489eq9p0sycrzuutglx62d6nyv86kvvpumnxlk6wm0xxa9pn7zqan53pq",
-            "type_asset": "sdk.coin",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uzen-core12489eq9p0sycrzuutglx62d6nyv86kvvpumnxlk6wm0xxa9pn7zqan53pq",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "zen",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "display": "zen",
             "name": "zen",
-            "symbol": "zen"
+            "symbol": "zen",
+            "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "coreum-mainnet-1",
+    "chain_name": "coreum"
 }

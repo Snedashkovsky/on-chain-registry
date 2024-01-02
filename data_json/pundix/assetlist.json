@@ -1,54 +1,33 @@
 {
-    "chain_name": "pundix",
-    "chain_id": "PUNDIX",
     "assets": [
         {
             "base": "ibc/027BB5CDD412B8C3130E1D7EF27D3C90412373FDFB915D3F0B35C067A85819EA",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-0",
+                "source_denom": "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "fxcore",
-                        "channel_id": "channel-0",
-                        "base_denom": "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
-                        "chain_name": "fxcore"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+                        "chain_id": "fxcore",
+                        "chain_name": "fxcore",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-0",
-                "source_denom": "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/0816EE31A3FE24B7B00ED64C6ABB34C3FD14410A5DCFB61CD7C126ABFE96B9ED",
-            "type_asset": "ics20",
-            "traces": [
-                {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "fxcore",
-                        "channel_id": "channel-0",
-                        "base_denom": "usdt",
-                        "chain_name": "fxcore"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/usdt"
-                    }
-                }
-            ],
-            "description": "Cross chain token Function X",
             "denom_units": [
                 {
-                    "denom": "usdt",
-                    "exponent": 0,
                     "aliases": [
                         "eth0xdAC17F958D2ee523a2206206994597C13D831ec7",
                         "tronTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
@@ -57,125 +36,146 @@
                         "bsc0x55d398326f99059fF775485246999027B3197955",
                         "arbitrum0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
                         "optimism0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
-                    ]
+                    ],
+                    "denom": "usdt",
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "USDT",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
+            "description": "Cross chain token Function X",
             "display": "usdt",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-0",
+                "source_denom": "usdt"
+            },
             "name": "Tether USD",
             "symbol": "USDT",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-0",
-                "source_denom": "usdt"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/usdt"
+                    },
+                    "counterparty": {
+                        "base_denom": "usdt",
+                        "chain_id": "fxcore",
+                        "chain_name": "fxcore",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/37CA072246C3BCBB445AEC196645F5AAB7876C456D76BC96141D3A0D6E615D2E",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "fxcore",
-                        "channel_id": "channel-0",
-                        "base_denom": "FX",
-                        "chain_name": "fxcore"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/FX"
-                    }
+                    "aliases": [],
+                    "denom": "FX",
+                    "exponent": 0
                 }
             ],
             "description": "The native staking token of the Function X",
-            "denom_units": [
-                {
-                    "denom": "FX",
-                    "exponent": 0,
-                    "aliases": []
-                }
-            ],
             "display": "FX",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-0",
+                "source_denom": "FX"
+            },
             "name": "Function X",
             "symbol": "FX",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-0",
-                "source_denom": "FX"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/FX"
+                    },
+                    "counterparty": {
+                        "base_denom": "FX",
+                        "chain_id": "fxcore",
+                        "chain_name": "fxcore",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/55367B7B6572631B78A93C66EF9FDFCE87CDE372CC4ED7848DA78C1EB1DCDD78",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "fxcore",
-                        "channel_id": "channel-0",
-                        "base_denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
-                        "chain_name": "fxcore"
-                    },
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38"
-                    }
+                    "aliases": [],
+                    "denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "PUNDIX",
+                    "exponent": 18
                 }
             ],
             "description": "The cross chain token of the Function X",
-            "denom_units": [
-                {
-                    "denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "PUNDIX",
-                    "exponent": 18,
-                    "aliases": []
-                }
-            ],
             "display": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-0",
+                "source_denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38"
+            },
             "name": "Pundi X Token",
             "symbol": "PUNDIX",
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-0",
-                "source_denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38"
+                    },
+                    "counterparty": {
+                        "base_denom": "eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
+                        "chain_id": "fxcore",
+                        "chain_name": "fxcore",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/6259AD5A0FEBC77820378BCF9939ABFC3BB4CC8E2F2094703669F217858F1BE1",
-            "type_asset": "ics20",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-0",
+                "source_denom": "polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "fxcore",
-                        "channel_id": "channel-0",
-                        "base_denom": "polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-                        "chain_name": "fxcore"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+                        "chain_id": "fxcore",
+                        "chain_name": "fxcore",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-0",
-                "source_denom": "polygon0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
-            }
+            "type_asset": "ics20"
         },
         {
             "base": "bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "PUNDIX",
+    "chain_name": "pundix"
 }

@@ -1,151 +1,191 @@
 {
-    "chain_name": "uptick",
-    "chain_id": "uptick_117-1",
     "assets": [
         {
             "base": "ibc/0F807ECA029E2E205F35320770440830709E0A902C5918CFADF05736A9308040",
-            "type_asset": "ics20",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uiris",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "iris",
+                    "exponent": 6
+                }
+            ],
+            "description": "Irishub staking token",
+            "display": "iris",
+            "ibc": {
+                "dst_channel": "channel-38",
+                "source_channel": "channel-0",
+                "source_denom": "uiris"
+            },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "irishub-1",
-                        "channel_id": "channel-38",
-                        "base_denom": "uiris",
-                        "chain_name": "irisnet"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/uiris"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uiris",
+                        "chain_id": "irishub-1",
+                        "chain_name": "irisnet",
+                        "channel_id": "channel-38"
+                    },
+                    "type": "ibc"
                 }
             ],
-            "description": "Irishub staking token",
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4",
             "denom_units": [
                 {
-                    "denom": "uiris",
-                    "exponent": 0,
-                    "aliases": []
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
                 },
                 {
-                    "denom": "iris",
-                    "exponent": 6,
-                    "aliases": []
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
                 }
             ],
-            "display": "iris",
+            "description": "USD Coin",
             "ibc": {
-                "source_channel": "channel-0",
-                "dst_channel": "channel-38",
-                "source_denom": "uiris"
-            }
+                "dst_channel": "channel-52",
+                "source_channel": "channel-3",
+                "source_denom": "uusdc"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-52"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-535",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uatom"
-                    }
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Cosmos Hub.",
-            "denom_units": [
-                {
-                    "denom": "uatom",
-                    "exponent": 0,
-                    "aliases": [
-                        "microatom"
-                    ]
-                },
-                {
-                    "denom": "matom",
-                    "exponent": 3,
-                    "aliases": [
-                        "milliatom"
-                    ]
-                },
-                {
-                    "denom": "atom",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-535",
+                "source_channel": "channel-1",
+                "source_denom": "uatom"
+            },
             "name": "Cosmos Hub Atom",
             "symbol": "ATOM",
-            "ibc": {
-                "source_channel": "channel-1",
-                "dst_channel": "channel-535",
-                "source_denom": "uatom"
-            }
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-535"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "ibc/D5460C6C5B9D46389463C65201200F602490933DF1A2FFFE76C2FD234E811986",
-            "type_asset": "ics20",
-            "traces": [
+            "denom_units": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "irishub-1",
-                        "channel_id": "channel-39",
-                        "base_denom": "uiris",
-                        "chain_name": "irisnet"
-                    },
-                    "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/uiris"
-                    }
+                    "aliases": [],
+                    "denom": "uiris",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "iris",
+                    "exponent": 6
                 }
             ],
             "description": "Irishub staking token",
-            "denom_units": [
-                {
-                    "denom": "uiris",
-                    "exponent": 0,
-                    "aliases": []
-                },
-                {
-                    "denom": "iris",
-                    "exponent": 6,
-                    "aliases": []
-                }
-            ],
             "display": "iris",
             "ibc": {
-                "source_channel": "channel-2",
                 "dst_channel": "channel-39",
+                "source_channel": "channel-2",
                 "source_denom": "uiris"
-            }
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uiris"
+                    },
+                    "counterparty": {
+                        "base_denom": "uiris",
+                        "chain_id": "irishub-1",
+                        "chain_name": "irisnet",
+                        "channel_id": "channel-39"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
         },
         {
             "base": "auptick",
-            "type_asset": "sdk.coin",
-            "description": "The native EVM, governance and staking token of the Uptick",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "auptick",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "uptick",
-                    "exponent": 18,
-                    "aliases": []
+                    "exponent": 18
                 }
             ],
+            "description": "The native EVM, governance and staking token of the Uptick",
             "display": "uptick",
             "name": "Uptick",
-            "symbol": "UPTICK"
+            "symbol": "UPTICK",
+            "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "uptick_117-1",
+    "chain_name": "uptick"
 }

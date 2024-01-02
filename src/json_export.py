@@ -38,17 +38,13 @@ def get_asset_json(
 
     if row['type_asset'] == 'cw20':
         _asset_json['address'] = row['denom_base'][5:]
-
-    if row['type_asset'] == 'erc20' and row['denom'][:9] == 'gravity0x':
+    elif row['type_asset'] == 'erc20' and row['denom'][:9] == 'gravity0x':
         _asset_json['address'] = row['denom_base'][7:]
-
-    if row['type_asset'] == 'snip20':
-        # asset_json['address'] =   # Add
-        pass
-
-    if row['type_asset'] == 'factory':
+    elif row['type_asset'] == 'factory':
         _asset_json['address'] = row['denom']
         _asset_json['admin'] = row['admin']
+    elif row['type_asset'] == 'snip20':
+        pass
 
     return _asset_json
 
@@ -113,7 +109,7 @@ def save_to_json(
                 f'data_json/{chain_id_name_dict[_chain_id] if _chain_id in chain_id_name_dict.keys() else _chain_id}'
                 f'/assetlist.json',
                 'w') as _assetlist_file:
-            json.dump(obj=_assets_json[_chain_id], fp=_assetlist_file, ensure_ascii=False, indent=4)
+            json.dump(obj=_assets_json[_chain_id], fp=_assetlist_file, ensure_ascii=False, sort_keys=True, indent=4)
     with open(f'data_json/all_assets.json', 'w') as all_assets_file:
         json.dump(obj=[_assets_json[chain_id] for chain_id in _assets_json.keys()],
-                  fp=all_assets_file, ensure_ascii=False, indent=4)
+                  fp=all_assets_file, ensure_ascii=False, sort_keys=True, indent=4)
