@@ -1,41 +1,39 @@
 {
-    "chain_name": "aioz",
-    "chain_id": "aioz_168-1",
     "assets": [
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-1",
                 "dst_channel": "channel-779",
+                "source_channel": "channel-1",
                 "source_denom": "uosmo"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-779",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/uosmo"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-779"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -44,47 +42,47 @@
             "base": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
             "denom_units": [
                 {
-                    "denom": "uatom",
-                    "exponent": 0,
                     "aliases": [
                         "microatom"
-                    ]
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
                 },
                 {
-                    "denom": "matom",
-                    "exponent": 3,
                     "aliases": [
                         "milliatom"
-                    ]
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
                 },
                 {
+                    "aliases": [],
                     "denom": "atom",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "description": "The native staking token of the Cosmos Hub.",
             "display": "atom",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-567",
+                "source_channel": "channel-0",
                 "source_denom": "uatom"
             },
             "name": "Cosmos Hub Atom",
             "symbol": "ATOM",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "cosmoshub-4",
-                        "channel_id": "channel-567",
-                        "base_denom": "uatom",
-                        "chain_name": "cosmoshub"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/uatom"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-567"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -93,37 +91,37 @@
             "base": "attoaioz",
             "denom_units": [
                 {
-                    "denom": "attoaioz",
-                    "exponent": 0,
                     "aliases": [
                         "atto aioz"
-                    ]
+                    ],
+                    "denom": "attoaioz",
+                    "exponent": 0
                 },
                 {
-                    "denom": "nanoaioz",
-                    "exponent": 9,
                     "aliases": [
                         "nano aioz"
-                    ]
+                    ],
+                    "denom": "nanoaioz",
+                    "exponent": 9
                 },
                 {
-                    "denom": "microaioz",
-                    "exponent": 12,
                     "aliases": [
                         "micro aioz"
-                    ]
+                    ],
+                    "denom": "microaioz",
+                    "exponent": 12
                 },
                 {
-                    "denom": "milliaioz",
-                    "exponent": 15,
                     "aliases": [
                         "milli aioz"
-                    ]
+                    ],
+                    "denom": "milliaioz",
+                    "exponent": 15
                 },
                 {
+                    "aliases": [],
                     "denom": "aioz",
-                    "exponent": 18,
-                    "aliases": []
+                    "exponent": 18
                 }
             ],
             "description": "Staking, gas and governance token of the AIOZ Network",
@@ -132,5 +130,7 @@
             "symbol": "AIOZ",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "aioz_168-1",
+    "chain_name": "aioz"
 }

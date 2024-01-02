@@ -1,27 +1,25 @@
 {
-    "chain_name": "beezee",
-    "chain_id": "beezee-1",
     "assets": [
         {
             "base": "ibc/689DD6F80E4DBCE14877462B182504037FAEAD0699D5804A7F5CB328D33ED24B",
             "ibc": {
-                "source_channel": "channel-1",
                 "dst_channel": "channel-12",
+                "source_channel": "channel-1",
                 "source_denom": "uvdl"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "vidulum-1",
-                        "channel_id": "channel-12",
-                        "base_denom": "uvdl",
-                        "chain_name": "vidulum"
-                    },
                     "chain": {
                         "channel_id": "channel-1",
                         "path": "transfer/channel-1/uvdl"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uvdl",
+                        "chain_id": "vidulum-1",
+                        "chain_name": "vidulum",
+                        "channel_id": "channel-12"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -30,36 +28,36 @@
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-340",
+                "source_channel": "channel-0",
                 "source_denom": "uosmo"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-340",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/uosmo"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-340"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -68,5 +66,7 @@
             "base": "ubze",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "beezee-1",
+    "chain_name": "beezee"
 }

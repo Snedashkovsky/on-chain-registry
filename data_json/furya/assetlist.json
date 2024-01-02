@@ -1,12 +1,10 @@
 {
-    "chain_name": "furya",
-    "chain_id": "furya-1",
     "assets": [
         {
             "base": "ibc/093231535A38351AD2FEEFF897D23CF8FE43A44F6EAA3611F55F4B3D62C45014",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-119",
+                "source_channel": "channel-0",
                 "source_denom": ""
             },
             "type_asset": "ics20"
@@ -14,23 +12,23 @@
         {
             "base": "ibc/4CD525F166D32B0132C095F353F4C6F033B0FF5C49141470D1EFDA1D63303D04",
             "ibc": {
-                "source_channel": "channel-2",
                 "dst_channel": "channel-417",
+                "source_channel": "channel-2",
                 "source_denom": "ujuno"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "juno-1",
-                        "channel_id": "channel-417",
-                        "base_denom": "ujuno",
-                        "chain_name": "juno"
-                    },
                     "chain": {
                         "channel_id": "channel-2",
                         "path": "transfer/channel-2/ujuno"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ujuno",
+                        "chain_id": "juno-1",
+                        "chain_name": "juno",
+                        "channel_id": "channel-417"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -38,23 +36,23 @@
         {
             "base": "ibc/90F27756D300141BDF07B83E65401BDC58C05269B9BAE3ECB0B20FAB166BCF8F",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-119",
+                "source_channel": "channel-0",
                 "source_denom": "ukuji"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "kaiyo-1",
-                        "channel_id": "channel-119",
-                        "base_denom": "ukuji",
-                        "chain_name": "kujira"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/ukuji"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ukuji",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-119"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -63,38 +61,38 @@
             "base": "ibc/BFF0D3805B50D93E2FA5C0B2DDF7E0B30A631076CD80BC12A48C0E95404B4A41",
             "denom_units": [
                 {
-                    "denom": "uusdc",
-                    "exponent": 0,
                     "aliases": [
                         "microusdc"
-                    ]
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "usdc",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "description": "USD Coin",
             "ibc": {
-                "source_channel": "channel-4",
                 "dst_channel": "channel-42",
+                "source_channel": "channel-4",
                 "source_denom": "uusdc"
             },
             "name": "usdc",
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "noble-1",
-                        "channel_id": "channel-42",
-                        "base_denom": "uusdc",
-                        "chain_name": "noble"
-                    },
                     "chain": {
                         "channel_id": "channel-4",
                         "path": "transfer/channel-4/uusdc"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-42"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -103,5 +101,7 @@
             "base": "ufury",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "furya-1",
+    "chain_name": "furya"
 }

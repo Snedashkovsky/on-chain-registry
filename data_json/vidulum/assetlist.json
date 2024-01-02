@@ -1,12 +1,10 @@
 {
-    "chain_name": "vidulum",
-    "chain_id": "vidulum-1",
     "assets": [
         {
             "base": "ibc/45FFEE350E790699F48BB53C35CBB71722246D54D5B08731A736B0C4376E5FF7",
             "ibc": {
-                "source_channel": "channel-13",
                 "dst_channel": "channel-47",
+                "source_channel": "channel-13",
                 "source_denom": ""
             },
             "type_asset": "ics20"
@@ -14,23 +12,23 @@
         {
             "base": "ibc/57C92D513C96B20B7C33D079B8B1AE46B5F7C5DC5B673BCE7FA27FB7D8640384",
             "ibc": {
-                "source_channel": "channel-12",
                 "dst_channel": "channel-1",
+                "source_channel": "channel-12",
                 "source_denom": "ubze"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "beezee-1",
-                        "channel_id": "channel-1",
-                        "base_denom": "ubze",
-                        "chain_name": "beezee"
-                    },
                     "chain": {
                         "channel_id": "channel-12",
                         "path": "transfer/channel-12/ubze"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "ubze",
+                        "chain_id": "beezee-1",
+                        "chain_name": "beezee",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -38,8 +36,8 @@
         {
             "base": "ibc/6BCB31DF5429E8CA9DB008FFA69AE8EDD3E4EF7F33FB57C016E4E7060FDE0BE8",
             "ibc": {
-                "source_channel": "channel-2",
                 "dst_channel": "channel-14",
+                "source_channel": "channel-2",
                 "source_denom": ""
             },
             "type_asset": "ics20"
@@ -47,8 +45,8 @@
         {
             "base": "ibc/82B1713DB67E52F4A27E3B6F1AF4A8E6DD9E4835B25C1CDFF80E542FC86D4199",
             "ibc": {
-                "source_channel": "channel-10",
                 "dst_channel": "channel-37",
+                "source_channel": "channel-10",
                 "source_denom": ""
             },
             "type_asset": "ics20"
@@ -57,36 +55,36 @@
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
             "denom_units": [
                 {
+                    "aliases": [],
                     "denom": "uosmo",
-                    "exponent": 0,
-                    "aliases": []
+                    "exponent": 0
                 },
                 {
+                    "aliases": [],
                     "denom": "osmo",
-                    "exponent": 6,
-                    "aliases": []
+                    "exponent": 6
                 }
             ],
             "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "source_channel": "channel-0",
                 "dst_channel": "channel-124",
+                "source_channel": "channel-0",
                 "source_denom": "uosmo"
             },
             "traces": [
                 {
-                    "type": "ibc",
-                    "counterparty": {
-                        "chain_id": "osmosis-1",
-                        "channel_id": "channel-124",
-                        "base_denom": "uosmo",
-                        "chain_name": "osmosis"
-                    },
                     "chain": {
                         "channel_id": "channel-0",
                         "path": "transfer/channel-0/uosmo"
-                    }
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-124"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -95,5 +93,7 @@
             "base": "uvdl",
             "type_asset": "sdk.coin"
         }
-    ]
+    ],
+    "chain_id": "vidulum-1",
+    "chain_name": "vidulum"
 }
