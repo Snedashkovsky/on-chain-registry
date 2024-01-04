@@ -576,6 +576,81 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/2C5F42AE5A584D58B582856CB200EA95E6709BA78989D47BDB5FF4D14F784AF4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
+            "ibc": {
+                "dst_channel": "channel-584",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/D7B1D6B337D1CD21951E2658FBBD155A89EB26EE55475C490655E29247FB99C9"
+            },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D7B1D6B337D1CD21951E2658FBBD155A89EB26EE55475C490655E29247FB99C9",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/490131E889FF4B4DAE5A13F9BB1D5106F2234D8052271D839D1DB2173F085D0F",
             "ibc": {
                 "dst_channel": "channel-782",
@@ -845,6 +920,59 @@
                         "chain_id": "neutron-1",
                         "chain_name": "neutron",
                         "channel_id": "channel-19"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/F5FABF52B54E65064B57BF6DBD8E5FAD22CEE9F4B8A57ADBB20CCD0173AA72A4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-782",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
                     },
                     "type": "ibc"
                 }
@@ -1168,6 +1296,40 @@
                         "chain_id": "axelar-dojo-1",
                         "chain_name": "axelar",
                         "channel_id": "channel-103"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A5BA3F1C38ADAA11F941D66B19A7CD67B127F25DE2EA581BCD2DC4D8D50BEED9",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "ibc": {
+                "dst_channel": "channel-782",
+                "source_channel": "channel-0",
+                "source_denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
+            },
+            "name": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "symbol": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
                     },
                     "type": "ibc"
                 }
@@ -2010,6 +2172,86 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/bigcocknerveus",
+            "admin": "sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt",
+            "base": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/bigcocknerveus",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/bigcocknerveus",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/bigcocknerveus",
+            "name": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/bigcocknerveus",
+            "symbol": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/bigcocknerveus",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtest",
+            "admin": "sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt",
+            "base": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtest",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtest",
+            "name": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtest",
+            "symbol": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtest",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttest",
+            "admin": "sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt",
+            "base": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttest",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttest",
+            "name": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttest",
+            "symbol": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttest",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest",
+            "admin": "sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt",
+            "base": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest",
+            "name": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest",
+            "symbol": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest1",
+            "admin": "sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt",
+            "base": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest1",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest1",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest1",
+            "name": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest1",
+            "symbol": "factory/sei154mmdpaw2zvu2mq8n4szk47sqjn6kpcym2krxt/testtesttesttest1",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1584g7vslgphlt8yfxlj3gjv2rlhflcde4rlz2l/useint",
             "admin": "sei1584g7vslgphlt8yfxlj3gjv2rlhflcde4rlz2l",
             "base": "factory/sei1584g7vslgphlt8yfxlj3gjv2rlhflcde4rlz2l/useint",
@@ -2061,6 +2303,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur/ponsei",
+            "admin": "sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur",
+            "base": "factory/sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur/ponsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur/ponsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur/ponsei",
+            "name": "factory/sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur/ponsei",
+            "symbol": "factory/sei15p0g5nhlsjk5gpkhet5f3g82h5jhzfcd3ejvur/ponsei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei15pz333htntschjk0mu89m7rmetduemvdvpl4cr/dirty",
             "admin": "sei15pz333htntschjk0mu89m7rmetduemvdvpl4cr",
             "base": "factory/sei15pz333htntschjk0mu89m7rmetduemvdvpl4cr/dirty",
@@ -2074,6 +2332,38 @@
             "display": "factory/sei15pz333htntschjk0mu89m7rmetduemvdvpl4cr/dirty",
             "name": "factory/sei15pz333htntschjk0mu89m7rmetduemvdvpl4cr/dirty",
             "symbol": "factory/sei15pz333htntschjk0mu89m7rmetduemvdvpl4cr/dirty",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seigoku",
+            "admin": "sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny",
+            "base": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seigoku",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seigoku",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seigoku",
+            "name": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seigoku",
+            "symbol": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seigoku",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seimana",
+            "admin": "sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny",
+            "base": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seimana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seimana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seimana",
+            "name": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seimana",
+            "symbol": "factory/sei16e75ttw96jdmhwjk7kjdh0v2s4w6xpjvexceny/seimana",
             "type_asset": "factory"
         },
         {
@@ -2323,6 +2613,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3GimGkNqtjssRx9GetwGbrSVxuAYpfVKxeCNJG9ob6Ws",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3GimGkNqtjssRx9GetwGbrSVxuAYpfVKxeCNJG9ob6Ws",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3GimGkNqtjssRx9GetwGbrSVxuAYpfVKxeCNJG9ob6Ws",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3GimGkNqtjssRx9GetwGbrSVxuAYpfVKxeCNJG9ob6Ws",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3GimGkNqtjssRx9GetwGbrSVxuAYpfVKxeCNJG9ob6Ws",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3GimGkNqtjssRx9GetwGbrSVxuAYpfVKxeCNJG9ob6Ws",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3Lc3dBrMSoQuqvW8ZF1NSL7DyDcJ6p1PQpm2kv9GmsNu",
             "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
             "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3Lc3dBrMSoQuqvW8ZF1NSL7DyDcJ6p1PQpm2kv9GmsNu",
@@ -2512,6 +2818,22 @@
             "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/5v5bU1ZYq1PwQRRf45JdJCBv6qse7Rq8baE4B4216ipv",
             "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/5v5bU1ZYq1PwQRRf45JdJCBv6qse7Rq8baE4B4216ipv",
             "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/5v5bU1ZYq1PwQRRf45JdJCBv6qse7Rq8baE4B4216ipv",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/6KywiSUFcsT6v81VcBkZwwNxnrjKyFSuZF8DX3nacumz",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/6KywiSUFcsT6v81VcBkZwwNxnrjKyFSuZF8DX3nacumz",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/6KywiSUFcsT6v81VcBkZwwNxnrjKyFSuZF8DX3nacumz",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/6KywiSUFcsT6v81VcBkZwwNxnrjKyFSuZF8DX3nacumz",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/6KywiSUFcsT6v81VcBkZwwNxnrjKyFSuZF8DX3nacumz",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/6KywiSUFcsT6v81VcBkZwwNxnrjKyFSuZF8DX3nacumz",
             "type_asset": "factory"
         },
         {
@@ -3203,6 +3525,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km/seiless",
+            "admin": "sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km",
+            "base": "factory/sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km/seiless",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km/seiless",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km/seiless",
+            "name": "factory/sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km/seiless",
+            "symbol": "factory/sei189qj3ng2uxm8ahu8pdssy6mzxgg26lfxts80km/seiless",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei18dy78evn3h3tzdu5uuefxsf9ql79ft73vml8mr/SEIINU",
             "admin": "sei18dy78evn3h3tzdu5uuefxsf9ql79ft73vml8mr",
             "base": "factory/sei18dy78evn3h3tzdu5uuefxsf9ql79ft73vml8mr/SEIINU",
@@ -3264,6 +3602,22 @@
             "display": "factory/sei18n0y0a5wk9afd45j7399gsyasvp6h3k3znts58/shit",
             "name": "factory/sei18n0y0a5wk9afd45j7399gsyasvp6h3k3znts58/shit",
             "symbol": "factory/sei18n0y0a5wk9afd45j7399gsyasvp6h3k3znts58/shit",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2/seionara",
+            "admin": "sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2",
+            "base": "factory/sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2/seionara",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2/seionara",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2/seionara",
+            "name": "factory/sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2/seionara",
+            "symbol": "factory/sei196a3upwjn8wzg2dmuw9snd5677tugvae0nvsz2/seionara",
             "type_asset": "factory"
         },
         {
@@ -3375,6 +3729,22 @@
             "display": "SEIMOON",
             "name": "SEIMOON",
             "symbol": "SEIMOON",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5/seihorse",
+            "admin": "sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5",
+            "base": "factory/sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5/seihorse",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5/seihorse",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5/seihorse",
+            "name": "factory/sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5/seihorse",
+            "symbol": "factory/sei1aq92ymm04x2fsgxqcnussxhpv02qtr04323re5/seihorse",
             "type_asset": "factory"
         },
         {
@@ -3531,6 +3901,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes/sauseige",
+            "admin": "sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes",
+            "base": "factory/sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes/sauseige",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes/sauseige",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes/sauseige",
+            "name": "factory/sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes/sauseige",
+            "symbol": "factory/sei1d2uvv2f7ryhfyxck74h496sn5zk4vnvp2dakes/sauseige",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1d4fassw3kuy40l8n9e4z8wssmcr0l33wch76gp/pseiop",
             "admin": "sei1d4fassw3kuy40l8n9e4z8wssmcr0l33wch76gp",
             "base": "factory/sei1d4fassw3kuy40l8n9e4z8wssmcr0l33wch76gp/pseiop",
@@ -3601,6 +3987,28 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1e3haasp0c46acccl5stmmgp4hky2z4xxgleq9p/SEIDOGE",
+            "admin": "sei1e3haasp0c46acccl5stmmgp4hky2z4xxgleq9p",
+            "base": "factory/sei1e3haasp0c46acccl5stmmgp4hky2z4xxgleq9p/SEIDOGE",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1e3haasp0c46acccl5stmmgp4hky2z4xxgleq9p/SEIDOGE",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SEIDOGE",
+                    "exponent": 6
+                }
+            ],
+            "description": "SEIDOGE",
+            "display": "SEIDOGE",
+            "name": "SEIDOGE",
+            "symbol": "SEIDOGE",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1e3parzx29050eh2jm4nj8s0k6h4228tajqsrk3/johnseina",
             "admin": "sei1e3parzx29050eh2jm4nj8s0k6h4228tajqsrk3",
             "base": "factory/sei1e3parzx29050eh2jm4nj8s0k6h4228tajqsrk3/johnseina",
@@ -3624,6 +4032,54 @@
             "display": "seina",
             "name": "JOHN SEINA",
             "symbol": "SEINA",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/senseition",
+            "admin": "sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd",
+            "base": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/senseition",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/senseition",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/senseition",
+            "name": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/senseition",
+            "symbol": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/senseition",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/shinsei",
+            "admin": "sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd",
+            "base": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/shinsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/shinsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/shinsei",
+            "name": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/shinsei",
+            "symbol": "factory/sei1e9jmm6ynfp40ywzzuv7hrtlzkd4du7cznap5yd/shinsei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6/upseid",
+            "admin": "sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6",
+            "base": "factory/sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6/upseid",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6/upseid",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6/upseid",
+            "name": "factory/sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6/upseid",
+            "symbol": "factory/sei1efen76tdpnmrjq9swlhsm4n7es3wqp5wmhn3w6/upseid",
             "type_asset": "factory"
         },
         {
@@ -3678,6 +4134,31 @@
             "display": "factory/sei1eqef7pcwtakfex6s42nvw7ajtl9jh7n3lml5k0jycj0r0nxsfzrqvykrxw/USD",
             "name": "factory/sei1eqef7pcwtakfex6s42nvw7ajtl9jh7n3lml5k0jycj0r0nxsfzrqvykrxw/USD",
             "symbol": "factory/sei1eqef7pcwtakfex6s42nvw7ajtl9jh7n3lml5k0jycj0r0nxsfzrqvykrxw/USD",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1exnzts2hm5c2s7dd7f2rqydw7t5q8ev7hy9n8w/capo",
+            "admin": "sei1exnzts2hm5c2s7dd7f2rqydw7t5q8ev7hy9n8w",
+            "base": "factory/sei1exnzts2hm5c2s7dd7f2rqydw7t5q8ev7hy9n8w/capo",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microcapo"
+                    ],
+                    "denom": "factory/sei1exnzts2hm5c2s7dd7f2rqydw7t5q8ev7hy9n8w/capo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "capo"
+                    ],
+                    "denom": "capo",
+                    "exponent": 6
+                }
+            ],
+            "display": "capo",
+            "name": "Capo",
+            "symbol": "CAPO",
             "type_asset": "factory"
         },
         {
@@ -3746,6 +4227,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp/hussein",
+            "admin": "sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp",
+            "base": "factory/sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp/hussein",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp/hussein",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp/hussein",
+            "name": "factory/sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp/hussein",
+            "symbol": "factory/sei1fgwgm3zujumcue05qfgnkwm5yjtwvw3hl2t5zp/hussein",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1fl8pg59wfsgw2wp4aruk38zqccfnc2g8ptrm24/popeye",
             "admin": "sei1fl8pg59wfsgw2wp4aruk38zqccfnc2g8ptrm24",
             "base": "factory/sei1fl8pg59wfsgw2wp4aruk38zqccfnc2g8ptrm24/popeye",
@@ -3765,6 +4262,22 @@
             "display": "popeye",
             "name": "Popeye",
             "symbol": "POPEYE",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y/seinior",
+            "admin": "sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y",
+            "base": "factory/sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y/seinior",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y/seinior",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y/seinior",
+            "name": "factory/sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y/seinior",
+            "symbol": "factory/sei1g38dh97qqjpa8vhxggqrnkd35dlegmevj3vf5y/seinior",
             "type_asset": "factory"
         },
         {
@@ -4079,6 +4592,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c/hearsei",
+            "admin": "sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c",
+            "base": "factory/sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c/hearsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c/hearsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c/hearsei",
+            "name": "factory/sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c/hearsei",
+            "symbol": "factory/sei1jcy0lm7gqpar7hwxemylwnnuh0fqgrwp9dql5c/hearsei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu/seide",
+            "admin": "sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu",
+            "base": "factory/sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu/seide",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu/seide",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu/seide",
+            "name": "factory/sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu/seide",
+            "symbol": "factory/sei1jke84s608tzxk9622sp5kt83es7u5ps3tgulpu/seide",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1jpfxqkxc63qvkx9mam7nfr8zsky9wyakpmnxwn/seibre",
             "admin": "sei1jpfxqkxc63qvkx9mam7nfr8zsky9wyakpmnxwn",
             "base": "factory/sei1jpfxqkxc63qvkx9mam7nfr8zsky9wyakpmnxwn/seibre",
@@ -4159,6 +4704,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seilords",
+            "admin": "sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs",
+            "base": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seilords",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seilords",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seilords",
+            "name": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seilords",
+            "symbol": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seilords",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+            "admin": "sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs",
+            "base": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+            "name": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+            "symbol": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1keutv8u6uwle2q7ezvj3gxuxaescdtsyklw8kx/poosei",
             "admin": "sei1keutv8u6uwle2q7ezvj3gxuxaescdtsyklw8kx",
             "base": "factory/sei1keutv8u6uwle2q7ezvj3gxuxaescdtsyklw8kx/poosei",
@@ -4229,6 +4806,31 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1kngvdedcuzxd26fjyn8qh4ntjsk7t2v586tu2k/shikoku",
+            "admin": "sei1kngvdedcuzxd26fjyn8qh4ntjsk7t2v586tu2k",
+            "base": "factory/sei1kngvdedcuzxd26fjyn8qh4ntjsk7t2v586tu2k/shikoku",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microshikoku"
+                    ],
+                    "denom": "factory/sei1kngvdedcuzxd26fjyn8qh4ntjsk7t2v586tu2k/shikoku",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "shikoku"
+                    ],
+                    "denom": "shikoku",
+                    "exponent": 6
+                }
+            ],
+            "display": "shikoku",
+            "name": "Shikoku the dog",
+            "symbol": "SHIKOKU",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1kpv8szkqdtnyul72uyj65mj5al6n5anfa5qa4m/SEIMEN",
             "admin": "sei1kpv8szkqdtnyul72uyj65mj5al6n5anfa5qa4m",
             "base": "factory/sei1kpv8szkqdtnyul72uyj65mj5al6n5anfa5qa4m/SEIMEN",
@@ -4248,6 +4850,31 @@
             "display": "SEIMEN",
             "name": "SEIMEN",
             "symbol": "SEIMEN",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1kqg9yu4290hhc2yrru7l9xzl0dxkjumcn2ljn0/extravirginoliveoilinu",
+            "admin": "sei1kqg9yu4290hhc2yrru7l9xzl0dxkjumcn2ljn0",
+            "base": "factory/sei1kqg9yu4290hhc2yrru7l9xzl0dxkjumcn2ljn0/extravirginoliveoilinu",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microextravirginoliveoilinu"
+                    ],
+                    "denom": "factory/sei1kqg9yu4290hhc2yrru7l9xzl0dxkjumcn2ljn0/extravirginoliveoilinu",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "extravirginoliveoilinu"
+                    ],
+                    "denom": "extravirginoliveoilinu",
+                    "exponent": 6
+                }
+            ],
+            "display": "extravirginoliveoilinu",
+            "name": "Extra Virgin Olive Oil INU",
+            "symbol": "EXTRAVIRGINOLIVEOILINU",
             "type_asset": "factory"
         },
         {
@@ -4411,6 +5038,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/darkseid",
+            "admin": "sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus",
+            "base": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/darkseid",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/darkseid",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/darkseid",
+            "name": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/darkseid",
+            "symbol": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/darkseid",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seilebrate",
+            "admin": "sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus",
+            "base": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seilebrate",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seilebrate",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seilebrate",
+            "name": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seilebrate",
+            "symbol": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seilebrate",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seipms",
             "admin": "sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus",
             "base": "factory/sei1ls0fy4kljepy2cw8y5dw8l3vm7qqnt223tttus/seipms",
@@ -4516,6 +5175,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9/seikiro",
+            "admin": "sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9",
+            "base": "factory/sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9/seikiro",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9/seikiro",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9/seikiro",
+            "name": "factory/sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9/seikiro",
+            "symbol": "factory/sei1mx8qfy5xtjz3t59al0c5jyq79j407arljgsyx9/seikiro",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1myphvfn9f9q7uys372kcurpzsh74u3vpmtmdpw/SQUID",
             "admin": "sei1myphvfn9f9q7uys372kcurpzsh74u3vpmtmdpw",
             "base": "factory/sei1myphvfn9f9q7uys372kcurpzsh74u3vpmtmdpw/SQUID",
@@ -4590,6 +5265,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3/superseiyan",
+            "admin": "sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3",
+            "base": "factory/sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3/superseiyan",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3/superseiyan",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3/superseiyan",
+            "name": "factory/sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3/superseiyan",
+            "symbol": "factory/sei1n0y0v9mltqxvrhqrdf7vdcwc9d6rq686e26eh3/superseiyan",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1n3cd02mexskgxyp642cyuvj79cnuv07rd6jte9/chloin",
             "admin": "sei1n3cd02mexskgxyp642cyuvj79cnuv07rd6jte9",
             "base": "factory/sei1n3cd02mexskgxyp642cyuvj79cnuv07rd6jte9/chloin",
@@ -4606,6 +5297,54 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw/seinothing",
+            "admin": "sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw",
+            "base": "factory/sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw/seinothing",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw/seinothing",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw/seinothing",
+            "name": "factory/sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw/seinothing",
+            "symbol": "factory/sei1n7s4dqdsnumfkrlve03m225jexy6xmv9wewvvw/seinothing",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm/poseidon",
+            "admin": "sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm",
+            "base": "factory/sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm/poseidon",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm/poseidon",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm/poseidon",
+            "name": "factory/sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm/poseidon",
+            "symbol": "factory/sei1nake5vavcd8lzeprcu6c9yvvw9yj0nsjck4qnm/poseidon",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
+            "admin": "sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y",
+            "base": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
+            "name": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
+            "symbol": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1nmhmzhtu8sfznlj4f0z7k6pvswrlp00nd5m5z5/SEITAMA",
             "admin": "sei1nmhmzhtu8sfznlj4f0z7k6pvswrlp00nd5m5z5",
             "base": "factory/sei1nmhmzhtu8sfznlj4f0z7k6pvswrlp00nd5m5z5/SEITAMA",
@@ -4619,6 +5358,41 @@
             "display": "factory/sei1nmhmzhtu8sfznlj4f0z7k6pvswrlp00nd5m5z5/SEITAMA",
             "name": "factory/sei1nmhmzhtu8sfznlj4f0z7k6pvswrlp00nd5m5z5/SEITAMA",
             "symbol": "factory/sei1nmhmzhtu8sfznlj4f0z7k6pvswrlp00nd5m5z5/SEITAMA",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3/useito",
+            "admin": "sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3",
+            "base": "factory/sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3/useito",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "useito",
+                        "microseito"
+                    ],
+                    "denom": "factory/sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3/useito",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "mseito",
+                        "milliseito"
+                    ],
+                    "denom": "factory/sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3/mseito",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "seito"
+                    ],
+                    "denom": "factory/sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3/seito",
+                    "exponent": 6
+                }
+            ],
+            "description": "Introducing Seito Kaiba, the CEO of Kaiba Corp and the unrivaled Master of Duels. Recently discovering the potential within the Sei Chain, he`s set to extend his dominance into this new frontier.",
+            "display": "factory/sei1ntacl2rjuhha4gjlzaal4as5qtnjwxtf47sfg3/seito",
+            "name": "Seito Kaiba",
+            "symbol": "SEITO",
             "type_asset": "factory"
         },
         {
@@ -4952,6 +5726,31 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6/seikiro",
+            "admin": "sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6",
+            "base": "factory/sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6/seikiro",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microseikiro"
+                    ],
+                    "denom": "factory/sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6/seikiro",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "seikiro"
+                    ],
+                    "denom": "seikiro",
+                    "exponent": 6
+                }
+            ],
+            "display": "seikiro",
+            "name": "Seikiro",
+            "symbol": "SEIKIRO",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1pw6sywysx29yl4wuw7nwclv3gehvkc9p49y89m/seixy",
             "admin": "sei1pw6sywysx29yl4wuw7nwclv3gehvkc9p49y89m",
             "base": "factory/sei1pw6sywysx29yl4wuw7nwclv3gehvkc9p49y89m/seixy",
@@ -5016,6 +5815,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8/seige",
+            "admin": "sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8",
+            "base": "factory/sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8/seige",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8/seige",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8/seige",
+            "name": "factory/sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8/seige",
+            "symbol": "factory/sei1q2d9m8fstf38cw0852tkzh8lhj59na760zemh8/seige",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1q96rdw97rpzqut4fkklpsavptkae6mmdsh2u0l/chad",
             "admin": "sei1q96rdw97rpzqut4fkklpsavptkae6mmdsh2u0l",
             "base": "factory/sei1q96rdw97rpzqut4fkklpsavptkae6mmdsh2u0l/chad",
@@ -5029,6 +5844,38 @@
             "display": "factory/sei1q96rdw97rpzqut4fkklpsavptkae6mmdsh2u0l/chad",
             "name": "factory/sei1q96rdw97rpzqut4fkklpsavptkae6mmdsh2u0l/chad",
             "symbol": "factory/sei1q96rdw97rpzqut4fkklpsavptkae6mmdsh2u0l/chad",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs/thesuperseiyan",
+            "admin": "sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs",
+            "base": "factory/sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs/thesuperseiyan",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs/thesuperseiyan",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs/thesuperseiyan",
+            "name": "factory/sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs/thesuperseiyan",
+            "symbol": "factory/sei1qeyd5j9q7nvlp24tyulssfgd6lcn0js74rhkxs/thesuperseiyan",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe/seinot",
+            "admin": "sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe",
+            "base": "factory/sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe/seinot",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe/seinot",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe/seinot",
+            "name": "factory/sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe/seinot",
+            "symbol": "factory/sei1qlh6d5vklc8kwwspw7xkvvzxm8dcsmfk80gpfe/seinot",
             "type_asset": "factory"
         },
         {
@@ -5450,6 +6297,23 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1t57eenx09ht65vvrheqw5yxmlthm6jlp7tsrhm/SEIMES",
+            "admin": "sei1t57eenx09ht65vvrheqw5yxmlthm6jlp7tsrhm",
+            "base": "factory/sei1t57eenx09ht65vvrheqw5yxmlthm6jlp7tsrhm/SEIMES",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1t57eenx09ht65vvrheqw5yxmlthm6jlp7tsrhm/SEIMES",
+                    "exponent": 0
+                }
+            ],
+            "description": "SEIMES The God Of SEI. TG: https://t.me/seimese",
+            "display": "factory/sei1t57eenx09ht65vvrheqw5yxmlthm6jlp7tsrhm/SEIMES",
+            "name": "SEIMES",
+            "symbol": "SEIMES",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1ta5rkr6y2qlkj7px8w2cvear7m2822q4f4ea0m/sensei",
             "admin": "sei1ta5rkr6y2qlkj7px8w2cvear7m2822q4f4ea0m",
             "base": "factory/sei1ta5rkr6y2qlkj7px8w2cvear7m2822q4f4ea0m/sensei",
@@ -5488,6 +6352,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3/abseint",
+            "admin": "sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3",
+            "base": "factory/sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3/abseint",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3/abseint",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3/abseint",
+            "name": "factory/sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3/abseint",
+            "symbol": "factory/sei1tya92fkyumcq4ghf6y5jg72tcml6eqc0x62wr3/abseint",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1u8cr964xl7m23vcscql8624qsuk4vennqrgcg7/PEPE",
             "admin": "sei1u8cr964xl7m23vcscql8624qsuk4vennqrgcg7",
             "base": "factory/sei1u8cr964xl7m23vcscql8624qsuk4vennqrgcg7/PEPE",
@@ -5504,6 +6384,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w/seiko",
+            "admin": "sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w",
+            "base": "factory/sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w/seiko",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w/seiko",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w/seiko",
+            "name": "factory/sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w/seiko",
+            "symbol": "factory/sei1ufjg0kp97lgqy725g9r9t7gpf58skatmfhu84w/seiko",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1ukra3xwftf7y0k6vx0kg8t5ex08f6ddea8whnp/seiamese",
             "admin": "sei1ukra3xwftf7y0k6vx0kg8t5ex08f6ddea8whnp",
             "base": "factory/sei1ukra3xwftf7y0k6vx0kg8t5ex08f6ddea8whnp/seiamese",
@@ -5517,6 +6413,38 @@
             "display": "factory/sei1ukra3xwftf7y0k6vx0kg8t5ex08f6ddea8whnp/seiamese",
             "name": "factory/sei1ukra3xwftf7y0k6vx0kg8t5ex08f6ddea8whnp/seiamese",
             "symbol": "factory/sei1ukra3xwftf7y0k6vx0kg8t5ex08f6ddea8whnp/seiamese",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx/seimore",
+            "admin": "sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx",
+            "base": "factory/sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx/seimore",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx/seimore",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx/seimore",
+            "name": "factory/sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx/seimore",
+            "symbol": "factory/sei1uupklx6huq9cqk2pxd3k8puhgnxznw78m657qx/seimore",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m/seiliva",
+            "admin": "sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m",
+            "base": "factory/sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m/seiliva",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m/seiliva",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m/seiliva",
+            "name": "factory/sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m/seiliva",
+            "symbol": "factory/sei1uwnnlqlmkau8qf6welq5xqjzuxyl5zt49ckc6m/seiliva",
             "type_asset": "factory"
         },
         {
@@ -5571,6 +6499,22 @@
             "display": "factory/sei1v4v7flyk0ts39mnjeuus03n66flcns0n4n0xm4/seilmon",
             "name": "factory/sei1v4v7flyk0ts39mnjeuus03n66flcns0n4n0xm4/seilmon",
             "symbol": "factory/sei1v4v7flyk0ts39mnjeuus03n66flcns0n4n0xm4/seilmon",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl/seinen",
+            "admin": "sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl",
+            "base": "factory/sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl/seinen",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl/seinen",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl/seinen",
+            "name": "factory/sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl/seinen",
+            "symbol": "factory/sei1v9ttu0l0sek445h9z7uxqfzytap9m42a3cfysl/seinen",
             "type_asset": "factory"
         },
         {
@@ -5863,6 +6807,38 @@
             "display": "factory/sei1y9jq867hjwn4cy4wfh74fkt37u9j2cmvzrak92/seinomore",
             "name": "factory/sei1y9jq867hjwn4cy4wfh74fkt37u9j2cmvzrak92/seinomore",
             "symbol": "factory/sei1y9jq867hjwn4cy4wfh74fkt37u9j2cmvzrak92/seinomore",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6/stone",
+            "admin": "sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6",
+            "base": "factory/sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6/stone",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6/stone",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6/stone",
+            "name": "factory/sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6/stone",
+            "symbol": "factory/sei1yvq5ll55muq2uc8hfwttr7m9d4ggsaz7yz7dj7av9cr45z0frhtsvmqtd6/stone",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
+            "admin": "sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7",
+            "base": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
+            "name": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
+            "symbol": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
             "type_asset": "factory"
         },
         {

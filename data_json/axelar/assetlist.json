@@ -3446,6 +3446,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/09023645EEED57C307D0CA1393A1C19CE7AD2D512F643399B94A7FFAA3C40522",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-84",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/2CBC2EA121AE42563B08028466F37B600F2D7D4282342DE938283CC3FB2BC00E"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-148/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2CBC2EA121AE42563B08028466F37B600F2D7D4282342DE938283CC3FB2BC00E",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-84"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-148",
+                        "path": "transfer/channel-148/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-31"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/179B0098D517BD148228132CA29A950D54A836836C3558569816C9BB61C630D9",
             "ibc": {
                 "dst_channel": "channel-3",
@@ -4656,6 +4709,43 @@
                         "chain_id": "columbus-5",
                         "chain_name": "terra",
                         "channel_id": "channel-16"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/BE380F7C5D4FED1E882870BC415C79E19652ED06C9974241B9315CAE04C0648F",
+            "ibc": {
+                "dst_channel": "channel-84",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/C20C0A822BD22B2CEF0D067400FCCFB6FAEEE9E91D360B4E0725BD522302D565"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-147/orai"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C20C0A822BD22B2CEF0D067400FCCFB6FAEEE9E91D360B4E0725BD522302D565",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-84"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-147",
+                        "path": "transfer/channel-147/orai"
+                    },
+                    "counterparty": {
+                        "base_denom": "orai",
+                        "chain_id": "Oraichain",
+                        "chain_name": "oraichain",
+                        "channel_id": "channel-146"
                     },
                     "type": "ibc"
                 }

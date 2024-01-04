@@ -516,6 +516,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/075038AAC32DEBB891A8107482FC89915DB89EE0DEC22B0AA132DB100A3D1B60",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
+            "ibc": {
+                "dst_channel": "channel-12",
+                "source_channel": "channel-29",
+                "source_denom": "ibc/DBC1802D65B51FCD3C82A84415F54254CC8233A13644421F85128DC500248ECD"
+            },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-29",
+                        "path": "transfer/channel-29/transfer/channel-33/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DBC1802D65B51FCD3C82A84415F54254CC8233A13644421F85128DC500248ECD",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-12"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-33",
+                        "path": "transfer/channel-33/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/37B7C1AABC243067278C28C77973A28D7844EF5465ACD0EBE6E506BE4C6816C2",
             "ibc": {
                 "dst_channel": "channel-1429",
