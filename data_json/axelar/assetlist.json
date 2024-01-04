@@ -1876,15 +1876,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/0E741ADD66DFE9EB40457E03CB45D0BA9C336DA5B2481C0DA14FB4E401B0572B",
-            "ibc": {
-                "dst_channel": "channel-208",
-                "source_channel": "channel-3",
-                "source_denom": ""
-            },
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/1F79D86A6A62EDF93E1ADB252FAE8F9CE5F5A126A1F883B58BA01BA757D6FD3E",
             "ibc": {
                 "dst_channel": "channel-20",
@@ -5087,6 +5078,57 @@
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/F7D9759046C4D45B1F7218EA8F9E0147AB04345F8F2F8430E406332B7094F0C4",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "dst_channel": "channel-84",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/92E0120F15D037353CFB73C14651FC8930ADC05B93100FD7754D3A689E53B333"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-8/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/92E0120F15D037353CFB73C14651FC8930ADC05B93100FD7754D3A689E53B333",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-84"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
                     },
                     "type": "ibc"
                 }
