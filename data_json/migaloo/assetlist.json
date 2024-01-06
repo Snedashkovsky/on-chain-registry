@@ -2242,6 +2242,55 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/B1512E58F68DDDF7B405F0739E7AA701C0105100FAEA446A9567579118BA35C7",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusd"
+                    ],
+                    "denom": "uusd",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliusd"
+                    ],
+                    "denom": "musd",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "usd",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native stable token of the Terra Columbus.",
+            "display": "usd",
+            "ibc": {
+                "dst_channel": "channel-84",
+                "source_channel": "channel-59",
+                "source_denom": "uusd"
+            },
+            "name": "USD TERRA",
+            "symbol": "UST",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-59",
+                        "path": "transfer/channel-59/uusd"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusd",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-84"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/B1F66414EA8D434F52150F7EC1E79BC917BE78B60E7D5FB089607936FAE67139",
             "ibc": {
                 "dst_channel": "channel-121",
