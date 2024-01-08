@@ -1,6 +1,81 @@
 {
     "assets": [
         {
+            "base": "ibc/A4E394FB2B774033A2C252835F78DEC14C1C1A28C43BCACAD97C4063924031EF",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsomm"
+                    ],
+                    "denom": "usomm",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisomm"
+                    ],
+                    "denom": "msomm",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "somm",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Sommelier Chain",
+            "display": "somm",
+            "ibc": {
+                "dst_channel": "channel-165",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/FD56AFA057C95871BC72302BA9084D2106FDD84A42D5BF0B938A75B1495C8A71"
+            },
+            "name": "Somm",
+            "symbol": "SOMM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-522/transfer/channel-101/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/FD56AFA057C95871BC72302BA9084D2106FDD84A42D5BF0B938A75B1495C8A71",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-165"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-522",
+                        "path": "transfer/channel-522/transfer/channel-101/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BFF8BC09B94E2EA90B64961A181D2383280FFA7847109DE1AB4ECA366466462A",
+                        "chain_id": "quicksilver-2",
+                        "chain_name": "quicksilver",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-101",
+                        "path": "transfer/channel-101/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "usomm",
+                        "chain_id": "sommelier-3",
+                        "chain_name": "sommelier",
+                        "channel_id": "channel-59"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/AB8268F50B90B767B5A49B12FDD69443AA5E35125D6477CDE9418273B0A25228",
             "denom_units": [
                 {
@@ -182,6 +257,40 @@
                 "source_channel": "channel-4",
                 "source_denom": ""
             },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A5BA3F1C38ADAA11F941D66B19A7CD67B127F25DE2EA581BCD2DC4D8D50BEED9",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "ibc": {
+                "dst_channel": "channel-165",
+                "source_channel": "channel-0",
+                "source_denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
+            },
+            "name": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "symbol": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-165"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
