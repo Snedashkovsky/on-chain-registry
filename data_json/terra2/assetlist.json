@@ -2358,6 +2358,15 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/4E07AE9F6FCFA2FC77C0330CC22F9F12A2DC714BEE16852DCE1FDB519E5BC947",
+            "ibc": {
+                "dst_channel": "channel-251",
+                "source_channel": "channel-1",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/52972E681562A29CE11544C6000E97A474BB6C22DFB305CB4A7269F5534638B4",
             "denom_units": [
                 {
@@ -5580,6 +5589,68 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/DC14622101BEBEFA64A5EC9125B8D5BED0E9A74CD7F1465D8F7B81D8446C2448",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Terra Columbus.",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-5",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/119334C55720942481F458C9C462F5C0CD1F1E7EEAC4679D674AA67221916AEA"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-71/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/119334C55720942481F458C9C462F5C0CD1F1E7EEAC4679D674AA67221916AEA",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-71",
+                        "path": "transfer/channel-71/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-71"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/DC697DA4D4353E3817B0CB3D08AAE9E133729BF1315EBA5172FBDA9C800D86B0",
             "ibc": {
                 "dst_channel": "channel-339",
@@ -6188,6 +6259,55 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/0C1F9AD97CA74C201028B9852C352EB332A5EEB0C388CBF04A7BC9B6527F9B59",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microkrw"
+                    ],
+                    "denom": "ukrw",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millikrw"
+                    ],
+                    "denom": "mkrw",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "krw",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native stable token of the Terra Columbus.",
+            "display": "krw",
+            "ibc": {
+                "dst_channel": "channel-85",
+                "source_channel": "channel-314",
+                "source_denom": "ukrw"
+            },
+            "name": "KRW TERRA",
+            "symbol": "KRT",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-314",
+                        "path": "transfer/channel-314/ukrw"
+                    },
+                    "counterparty": {
+                        "base_denom": "ukrw",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-85"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/0E90026619DD296AD4EF9546396F292B465BAB6B5BE00ABD6162AA1CE8E68098",
             "denom_units": [
                 {
@@ -6465,6 +6585,48 @@
                         "chain_id": "columbus-5",
                         "chain_name": "terra",
                         "channel_id": "channel-58"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/19313100CB022954D65361B26AC3C5BAFB0AEEEDF7DF86D44E8CA9F5148B6B08",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microtia"
+                    ],
+                    "denom": "utia",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "TIA",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of the Celestia network.",
+            "display": "TIA",
+            "ibc": {
+                "dst_channel": "channel-15",
+                "source_channel": "channel-300",
+                "source_denom": "utia"
+            },
+            "name": "TIA",
+            "symbol": "TIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-300",
+                        "path": "transfer/channel-300/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "utia",
+                        "chain_id": "celestia",
+                        "chain_name": "celestia",
+                        "channel_id": "channel-15"
                     },
                     "type": "ibc"
                 }
