@@ -6950,6 +6950,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/135C3DEC22E991E288C6D19C7FE617C85731FDA35F27DC4325544B36B9E71E80",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-2",
+                "source_channel": "channel-62",
+                "source_denom": "ibc/F47D6F6C38DC1B5B72FFB71CC4D8A12FC4C57A5A79BAFA65286723D56B85197D"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-62",
+                        "path": "transfer/channel-62/transfer/channel-38/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F47D6F6C38DC1B5B72FFB71CC4D8A12FC4C57A5A79BAFA65286723D56B85197D",
+                        "chain_id": "crescent-1",
+                        "chain_name": "crescent",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-38",
+                        "path": "transfer/channel-38/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/140A34459BD0720DDF3B13E7B7C8B3667744CD49ED79E018578EF87E8CB203C5",
             "denom_units": [
                 {
@@ -8489,6 +8542,43 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-144"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/32986CB7F9DD57EDEB92638E2BD0A2A0EE1C55A57F8FFA1CF411EC70E312BF2D",
+            "ibc": {
+                "dst_channel": "channel-281",
+                "source_channel": "channel-17",
+                "source_denom": "ibc/F04D72CF9B5D9C849BB278B691CDFA2241813327430EC9CDC83F8F4CA4CDC2B0"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/transfer/channel-277/erc20/tether/usdt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F04D72CF9B5D9C849BB278B691CDFA2241813327430EC9CDC83F8F4CA4CDC2B0",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-281"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-277",
+                        "path": "transfer/channel-277/erc20/tether/usdt"
+                    },
+                    "counterparty": {
+                        "base_denom": "erc20/tether/usdt",
+                        "chain_id": "kava_2222-10",
+                        "chain_name": "kava",
+                        "channel_id": "channel-0"
                     },
                     "type": "ibc"
                 }
@@ -18309,6 +18399,11 @@
         {
             "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
             "base": "gravity0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+            "type_asset": "erc20"
+        },
+        {
+            "address": "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
+            "base": "gravity0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
             "type_asset": "erc20"
         },
         {

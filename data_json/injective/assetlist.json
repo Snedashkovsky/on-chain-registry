@@ -3013,6 +3013,57 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/AE6D267A64EEFE1430D11221D579C91CFC6D7B0E7F885874AE1BC715FE8753E1",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "dst_channel": "channel-10",
+                "source_channel": "channel-83",
+                "source_denom": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-83",
+                        "path": "transfer/channel-83/transfer/channel-0/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-204"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BE749147EF2813020A5A77D29183336CFAA1A53B67E522EF103D6803DE0E084B",
             "denom_units": [
                 {
@@ -3068,6 +3119,59 @@
                         "chain_id": "pacific-1",
                         "chain_name": "sei",
                         "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/BE7AB5AEDF88351CF4E1AAE8EC00EC9EE36CD39AEE83D95A1555418E15FC88AD",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "wormhole/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp/8",
+                    "exponent": 8
+                }
+            ],
+            "description": "Wrapped Ether (Wormhole), WETH, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/62F82550D0B96522361C89B0DA1119DE262FBDFB25E5502BC5101B5C0D0DBAAC"
+            },
+            "name": "Wrapped Ether (Wormhole)",
+            "symbol": "WETH",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-2186/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/62F82550D0B96522361C89B0DA1119DE262FBDFB25E5502BC5101B5C0D0DBAAC",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2186",
+                        "path": "transfer/channel-2186/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
+                        "chain_id": "wormchain",
+                        "chain_name": "gateway",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -5117,6 +5221,30 @@
                         "chain_id": "planq_7070-2",
                         "chain_name": "planq",
                         "channel_id": "channel-42"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/BC3AD52E42C6E1D13D2BDCEB497CF5AB9FEE24D804F5563B9E7DCFB825246947",
+            "ibc": {
+                "dst_channel": "channel-5",
+                "source_channel": "channel-182",
+                "source_denom": "peaka"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-182",
+                        "path": "transfer/channel-182/peaka"
+                    },
+                    "counterparty": {
+                        "base_denom": "peaka",
+                        "chain_id": "vota-ash",
+                        "chain_name": "doravota",
+                        "channel_id": "channel-5"
                     },
                     "type": "ibc"
                 }
@@ -7499,6 +7627,19 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1d62ry5fwsafggxu67fwhavpu3954vf5n8e5pmt",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1dtpqn48watxrezj6gg630x0xzxw4jm70mqxgpt",
+            "admin": "inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk",
+            "base": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1dtpqn48watxrezj6gg630x0xzxw4jm70mqxgpt",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1dtpqn48watxrezj6gg630x0xzxw4jm70mqxgpt",
                     "exponent": 0
                 }
             ],
@@ -11653,6 +11794,28 @@
             "display": "FUD",
             "name": "FUD",
             "symbol": "FUD",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1j43ya8q0u5dx64x362u62yq5zyvasvg98asm0d/pinju",
+            "admin": "inj1j43ya8q0u5dx64x362u62yq5zyvasvg98asm0d",
+            "base": "factory/inj1j43ya8q0u5dx64x362u62yq5zyvasvg98asm0d/pinju",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1j43ya8q0u5dx64x362u62yq5zyvasvg98asm0d/pinju",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "PINJU",
+                    "exponent": 6
+                }
+            ],
+            "description": "Pinju the friendly penguin on ",
+            "display": "PINJU",
+            "name": "Pinju",
+            "symbol": "PINJU",
             "type_asset": "factory"
         },
         {
@@ -16960,6 +17123,10 @@
         },
         {
             "base": "peggy0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "peggy0xC5d27F27F08D1FD1E3EbBAa50b3442e6c0D50439",
             "type_asset": "sdk.coin"
         },
         {
