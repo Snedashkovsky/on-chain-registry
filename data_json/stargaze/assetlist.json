@@ -674,11 +674,70 @@
         },
         {
             "base": "ibc/76D3D93C6117588089B9B5A0ECBD3F5FEBF8F4FB93B6059549175E4EFB0E7B0D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-75",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/0FF5FB055621B058447E76E7C659D71544E87E7FFE758669F3B354F2154929DA"
             },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-184/transfer/channel-109/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0FF5FB055621B058447E76E7C659D71544E87E7FFE758669F3B354F2154929DA",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-184",
+                        "path": "transfer/channel-184/transfer/channel-109/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/885F4DFF6EE97AFDF25ECA50C6438003B004B8DA7F29FB3ADBD026BF29E6A5A9",
+                        "chain_id": "umee-1",
+                        "chain_name": "umee",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-109",
+                        "path": "transfer/channel-109/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-232"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -950,6 +1009,30 @@
                     },
                     "counterparty": {
                         "base_denom": "ibc/75345531D87BD90BF108BE7240BD721CB2CB0A1F16D4EBA71B09EC3C43E15C8F",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/12C0B8B561AFCFDA3C73DEE0F7F84AA2B860D48493C27E8E81A5D14724FAB08B",
+            "ibc": {
+                "dst_channel": "channel-75",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/D3B574938631B0A1BA704879020C696E514CFADAA7643CDE4BD5EB010BDE327B"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-169/cw20:juno1rws84uz7969aaa7pej303udhlkt3j9ca0l3egpcae98jwak9quzq8szn2l"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D3B574938631B0A1BA704879020C696E514CFADAA7643CDE4BD5EB010BDE327B",
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-75"
@@ -1738,6 +1821,68 @@
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-343"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/D418F8D0A37E1432257C236E794CAB2F2F20D4CF55C31A5E265C38A12FA5DDDB",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microregen"
+                    ],
+                    "denom": "uregen",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliregen"
+                    ],
+                    "denom": "mregen",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "regen",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of Regen Network",
+            "display": "regen",
+            "ibc": {
+                "dst_channel": "channel-75",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/1DCC8A6CB5689018431323953344A9F6CC4D0BFB261E88C9F7777372C10CD076"
+            },
+            "name": "Regen",
+            "symbol": "REGEN",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-8/uregen"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1DCC8A6CB5689018431323953344A9F6CC4D0BFB261E88C9F7777372C10CD076",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/uregen"
+                    },
+                    "counterparty": {
+                        "base_denom": "uregen",
+                        "chain_id": "regen-1",
+                        "chain_name": "regen",
+                        "channel_id": "channel-1"
                     },
                     "type": "ibc"
                 }
