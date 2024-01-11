@@ -2,11 +2,36 @@
     "assets": [
         {
             "base": "ibc/9A18CE2116A05D9963F640484735642D38A596EF95FB8D0F1626662885386010",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-584",
                 "source_channel": "channel-1",
                 "source_denom": "ibc/A0F48A91E0E433DDE4C9D044298200E0587F9F7D2DCFE6E2A53E728B73A01C1E"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -31,6 +56,123 @@
                         "chain_id": "neutron-1",
                         "chain_name": "neutron",
                         "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-782/transfer/channel-1/transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0AEB07DD28484841348C1636B63E0A127211D4332E876511D6B4B18D492844C6",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-874"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-1/transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/42AD85D11FC47083D3C283643DA15DB2C3A3C36C38704F85370540C2AF858B94",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C6ADBD6A6E2F5634C8ACF14F34E7F2C91814F8EBB8C5837C5447CD0EE2BB4122",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-343",
+                        "path": "transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8C3EEF7F7DB693AA4A060FC77CDE79D277D12BD45772EA59D5DA981F3E9ECC63",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-50",
+                        "path": "transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/85F46C06FB3FE2C75E3872B2BA3203795CCBC8E901B475CDAFC4B008FB266D8E",
+                        "chain_id": "gravity-bridge-3",
+                        "chain_name": "gravitybridge",
+                        "channel_id": "channel-107"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DF12B9C940701C3EBD871F78C7962AC5F3FF48A9974C433B2259053CA2672760",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-281"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/83B4ADB51C3A0472F9A48E2ED1EE72082292E7D7B90D99DC4BC1022C7F394F65",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
                     },
                     "type": "ibc"
                 }
@@ -293,20 +435,204 @@
         },
         {
             "base": "ibc/B3F9807BEB9D6FD786DB3F8CAE136CAFE15D7461DD0AE3C8D9D4D5E9C0060126",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/5E409A29F634B76918F17BEBE21CB4DD2E7AA386CECBB7A3F7E0597D9724F662"
             },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-0/transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5E409A29F634B76918F17BEBE21CB4DD2E7AA386CECBB7A3F7E0597D9724F662",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5FC98F5B316C615356515A16887FD375630BCD292F492453EAD9C4A924495582",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-220",
+                        "path": "transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BE749147EF2813020A5A77D29183336CFAA1A53B67E522EF103D6803DE0E084B",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/C3F44751671039E93D658DE399F6F80C2F234DDFA06F2CA125A393DE728C45DE",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/F64E4DB4034C7DCB90217FC8FFE286EDBF3C79D072E002CF9B63D36B7EA617BC"
             },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-208/transfer/channel-2/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F64E4DB4034C7DCB90217FC8FFE286EDBF3C79D072E002CF9B63D36B7EA617BC",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/transfer/channel-2/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/97D63631B7BCAEE498B810F71E5017F5C2C087008A64AD478D0E5E973B102598",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D7B1D6B337D1CD21951E2658FBBD155A89EB26EE55475C490655E29247FB99C9",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-293"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -403,6 +729,94 @@
                         "chain_id": "centauri-1",
                         "chain_name": "composable",
                         "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A778AA8C8CDDB9A42A1D24DD70485A495995DEE39B5DF32A723752E21710534D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
+            "ibc": {
+                "dst_channel": "channel-584",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/5FC98F5B316C615356515A16887FD375630BCD292F492453EAD9C4A924495582"
+            },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5FC98F5B316C615356515A16887FD375630BCD292F492453EAD9C4A924495582",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-220",
+                        "path": "transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BE749147EF2813020A5A77D29183336CFAA1A53B67E522EF103D6803DE0E084B",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
                     },
                     "type": "ibc"
                 }
@@ -697,6 +1111,56 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/871B1D447D7754D45B07126745B84DE02ED1A2C0022C76EC558B5E19ECE6A65F",
+            "ibc": {
+                "dst_channel": "channel-782",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/9661BE20D1510B1753AEEB14496E07CC91AF5CB9C1D9ED85A513271F4622AF25"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-1279/transfer/channel-27/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/9661BE20D1510B1753AEEB14496E07CC91AF5CB9C1D9ED85A513271F4622AF25",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1279",
+                        "path": "transfer/channel-1279/transfer/channel-27/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4E86DB2D0F4DC03F4853FD7F6B0E622FBAD10F198B29CC1BA24C207F514B8271",
+                        "chain_id": "centauri-1",
+                        "chain_name": "composable",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-27",
+                        "path": "transfer/channel-27/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ukuji",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-101"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/11E3CF372E065ACB1A39C531A3C7E7E03F60B5D0653AD2139D31128ACD2772B5",
             "denom_units": [
                 {
@@ -745,6 +1209,43 @@
                         "chain_id": "stargaze-1",
                         "chain_name": "stargaze",
                         "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/338D2DB6F58921A72BD9F7B834AA9E05A3FC40D4FCCBEF3DB90EBACB230CCE96",
+            "ibc": {
+                "dst_channel": "channel-782",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/BB6BCDB515050BAE97516111873CCD7BCF1FD0CCB723CC12F3C4F704D6C646CE"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-259/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BB6BCDB515050BAE97516111873CCD7BCF1FD0CCB723CC12F3C4F704D6C646CE",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ukuji",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -966,6 +1467,30 @@
                         "chain_id": "neutron-1",
                         "chain_name": "neutron",
                         "channel_id": "channel-19"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/036ABD1ED4080F3449E7BA0341BE43A5CF3AFDA886FD567DAA0EE72C1D5E1180",
+            "ibc": {
+                "dst_channel": "channel-77",
+                "source_channel": "channel-56",
+                "source_denom": "uwhale"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-56",
+                        "path": "transfer/channel-56/uwhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "uwhale",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-77"
                     },
                     "type": "ibc"
                 }
@@ -1265,6 +1790,30 @@
                         "chain_id": "kava_2222-10",
                         "chain_name": "kava",
                         "channel_id": "channel-130"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/825CBB2F938AC6E79D69EED47E82FA85C190BA4A2888E3979F2245ECE4C1ECB2",
+            "ibc": {
+                "dst_channel": "channel-57",
+                "source_channel": "channel-14",
+                "source_denom": "uwhale"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-14",
+                        "path": "transfer/channel-14/uwhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "uwhale",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-57"
                     },
                     "type": "ibc"
                 }
@@ -1650,6 +2199,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn/abassei",
+            "admin": "sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn",
+            "base": "factory/sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn/abassei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn/abassei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn/abassei",
+            "name": "factory/sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn/abassei",
+            "symbol": "factory/sei10cqkm8nxzuph5xy050y0zqkucl88kl5njc6apn/abassei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e/siusei",
+            "admin": "sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e",
+            "base": "factory/sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e/siusei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e/siusei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e/siusei",
+            "name": "factory/sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e/siusei",
+            "symbol": "factory/sei10exsjgevu4zrm96u7wlezt0nyamc8p9l8u936e/siusei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei10jed4a82qwwv3elrej6ts5lhjns3vyllf6hyh7/sensei",
             "admin": "sei10jed4a82qwwv3elrej6ts5lhjns3vyllf6hyh7",
             "base": "factory/sei10jed4a82qwwv3elrej6ts5lhjns3vyllf6hyh7/sensei",
@@ -1759,6 +2340,22 @@
             "display": "factory/sei123n8tudme87jz9k9jmmlcdhlnmlsdjk7cdrqk3/seinetic",
             "name": "factory/sei123n8tudme87jz9k9jmmlcdhlnmlsdjk7cdrqk3/seinetic",
             "symbol": "factory/sei123n8tudme87jz9k9jmmlcdhlnmlsdjk7cdrqk3/seinetic",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2/seia",
+            "admin": "sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2",
+            "base": "factory/sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2/seia",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2/seia",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2/seia",
+            "name": "factory/sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2/seia",
+            "symbol": "factory/sei123xgeftd2tr8xml8hyvju5sz4293y3v9y9upm2/seia",
             "type_asset": "factory"
         },
         {
@@ -1880,6 +2477,22 @@
             "display": "factory/sei12gh40cl8dp55029mld0kmy5dmz8793nxkgattr2rpx6vv3yva23s2n2n27/USD",
             "name": "factory/sei12gh40cl8dp55029mld0kmy5dmz8793nxkgattr2rpx6vv3yva23s2n2n27/USD",
             "symbol": "factory/sei12gh40cl8dp55029mld0kmy5dmz8793nxkgattr2rpx6vv3yva23s2n2n27/USD",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex/kisei",
+            "admin": "sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex",
+            "base": "factory/sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex/kisei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex/kisei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex/kisei",
+            "name": "factory/sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex/kisei",
+            "symbol": "factory/sei12gsed4lf3dv58pppc8gys9q62c8ud9cjd9e5ex/kisei",
             "type_asset": "factory"
         },
         {
@@ -2055,6 +2668,22 @@
             "display": "factory/sei12w0lqnuncmqxqeyqgdj6w7ndenqj4q9hrep7uw/seionara",
             "name": "factory/sei12w0lqnuncmqxqeyqgdj6w7ndenqj4q9hrep7uw/seionara",
             "symbol": "factory/sei12w0lqnuncmqxqeyqgdj6w7ndenqj4q9hrep7uw/seionara",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h/seith",
+            "admin": "sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h",
+            "base": "factory/sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h/seith",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h/seith",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h/seith",
+            "name": "factory/sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h/seith",
+            "symbol": "factory/sei12wrw6r0f0ut8gmkcv20twyvycly3sujtu0xu6h/seith",
             "type_asset": "factory"
         },
         {
@@ -2348,6 +2977,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu/sarsei",
+            "admin": "sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu",
+            "base": "factory/sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu/sarsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu/sarsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu/sarsei",
+            "name": "factory/sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu/sarsei",
+            "symbol": "factory/sei13htyr8zw302ykgrls2wh8vj0v4x074ngrjwluu/sarsei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei13ks9e2nwww40sl6vwq8qtszhz4p7y9sgps9kt6/seixtynine",
             "admin": "sei13ks9e2nwww40sl6vwq8qtszhz4p7y9sgps9kt6",
             "base": "factory/sei13ks9e2nwww40sl6vwq8qtszhz4p7y9sgps9kt6/seixtynine",
@@ -2451,6 +3096,22 @@
             "display": "factory/sei13tne0cgy6az6dp8zlztfdymvrs4hmusmxxyrf3/seipa",
             "name": "factory/sei13tne0cgy6az6dp8zlztfdymvrs4hmusmxxyrf3/seipa",
             "symbol": "factory/sei13tne0cgy6az6dp8zlztfdymvrs4hmusmxxyrf3/seipa",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m/seityn",
+            "admin": "sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m",
+            "base": "factory/sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m/seityn",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m/seityn",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m/seityn",
+            "name": "factory/sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m/seityn",
+            "symbol": "factory/sei13x2w2ywedq0advtdt2wtuy74zhgp7a7lh2uv5m/seityn",
             "type_asset": "factory"
         },
         {
@@ -2579,6 +3240,22 @@
             "display": "factory/sei14hq4mshmn2j5mx406jkz4klqmh843u72vhr6p9/seisei",
             "name": "factory/sei14hq4mshmn2j5mx406jkz4klqmh843u72vhr6p9/seisei",
             "symbol": "factory/sei14hq4mshmn2j5mx406jkz4klqmh843u72vhr6p9/seisei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc/seimore",
+            "admin": "sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc",
+            "base": "factory/sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc/seimore",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc/seimore",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc/seimore",
+            "name": "factory/sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc/seimore",
+            "symbol": "factory/sei14l6c0v0ye9frk3vwuy68jwt044wsdh5wda8xwc/seimore",
             "type_asset": "factory"
         },
         {
@@ -2921,6 +3598,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy/tussei",
+            "admin": "sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy",
+            "base": "factory/sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy/tussei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy/tussei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy/tussei",
+            "name": "factory/sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy/tussei",
+            "symbol": "factory/sei15cc3lzflx70f2ew0kmhafazdm3nshjs39z9rmy/tussei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei15crvx5vtl48nmtzhcelfwqvd9relaqugna6hrm/seigon",
             "admin": "sei15crvx5vtl48nmtzhcelfwqvd9relaqugna6hrm",
             "base": "factory/sei15crvx5vtl48nmtzhcelfwqvd9relaqugna6hrm/seigon",
@@ -2992,6 +3685,22 @@
             "display": "seimsung",
             "name": "SEIMSUNG",
             "symbol": "SEIMSUNG",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9/seipeia",
+            "admin": "sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9",
+            "base": "factory/sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9/seipeia",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9/seipeia",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9/seipeia",
+            "name": "factory/sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9/seipeia",
+            "symbol": "factory/sei168auv53tpvaydfjm3jjul5qx30afwxx4vnkcy9/seipeia",
             "type_asset": "factory"
         },
         {
@@ -3228,6 +3937,22 @@
             "display": "factory/sei17l8mpt6pwxfqfd2e9luwvdywtg8cr3h3m302ge/subsei",
             "name": "factory/sei17l8mpt6pwxfqfd2e9luwvdywtg8cr3h3m302ge/subsei",
             "symbol": "factory/sei17l8mpt6pwxfqfd2e9luwvdywtg8cr3h3m302ge/subsei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei17m54dl90nsfrkacgehernktdujkakgkrerefpx/dalasei",
+            "admin": "sei17m54dl90nsfrkacgehernktdujkakgkrerefpx",
+            "base": "factory/sei17m54dl90nsfrkacgehernktdujkakgkrerefpx/dalasei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei17m54dl90nsfrkacgehernktdujkakgkrerefpx/dalasei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei17m54dl90nsfrkacgehernktdujkakgkrerefpx/dalasei",
+            "name": "factory/sei17m54dl90nsfrkacgehernktdujkakgkrerefpx/dalasei",
+            "symbol": "factory/sei17m54dl90nsfrkacgehernktdujkakgkrerefpx/dalasei",
             "type_asset": "factory"
         },
         {
@@ -3503,6 +4228,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bN8CLzb6mjC3wBNuymgSTM6sK1fosxNkWnWn2FLB1y3",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bN8CLzb6mjC3wBNuymgSTM6sK1fosxNkWnWn2FLB1y3",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bN8CLzb6mjC3wBNuymgSTM6sK1fosxNkWnWn2FLB1y3",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bN8CLzb6mjC3wBNuymgSTM6sK1fosxNkWnWn2FLB1y3",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bN8CLzb6mjC3wBNuymgSTM6sK1fosxNkWnWn2FLB1y3",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bN8CLzb6mjC3wBNuymgSTM6sK1fosxNkWnWn2FLB1y3",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bPUA2E9Ae5fPMcr7PA5t1wZihRaT1dEv3hs9JXuKPuW",
             "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
             "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3bPUA2E9Ae5fPMcr7PA5t1wZihRaT1dEv3hs9JXuKPuW",
@@ -3532,6 +4273,38 @@
             "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3i4ucyMvmRWrxjC5kAQgsBgxYVa4UFXQth1Cq5LSCe5m",
             "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3i4ucyMvmRWrxjC5kAQgsBgxYVa4UFXQth1Cq5LSCe5m",
             "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/3i4ucyMvmRWrxjC5kAQgsBgxYVa4UFXQth1Cq5LSCe5m",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4JxktaKhL37jehRDLfDCKqrzP8PfQrj94tJ2FJs5P8hs",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4JxktaKhL37jehRDLfDCKqrzP8PfQrj94tJ2FJs5P8hs",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4JxktaKhL37jehRDLfDCKqrzP8PfQrj94tJ2FJs5P8hs",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4JxktaKhL37jehRDLfDCKqrzP8PfQrj94tJ2FJs5P8hs",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4JxktaKhL37jehRDLfDCKqrzP8PfQrj94tJ2FJs5P8hs",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4JxktaKhL37jehRDLfDCKqrzP8PfQrj94tJ2FJs5P8hs",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4keEbfaUrvg3RcsxCtcexfYXgYto6Lm77ueNg61c27TR",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4keEbfaUrvg3RcsxCtcexfYXgYto6Lm77ueNg61c27TR",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4keEbfaUrvg3RcsxCtcexfYXgYto6Lm77ueNg61c27TR",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4keEbfaUrvg3RcsxCtcexfYXgYto6Lm77ueNg61c27TR",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4keEbfaUrvg3RcsxCtcexfYXgYto6Lm77ueNg61c27TR",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/4keEbfaUrvg3RcsxCtcexfYXgYto6Lm77ueNg61c27TR",
             "type_asset": "factory"
         },
         {
@@ -3743,6 +4516,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7NYnE5zcYCRB2mYKwvTbo1cigb1a19nJgG1ttgu2qyzF",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7NYnE5zcYCRB2mYKwvTbo1cigb1a19nJgG1ttgu2qyzF",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7NYnE5zcYCRB2mYKwvTbo1cigb1a19nJgG1ttgu2qyzF",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7NYnE5zcYCRB2mYKwvTbo1cigb1a19nJgG1ttgu2qyzF",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7NYnE5zcYCRB2mYKwvTbo1cigb1a19nJgG1ttgu2qyzF",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7NYnE5zcYCRB2mYKwvTbo1cigb1a19nJgG1ttgu2qyzF",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7edDfnf4mku8So3t4Do215GNHwASEwCWrdhM5GqD51xZ",
             "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
             "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/7edDfnf4mku8So3t4Do215GNHwASEwCWrdhM5GqD51xZ",
@@ -3804,6 +4593,22 @@
             "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8BAPvh5ceCcA4FLvQrxTPvAWDPwcQuB71hc4bxu2Czyw",
             "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8BAPvh5ceCcA4FLvQrxTPvAWDPwcQuB71hc4bxu2Czyw",
             "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8BAPvh5ceCcA4FLvQrxTPvAWDPwcQuB71hc4bxu2Czyw",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8hGuMeKZpbviXtWov1v6daVKiNRXGkheWHw75cLheqPJ",
+            "admin": "sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l",
+            "base": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8hGuMeKZpbviXtWov1v6daVKiNRXGkheWHw75cLheqPJ",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8hGuMeKZpbviXtWov1v6daVKiNRXGkheWHw75cLheqPJ",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8hGuMeKZpbviXtWov1v6daVKiNRXGkheWHw75cLheqPJ",
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8hGuMeKZpbviXtWov1v6daVKiNRXGkheWHw75cLheqPJ",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/8hGuMeKZpbviXtWov1v6daVKiNRXGkheWHw75cLheqPJ",
             "type_asset": "factory"
         },
         {
@@ -4463,6 +5268,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl/seinn",
+            "admin": "sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl",
+            "base": "factory/sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl/seinn",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl/seinn",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl/seinn",
+            "name": "factory/sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl/seinn",
+            "symbol": "factory/sei18qka7j94avtj4rwj9hgewd62ngm37vapn8rndl/seinn",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei19452cehq7nd8stm8s03gc8cjja22jvnp9w8yu4/seion",
             "admin": "sei19452cehq7nd8stm8s03gc8cjja22jvnp9w8yu4",
             "base": "factory/sei19452cehq7nd8stm8s03gc8cjja22jvnp9w8yu4/seion",
@@ -4632,6 +5453,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt/messei",
+            "admin": "sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt",
+            "base": "factory/sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt/messei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt/messei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt/messei",
+            "name": "factory/sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt/messei",
+            "symbol": "factory/sei19tv3aknuwa7dpuelmmt3fzzwfv4tgs6ec6jqnt/messei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei19zj292v4fhzxdeppzhl2m0npqawydkpw3ucfdl/APESEI",
             "admin": "sei19zj292v4fhzxdeppzhl2m0npqawydkpw3ucfdl",
             "base": "factory/sei19zj292v4fhzxdeppzhl2m0npqawydkpw3ucfdl/APESEI",
@@ -4645,6 +5482,38 @@
             "display": "factory/sei19zj292v4fhzxdeppzhl2m0npqawydkpw3ucfdl/APESEI",
             "name": "factory/sei19zj292v4fhzxdeppzhl2m0npqawydkpw3ucfdl/APESEI",
             "symbol": "factory/sei19zj292v4fhzxdeppzhl2m0npqawydkpw3ucfdl/APESEI",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv/seinner",
+            "admin": "sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv",
+            "base": "factory/sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv/seinner",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv/seinner",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv/seinner",
+            "name": "factory/sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv/seinner",
+            "symbol": "factory/sei1a2jjf7hwnsk20ftmgps2wlfstnya9rt2yl0adv/seinner",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl/seignal",
+            "admin": "sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl",
+            "base": "factory/sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl/seignal",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl/seignal",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl/seignal",
+            "name": "factory/sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl/seignal",
+            "symbol": "factory/sei1a4vnxgjp3ayem3el537ttwtcmndddvaqev2jwl/seignal",
             "type_asset": "factory"
         },
         {
@@ -4725,6 +5594,22 @@
             "display": "factory/sei1a85gv3gjruwlltvca3vcn3wcmky6fru67dkr2r/darkseid",
             "name": "factory/sei1a85gv3gjruwlltvca3vcn3wcmky6fru67dkr2r/darkseid",
             "symbol": "factory/sei1a85gv3gjruwlltvca3vcn3wcmky6fru67dkr2r/darkseid",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd/seiless",
+            "admin": "sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd",
+            "base": "factory/sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd/seiless",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd/seiless",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd/seiless",
+            "name": "factory/sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd/seiless",
+            "symbol": "factory/sei1a90v2hy2x7fc2s2yy4qtmt3ckyyx7k3uw2l9qd/seiless",
             "type_asset": "factory"
         },
         {
@@ -4869,6 +5754,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/insein",
+            "admin": "sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2",
+            "base": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/insein",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/insein",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/insein",
+            "name": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/insein",
+            "symbol": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/insein",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/seilana",
+            "admin": "sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2",
+            "base": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/seilana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/seilana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/seilana",
+            "name": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/seilana",
+            "symbol": "factory/sei1c8zzhtwqvznczcpa8dqteavu5a7xg58t9306q2/seilana",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1cdvr6tns50wv03ek94ds6vnxh7pl3pmm9amstu/test-denom",
             "admin": "sei1cdvr6tns50wv03ek94ds6vnxh7pl3pmm9amstu",
             "base": "factory/sei1cdvr6tns50wv03ek94ds6vnxh7pl3pmm9amstu/test-denom",
@@ -4933,6 +5850,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu/seinomore",
+            "admin": "sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu",
+            "base": "factory/sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu/seinomore",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu/seinomore",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu/seinomore",
+            "name": "factory/sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu/seinomore",
+            "symbol": "factory/sei1cgqfac535vqjxdhuz4yajusm3aa0erwrdc8udu/seinomore",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1chz2zuzja8jfryv43zzpupjs8vkzm7vxvt95cw/test",
             "admin": "sei1chz2zuzja8jfryv43zzpupjs8vkzm7vxvt95cw",
             "base": "factory/sei1chz2zuzja8jfryv43zzpupjs8vkzm7vxvt95cw/test",
@@ -4946,6 +5879,22 @@
             "display": "factory/sei1chz2zuzja8jfryv43zzpupjs8vkzm7vxvt95cw/test",
             "name": "factory/sei1chz2zuzja8jfryv43zzpupjs8vkzm7vxvt95cw/test",
             "symbol": "factory/sei1chz2zuzja8jfryv43zzpupjs8vkzm7vxvt95cw/test",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd/newsei",
+            "admin": "sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd",
+            "base": "factory/sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd/newsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd/newsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd/newsei",
+            "name": "factory/sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd/newsei",
+            "symbol": "factory/sei1cj52exx5ypmhs7ccvmav8fetj57gtn3wuxjlkd/newsei",
             "type_asset": "factory"
         },
         {
@@ -5015,6 +5964,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk/lassei",
+            "admin": "sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk",
+            "base": "factory/sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk/lassei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk/lassei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk/lassei",
+            "name": "factory/sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk/lassei",
+            "symbol": "factory/sei1d0psqk8y4pmvh0vg37ajcz7gm8crmudvx8srlk/lassei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1d2pp6afqpd4hty78mm27t2x8dcaznc7vd4ndm7/elon",
             "admin": "sei1d2pp6afqpd4hty78mm27t2x8dcaznc7vd4ndm7",
             "base": "factory/sei1d2pp6afqpd4hty78mm27t2x8dcaznc7vd4ndm7/elon",
@@ -5073,6 +6038,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme/bonsei",
+            "admin": "sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme",
+            "base": "factory/sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme/bonsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme/bonsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme/bonsei",
+            "name": "factory/sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme/bonsei",
+            "symbol": "factory/sei1d4t4vqy5a9nf360wvj08l297khhx6e66hr3dme/bonsei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1dd9f27s70y3k4xnc8gpl6dvn9qakph0uep4flx/seizophrenia",
             "admin": "sei1dd9f27s70y3k4xnc8gpl6dvn9qakph0uep4flx",
             "base": "factory/sei1dd9f27s70y3k4xnc8gpl6dvn9qakph0uep4flx/seizophrenia",
@@ -5108,6 +6089,22 @@
             "display": "factory/sei1dj8sjapqcnfwa3hcj0ez2qjaqght6xjxpyvt87/seida",
             "name": "factory/sei1dj8sjapqcnfwa3hcj0ez2qjaqght6xjxpyvt87/seida",
             "symbol": "factory/sei1dj8sjapqcnfwa3hcj0ez2qjaqght6xjxpyvt87/seida",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068/seilana",
+            "admin": "sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068",
+            "base": "factory/sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068/seilana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068/seilana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068/seilana",
+            "name": "factory/sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068/seilana",
+            "symbol": "factory/sei1dlfzuvkuqnwz2qtenlfaldl4t73j54v5tyz068/seilana",
             "type_asset": "factory"
         },
         {
@@ -5178,6 +6175,22 @@
             "display": "factory/sei1dwk2etzd98dc9plp7zufmvvrmm9yhk7crdvk97/seinal",
             "name": "factory/sei1dwk2etzd98dc9plp7zufmvvrmm9yhk7crdvk97/seinal",
             "symbol": "factory/sei1dwk2etzd98dc9plp7zufmvvrmm9yhk7crdvk97/seinal",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9/basingsei",
+            "admin": "sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9",
+            "base": "factory/sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9/basingsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9/basingsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9/basingsei",
+            "name": "factory/sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9/basingsei",
+            "symbol": "factory/sei1e0htcpu3w93rmmrpztj265lfzz5e9m4zh39az9/basingsei",
             "type_asset": "factory"
         },
         {
@@ -5421,6 +6434,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76/stone",
+            "admin": "sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76",
+            "base": "factory/sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76/stone",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76/stone",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76/stone",
+            "name": "factory/sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76/stone",
+            "symbol": "factory/sei1es0st63d8ahj3w9sql63l00882ll9jpuzucd4z9ly7qm25dtw82s8ada76/stone",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1et2seta2qsj67hqhyaqvtr8fr0mx7c4mw85gm6/sheit",
             "admin": "sei1et2seta2qsj67hqhyaqvtr8fr0mx7c4mw85gm6",
             "base": "factory/sei1et2seta2qsj67hqhyaqvtr8fr0mx7c4mw85gm6/sheit",
@@ -5459,6 +6488,28 @@
             "display": "capo",
             "name": "Capo",
             "symbol": "CAPO",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ezsv93jrguxphuma67jne8ztngm827yqndph77/bjs-1",
+            "admin": "sei1ezsv93jrguxphuma67jne8ztngm827yqndph77",
+            "base": "factory/sei1ezsv93jrguxphuma67jne8ztngm827yqndph77/bjs-1",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ezsv93jrguxphuma67jne8ztngm827yqndph77/bjs-1",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "BJS",
+                    "exponent": 6
+                }
+            ],
+            "description": "desc",
+            "display": "BJS",
+            "name": "BeJayEs",
+            "symbol": "BJS",
             "type_asset": "factory"
         },
         {
@@ -5613,6 +6664,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt/psei",
+            "admin": "sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt",
+            "base": "factory/sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt/psei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt/psei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt/psei",
+            "name": "factory/sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt/psei",
+            "symbol": "factory/sei1g4y9730rse2h0wkq7xhdu0g4cmlgm20n7ffkqt/psei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1g67gjpzn53hc4qsta9jqe7yq40atuqxmuakqkg/sea",
             "admin": "sei1g67gjpzn53hc4qsta9jqe7yq40atuqxmuakqkg",
             "base": "factory/sei1g67gjpzn53hc4qsta9jqe7yq40atuqxmuakqkg/sea",
@@ -5636,6 +6703,22 @@
             "display": "factory/sei1g67gjpzn53hc4qsta9jqe7yq40atuqxmuakqkg/sea",
             "name": "sea",
             "symbol": "SEA",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x/tenesei",
+            "admin": "sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x",
+            "base": "factory/sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x/tenesei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x/tenesei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x/tenesei",
+            "name": "factory/sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x/tenesei",
+            "symbol": "factory/sei1gd60sajkt0ld2cwckyl4zrjw6cydvy7wv7d00x/tenesei",
             "type_asset": "factory"
         },
         {
@@ -5792,6 +6875,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s/quasei",
+            "admin": "sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s",
+            "base": "factory/sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s/quasei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s/quasei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s/quasei",
+            "name": "factory/sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s/quasei",
+            "symbol": "factory/sei1grcmk84unv7nn233jg6td7xvnh6eaa6ft09j7s/quasei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety/seivite",
+            "admin": "sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety",
+            "base": "factory/sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety/seivite",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety/seivite",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety/seivite",
+            "name": "factory/sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety/seivite",
+            "symbol": "factory/sei1gunvfa2qq5wtfujnc7fhupja4njq9nfazcqety/seivite",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1gyne70najtmt4e2tsjsar6y98m67cw2zt3gmhm/mamba",
             "admin": "sei1gyne70najtmt4e2tsjsar6y98m67cw2zt3gmhm",
             "base": "factory/sei1gyne70najtmt4e2tsjsar6y98m67cw2zt3gmhm/mamba",
@@ -5859,6 +6974,22 @@
             "display": "factory/sei1h8mxnasvxr6s3tzcx44yz5u5hvtfapzs8ghlr4/sauseidge",
             "name": "factory/sei1h8mxnasvxr6s3tzcx44yz5u5hvtfapzs8ghlr4/sauseidge",
             "symbol": "factory/sei1h8mxnasvxr6s3tzcx44yz5u5hvtfapzs8ghlr4/sauseidge",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g/shinsei",
+            "admin": "sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g",
+            "base": "factory/sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g/shinsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g/shinsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g/shinsei",
+            "name": "factory/sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g/shinsei",
+            "symbol": "factory/sei1h9flzz9earaqjtskrddqq9twskd7dcr0d5wy9g/shinsei",
             "type_asset": "factory"
         },
         {
@@ -5995,6 +7126,54 @@
             "display": "factory/sei1hzvymsxuavcn9lwjqkh9qu9ppkwf0y6wwup6gt/tocsein",
             "name": "factory/sei1hzvymsxuavcn9lwjqkh9qu9ppkwf0y6wwup6gt/tocsein",
             "symbol": "factory/sei1hzvymsxuavcn9lwjqkh9qu9ppkwf0y6wwup6gt/tocsein",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t/inseine",
+            "admin": "sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t",
+            "base": "factory/sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t/inseine",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t/inseine",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t/inseine",
+            "name": "factory/sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t/inseine",
+            "symbol": "factory/sei1j4j59jf8kh0ec3yd8z7t3yhud9tdqsxtv7l49t/inseine",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/seilana",
+            "admin": "sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45",
+            "base": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/seilana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/seilana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/seilana",
+            "name": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/seilana",
+            "symbol": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/seilana",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/susei",
+            "admin": "sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45",
+            "base": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/susei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/susei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/susei",
+            "name": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/susei",
+            "symbol": "factory/sei1j8pppud48jurfulhkmycvf33kvvmfxt8yfqr45/susei",
             "type_asset": "factory"
         },
         {
@@ -6212,6 +7391,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj/seisakura",
+            "admin": "sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj",
+            "base": "factory/sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj/seisakura",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj/seisakura",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj/seisakura",
+            "name": "factory/sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj/seisakura",
+            "symbol": "factory/sei1jvvzza7cg4a5awpusjaavng4fal0uh4p2auzzj/seisakura",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1k30qfr6aqgyhwfpr5u3u0zhcdunn22qedul8tt/SEI7",
             "admin": "sei1k30qfr6aqgyhwfpr5u3u0zhcdunn22qedul8tt",
             "base": "factory/sei1k30qfr6aqgyhwfpr5u3u0zhcdunn22qedul8tt/SEI7",
@@ -6231,6 +7426,22 @@
             "display": "SEI7",
             "name": "SEI7",
             "symbol": "SEI7",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g/virtuosei",
+            "admin": "sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g",
+            "base": "factory/sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g/virtuosei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g/virtuosei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g/virtuosei",
+            "name": "factory/sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g/virtuosei",
+            "symbol": "factory/sei1k3lvf9630wz83n3u6xnc8rwn6dvz66tfg7h96g/virtuosei",
             "type_asset": "factory"
         },
         {
@@ -6279,6 +7490,28 @@
             "display": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
             "name": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
             "symbol": "factory/sei1kcf3ccret42ng8n2gurnaw8lt4jgz4jrss3afs/seiviour",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1kde9nvjmw6ef5z8gayr5msz79eyt4nswupvfp4/GOGETA",
+            "admin": "sei1kde9nvjmw6ef5z8gayr5msz79eyt4nswupvfp4",
+            "base": "factory/sei1kde9nvjmw6ef5z8gayr5msz79eyt4nswupvfp4/GOGETA",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1kde9nvjmw6ef5z8gayr5msz79eyt4nswupvfp4/GOGETA",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SeiGogeta",
+                    "exponent": 6
+                }
+            ],
+            "description": "https://t.me/ProjectXSei",
+            "display": "SeiGogeta",
+            "name": "SeiGogeta",
+            "symbol": "GOGETA",
             "type_asset": "factory"
         },
         {
@@ -6343,6 +7576,22 @@
             "display": "factory/sei1kfyxcrxy4edm53z39a3vucewkucw7af4zku7pu/seionara",
             "name": "factory/sei1kfyxcrxy4edm53z39a3vucewkucw7af4zku7pu/seionara",
             "symbol": "factory/sei1kfyxcrxy4edm53z39a3vucewkucw7af4zku7pu/seionara",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml/parsei",
+            "admin": "sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml",
+            "base": "factory/sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml/parsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml/parsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml/parsei",
+            "name": "factory/sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml/parsei",
+            "symbol": "factory/sei1kk42rq726hr3g7f7ay9qhp3lxc7dfuk0h0qzml/parsei",
             "type_asset": "factory"
         },
         {
@@ -6440,6 +7689,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t/masei",
+            "admin": "sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t",
+            "base": "factory/sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t/masei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t/masei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t/masei",
+            "name": "factory/sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t/masei",
+            "symbol": "factory/sei1ksnm6w8vz7zxtuhtfflham7rm9l69ccd43eq6t/masei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1ku3m5qjmrvqrg9vrefnpxh9v08454fsju8e32j/TEST",
             "admin": "sei1ku3m5qjmrvqrg9vrefnpxh9v08454fsju8e32j",
             "base": "factory/sei1ku3m5qjmrvqrg9vrefnpxh9v08454fsju8e32j/TEST",
@@ -6453,6 +7718,22 @@
             "display": "factory/sei1ku3m5qjmrvqrg9vrefnpxh9v08454fsju8e32j/TEST",
             "name": "factory/sei1ku3m5qjmrvqrg9vrefnpxh9v08454fsju8e32j/TEST",
             "symbol": "factory/sei1ku3m5qjmrvqrg9vrefnpxh9v08454fsju8e32j/TEST",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw/pegasei",
+            "admin": "sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw",
+            "base": "factory/sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw/pegasei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw/pegasei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw/pegasei",
+            "name": "factory/sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw/pegasei",
+            "symbol": "factory/sei1kvsqavsvfpljqxlpa45gfz79ma2v9uq3d2sjzw/pegasei",
             "type_asset": "factory"
         },
         {
@@ -6511,6 +7792,118 @@
             "display": "factory/sei1kx7dw2wj2ak2qf3aj5jelnlzftxqkgpjd6njkl/poosei",
             "name": "factory/sei1kx7dw2wj2ak2qf3aj5jelnlzftxqkgpjd6njkl/poosei",
             "symbol": "factory/sei1kx7dw2wj2ak2qf3aj5jelnlzftxqkgpjd6njkl/poosei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/Google",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/Google",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/Google",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/Google",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/Google",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/Google",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/X",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/X",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/X",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/X",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/X",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/X",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/meta",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/meta",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/meta",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/meta",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/meta",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/meta",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seimoyed",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seimoyed",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seimoyed",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seimoyed",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seimoyed",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seimoyed",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seitana",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seitana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seitana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seitana",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seitana",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seitana",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seito",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seito",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seito",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seito",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seito",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/seito",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/shinsei",
+            "admin": "sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak",
+            "base": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/shinsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/shinsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/shinsei",
+            "name": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/shinsei",
+            "symbol": "factory/sei1ky0qlfchg8gy0mpz65xepfazwnlt548l50quak/shinsei",
             "type_asset": "factory"
         },
         {
@@ -6936,6 +8329,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8/seika",
+            "admin": "sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8",
+            "base": "factory/sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8/seika",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8/seika",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8/seika",
+            "name": "factory/sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8/seika",
+            "symbol": "factory/sei1mlzpqcca62msx0yfarzjfxdqgcg56zayq33uw8/seika",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1mmc2lmvlhk4fma7fgpvqxlu6ym9cvx3dya6psk/hussein",
             "admin": "sei1mmc2lmvlhk4fma7fgpvqxlu6ym9cvx3dya6psk",
             "base": "factory/sei1mmc2lmvlhk4fma7fgpvqxlu6ym9cvx3dya6psk/hussein",
@@ -6990,6 +8399,22 @@
             "display": "bonsei",
             "name": "Bonsei (https://t.me/BansaiOnSei)",
             "symbol": "BONSEI",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml/watusei",
+            "admin": "sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml",
+            "base": "factory/sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml/watusei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml/watusei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml/watusei",
+            "name": "factory/sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml/watusei",
+            "symbol": "factory/sei1mwcjqzhzegfahtpv4dm45jf0e5l2zx07mg4eml/watusei",
             "type_asset": "factory"
         },
         {
@@ -7195,6 +8620,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd/seisei",
+            "admin": "sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd",
+            "base": "factory/sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd/seisei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd/seisei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd/seisei",
+            "name": "factory/sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd/seisei",
+            "symbol": "factory/sei1ngrxd9rkge9k8683evel7ecqseh45p73nrwlcd/seisei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
             "admin": "sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y",
             "base": "factory/sei1nk0nwzaqmjankzg4p5yptyjw7ugfssf9s64c4y/seitsuko",
@@ -7384,6 +8825,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt/bonsei",
+            "admin": "sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt",
+            "base": "factory/sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt/bonsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt/bonsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt/bonsei",
+            "name": "factory/sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt/bonsei",
+            "symbol": "factory/sei1nxdv8vhad6uwv952dwxf4t4adtafhags3djnyt/bonsei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1ny84a4tu2dshwpwjrej82ljg5u2wd7682f0u7w/jasel",
             "admin": "sei1ny84a4tu2dshwpwjrej82ljg5u2wd7682f0u7w",
             "base": "factory/sei1ny84a4tu2dshwpwjrej82ljg5u2wd7682f0u7w/jasel",
@@ -7397,6 +8854,22 @@
             "display": "factory/sei1ny84a4tu2dshwpwjrej82ljg5u2wd7682f0u7w/jasel",
             "name": "factory/sei1ny84a4tu2dshwpwjrej82ljg5u2wd7682f0u7w/jasel",
             "symbol": "factory/sei1ny84a4tu2dshwpwjrej82ljg5u2wd7682f0u7w/jasel",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p/seifu",
+            "admin": "sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p",
+            "base": "factory/sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p/seifu",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p/seifu",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p/seifu",
+            "name": "factory/sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p/seifu",
+            "symbol": "factory/sei1nyxca7zf79ejuphgjhv6yzqaek68jwhgza4d2p/seifu",
             "type_asset": "factory"
         },
         {
@@ -7477,6 +8950,22 @@
             "display": "factory/sei1pdvp2xtglyvpxlkupsnmau09qa3nfz9x3ls85x/joseiph",
             "name": "factory/sei1pdvp2xtglyvpxlkupsnmau09qa3nfz9x3ls85x/joseiph",
             "symbol": "factory/sei1pdvp2xtglyvpxlkupsnmau09qa3nfz9x3ls85x/joseiph",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m/hussei",
+            "admin": "sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m",
+            "base": "factory/sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m/hussei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m/hussei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m/hussei",
+            "name": "factory/sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m/hussei",
+            "symbol": "factory/sei1pfkws352fzgntf2pd294mqz0h06nh9xsm3ct0m/hussei",
             "type_asset": "factory"
         },
         {
@@ -7736,6 +9225,38 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/meta",
+            "admin": "sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l",
+            "base": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/meta",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/meta",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/meta",
+            "name": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/meta",
+            "symbol": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/meta",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/seirin",
+            "admin": "sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l",
+            "base": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/seirin",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/seirin",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/seirin",
+            "name": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/seirin",
+            "symbol": "factory/sei1pshfh6g60h48gy7exkthrgsxdfl2qzjatpme6l/seirin",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6/seikiro",
             "admin": "sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6",
             "base": "factory/sei1pu8xw050x2yc8q0t0dpy7zspxx6uc7gkzvydm6/seikiro",
@@ -7889,6 +9410,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg/seitic",
+            "admin": "sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg",
+            "base": "factory/sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg/seitic",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg/seitic",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg/seitic",
+            "name": "factory/sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg/seitic",
+            "symbol": "factory/sei1q978w9ym6w5dl4m5cqessx3g66j3wcnlls8qsg/seitic",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1qc00a8jfu8tkrdmqv9jca6pz36sgkhc6ap8ksk/seinch",
             "admin": "sei1qc00a8jfu8tkrdmqv9jca6pz36sgkhc6ap8ksk",
             "base": "factory/sei1qc00a8jfu8tkrdmqv9jca6pz36sgkhc6ap8ksk/seinch",
@@ -7902,6 +9439,22 @@
             "display": "factory/sei1qc00a8jfu8tkrdmqv9jca6pz36sgkhc6ap8ksk/seinch",
             "name": "factory/sei1qc00a8jfu8tkrdmqv9jca6pz36sgkhc6ap8ksk/seinch",
             "symbol": "factory/sei1qc00a8jfu8tkrdmqv9jca6pz36sgkhc6ap8ksk/seinch",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj/farsei",
+            "admin": "sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj",
+            "base": "factory/sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj/farsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj/farsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj/farsei",
+            "name": "factory/sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj/farsei",
+            "symbol": "factory/sei1qcz0re5lyqa4nv8543fdte3vywewucjh6tl0fj/farsei",
             "type_asset": "factory"
         },
         {
@@ -8115,6 +9668,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz/nosei",
+            "admin": "sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz",
+            "base": "factory/sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz/nosei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz/nosei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz/nosei",
+            "name": "factory/sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz/nosei",
+            "symbol": "factory/sei1rhjh7hdruzmam7s6avdd4mklxxl2t8693z37fz/nosei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1rlzwuejkshfkmgtl369mmh7nq67ycw877x0epw/insein",
             "admin": "sei1rlzwuejkshfkmgtl369mmh7nq67ycw877x0epw",
             "base": "factory/sei1rlzwuejkshfkmgtl369mmh7nq67ycw877x0epw/insein",
@@ -8128,6 +9697,22 @@
             "display": "factory/sei1rlzwuejkshfkmgtl369mmh7nq67ycw877x0epw/insein",
             "name": "factory/sei1rlzwuejkshfkmgtl369mmh7nq67ycw877x0epw/insein",
             "symbol": "factory/sei1rlzwuejkshfkmgtl369mmh7nq67ycw877x0epw/insein",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju/seiber",
+            "admin": "sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju",
+            "base": "factory/sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju/seiber",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju/seiber",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju/seiber",
+            "name": "factory/sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju/seiber",
+            "symbol": "factory/sei1rugv579g7yujvlazpexz7r8ye36rz67j547rju/seiber",
             "type_asset": "factory"
         },
         {
@@ -8288,6 +9873,22 @@
             "display": "factory/sei1shtn8fayvudxpp3cgxjsctur0gh6zl980tdj2w/seinophile",
             "name": "factory/sei1shtn8fayvudxpp3cgxjsctur0gh6zl980tdj2w/seinophile",
             "symbol": "factory/sei1shtn8fayvudxpp3cgxjsctur0gh6zl980tdj2w/seinophile",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy/seivior",
+            "admin": "sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy",
+            "base": "factory/sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy/seivior",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy/seivior",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy/seivior",
+            "name": "factory/sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy/seivior",
+            "symbol": "factory/sei1stnea0vtrf6jfqveh34nlku0tyfal2sllscfzy/seivior",
             "type_asset": "factory"
         },
         {
@@ -8602,6 +10203,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5/jusei",
+            "admin": "sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5",
+            "base": "factory/sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5/jusei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5/jusei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5/jusei",
+            "name": "factory/sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5/jusei",
+            "symbol": "factory/sei1u2uxgd6a04qgr95wlwfrv8rnez9jpg2za6gcy5/jusei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1u8cr964xl7m23vcscql8624qsuk4vennqrgcg7/PEPE",
             "admin": "sei1u8cr964xl7m23vcscql8624qsuk4vennqrgcg7",
             "base": "factory/sei1u8cr964xl7m23vcscql8624qsuk4vennqrgcg7/PEPE",
@@ -8673,6 +10290,22 @@
             "display": "factory/sei1ujn9zry0v5cdars692r7au0djjufwrpe7wgahj/X",
             "name": "factory/sei1ujn9zry0v5cdars692r7au0djjufwrpe7wgahj/X",
             "symbol": "factory/sei1ujn9zry0v5cdars692r7au0djjufwrpe7wgahj/X",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn/seition",
+            "admin": "sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn",
+            "base": "factory/sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn/seition",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn/seition",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn/seition",
+            "name": "factory/sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn/seition",
+            "symbol": "factory/sei1ujseuu80ykc0nyg6y6xu7xnj7g7arkcq49rthn/seition",
             "type_asset": "factory"
         },
         {
@@ -8762,6 +10395,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
+            "admin": "sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53",
+            "base": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
+            "name": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
+            "symbol": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1v4v7flyk0ts39mnjeuus03n66flcns0n4n0xm4/busei",
             "admin": "sei1v4v7flyk0ts39mnjeuus03n66flcns0n4n0xm4",
             "base": "factory/sei1v4v7flyk0ts39mnjeuus03n66flcns0n4n0xm4/busei",
@@ -8807,6 +10456,70 @@
             "display": "factory/sei1v6x20yhwnpmcsyvr9maa6clc29h0afday69kuv/seidick",
             "name": "factory/sei1v6x20yhwnpmcsyvr9maa6clc29h0afday69kuv/seidick",
             "symbol": "factory/sei1v6x20yhwnpmcsyvr9maa6clc29h0afday69kuv/seidick",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/bonsei",
+            "admin": "sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf",
+            "base": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/bonsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/bonsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/bonsei",
+            "name": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/bonsei",
+            "symbol": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/bonsei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/seilana",
+            "admin": "sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf",
+            "base": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/seilana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/seilana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/seilana",
+            "name": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/seilana",
+            "symbol": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/seilana",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/susei",
+            "admin": "sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf",
+            "base": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/susei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/susei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/susei",
+            "name": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/susei",
+            "symbol": "factory/sei1v7xcp3mwxgkmxw308h5xamquut2pjjmezk7ydf/susei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3/dapussei",
+            "admin": "sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3",
+            "base": "factory/sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3/dapussei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3/dapussei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3/dapussei",
+            "name": "factory/sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3/dapussei",
+            "symbol": "factory/sei1v8p5wjs7xf79wwshlc5fffnmmhf63ng8rzekx3/dapussei",
             "type_asset": "factory"
         },
         {
@@ -8954,6 +10667,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p/newtest",
+            "admin": "sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p",
+            "base": "factory/sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p/newtest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p/newtest",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p/newtest",
+            "name": "factory/sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p/newtest",
+            "symbol": "factory/sei1vrtjqv5245ttt5m50qqfhyw4sl78dw55vwkr0p/newtest",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1vrz7ndadkf6gwanf6ccy2d2v706yzrx2957fjd/GOLDENRULES",
             "admin": "sei1vrz7ndadkf6gwanf6ccy2d2v706yzrx2957fjd",
             "base": "factory/sei1vrz7ndadkf6gwanf6ccy2d2v706yzrx2957fjd/GOLDENRULES",
@@ -8967,6 +10696,22 @@
             "display": "factory/sei1vrz7ndadkf6gwanf6ccy2d2v706yzrx2957fjd/GOLDENRULES",
             "name": "factory/sei1vrz7ndadkf6gwanf6ccy2d2v706yzrx2957fjd/GOLDENRULES",
             "symbol": "factory/sei1vrz7ndadkf6gwanf6ccy2d2v706yzrx2957fjd/GOLDENRULES",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr/resei",
+            "admin": "sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr",
+            "base": "factory/sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr/resei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr/resei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr/resei",
+            "name": "factory/sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr/resei",
+            "symbol": "factory/sei1vv9as6fr8j0mgdw3zzvw24j2as88wugakswmnr/resei",
             "type_asset": "factory"
         },
         {
@@ -9023,6 +10768,22 @@
             "display": "factory/sei1vzk38newcx6pqdu7kh9kf97gcnav4mu8x3az2w/test",
             "name": "testtoken",
             "symbol": "TEST",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60/dorsei",
+            "admin": "sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60",
+            "base": "factory/sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60/dorsei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60/dorsei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60/dorsei",
+            "name": "factory/sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60/dorsei",
+            "symbol": "factory/sei1w3q0snlnz2jfje0h6d0e88tdj70swyr6yuen60/dorsei",
             "type_asset": "factory"
         },
         {
@@ -9288,6 +11049,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny/seined",
+            "admin": "sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny",
+            "base": "factory/sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny/seined",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny/seined",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny/seined",
+            "name": "factory/sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny/seined",
+            "symbol": "factory/sei1xesdymzkz4x3dxy2n2pm0k2rre2xr2hh6q5zny/seined",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1xlk676mv7gvc2saevq9qc9w3mdhkm5vy34ytse/donksei",
             "admin": "sei1xlk676mv7gvc2saevq9qc9w3mdhkm5vy34ytse",
             "base": "factory/sei1xlk676mv7gvc2saevq9qc9w3mdhkm5vy34ytse/donksei",
@@ -9336,6 +11113,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd/essei",
+            "admin": "sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd",
+            "base": "factory/sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd/essei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd/essei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd/essei",
+            "name": "factory/sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd/essei",
+            "symbol": "factory/sei1y54z8vj8cjtzxfr0wfl4f6cpk7krm8cj9p4qqd/essei",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1y6lzw88vfjt9vrfhqhhytutsgwf8srw9d4n5p3/seiko",
             "admin": "sei1y6lzw88vfjt9vrfhqhhytutsgwf8srw9d4n5p3",
             "base": "factory/sei1y6lzw88vfjt9vrfhqhhytutsgwf8srw9d4n5p3/seiko",
@@ -9365,6 +11158,38 @@
             "display": "factory/sei1y9jq867hjwn4cy4wfh74fkt37u9j2cmvzrak92/seinomore",
             "name": "factory/sei1y9jq867hjwn4cy4wfh74fkt37u9j2cmvzrak92/seinomore",
             "symbol": "factory/sei1y9jq867hjwn4cy4wfh74fkt37u9j2cmvzrak92/seinomore",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09/seiart",
+            "admin": "sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09",
+            "base": "factory/sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09/seiart",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09/seiart",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09/seiart",
+            "name": "factory/sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09/seiart",
+            "symbol": "factory/sei1yg3yx9d4nyuz6t8h5przvf4f4uyeef99l3xm09/seiart",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44/assei",
+            "admin": "sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44",
+            "base": "factory/sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44/assei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44/assei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44/assei",
+            "name": "factory/sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44/assei",
+            "symbol": "factory/sei1yjfpywmh2frjt25l8k30k6pu7xkztr82slgk44/assei",
             "type_asset": "factory"
         },
         {
@@ -9477,6 +11302,38 @@
             "display": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
             "name": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
             "symbol": "factory/sei1yw0a8fge4czucsl8vjl5em5mxvn4rrudszqcm7/sauseige",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk/khasei",
+            "admin": "sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk",
+            "base": "factory/sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk/khasei",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk/khasei",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk/khasei",
+            "name": "factory/sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk/khasei",
+            "symbol": "factory/sei1yzh7dad83mtkl4dk6z5dtay6u5hhlf6wejy5qk/khasei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37/seilana",
+            "admin": "sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37",
+            "base": "factory/sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37/seilana",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37/seilana",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37/seilana",
+            "name": "factory/sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37/seilana",
+            "symbol": "factory/sei1z3kaxg96fwtjj5snf3h2g0jm9qs8vhrk50jt37/seilana",
             "type_asset": "factory"
         },
         {
