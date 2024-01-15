@@ -2938,6 +2938,72 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/C1C48A930BFA536F85928AFA1BF20DDF0685742B6288C8314286F288BF72B1CF",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-208",
+                "source_channel": "channel-3",
+                "source_denom": "ibc/C768F080799DD787D3957A27AE1EFD6779601026F9A49371AF05759CB06AAB8F"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C768F080799DD787D3957A27AE1EFD6779601026F9A49371AF05759CB06AAB8F",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-208"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F663521BF1836B00F5F177680F74BFB9A8B5654A694D0D2BC249E03CF2509013",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-536",
+                        "path": "transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/C2569B38C8470B756661F575CC441F28B71F4CDF9A591C446CCF3EA0C38BA96D",
             "ibc": {
                 "dst_channel": "channel-208",
