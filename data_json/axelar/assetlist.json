@@ -2830,6 +2830,72 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/BA7342CE0B1576AAC7AB80431D3B57E47F767077E20B5C7C892E0D7FF7277E9A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-293",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/DE2781A72B8B9704201E41ED8C00E60AAE1B26FFC517EEEFC1CB849912E0041D"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DE2781A72B8B9704201E41ED8C00E60AAE1B26FFC517EEEFC1CB849912E0041D",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-293"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BB6D1CAFF63BE3B05107FA29154B759EE2B5ED2C81D346892D4F8534BC2181D2",
             "ibc": {
                 "dst_channel": "channel-208",
@@ -8385,6 +8451,10 @@
         },
         {
             "base": "ovn-wei",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "ox-wei",
             "type_asset": "sdk.coin"
         },
         {

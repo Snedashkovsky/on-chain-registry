@@ -100,6 +100,55 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/2B58B8C147E8718EECCB3713271DF46DEE8A3A00A27242628604E31C2F370EF5",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of Terra 2.0",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-351",
+                "source_channel": "channel-12",
+                "source_denom": "uluna"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-12",
+                        "path": "transfer/channel-12/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-351"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/3A6EF291CAE66EDCA46E43874FF6FC1499F61C4B56CA8186B8DFD9227F10D631",
             "ibc": {
                 "dst_channel": "channel-97",
