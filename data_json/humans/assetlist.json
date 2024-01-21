@@ -1,6 +1,109 @@
 {
     "assets": [
         {
+            "base": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "dst_channel": "channel-18272",
+                "source_channel": "channel-3",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-18272"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/77F757C230CA4DD6BB1785D9771BB3D2DA68E075B89BB3BFDEF8442D2342FF93",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "FET",
+                    "exponent": 18
+                },
+                {
+                    "aliases": [],
+                    "denom": "mfet",
+                    "exponent": 15
+                },
+                {
+                    "aliases": [],
+                    "denom": "ufet",
+                    "exponent": 12
+                },
+                {
+                    "aliases": [],
+                    "denom": "nfet",
+                    "exponent": 9
+                },
+                {
+                    "aliases": [],
+                    "denom": "pfet",
+                    "exponent": 6
+                },
+                {
+                    "aliases": [],
+                    "denom": "ffet",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "afet",
+                    "exponent": 0
+                }
+            ],
+            "description": "Fetch-ai Network token",
+            "display": "FET",
+            "ibc": {
+                "dst_channel": "channel-32",
+                "source_channel": "channel-1",
+                "source_denom": "afet"
+            },
+            "name": "FET",
+            "symbol": "FET",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/afet"
+                    },
+                    "counterparty": {
+                        "base_denom": "afet",
+                        "chain_id": "fetchhub-4",
+                        "chain_name": "fetchhub",
+                        "channel_id": "channel-32"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "aheart",
             "type_asset": "sdk.coin"
         }
