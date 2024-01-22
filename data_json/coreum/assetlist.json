@@ -2,11 +2,27 @@
     "assets": [
         {
             "base": "ibc/99E2AB70FD167926290AFB89DE61C77817F3ED49FDFAD4073BD67CD0502F03B8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-49",
                 "source_channel": "channel-19",
                 "source_denom": "ibc/1345A0A414EA86E93096D9B1D32C23F7CE55065569A7C99C5E112B3155161FFE"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -33,26 +49,581 @@
                         "channel_id": "channel-536"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-9/transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/03F07433842AC4DB6DCED2E60FB1B8395B7F5091208CD176757EB207197DB324",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-9/transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D217F1CD4D840F0B50937DF2F0394FA6D4FF3C002FC8825423EF6B4AA411FBE7",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-9/transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/80F0E7C8B8715505BA63F211D387F921C0D1F2E6DFC5749A7E14A4B7A6A907E2",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-2188/transfer/channel-9/transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7B7CACB5707E5810F38DADE39ADD56DAA0FDE943CF3A37613D54E8ABD4E6EE76",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-9/transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/31A342530A712819CC8102D0BB8CA86E50C173E828D071D651E807D55BB0DEE6",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E9CEF61183B80C94FF2C69C9D739753BFD892A6F847DAE615344A1B34F70FC18",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-660"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-536",
+                        "path": "transfer/channel-536/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1D66490CB4F52ACC454A30B3A1F4AED6BCDF2487070B2D710EB6DA75FACB099F",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-49",
+                        "path": "transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F698E9343925ECF0083BCF4DDA54195D4080D941FB0E9D67EFBA428635482C8E",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-19"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1C869C19592767CB95F4D31C09308E468E167F7E7B769310CE0E1CE838F056AF",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/14BF332912FB81952BC5E34C6AFE26F0DC807CD2DEFD7C9D4C03E983EF0FBDA6",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B86E6897A7A8E275263D0027CE5F27D07A1EB1C87649DCB38A532E59F8576131",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0E8595C44285144325A131C9A451E63B8E7467914DA5BC194F191151ED27DF30",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/56A422BE026779F847A8EFFFD4F7A91746953288BAB26C4EAE5E21BF4CBB70EE",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/5FBB88038E0892090B90BD977228B16850B3036E050AD6B5DEACAC9E7ED66B77"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-122/transfer/channel-1/transfer/channel-536/transfer/channel-1/transfer/channel-259/transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5FBB88038E0892090B90BD977228B16850B3036E050AD6B5DEACAC9E7ED66B77",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-1/transfer/channel-536/transfer/channel-1/transfer/channel-259/transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E43E4F1FD4B84EE30EDB8E0BE6F03E0A5596B292EAA0F198789DDF0C1301FB85",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-536/transfer/channel-1/transfer/channel-259/transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DCA1AD341F41B7E418EB8C4BB4DDE21DB43C576005132D0429790224D318ACEE",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-536",
+                        "path": "transfer/channel-536/transfer/channel-1/transfer/channel-259/transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/FA7F365FBB0508DF83752E6D367D101541BF96E25C775FAAC79D956BC908C469",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-259/transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/540B672AD5C55050A721EA48B1792C43478C92473A52AB9D42F8EE4B7E72D93E",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8E9B08F6C982E3E56B8E98420DEE3ACD39DB03CE2638851DE1DB733DB37270C7",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-62",
+                        "path": "transfer/channel-62/transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7A23048FC4254456A42FBDFE362B7D6F024816B09D2AC8B47D8BEEEE80445200",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-49",
+                        "path": "transfer/channel-49/transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DE1E92792C72BD79E5B91C367133F923B32A8E46E0A6986DB177AFFC00BA7E72",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-19"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/77F6AECB5A6208999B8958BCB0888F935F0B24DC4DFF8A43D7092E2C9BB722B8",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0DC897FC98E334D6CAFE4745C8D479ED65498D7598D6D3DEA461564E6DC6E68B",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0A72B08CB76BC506A5D623687CF77524EDBFCBBDAD69DAC74E46F3B52E5BA7DA",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A2803F0C846064C43D9BA8AA4051398DC583EBD5FA69A609DBF6939ADBD2CA2C",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-49",
+                "source_channel": "channel-19",
+                "source_denom": "ibc/A78196B69246E9D64ECB0BB323C0617F3CAC9B980A68DA76C7CB4628643FFCB0"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/transfer/channel-1/transfer/channel-0/transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A78196B69246E9D64ECB0BB323C0617F3CAC9B980A68DA76C7CB4628643FFCB0",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-0/transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0BD48601986A6B87C42BC34BCB36B295F6CE8CECA8A44E4C372940920826177C",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BEE65C290AAA2BA77121B86D6EAC64B8FB2A49A919771EBBC8C3DC55DE1938BE",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-536",
+                        "path": "transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/42AEAA6E975965ECBB1694D8491172178266BF504A3CB030C77A488CDB03F560",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-2188/transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/79797E415472AAEED5011D68E36621843AED11BB93B1D61FD40230F5D3810CAD",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/CF4C14BCBFFC2BF1195B7B3022F2FC2AA0C6DEC1D42EEF5505E61B8C6646A0EB",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/49CC43C95935F78225D8AF136E47716C56EB8211C242031BDF75947AB2664C98",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DE2781A72B8B9704201E41ED8C00E60AAE1B26FFC517EEEFC1CB849912E0041D",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/31A342530A712819CC8102D0BB8CA86E50C173E828D071D651E807D55BB0DEE6",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-660",
                 "source_channel": "channel-9",
                 "source_denom": "ibc/E9CEF61183B80C94FF2C69C9D739753BFD892A6F847DAE615344A1B34F70FC18"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -92,17 +663,111 @@
                         "channel_id": "channel-19"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1C869C19592767CB95F4D31C09308E468E167F7E7B769310CE0E1CE838F056AF",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/14BF332912FB81952BC5E34C6AFE26F0DC807CD2DEFD7C9D4C03E983EF0FBDA6",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B86E6897A7A8E275263D0027CE5F27D07A1EB1C87649DCB38A532E59F8576131",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0E8595C44285144325A131C9A451E63B8E7467914DA5BC194F191151ED27DF30",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/194F05289ACFB9F472E8886F52BC12BCC707C09150DE7128D486FDB8E2ABCAB6",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-49",
                 "source_channel": "channel-19",
                 "source_denom": "ibc/D6ABC6230F5770AA80434349AC918C723DDA817A07AC75020B54159D6F6CB34D"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -116,71 +781,795 @@
                         "channel_id": "channel-49"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-2188/transfer/channel-19/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6B40DE600352425D64A576CAF17AB3CF9BFAFFB06C0EEF975D1DC3F7693AD5C6",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/CFCEF5A109EA8E273BCE642BF79440419C365E91FA9559C3BF68D41EFD8D286F",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/698AA11FA6FE19E981C2242E74DBF99985427EBBF7A089ED6617FC96FD0CE0D0",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/BC4BA6E28090F098F9D3D42CC5943F1B32F98403A5ED811A5743C02873796075",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/3A6E771F35C1E5D4C316A6BBB098D664F6461D6479B9307C90FF4273070CF337"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-49/transfer/channel-2/transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3A6E771F35C1E5D4C316A6BBB098D664F6461D6479B9307C90FF4273070CF337",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-49/transfer/channel-2/transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7D46EACF4F35700BA81BFEE12AF50E973354006C71AE40D6171533D338EF93BF",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-49",
+                        "path": "transfer/channel-49/transfer/channel-2/transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/FFBD24362BB3953E9A2FD292A0BA9B904D50ED596124E0FC60E2F7BA0476CB77",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-19"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/019EA79F8FFB21725CD2C8BB1A4B2946CC13CACD2EF4E6FA06AF4E256761270B",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DE2781A72B8B9704201E41ED8C00E60AAE1B26FFC517EEEFC1CB849912E0041D",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/DE1E92792C72BD79E5B91C367133F923B32A8E46E0A6986DB177AFFC00BA7E72",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/77F6AECB5A6208999B8958BCB0888F935F0B24DC4DFF8A43D7092E2C9BB722B8"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/77F6AECB5A6208999B8958BCB0888F935F0B24DC4DFF8A43D7092E2C9BB722B8",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0DC897FC98E334D6CAFE4745C8D479ED65498D7598D6D3DEA461564E6DC6E68B",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0A72B08CB76BC506A5D623687CF77524EDBFCBBDAD69DAC74E46F3B52E5BA7DA",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/E74F5E2BB44A1DF3A0EF61FE0AA2C4840EF2A409CB29A102EFCBA05C2D4427A3",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/7F9BDFD257D9B2065CBFDA8ED2BA49458C412E94D7AF9E660CF4158ED3A47FD0"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7F9BDFD257D9B2065CBFDA8ED2BA49458C412E94D7AF9E660CF4158ED3A47FD0",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/713730B7E8551FC4DC9E4016F62FC901EE0396766A88F99A1C15093902A48625",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-536",
+                        "path": "transfer/channel-536/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/698AA11FA6FE19E981C2242E74DBF99985427EBBF7A089ED6617FC96FD0CE0D0",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/F698E9343925ECF0083BCF4DDA54195D4080D941FB0E9D67EFBA428635482C8E",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/1C869C19592767CB95F4D31C09308E468E167F7E7B769310CE0E1CE838F056AF"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1C869C19592767CB95F4D31C09308E468E167F7E7B769310CE0E1CE838F056AF",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/14BF332912FB81952BC5E34C6AFE26F0DC807CD2DEFD7C9D4C03E983EF0FBDA6",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B86E6897A7A8E275263D0027CE5F27D07A1EB1C87649DCB38A532E59F8576131",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-536"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0E8595C44285144325A131C9A451E63B8E7467914DA5BC194F191151ED27DF30",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/079D948CB946E091DA0F438BFE6099CFE026C3D8835B9AFD679DA08540344F4D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/DD05760D5042440C2FCBBE0E2F059880C714EADD113FC9D6687A270465C55BEA"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/transfer/channel-49/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DD05760D5042440C2FCBBE0E2F059880C714EADD113FC9D6687A270465C55BEA",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/transfer/channel-49/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6B3130B8740DDE6C39D3EAC9DEC5C1FA67EC6F29CCA2CF9F68819DE755424A00",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-49",
+                        "path": "transfer/channel-49/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0E8595C44285144325A131C9A451E63B8E7467914DA5BC194F191151ED27DF30",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-19"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/251C19FAFD88798E3763C5F13A2B57082A0369E8A9780B81DEA19C0AE96EBAC0",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/4AE4B32CD61DC38E2016A2B20C943C87CDFF0F2B31F524849D744AC06AF8B69B"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4AE4B32CD61DC38E2016A2B20C943C87CDFF0F2B31F524849D744AC06AF8B69B",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B86E6897A7A8E275263D0027CE5F27D07A1EB1C87649DCB38A532E59F8576131",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0E8595C44285144325A131C9A451E63B8E7467914DA5BC194F191151ED27DF30",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/50C09E93EA54EAF1FA6325BAE5AA7724C7D72858EE9805CC1BC519EEC260338B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "ucore",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "core",
+                    "exponent": 6
+                }
+            ],
+            "description": "ucore coin",
+            "display": "core",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/6512DB6D00E78CCB7145F1851F7C39396EB5AED120B1A6319B9760481B83E8EB"
             },
+            "name": "ucore",
+            "symbol": "UCORE",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-293/transfer/channel-3/transfer/channel-2188/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6512DB6D00E78CCB7145F1851F7C39396EB5AED120B1A6319B9760481B83E8EB",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-293/transfer/channel-3/transfer/channel-2188/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/17C0CBEEBEFA4A46B6A934931FB7806F573E6E2DAC9FD405B750F06D322B8EC3",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-293",
+                        "path": "transfer/channel-293/transfer/channel-3/transfer/channel-2188/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/07B53FBF19B2982942652835194389AABBBA4E68760F62B5E409EB92DB2E5E0E",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-2188/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F3166F4D31D6BA1EC6C9F5536F5DDDD4CC93DBA430F7419E7CDC41C497944A65",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-208"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ucore",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -269,52 +1658,6 @@
                         "chain_id": "coreum-mainnet-1",
                         "chain_name": "coreum",
                         "channel_id": "channel-9"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/8E5C95381A8E6401DB7C29E72F28451F5ED3FCDCD76AAD4610803769AD2DF018",
-            "ibc": {
-                "dst_channel": "channel-2188",
-                "source_channel": "channel-2",
-                "source_denom": ""
-            },
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/ADADB4C9DAC832DDE1879740D986E5D194DF79393ABE357B27C702DEE084B2C8",
-            "ibc": {
-                "dst_channel": "channel-49",
-                "source_channel": "channel-19",
-                "source_denom": "ibc/0DC897FC98E334D6CAFE4745C8D479ED65498D7598D6D3DEA461564E6DC6E68B"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/0DC897FC98E334D6CAFE4745C8D479ED65498D7598D6D3DEA461564E6DC6E68B",
-                        "chain_id": "noble-1",
-                        "chain_name": "noble",
-                        "channel_id": "channel-49"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-4",
-                        "path": "transfer/channel-4/transfer/channel-141/transfer/channel-2188/transfer/channel-19/uusdc"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/0A72B08CB76BC506A5D623687CF77524EDBFCBBDAD69DAC74E46F3B52E5BA7DA",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-536"
                     },
                     "type": "ibc"
                 }
@@ -481,30 +1824,6 @@
         },
         {
             "base": "ibc/CFCEF5A109EA8E273BCE642BF79440419C365E91FA9559C3BF68D41EFD8D286F",
-            "ibc": {
-                "dst_channel": "channel-49",
-                "source_channel": "channel-19",
-                "source_denom": "ibc/698AA11FA6FE19E981C2242E74DBF99985427EBBF7A089ED6617FC96FD0CE0D0"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/698AA11FA6FE19E981C2242E74DBF99985427EBBF7A089ED6617FC96FD0CE0D0",
-                        "chain_id": "noble-1",
-                        "chain_name": "noble",
-                        "channel_id": "channel-49"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/DAD4108C298361F19DF0E67A7EFB55BF5A86509F542D7DE1267242173CA8EBAB",
             "denom_units": [
                 {
                     "aliases": [
@@ -521,48 +1840,48 @@
             ],
             "description": "USD Coin",
             "ibc": {
-                "dst_channel": "channel-142",
-                "source_channel": "channel-7",
-                "source_denom": "ibc/A94434E2036BBEAD62B661700C040D265AE21DC297159DB8AA5388C2C7165838"
+                "dst_channel": "channel-49",
+                "source_channel": "channel-19",
+                "source_denom": "ibc/698AA11FA6FE19E981C2242E74DBF99985427EBBF7A089ED6617FC96FD0CE0D0"
             },
             "name": "usdc",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-7",
-                        "path": "transfer/channel-7/transfer/channel-17/transfer/channel-660/transfer/channel-19/uusdc"
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/A94434E2036BBEAD62B661700C040D265AE21DC297159DB8AA5388C2C7165838",
-                        "chain_id": "gravity-bridge-3",
-                        "chain_name": "gravitybridge",
-                        "channel_id": "channel-142"
+                        "base_denom": "ibc/698AA11FA6FE19E981C2242E74DBF99985427EBBF7A089ED6617FC96FD0CE0D0",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
                     },
                     "type": "ibc"
                 },
                 {
                     "chain": {
-                        "channel_id": "channel-17",
-                        "path": "transfer/channel-17/transfer/channel-660/transfer/channel-19/uusdc"
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/DE2781A72B8B9704201E41ED8C00E60AAE1B26FFC517EEEFC1CB849912E0041D",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-281"
+                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
                     },
                     "type": "ibc"
                 },
                 {
                     "chain": {
-                        "channel_id": "channel-660",
-                        "path": "transfer/channel-660/transfer/channel-19/uusdc"
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
                     },
                     "counterparty": {
                         "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
                         "chain_id": "coreum-mainnet-1",
                         "chain_name": "coreum",
-                        "channel_id": "channel-9"
+                        "channel_id": "channel-2"
                     },
                     "type": "ibc"
                 },
@@ -751,11 +2070,81 @@
         },
         {
             "base": "ibc/FFBD24362BB3953E9A2FD292A0BA9B904D50ED596124E0FC60E2F7BA0476CB77",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/019EA79F8FFB21725CD2C8BB1A4B2946CC13CACD2EF4E6FA06AF4E256761270B"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/019EA79F8FFB21725CD2C8BB1A4B2946CC13CACD2EF4E6FA06AF4E256761270B",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DE2781A72B8B9704201E41ED8C00E60AAE1B26FFC517EEEFC1CB849912E0041D",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -976,20 +2365,134 @@
         },
         {
             "base": "ibc/86C47890A76159A5342B1D1BC405AF8C5A85270C892B272E9F58527EE52CAD5E",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "ucore",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "core",
+                    "exponent": 6
+                }
+            ],
+            "description": "ucore coin",
+            "display": "core",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/7C657AF9D002F0EA5327B3AECB0ECE6BED10C7B56AF4C5124700F64782CD0231"
             },
+            "name": "ucore",
+            "symbol": "UCORE",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-660/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7C657AF9D002F0EA5327B3AECB0ECE6BED10C7B56AF4C5124700F64782CD0231",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-660/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F8215CF2CD97294057DBECAA45E3ABEB6012D25550750DA8EC56BEC73F0E522F",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-660",
+                        "path": "transfer/channel-660/ucore"
+                    },
+                    "counterparty": {
+                        "base_denom": "ucore",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/8B2CF3928B150338F6AA58A3EF003DF62FAE4CD78A0F0BC922C004A816D65E0B",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-2188",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/3A8C739C1115F446555F964B4B2C5374744DF899CB9B848FF747997F96A3323E"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-874/transfer/channel-30/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3A8C739C1115F446555F964B4B2C5374744DF899CB9B848FF747997F96A3323E",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2188"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-874",
+                        "path": "transfer/channel-874/transfer/channel-30/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B559A80D62249C8AA07A380E2A2BEA6E5CA9A6F079C912C3A9E9B494105E4F81",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-30",
+                        "path": "transfer/channel-30/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-18"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -3328,6 +4831,26 @@
             "display": "qsi",
             "name": "qsi",
             "symbol": "qsi",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "usara-core1r9gc0rnxnzpq33u82f44aufgdwvyxv4wyepyck98m9v2pxua6naqr8h03z",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "usara-core1r9gc0rnxnzpq33u82f44aufgdwvyxv4wyepyck98m9v2pxua6naqr8h03z",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SARA",
+                    "exponent": 6
+                }
+            ],
+            "description": "SARA is the utility native token of the Pulsara ecosystem. The burn or mint of the $SARA token will be decided by the community through proposals and voting.",
+            "display": "SARA",
+            "name": "SARA",
+            "symbol": "SARA",
             "type_asset": "sdk.coin"
         },
         {
