@@ -108,6 +108,50 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/41746107C9CB12ECF4402F46ECCEF66D0C30D9283E6647DCAFED8A09C9A78197",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "eth0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                        "arbitrum0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+                        "optimism0x4200000000000000000000000000000000000006"
+                    ],
+                    "denom": "weth",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "WETH",
+                    "exponent": 18
+                }
+            ],
+            "description": "The cross chain token of Function X",
+            "display": "weth",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-0",
+                "source_denom": "weth"
+            },
+            "name": "Wrapped Ether",
+            "symbol": "WETH",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/weth"
+                    },
+                    "counterparty": {
+                        "base_denom": "weth",
+                        "chain_id": "fxcore",
+                        "chain_name": "fxcore",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/55367B7B6572631B78A93C66EF9FDFCE87CDE372CC4ED7848DA78C1EB1DCDD78",
             "denom_units": [
                 {
