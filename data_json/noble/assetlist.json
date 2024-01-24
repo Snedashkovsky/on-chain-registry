@@ -1437,6 +1437,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/D306C77106A0CA02930AF540EA9CCCBD00954B02295100169252C1CF51AB5310",
+            "ibc": {
+                "dst_channel": "channel-750",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/443EE1958456DDE221EA0FBB38F26C9AE744EA578E01F73E54F63AF09FB4A993"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-188/transfer/channel-9/transfer/channel-122/transfer/channel-19/transfer/channel-1/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/443EE1958456DDE221EA0FBB38F26C9AE744EA578E01F73E54F63AF09FB4A993",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-750"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/1D66490CB4F52ACC454A30B3A1F4AED6BCDF2487070B2D710EB6DA75FACB099F",
             "denom_units": [
                 {
@@ -3417,6 +3441,72 @@
                         "chain_id": "noble-1",
                         "chain_name": "noble",
                         "channel_id": "channel-14"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/616AC9530A57E06B77745C89A29A49AE15925820077C2797B39485B6F4474D91",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-62",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/BE417EF3787635496D301B1206607AB9EA3069C37ED94651A705029E205264AB"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-122/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BE417EF3787635496D301B1206607AB9EA3069C37ED94651A705029E205264AB",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-62"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-17"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
                     },
                     "type": "ibc"
                 }
