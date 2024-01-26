@@ -4275,6 +4275,74 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/5C2B273ACF488EFCD9DF50E537CEBC8741204C7096B0C779C12F5788A7392920",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microtia"
+                    ],
+                    "denom": "utia",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "TIA",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of the Celestia network.",
+            "display": "TIA",
+            "ibc": {
+                "dst_channel": "channel-18",
+                "source_channel": "channel-23",
+                "source_denom": "ibc/6C349F0EB135C5FA99301758F35B87DB88403D690E5E314AB080401FEE4066E5"
+            },
+            "name": "TIA",
+            "symbol": "TIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-23",
+                        "path": "transfer/channel-23/transfer/channel-0/transfer/channel-6994/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6C349F0EB135C5FA99301758F35B87DB88403D690E5E314AB080401FEE4066E5",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-18"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-6994/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D79E7D83AB399BFFF93433E54FAA480C191248FC556924A2A8351AE2638B3877",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-204"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-6994",
+                        "path": "transfer/channel-6994/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "utia",
+                        "chain_id": "celestia",
+                        "chain_name": "celestia",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/6005618F257421D1A4F81B01FC573662D9112BA1DDBCAFABFA165AE74CC87881",
             "ibc": {
                 "dst_channel": "channel-107",
@@ -9986,6 +10054,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/086C1B2E9E611F23D3C9159C858D3F4C6A911D348DFB916A11AE306A865A77A8",
+            "ibc": {
+                "dst_channel": "channel-152",
+                "source_channel": "channel-158",
+                "source_denom": "stk/uatom"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-158",
+                        "path": "transfer/channel-158/stk/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "stk/uatom",
+                        "chain_id": "core-1",
+                        "chain_name": "persistence",
+                        "channel_id": "channel-152"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/0A88A08F3E9573DB9D8CB74AA3746F6D23C41C3EE7B6CC5AA4695A1DD74FF86B",
             "ibc": {
                 "dst_channel": "channel-14",
@@ -11031,6 +11123,46 @@
                         "chain_id": "stride-1",
                         "chain_name": "stride",
                         "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/24241327465E5F81DFF0E6A5500A5D96F7E8104E001511D7805FEF8D9FBEA079",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/701",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-701",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 701",
+            "display": "GAMM-701",
+            "ibc": {
+                "dst_channel": "channel-259",
+                "source_channel": "channel-3",
+                "source_denom": "gamm/pool/701"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/gamm/pool/701"
+                    },
+                    "counterparty": {
+                        "base_denom": "gamm/pool/701",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-259"
                     },
                     "type": "ibc"
                 }
@@ -17771,6 +17903,19 @@
                 {
                     "aliases": [],
                     "denom": "factory/kujira15d7wlz5fy879geplhm88pgey8wpav6z2y6xl8qdeq33a85hyqrpsunzq4l/urcpt",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/kujira15e8q5wzlk5k38gjxlhse3vu6vqnafysncx2ltexd6y9gx50vuj2qpt7dgv/boneKuji",
+            "admin": "kujira15e8q5wzlk5k38gjxlhse3vu6vqnafysncx2ltexd6y9gx50vuj2qpt7dgv",
+            "base": "factory/kujira15e8q5wzlk5k38gjxlhse3vu6vqnafysncx2ltexd6y9gx50vuj2qpt7dgv/boneKuji",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/kujira15e8q5wzlk5k38gjxlhse3vu6vqnafysncx2ltexd6y9gx50vuj2qpt7dgv/boneKuji",
                     "exponent": 0
                 }
             ],
