@@ -5788,6 +5788,81 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/5B3CDFE3F9D87E718AF1619DBED547D5EFCAC722FAFADF8F088E1B567628DA2A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Terra Columbus.",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-72",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/1590EFF99AF13D327D4BFABAC96DA7C485045B0985FA8A7955A3B517235B845C"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-259/transfer/channel-71/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1590EFF99AF13D327D4BFABAC96DA7C485045B0985FA8A7955A3B517235B845C",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-72"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/transfer/channel-71/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/119334C55720942481F458C9C462F5C0CD1F1E7EEAC4679D674AA67221916AEA",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-71",
+                        "path": "transfer/channel-71/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-71"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/5B789DD52FDCD2853922024EFE72CA00C0D4BD406B2512059AE25DAFE28E84B9",
             "denom_units": [
                 {
