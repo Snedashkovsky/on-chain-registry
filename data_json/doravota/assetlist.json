@@ -38,6 +38,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/1150925B42A4D5ED6A82549350330B1B79AA62ECD7891C49FD3C8109221AE4C1",
+            "ibc": {
+                "dst_channel": "channel-101",
+                "source_channel": "channel-10",
+                "source_denom": "aarch"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/aarch"
+                    },
+                    "counterparty": {
+                        "base_denom": "aarch",
+                        "chain_id": "archway-1",
+                        "chain_name": "archway",
+                        "channel_id": "channel-101"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/1C8A050BBE4C060A4392CC062B2D3B7C3BFD68E0FA6BB5A5D03DEFCBC0FA7C38",
             "denom_units": [
                 {
@@ -71,6 +95,55 @@
                         "chain_id": "coreum-mainnet-1",
                         "chain_name": "coreum",
                         "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/1D0755F60633E1F7E5BA06B12EA2F531F72CD078D0B99C436FBAD79ED3A638D8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
+            "ibc": {
+                "dst_channel": "channel-64",
+                "source_channel": "channel-12",
+                "source_denom": "usei"
+            },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-12",
+                        "path": "transfer/channel-12/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-64"
                     },
                     "type": "ibc"
                 }

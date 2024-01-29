@@ -3436,6 +3436,43 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/D18907CCF379EEA71AE2C3725A135AE678A67A35B7C6556A77A4E0B3520F7854",
+            "ibc": {
+                "dst_channel": "channel-220",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/884B6311801A798FB9EEE236554BA50A1D458190951D79485060D95F990B1117"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-584/transfer/channel-8/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/884B6311801A798FB9EEE236554BA50A1D458190951D79485060D95F990B1117",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-584",
+                        "path": "transfer/channel-584/transfer/channel-8/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0EC78B75D318EA0AAB6160A12AEE8F3C7FEA3CFEAD001A3B103E11914709F4CE",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/D3AF228E8FD11597F699BBE5428361A49F8EF808E271909E6A5AF9C76CB5E5AC",
             "ibc": {
                 "dst_channel": "channel-122",
@@ -4759,6 +4796,68 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/A2C433944E7989D2B32565DDF6B6C2806B2AF4500675AA39D3C3A061D37CE576",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of Terra 2.0",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/785AFEC6B3741100D15E7AF01374E3C4C36F24888E96479B1C33F5C71F364EF9"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-251/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/785AFEC6B3741100D15E7AF01374E3C4C36F24888E96479B1C33F5C71F364EF9",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-251",
+                        "path": "transfer/channel-251/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/ABC34F1F9C95DAB3AD3DAFD5228FAB5CDEA67B6BD126BC545D6D25B15E57F527",
             "ibc": {
                 "dst_channel": "channel-122",
@@ -4955,59 +5054,6 @@
                         "chain_id": "pacific-1",
                         "chain_name": "sei",
                         "channel_id": "channel-0"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/BE7AB5AEDF88351CF4E1AAE8EC00EC9EE36CD39AEE83D95A1555418E15FC88AD",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "wormhole/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp/8",
-                    "exponent": 8
-                }
-            ],
-            "description": "Wrapped Ether (Wormhole), WETH, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
-            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
-            "ibc": {
-                "dst_channel": "channel-122",
-                "source_channel": "channel-8",
-                "source_denom": "ibc/62F82550D0B96522361C89B0DA1119DE262FBDFB25E5502BC5101B5C0D0DBAAC"
-            },
-            "name": "Wrapped Ether (Wormhole)",
-            "symbol": "WETH",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-8",
-                        "path": "transfer/channel-8/transfer/channel-2186/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/62F82550D0B96522361C89B0DA1119DE262FBDFB25E5502BC5101B5C0D0DBAAC",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-122"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-2186",
-                        "path": "transfer/channel-2186/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5BWqpR48Lubd55szM5i62zK7TFkddckhbT48yy6mNbDp",
-                        "chain_id": "wormchain",
-                        "chain_name": "gateway",
-                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -6788,6 +6834,46 @@
                 "source_channel": "channel-98",
                 "source_denom": ""
             },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A8B0B746B5AB736C2D8577259B510D56B8AF598008F68041E3D634BCDE72BE97",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "wormhole/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA/8",
+                    "exponent": 8
+                }
+            ],
+            "description": "Wrapped SOL (Wormhole), SOL, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA",
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA",
+            "ibc": {
+                "dst_channel": "channel-13",
+                "source_channel": "channel-183",
+                "source_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA"
+            },
+            "name": "Wrapped SOL (Wormhole)",
+            "symbol": "SOL",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-183",
+                        "path": "transfer/channel-183/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA",
+                        "chain_id": "wormchain",
+                        "chain_name": "gateway",
+                        "channel_id": "channel-13"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -8816,6 +8902,32 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj13j4gwlt2867y38z6e40366h38jtpmele209g6t/CROCO",
+            "admin": "inj13j4gwlt2867y38z6e40366h38jtpmele209g6t",
+            "base": "factory/inj13j4gwlt2867y38z6e40366h38jtpmele209g6t/CROCO",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microCROCO"
+                    ],
+                    "denom": "factory/inj13j4gwlt2867y38z6e40366h38jtpmele209g6t/CROCO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "CROCO"
+                    ],
+                    "denom": "CROCO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Get ready to witness the exciting future of $CROCO unfold! Spread the word and join us for this historic launch!. 🐊🐊🐊 Join us at Telegram: https://t.me/injcro Website: https://croco-inj.xyz",
+            "display": "CROCO",
+            "name": "CROCO",
+            "symbol": "CROCO",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj13jjdsa953w03dvecsr43dj5r6a2vzt7n0spncv/brett",
             "admin": "inj13jjdsa953w03dvecsr43dj5r6a2vzt7n0spncv",
             "base": "factory/inj13jjdsa953w03dvecsr43dj5r6a2vzt7n0spncv/brett",
@@ -9067,6 +9179,32 @@
             "display": "HACHI",
             "name": "HACHI",
             "symbol": "HACHI",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj13zsd797dnkgpxcrf3zxxjzykzcz55tw7kk5x3y/CHAKRA",
+            "admin": "inj13zsd797dnkgpxcrf3zxxjzykzcz55tw7kk5x3y",
+            "base": "factory/inj13zsd797dnkgpxcrf3zxxjzykzcz55tw7kk5x3y/CHAKRA",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "uCHAKRA"
+                    ],
+                    "denom": "factory/inj13zsd797dnkgpxcrf3zxxjzykzcz55tw7kk5x3y/CHAKRA",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "CHAKRA"
+                    ],
+                    "denom": "CHAKRA",
+                    "exponent": 6
+                }
+            ],
+            "description": "Igniting the Degen Spirit in the Injective Ninjaverse!",
+            "display": "CHAKRA",
+            "name": "CHAKRA",
+            "symbol": "CHAKRA",
             "type_asset": "factory"
         },
         {
@@ -12626,6 +12764,32 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1c0tfeukmrw69076w7nffjqhrswp8vm9rr6t3eh/CROCO",
+            "admin": "inj1c0tfeukmrw69076w7nffjqhrswp8vm9rr6t3eh",
+            "base": "factory/inj1c0tfeukmrw69076w7nffjqhrswp8vm9rr6t3eh/CROCO",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microCROCO"
+                    ],
+                    "denom": "factory/inj1c0tfeukmrw69076w7nffjqhrswp8vm9rr6t3eh/CROCO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "CROCO"
+                    ],
+                    "denom": "CROCO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Get ready to witness the exciting future of $CROCO unfold! Spread the word and join us for this historic launch!. 🐊🐊🐊 Join us at Telegram: https://t.me/injcro Website: https://croco-inj.xyz ",
+            "display": "CROCO",
+            "name": "CROCO_NINJA",
+            "symbol": "CROCO",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1c5gk9y20ptuyjlul0w86dsxhfttpjgajhvf9lh/NFA",
             "admin": "inj1c5gk9y20ptuyjlul0w86dsxhfttpjgajhvf9lh",
             "base": "factory/inj1c5gk9y20ptuyjlul0w86dsxhfttpjgajhvf9lh/NFA",
@@ -13840,6 +14004,28 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
+            "admin": "inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52",
+            "base": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "HAVA",
+                    "exponent": 6
+                }
+            ],
+            "description": "Hava Coin is the lifeblood of the Cosmos & Juno networks, rewarding builders and welcoming supporters. https://havacoin.xyz/",
+            "display": "HAVA",
+            "name": "Hava Coin",
+            "symbol": "HAVA",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1h2dqvlca2lay8amfk5fgvateslp3h0sgf8wmmp/geisha",
             "admin": "inj1h2dqvlca2lay8amfk5fgvateslp3h0sgf8wmmp",
             "base": "factory/inj1h2dqvlca2lay8amfk5fgvateslp3h0sgf8wmmp/geisha",
@@ -14024,6 +14210,30 @@
             "display": "PIKACHU",
             "name": "Pikachu INJ",
             "symbol": "PIKACHU",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1hae0z4qsxw90ghy249ymghyz2ewa0ww3qrkyx2/SEI",
+            "admin": "inj1hae0z4qsxw90ghy249ymghyz2ewa0ww3qrkyx2",
+            "base": "factory/inj1hae0z4qsxw90ghy249ymghyz2ewa0ww3qrkyx2/SEI",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1hae0z4qsxw90ghy249ymghyz2ewa0ww3qrkyx2/SEI",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "SEI"
+                    ],
+                    "denom": "SEI",
+                    "exponent": 6
+                }
+            ],
+            "description": "Sei Network On Injective",
+            "display": "SEI",
+            "name": "Sei Network",
+            "symbol": "SEI",
             "type_asset": "factory"
         },
         {
@@ -14316,6 +14526,32 @@
             "display": "INJECT",
             "name": "Injectools",
             "symbol": "INJECT",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1ja9dyvqlx5u7rvlevmjwhr29p42424242pp3wn/CROCO",
+            "admin": "inj1ja9dyvqlx5u7rvlevmjwhr29p42424242pp3wn",
+            "base": "factory/inj1ja9dyvqlx5u7rvlevmjwhr29p42424242pp3wn/CROCO",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "CROCO"
+                    ],
+                    "denom": "factory/inj1ja9dyvqlx5u7rvlevmjwhr29p42424242pp3wn/CROCO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "CROCO"
+                    ],
+                    "denom": "CROCO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Get ready to witness the exciting future of $CROCO unfold! Spread the word and join us for this historic launch!. 🐊🐊🐊 Join us at Telegram: https://t.me/injcro Website: https://croco-inj.xyz ",
+            "display": "CROCO",
+            "name": "CROCO",
+            "symbol": "CROCO",
             "type_asset": "factory"
         },
         {
@@ -15445,6 +15681,28 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1mt876zny9j6xae25h7hl7zuqf7gkx8q63k0426/IKINGS",
+            "admin": "inj1mt876zny9j6xae25h7hl7zuqf7gkx8q63k0426",
+            "base": "factory/inj1mt876zny9j6xae25h7hl7zuqf7gkx8q63k0426/IKINGS",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1mt876zny9j6xae25h7hl7zuqf7gkx8q63k0426/IKINGS",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "IKINGS",
+                    "exponent": 6
+                }
+            ],
+            "description": "IKINGS for everyone",
+            "display": "IKINGS",
+            "name": "Injective Kings",
+            "symbol": "IKINGS",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1mwsgdlq6rxs3xte8p2m0pcw565czhgngrxgl38/Santa",
             "admin": "inj1mwsgdlq6rxs3xte8p2m0pcw565czhgngrxgl38",
             "base": "factory/inj1mwsgdlq6rxs3xte8p2m0pcw565czhgngrxgl38/Santa",
@@ -16058,6 +16316,30 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1q3xa3r638hmpu2mywg5r0w8a3pz2u5l9n7x4q2/MeninblackINJ",
+            "admin": "inj1q3xa3r638hmpu2mywg5r0w8a3pz2u5l9n7x4q2",
+            "base": "factory/inj1q3xa3r638hmpu2mywg5r0w8a3pz2u5l9n7x4q2/MeninblackINJ",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1q3xa3r638hmpu2mywg5r0w8a3pz2u5l9n7x4q2/MeninblackINJ",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "MeninblackINJ"
+                    ],
+                    "denom": "MeninblackINJ",
+                    "exponent": 6
+                }
+            ],
+            "description": "The most exclusive society on $INJ. 🕵️| Marketplace: https://injective.talis.art/collection/654111644c9b1919383210c5 | https://twitter.com/MeninblackINJ | https://t.co/u4TYbXFgzq",
+            "display": "MeninblackINJ",
+            "name": "Men In Black",
+            "symbol": "MIB",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1q42vrh9rhdnr20eq9ju9lymsxaqxcjpuqgd2cg/KBT",
             "admin": "inj1q42vrh9rhdnr20eq9ju9lymsxaqxcjpuqgd2cg",
             "base": "factory/inj1q42vrh9rhdnr20eq9ju9lymsxaqxcjpuqgd2cg/KBT",
@@ -16248,6 +16530,32 @@
             "display": "TEST",
             "name": "TEST",
             "symbol": "TEST",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1qqge7uaftfykr9wjqy4khwwzyr2wgcctwwgqv2/MIB",
+            "admin": "inj1qqge7uaftfykr9wjqy4khwwzyr2wgcctwwgqv2",
+            "base": "factory/inj1qqge7uaftfykr9wjqy4khwwzyr2wgcctwwgqv2/MIB",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microMIB"
+                    ],
+                    "denom": "factory/inj1qqge7uaftfykr9wjqy4khwwzyr2wgcctwwgqv2/MIB",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "MIB"
+                    ],
+                    "denom": "MIB",
+                    "exponent": 6
+                }
+            ],
+            "description": "Men In Black",
+            "display": "MIB",
+            "name": "Men In Black",
+            "symbol": "MIB",
             "type_asset": "factory"
         },
         {
@@ -16935,6 +17243,28 @@
             "display": "CHEN",
             "name": "CHEN",
             "symbol": "CHEN",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1s9pckznjz4hmgtxu5t9gerxtalch7wtle4y3a6/MIB",
+            "admin": "inj1s9pckznjz4hmgtxu5t9gerxtalch7wtle4y3a6",
+            "base": "factory/inj1s9pckznjz4hmgtxu5t9gerxtalch7wtle4y3a6/MIB",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1s9pckznjz4hmgtxu5t9gerxtalch7wtle4y3a6/MIB",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "MIB",
+                    "exponent": 6
+                }
+            ],
+            "description": "Men in Black are the most exclusive society of agents on INJ that protect the Injective blockchain and provide community and utility to holders.\nMIB will power our whole ecosystem and reward our holders.\nMade by Men In Black\nPowered by Injective",
+            "display": "MIB",
+            "name": "Men In Black",
+            "symbol": "MIB",
             "type_asset": "factory"
         },
         {
@@ -19175,6 +19505,32 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1y6zxg76ltrjdx7xppvtrdqlc5ujyhfra8aqr3f/CROCO",
+            "admin": "inj1y6zxg76ltrjdx7xppvtrdqlc5ujyhfra8aqr3f",
+            "base": "factory/inj1y6zxg76ltrjdx7xppvtrdqlc5ujyhfra8aqr3f/CROCO",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microCROCO"
+                    ],
+                    "denom": "factory/inj1y6zxg76ltrjdx7xppvtrdqlc5ujyhfra8aqr3f/CROCO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "CROCO"
+                    ],
+                    "denom": "CROCO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Get ready to witness the exciting future of $CROCO unfold! Spread the word and join us for this historic launch!. 🐊🐊🐊 Join us at Telegram: https://t.me/injcro Website: https://croco-inj.xyz",
+            "display": "CROCO",
+            "name": "CROCO",
+            "symbol": "CROCO",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1ya7ltz2mkj0z4w25lxueh7emz6qhwe33m4knx8/INJECTIV",
             "admin": "inj1ya7ltz2mkj0z4w25lxueh7emz6qhwe33m4knx8",
             "base": "factory/inj1ya7ltz2mkj0z4w25lxueh7emz6qhwe33m4knx8/INJECTIV",
@@ -20495,6 +20851,26 @@
             "display": "INSURANCE-0x7a70d95e24ba42b99a30121e6a4ff0d6161847d5b86cbfc3d4b3a81d8e190a70",
             "name": "ZRO/USDT PERP share token",
             "symbol": "INSURANCE-ZRO/USDT PERP",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "share38",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "share38",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "INSURANCE-0x03841e74624fd885d1ee28453f921d18c211e78a0d7646c792c7903054eb152c",
+                    "exponent": 6
+                }
+            ],
+            "description": "The share token of the insurance fund 0x03841e74624fd885d1ee28453f921d18c211e78a0d7646c792c7903054eb152c",
+            "display": "INSURANCE-0x03841e74624fd885d1ee28453f921d18c211e78a0d7646c792c7903054eb152c",
+            "name": "JUP/USDT PERP share token",
+            "symbol": "INSURANCE-JUP/USDT PERP",
             "type_asset": "sdk.coin"
         },
         {
