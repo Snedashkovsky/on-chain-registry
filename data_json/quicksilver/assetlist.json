@@ -252,6 +252,74 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/65AB558411378B0D3C37745FAEB28B3079709F6D4504EFAE1725137E9A9C94BC",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attoevmos"
+                    ],
+                    "denom": "aevmos",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "evmos",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "display": "evmos",
+            "ibc": {
+                "dst_channel": "channel-522",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/7BC96496A625DF7CB2094F48E0B973EF560B92DEA8EE6FFBD7117E112FCA8BA6"
+            },
+            "name": "Evmos",
+            "symbol": "EVMOS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-326/transfer/channel-9/aevmos"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7BC96496A625DF7CB2094F48E0B973EF560B92DEA8EE6FFBD7117E112FCA8BA6",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-522"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/transfer/channel-9/aevmos"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4B322204B4F59D770680FE4D7A565DDC3F37BFF035474B717476C66A4F83DD72",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/aevmos"
+                    },
+                    "counterparty": {
+                        "base_denom": "aevmos",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-25"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/6786534B169CD9927970E0F42437D0ADD41BD8E6698149C4D429BE414CCDFE15",
             "ibc": {
                 "dst_channel": "channel-467",
