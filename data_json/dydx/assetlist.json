@@ -247,6 +247,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/2E75BE55D9F2D7B3ADC294483B439080C3EFFF82BF49C92EB7EED92FF2E0F51D",
+            "ibc": {
+                "dst_channel": "channel-103",
+                "source_channel": "channel-22",
+                "source_denom": "aarch"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-22",
+                        "path": "transfer/channel-22/aarch"
+                    },
+                    "counterparty": {
+                        "base_denom": "aarch",
+                        "chain_id": "archway-1",
+                        "chain_name": "archway",
+                        "channel_id": "channel-103"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/3FE70329521E882682D5FE840A1FA0FF65AC1A2FBDEA9B7E38F767FD3C5C90A3",
             "denom_units": [
                 {
@@ -603,6 +627,48 @@
                         "chain_id": "secret-4",
                         "chain_name": "secretnetwork",
                         "channel_id": "channel-89"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/F3AA7EF362EC5E791FE78A0F4CCC69FEE1F9A7485EB1A8CAB3F6601C00522F10",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attoevmos"
+                    ],
+                    "denom": "aevmos",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "evmos",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "display": "evmos",
+            "ibc": {
+                "dst_channel": "channel-107",
+                "source_channel": "channel-23",
+                "source_denom": "aevmos"
+            },
+            "name": "Evmos",
+            "symbol": "EVMOS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-23",
+                        "path": "transfer/channel-23/aevmos"
+                    },
+                    "counterparty": {
+                        "base_denom": "aevmos",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-107"
                     },
                     "type": "ibc"
                 }
