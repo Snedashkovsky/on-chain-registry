@@ -3447,6 +3447,81 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/48FC5C01F3428CB08CA43C8C61EA07BDBF6C48EF02C5FBCF73F0B25EBC91D0B8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Terra Columbus.",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-339",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/F6F9DA5F63AEB211898BF7A675161750A3DDAF9BDAC00194145504308BA8442E"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-326/transfer/channel-0/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F6F9DA5F63AEB211898BF7A675161750A3DDAF9BDAC00194145504308BA8442E",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-339"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/transfer/channel-0/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4627AD2524E3E0523047E35BB76CC90E37D9D57ACF14F0FCBCEB2480705F3CB8",
+                        "chain_id": "crescent-1",
+                        "chain_name": "crescent",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/4A051D16523158F0486C99FE9C9FD0D882CF35C5734F5C9FC4FC66D40274DD85",
             "denom_units": [
                 {
@@ -11193,6 +11268,22 @@
         },
         {
             "address": "",
+            "base": "cw20:terra1cl273523kmr2uwjhhznq54je69mted2u3ljffm8kp2ap4z3drdksftwqun",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "DROGO"
+                    ],
+                    "denom": "drogo",
+                    "exponent": 6
+                }
+            ],
+            "name": "DROGO",
+            "symbol": "DROGO",
+            "type_asset": "cw20"
+        },
+        {
+            "address": "",
             "base": "cw20:terra1lalvk0r6nhruel7fvzdppk3tup3mh5j4d4eadrqzfhle4zrf52as58hh9t",
             "denom_units": [
                 {
@@ -11365,22 +11456,6 @@
             ],
             "name": "orne",
             "symbol": "ORNE",
-            "type_asset": "cw20"
-        },
-        {
-            "address": "",
-            "base": "cw20:terra1cl273523kmr2uwjhhznq54je69mted2u3ljffm8kp2ap4z3drdksftwqun",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "DROGO"
-                    ],
-                    "denom": "drogo",
-                    "exponent": 6
-                }
-            ],
-            "name": "DROGO",
-            "symbol": "DROGO",
             "type_asset": "cw20"
         }
     ],

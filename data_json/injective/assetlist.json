@@ -3991,6 +3991,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/0D2C8BD2BF7C53A7873D5D038273DF6E4E44092193202021308B90C6D035A98A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/126D6F24002F098804B70C133E0BBCEE40EE2ED489373C648805FEA4FF206333",
             "ibc": {
                 "dst_channel": "channel-122",
@@ -5361,6 +5414,50 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-204"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B6DEF77F4106DE5F5E1D5C7AA857392A8B5CE766733BA23589AD4760AF953819",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/GOP",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/2B3675B15D474B4E65D943122807023D3ECD7B415100A1DFADBA6C03E1F6D8AE"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-874/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/GOP"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2B3675B15D474B4E65D943122807023D3ECD7B415100A1DFADBA6C03E1F6D8AE",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-874",
+                        "path": "transfer/channel-874/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/GOP"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/GOP",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-10"
                     },
                     "type": "ibc"
                 }
@@ -10543,19 +10640,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1gzcx85m49u6y8a9dwx6eddfw8d9r4xtzzna83y",
-            "admin": "inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk",
-            "base": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1gzcx85m49u6y8a9dwx6eddfw8d9r4xtzzna83y",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1gzcx85m49u6y8a9dwx6eddfw8d9r4xtzzna83y",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1hqp8mnaa0m9zj77y9qqrv33v3k8w2jx3xjahm2",
             "admin": "inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk",
             "base": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1hqp8mnaa0m9zj77y9qqrv33v3k8w2jx3xjahm2",
@@ -11044,19 +11128,6 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1uu9dsss65z2dt6cz9avr2tk6wrdjxxe0cxh4d5",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1v0dxtj5ku80w4h96jc0scyxlnk3j869dj2nnay",
-            "admin": "inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk",
-            "base": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1v0dxtj5ku80w4h96jc0scyxlnk3j869dj2nnay",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1v0dxtj5ku80w4h96jc0scyxlnk3j869dj2nnay",
                     "exponent": 0
                 }
             ],
@@ -13578,6 +13649,45 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707151420.026670141InjUsdt1d1.08C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707230884.525553719InjUsdt28d1.16C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707230884.525553719InjUsdt28d1.16C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707230884.525553719InjUsdt28d1.16C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707231283.066300029InjUsdt20d1.21C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707231283.066300029InjUsdt20d1.21C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707231283.066300029InjUsdt20d1.21C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707231469.923471325InjUsdt16d0.87P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707231469.923471325InjUsdt16d0.87P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1707231469.923471325InjUsdt16d0.87P",
                     "exponent": 0
                 }
             ],
@@ -16361,6 +16471,30 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1na5d9jqhkyckh8gc5uqht75a74jq85gvpycp44/FUCKSOL",
+            "admin": "inj1na5d9jqhkyckh8gc5uqht75a74jq85gvpycp44",
+            "base": "factory/inj1na5d9jqhkyckh8gc5uqht75a74jq85gvpycp44/FUCKSOL",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1na5d9jqhkyckh8gc5uqht75a74jq85gvpycp44/FUCKSOL",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "FUCKSOL"
+                    ],
+                    "denom": "FUCKSOL",
+                    "exponent": 6
+                }
+            ],
+            "description": "Solana's shit is dead, worship injective",
+            "display": "FUCKSOL",
+            "name": "Fuck solana /̵͇̿̿/'̿̿ ̿̿ ̿̿",
+            "symbol": "FuckSol",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1nf43yjjx7sjc3eulffgfyxqhcraywwgrnqmqjc/INJDOGE",
             "admin": "inj1nf43yjjx7sjc3eulffgfyxqhcraywwgrnqmqjc",
             "base": "factory/inj1nf43yjjx7sjc3eulffgfyxqhcraywwgrnqmqjc/INJDOGE",
@@ -18640,6 +18774,30 @@
                     "exponent": 0
                 }
             ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1ua3rm4lsrse2canapg96v8jtg9k9yqzuscu766/GoatInj",
+            "admin": "inj1ua3rm4lsrse2canapg96v8jtg9k9yqzuscu766",
+            "base": "factory/inj1ua3rm4lsrse2canapg96v8jtg9k9yqzuscu766/GoatInj",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1ua3rm4lsrse2canapg96v8jtg9k9yqzuscu766/GoatInj",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "GoatInj"
+                    ],
+                    "denom": "GoatInj",
+                    "exponent": 6
+                }
+            ],
+            "description": "Goat memes on Injective. | liquidity lock at 100 inj",
+            "display": "GoatInj",
+            "name": "Injective Goat",
+            "symbol": "GoatInj",
             "type_asset": "factory"
         },
         {
