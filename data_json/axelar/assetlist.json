@@ -158,6 +158,15 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/A185845F3818AF71EE9405EDBE39C5F1C12878B9562A96682B33058E0C5BD61E",
+            "ibc": {
+                "dst_channel": "channel-293",
+                "source_channel": "channel-2",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/B75201D76B18B8467FEDBCF9B56F8F1C9ECF65AAC4EB9ABCA1AB274941C79A74",
             "ibc": {
                 "dst_channel": "channel-208",
@@ -2560,6 +2569,68 @@
                         "chain_id": "crescent-1",
                         "chain_name": "crescent",
                         "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/E76B0A17417110091B41C4F80EF63826C9D5725B0BCAB7A7695B62987086064D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusd"
+                    ],
+                    "denom": "uusd",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliusd"
+                    ],
+                    "denom": "musd",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "usd",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native stable token of the Terra Columbus.",
+            "display": "usd",
+            "ibc": {
+                "dst_channel": "channel-71",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/2DA4136457810BCB9DAAB620CA67BC342B17C3C70151CA70490A170DF7C9CB27"
+            },
+            "name": "USD TERRA",
+            "symbol": "UST",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-27/uusd"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2DA4136457810BCB9DAAB620CA67BC342B17C3C70151CA70490A170DF7C9CB27",
+                        "chain_id": "juno-1",
+                        "chain_name": "juno",
+                        "channel_id": "channel-71"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-27",
+                        "path": "transfer/channel-27/uusd"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusd",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-20"
                     },
                     "type": "ibc"
                 }
@@ -5064,11 +5135,36 @@
         },
         {
             "base": "ibc/EA2F9730C3496ED83479D9238515311A9AFA60E3D24A3419BECDF2A2A8152F8C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
             "ibc": {
                 "dst_channel": "channel-208",
                 "source_channel": "channel-3",
-                "source_denom": ""
+                "source_denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
             },
+            "name": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "symbol": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-208"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
