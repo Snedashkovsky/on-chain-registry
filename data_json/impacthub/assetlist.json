@@ -11,11 +11,62 @@
         },
         {
             "base": "ibc/87B127D828F2E4E021A2922BA90871641682B7A001F25C902899CB500C2DC81E",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microixo"
+                    ],
+                    "denom": "uixo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliixo"
+                    ],
+                    "denom": "mixo",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "ixo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of ixo.",
+            "display": "ixo",
             "ibc": {
                 "dst_channel": "channel-402",
                 "source_channel": "channel-19",
-                "source_denom": ""
+                "source_denom": "ibc/B2B5AEE174062FA7804AC95223D8169852F8F58962C51C66391C272C838258B7"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/transfer/channel-204/uixo"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B2B5AEE174062FA7804AC95223D8169852F8F58962C51C66391C272C838258B7",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-402"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-204",
+                        "path": "transfer/channel-204/uixo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uixo",
+                        "chain_id": "ixo-5",
+                        "chain_name": "impacthub",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -269,11 +320,51 @@
         },
         {
             "base": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-204",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "uatom"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-204"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
