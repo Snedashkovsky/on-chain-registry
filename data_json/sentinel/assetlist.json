@@ -233,6 +233,79 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/72ED1894D412B12F7AB2943061F4BEC0F0725901FCC6F0EC916E474FEA1464D1",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "dvpn",
+                    "exponent": 6
+                },
+                {
+                    "aliases": [
+                        "millidvpn"
+                    ],
+                    "denom": "mdvpn",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "microdvpn"
+                    ],
+                    "denom": "udvpn",
+                    "exponent": 0
+                }
+            ],
+            "description": "The native staking token of the Sentinel Hub.",
+            "display": "dvpn",
+            "ibc": {
+                "dst_channel": "channel-2",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/844B845BF9B3E8423F41B0B3BD44743FB8E99EA4C160487833F0D02D8FFFCF00"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-259/transfer/channel-59/udvpn"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/844B845BF9B3E8423F41B0B3BD44743FB8E99EA4C160487833F0D02D8FFFCF00",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/transfer/channel-59/udvpn"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/CF90BCBEDFF409F9187A0C3A69C1082D56908DC3F7FC342ED82455A504AD8AA9",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-59",
+                        "path": "transfer/channel-59/udvpn"
+                    },
+                    "counterparty": {
+                        "base_denom": "udvpn",
+                        "chain_id": "sentinelhub-2",
+                        "chain_name": "sentinel",
+                        "channel_id": "channel-70"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/CFC3F79D1E0CBBAF2C63A14C97434AFC532F5194C7F4A4FAC11E66C93C67591E",
             "denom_units": [
                 {

@@ -190,6 +190,56 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/3B6E14107186C00226C8A168919179247D04A20D4AD283AF16578E40961F886C",
+            "ibc": {
+                "dst_channel": "channel-492",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/8B979155692F5A03C0BD4F0F8EE7B5DFE3344D2E7441C4ABE829F460FADCCDF0"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-259/transfer/channel-51/aplanq"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8B979155692F5A03C0BD4F0F8EE7B5DFE3344D2E7441C4ABE829F460FADCCDF0",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-492"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/transfer/channel-51/aplanq"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F2A6A3D4C02E003CC3EDB84CFD1C6F8F0E21EE6815575C5FE82FAC7D96106239",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-51",
+                        "path": "transfer/channel-51/aplanq"
+                    },
+                    "counterparty": {
+                        "base_denom": "aplanq",
+                        "chain_id": "planq_7070-2",
+                        "chain_name": "planq",
+                        "channel_id": "channel-23"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/53078ED9B5DE9B3E28007E813ACAC828C3172A7B1C43EC6FD41668DA578B09DE",
             "ibc": {
                 "dst_channel": "channel-492",
@@ -351,6 +401,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/6B199312B29CF047BF8B1337450EF3AA0475FE0C312DB94055F2D5B22CD1E71A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-492",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-492"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BE9116F49581FF59F018C64FB4A445B307332F77381640AAB05380473D0D7642",
             "denom_units": [
                 {
@@ -461,6 +564,43 @@
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/FA7775734CC73176B7425910DE001A1D2AD9B6D9E93129A5D0750EAD13E4E63A",
+            "ibc": {
+                "dst_channel": "channel-492",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-208/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-492"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -1071,6 +1211,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/8B1A2352E009D7D5AEFA5FDDF23EF644EB818DA9E0806A0FEDEA8562EC15F474",
+            "ibc": {
+                "dst_channel": "channel-1",
+                "source_channel": "channel-61",
+                "source_denom": "usource"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-61",
+                        "path": "transfer/channel-61/usource"
+                    },
+                    "counterparty": {
+                        "base_denom": "usource",
+                        "chain_id": "source-1",
+                        "chain_name": "source",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/8E453678CC36D435CE284B3249453E21AB0080B98CCAD36BC9B579B216AA028D",
             "ibc": {
                 "dst_channel": "channel-10",
@@ -1495,6 +1659,26 @@
         },
         {
             "base": "aplanq",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "erc20/0x091F9A57A3F58d758b6572E9d41675918EAC7F09",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "erc20/0x091F9A57A3F58d758b6572E9d41675918EAC7F09",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SourceToken",
+                    "exponent": 9
+                }
+            ],
+            "description": "Cosmos coin token representation of 0x091F9A57A3F58d758b6572E9d41675918EAC7F09",
+            "display": "SourceToken",
+            "name": "erc20/0x091F9A57A3F58d758b6572E9d41675918EAC7F09",
+            "symbol": "SRCX",
             "type_asset": "sdk.coin"
         }
     ],
