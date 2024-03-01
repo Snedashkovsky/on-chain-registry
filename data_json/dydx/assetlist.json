@@ -1,6 +1,85 @@
 {
     "assets": [
         {
+            "base": "ibc/0922A2FDBD7C2F67F1F56B5CB0E32EEE8A684ABA2781D7E6BF20F0B509CE0324",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
+            "ibc": {
+                "dst_channel": "channel-131",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/77CBB79085B381E61A0962EE6FFB9514A8A8E21E2AF19CEFD2B0C88065F8AB2A"
+            },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-67/transfer/channel-5/transfer/channel-6787/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/77CBB79085B381E61A0962EE6FFB9514A8A8E21E2AF19CEFD2B0C88065F8AB2A",
+                        "chain_id": "core-1",
+                        "chain_name": "persistence",
+                        "channel_id": "channel-131"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-67",
+                        "path": "transfer/channel-67/transfer/channel-5/transfer/channel-6787/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/632681B755D6EAB5493B7C68738B2EA34FFB24894279417492FC1DA2456A809E",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-53"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/transfer/channel-6787/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/831F0B1BBB1D08A2B75311892876D71565478C532967545476DF4C2D7492E48C",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-326"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-6787",
+                        "path": "transfer/channel-6787/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/54D92F0CB1B40DC10A831A5635566B77EBB0ECB2E2E10CC0DC18FFABD5FE7FFA",
             "denom_units": [
                 {
