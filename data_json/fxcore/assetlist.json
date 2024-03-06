@@ -5,8 +5,23 @@
             "ibc": {
                 "dst_channel": "channel-585",
                 "source_channel": "channel-10",
-                "source_denom": ""
+                "source_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-141/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/14F9BC3E44B8A9C1BE1FB08980FAB87034C9905EF17CF2F5008FC085218811CC",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-585"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -35,89 +50,69 @@
         },
         {
             "base": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-585",
                 "source_channel": "channel-10",
+                "source_denom": "uatom"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-585"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/BE612CFB5445AD2F56FAE496C0848FA381F967970A4CA586B1F90123AA62C4D4",
+            "ibc": {
+                "dst_channel": "channel-2716",
+                "source_channel": "channel-19",
                 "source_denom": ""
             },
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/BE612CFB5445AD2F56FAE496C0848FA381F967970A4CA586B1F90123AA62C4D4",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "attopoolshare"
-                    ],
-                    "denom": "gamm/pool/1",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "GAMM-1",
-                    "exponent": 18
-                }
-            ],
-            "description": "The share token of the gamm pool 1",
-            "display": "GAMM-1",
-            "ibc": {
-                "dst_channel": "channel-2716",
-                "source_channel": "channel-19",
-                "source_denom": "gamm/pool/1"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/gamm/pool/1"
-                    },
-                    "counterparty": {
-                        "base_denom": "gamm/pool/1",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-2716"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/D7B22A85AB15F44A3152EBF7F2D37B6061F66FAF637E42C287FC649F1F5CA348",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-2716",
                 "source_channel": "channel-19",
-                "source_denom": "uosmo"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/uosmo"
-                    },
-                    "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-2716"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -279,6 +274,10 @@
         },
         {
             "base": "eth0x6B175474E89094C44Da98b954EedeAC495271d0F",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "eth0x95987b0cdC7F65d989A30B3B7132a38388c548Eb",
             "type_asset": "sdk.coin"
         },
         {

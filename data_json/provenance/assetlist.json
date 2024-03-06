@@ -5,95 +5,66 @@
             "ibc": {
                 "dst_channel": "channel-222",
                 "source_channel": "channel-7",
-                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-7",
-                        "path": "transfer/channel-7/transfer/channel-208/uusdc"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-222"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-208",
-                        "path": "transfer/channel-208/uusdc"
-                    },
-                    "counterparty": {
-                        "base_denom": "uusdc",
-                        "chain_id": "axelar-dojo-1",
-                        "chain_name": "axelar",
-                        "channel_id": "channel-3"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/FE109DBB332588166D6B27A2DB0BCB162A18E7EBA7DB366096E273BF63292F46",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "BOOT"
-                    ],
-                    "denom": "boot",
-                    "exponent": 0
-                }
-            ],
-            "description": "The staking token of Bostrom",
-            "display": "boot",
             "ibc": {
                 "dst_channel": "channel-222",
                 "source_channel": "channel-7",
-                "source_denom": "ibc/FE2CD1E6828EC0FAB8AF39BAC45BC25B965BA67CCBC50C13A14BD610B0D1E2C4"
+                "source_denom": ""
             },
-            "name": "Bostrom Boot",
-            "symbol": "BOOT",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-7",
-                        "path": "transfer/channel-7/transfer/channel-95/boot"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/FE2CD1E6828EC0FAB8AF39BAC45BC25B965BA67CCBC50C13A14BD610B0D1E2C4",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-222"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-95",
-                        "path": "transfer/channel-95/boot"
-                    },
-                    "counterparty": {
-                        "base_denom": "boot",
-                        "chain_id": "bostrom",
-                        "chain_name": "bostrom",
-                        "channel_id": "channel-2"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-127",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "uatom"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-127"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -146,40 +117,11 @@
         },
         {
             "base": "ibc/FAC1BAAA6ECDCB88408A6EEEA13AD4736DA687F85ACD22B5BBD00D36754AC0FA",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-222",
                 "source_channel": "channel-7",
-                "source_denom": "uosmo"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-7",
-                        "path": "transfer/channel-7/uosmo"
-                    },
-                    "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-222"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
