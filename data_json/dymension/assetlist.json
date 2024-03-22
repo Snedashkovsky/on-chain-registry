@@ -1,6 +1,208 @@
 {
     "assets": [
         {
+            "base": "ibc/4AEBA1AECE02365D730FAF1914B0FB23E1D2075C991CBDD2E4E4B8F902C6113B",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/87F3F32E3DE2ECF0AD80F1BAF60CED86A9CA69E53EBAE33A3925416E7D4605B3",
+            "ibc": {
+                "dst_channel": "channel-794",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/4D0BC0D3C31708FC879A3BF03A1DE99311B14D008099C5F680B660446A8BE00C"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-326/transfer/channel-23/transfer/channel-152/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4D0BC0D3C31708FC879A3BF03A1DE99311B14D008099C5F680B660446A8BE00C",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-794"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/transfer/channel-23/transfer/channel-152/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/FF16B3E3D31E78F92BB5EF3473BFD093ABBF00464992AD8D6380FBC666B9D4B3",
+                        "chain_id": "crescent-1",
+                        "chain_name": "crescent",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/194988ED9A47E6760F50BE9738F312250D62ADDEEECE69C173C069F7C3ABBDA7",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adym",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "DYM",
+                    "exponent": 18
+                }
+            ],
+            "description": "Native staking token of Dymension: DYM (adym)",
+            "display": "DYM",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/A70041C145BD8C3D13141D8E17894B540DA824FF00D0A64401EFBD2C24693EC3"
+            },
+            "name": "DYM",
+            "symbol": "DYM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/transfer/channel-794/adym"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A70041C145BD8C3D13141D8E17894B540DA824FF00D0A64401EFBD2C24693EC3",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-794/adym"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/49ACCECDED4A6A2B5DD683FA048235F4F66B65F58CD558C9A441195502191D01",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-794",
+                        "path": "transfer/channel-794/adym"
+                    },
+                    "counterparty": {
+                        "base_denom": "adym",
+                        "chain_id": "dymension_1100-1",
+                        "chain_name": "dymension",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/5B7D1800704D2C5FE48BED7782C20000FDF042EF680E5D29351F98D4681517EE",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2188",
+                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+                        "chain_id": "coreum-mainnet-1",
+                        "chain_name": "coreum",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-19",
+                        "path": "transfer/channel-19/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A7CA7C8986D88CAC9D6D1F4D65EA6F45D2C5B2A22789A967509781B83FD2942A",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/39CAB3483680C6C57FC8017314B340118A45F2800D8FDF7A197F3313A9D430B1"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-122/transfer/channel-152/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/39CAB3483680C6C57FC8017314B340118A45F2800D8FDF7A197F3313A9D430B1",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BBFEA67CFA923792F68E97099164D70B42C6FCA0A6575A6A337A1E055C57BF13",
             "denom_units": [
                 {
@@ -242,6 +444,105 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/1DD0FA29C8AC3330C3DDA00671E3DEB1CA8BCB4F9F4D5E57539C0058B1D7C0CF",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/698350B8A61D575025F3ED13E9AC9C0F45C89DEFE92F76D5838F1D3C1A7FF7C9"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-326/stutia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/698350B8A61D575025F3ED13E9AC9C0F45C89DEFE92F76D5838F1D3C1A7FF7C9",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/stutia"
+                    },
+                    "counterparty": {
+                        "base_denom": "stutia",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/5F78C42BCC76287AE6B3185C6C1455DFFF8D805B1847F94B9B625384B93885C7",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/6F3866516A68AE366C09E220202FC9F3089F0479C9CC9547D4BA1B848E1F6FD1",
             "ibc": {
                 "dst_channel": "channel-19774",
@@ -272,43 +573,6 @@
                         "chain_id": "agoric-3",
                         "chain_name": "agoric",
                         "channel_id": "channel-1"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/B95AA0670A1073A278BE1C28FBAE1509ACEFE0207AB3F3E92156324DECA2225A",
-            "ibc": {
-                "dst_channel": "channel-19774",
-                "source_channel": "channel-2",
-                "source_denom": "ibc/C360EF34A86D334F625E4CBB7DA3223AEA97174B61F35BB3758081A8160F7D9B"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/transfer/channel-258/loki"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/C360EF34A86D334F625E4CBB7DA3223AEA97174B61F35BB3758081A8160F7D9B",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-19774"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-258",
-                        "path": "transfer/channel-258/loki"
-                    },
-                    "counterparty": {
-                        "base_denom": "loki",
-                        "chain_id": "odin-mainnet-freya",
-                        "chain_name": "odin",
-                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -425,6 +689,48 @@
                         "chain_id": "celestia",
                         "chain_name": "celestia",
                         "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/04E01477A69DF1E5EE99F85C15B66D68D23292275357CAA44B2E0527310A405E",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attoevmos"
+                    ],
+                    "denom": "aevmos",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "evmos",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "display": "evmos",
+            "ibc": {
+                "dst_channel": "channel-109",
+                "source_channel": "channel-37",
+                "source_denom": "aevmos"
+            },
+            "name": "Evmos",
+            "symbol": "EVMOS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-37",
+                        "path": "transfer/channel-37/aevmos"
+                    },
+                    "counterparty": {
+                        "base_denom": "aevmos",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-109"
                     },
                     "type": "ibc"
                 }
@@ -602,6 +908,78 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/5C58CC109FB067073F1B80481EE9C3A8484330FECB35D2591B28E7E1A6FCF64C",
+            "ibc": {
+                "dst_channel": "channel-123",
+                "source_channel": "channel-45",
+                "source_denom": "aarch"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-45",
+                        "path": "transfer/channel-45/aarch"
+                    },
+                    "counterparty": {
+                        "base_denom": "aarch",
+                        "chain_id": "archway-1",
+                        "chain_name": "archway",
+                        "channel_id": "channel-123"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/AB30D2F9C131AE1EFA8449C74490326BD5ACC40EF69A2D8563994AA05CE0B258",
+            "ibc": {
+                "dst_channel": "channel-197",
+                "source_channel": "channel-0",
+                "source_denom": "stadym"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "stadym",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-197"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B22B4DD21586965DAEF42A7600BA371EA77C02E90FC8A7F2330BF9F9DE129B07",
+            "ibc": {
+                "dst_channel": "channel-160",
+                "source_channel": "channel-10",
+                "source_denom": "ukuji"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ukuji",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4",
             "denom_units": [
                 {
@@ -666,6 +1044,61 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/BEE9A8F835D60717548FFE9AC9E90F18AB8096574EB1211F88074CB3511B7860",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/BFAAB7870A9AAABF64A7366DAAA0B8E5065EAA1FCE762F45677DC24BE796EF65",
+            "ibc": {
+                "dst_channel": "channel-138",
+                "source_channel": "channel-5",
+                "source_denom": "uusdc"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-138"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
             "denom_units": [
                 {
@@ -715,6 +1148,48 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/C87A988C60DE234F90AC945ED00B894893C9CD60CEB221E7C76CE61B86CB14DB",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "sail"
+                    ],
+                    "denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SAIL",
+                    "exponent": 6
+                }
+            ],
+            "description": "Sail DAO's Governance Token",
+            "display": "SAIL",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+            },
+            "name": "Sail DAO token",
+            "symbol": "SAIL",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/D934516FBE457F3A98AFABD87E0EFF7F95A15325C191EA8CDD7763C702FDDEC2",
             "ibc": {
                 "dst_channel": "channel-138",
@@ -732,6 +1207,64 @@
                         "chain_id": "axelar-dojo-1",
                         "chain_name": "axelar",
                         "channel_id": "channel-138"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/E3AB0DFDE9E782262B770C32DF94AC2A92B93DC4825376D6F6C874D3C877864E",
+            "ibc": {
+                "dst_channel": "channel-138",
+                "source_channel": "channel-5",
+                "source_denom": "weth-wei"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/weth-wei"
+                    },
+                    "counterparty": {
+                        "base_denom": "weth-wei",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-138"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/F428C5D24BEF8CA22EE74810A583422C12F02865ADAC185678C73015A88227B3",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "ibc": {
+                "dst_channel": "channel-19774",
+                "source_channel": "channel-2",
+                "source_denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
+            },
+            "name": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "symbol": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19774"
                     },
                     "type": "ibc"
                 }
@@ -827,6 +1360,26 @@
             "type_asset": "pool"
         },
         {
+            "base": "gamm/pool/10",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/10",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-10",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 10",
+            "display": "GAMM-10",
+            "type_asset": "pool"
+        },
+        {
             "base": "gamm/pool/2",
             "denom_units": [
                 {
@@ -904,6 +1457,86 @@
             ],
             "description": "The share token of the gamm pool 5",
             "display": "GAMM-5",
+            "type_asset": "pool"
+        },
+        {
+            "base": "gamm/pool/6",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/6",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-6",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 6",
+            "display": "GAMM-6",
+            "type_asset": "pool"
+        },
+        {
+            "base": "gamm/pool/7",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/7",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-7",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 7",
+            "display": "GAMM-7",
+            "type_asset": "pool"
+        },
+        {
+            "base": "gamm/pool/8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/8",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-8",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 8",
+            "display": "GAMM-8",
+            "type_asset": "pool"
+        },
+        {
+            "base": "gamm/pool/9",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/9",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-9",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 9",
+            "display": "GAMM-9",
             "type_asset": "pool"
         }
     ],

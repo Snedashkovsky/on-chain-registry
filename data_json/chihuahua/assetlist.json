@@ -588,43 +588,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/168C92AF71DBCF1C41813B183D8AA8402285C3EDC1AAE9CDDF3DA161234367B5",
-            "ibc": {
-                "dst_channel": "channel-51",
-                "source_channel": "channel-76",
-                "source_denom": "ibc/58923AAE6E879D7CB5FB0F2F05550FD4F696099AB0F5CDF0A05CC0309DD8BC78"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-76",
-                        "path": "transfer/channel-76/transfer/channel-10/transfer/channel-212/ucrbrus"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/58923AAE6E879D7CB5FB0F2F05550FD4F696099AB0F5CDF0A05CC0309DD8BC78",
-                        "chain_id": "neutron-1",
-                        "chain_name": "neutron",
-                        "channel_id": "channel-51"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-10",
-                        "path": "transfer/channel-10/transfer/channel-212/ucrbrus"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/41999DF04D9441DAC0DF5D8291DF4333FBCBA810FFD63FDCE34FDF41EF37B6F7",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-874"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/1C2B822D67BA32E77DFA49060CF597B0020DA5243D4AD4CB39F617E6D2691061",
             "ibc": {
                 "dst_channel": "channel-10",
@@ -1080,6 +1043,43 @@
                         "chain_id": "juno-1",
                         "chain_name": "juno",
                         "channel_id": "channel-48"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/0C31FE8544E2885B01923A2E0B531D7EF90FCB2D2C534CFDF41955C88C22F0D0",
+            "ibc": {
+                "dst_channel": "channel-113",
+                "source_channel": "channel-7",
+                "source_denom": "ibc/8A34AF0C1943FD0DFCDE9ADBF0B2C9959C45E87E6088EA2FC6ADACD59261B8A2"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/transfer/channel-115/ulum"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8A34AF0C1943FD0DFCDE9ADBF0B2C9959C45E87E6088EA2FC6ADACD59261B8A2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-113"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-115",
+                        "path": "transfer/channel-115/ulum"
+                    },
+                    "counterparty": {
+                        "base_denom": "ulum",
+                        "chain_id": "lum-network-1",
+                        "chain_name": "lumnetwork",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -1917,6 +1917,15 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/59334E4659EE35FB629D7468D08F4B25B730D0CA8CA07121D82D6788C3C2F957",
+            "ibc": {
+                "dst_channel": "channel-72",
+                "source_channel": "channel-88",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/5A63D05D43F19EA782E7342F8CFB2161E3E1991DA4AE4B7F096ABCFDD6C38B8E",
             "ibc": {
                 "dst_channel": "channel-5",
@@ -2042,23 +2051,8 @@
             "ibc": {
                 "dst_channel": "channel-76",
                 "source_channel": "channel-12",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-12",
-                        "path": "transfer/channel-12/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-76"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -2665,6 +2659,53 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/D1489F3713939AE235BE7C4D6D01C49B3A67791D86F79520EE67CFA4A1A88846",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microxprt"
+                    ],
+                    "denom": "uxprt",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millixprt"
+                    ],
+                    "denom": "mxprt",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "xprt",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Persistence Core.",
+            "display": "xprt",
+            "ibc": {
+                "dst_channel": "channel-203",
+                "source_channel": "channel-94",
+                "source_denom": "uxprt"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-94",
+                        "path": "transfer/channel-94/uxprt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uxprt",
+                        "chain_id": "core-1",
+                        "chain_name": "persistence",
+                        "channel_id": "channel-203"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/D3B753C21BB7149299C1C175A6515EDE13E04AFA0E7A6319505553B903C3C7B7",
             "denom_units": [
                 {
@@ -2747,6 +2788,40 @@
                         "chain_id": "migaloo-1",
                         "chain_name": "migaloo",
                         "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/DD44CDCD7379C1550D397AE05AB87474925EB0A521A07F36298572C9F30ABEB8",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+            "ibc": {
+                "dst_channel": "channel-113",
+                "source_channel": "channel-7",
+                "source_denom": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn"
+            },
+            "name": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+            "symbol": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-113"
                     },
                     "type": "ibc"
                 }
@@ -3564,6 +3639,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/chihuahua13skx9aa28zp0ws0l40uh8zk63ujqtxzwrxeva8/FREAK",
+            "admin": "chihuahua13skx9aa28zp0ws0l40uh8zk63ujqtxzwrxeva8",
+            "base": "factory/chihuahua13skx9aa28zp0ws0l40uh8zk63ujqtxzwrxeva8/FREAK",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua13skx9aa28zp0ws0l40uh8zk63ujqtxzwrxeva8/FREAK",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "FREAK",
+                    "exponent": 6
+                }
+            ],
+            "description": "The Famous Freak Token",
+            "display": "factory/chihuahua13skx9aa28zp0ws0l40uh8zk63ujqtxzwrxeva8/FREAK",
+            "name": "factory/chihuahua13skx9aa28zp0ws0l40uh8zk63ujqtxzwrxeva8/FREAK",
+            "symbol": "FREAK",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua14fketv99hlrlk80mkggw643spsj3yyf7qylvqn/POMSKY",
+            "admin": "chihuahua14fketv99hlrlk80mkggw643spsj3yyf7qylvqn",
+            "base": "factory/chihuahua14fketv99hlrlk80mkggw643spsj3yyf7qylvqn/POMSKY",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua14fketv99hlrlk80mkggw643spsj3yyf7qylvqn/POMSKY",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "POMSKY",
+                    "exponent": 6
+                }
+            ],
+            "description": "POMSKY Token",
+            "display": "factory/chihuahua14fketv99hlrlk80mkggw643spsj3yyf7qylvqn/POMSKY",
+            "name": "factory/chihuahua14fketv99hlrlk80mkggw643spsj3yyf7qylvqn/POMSKY",
+            "symbol": "POMSKY",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/chihuahua14p5zgk8muuk486ghdh9jg8p0a8xgvzhh393mw4/jackass",
             "admin": "chihuahua14p5zgk8muuk486ghdh9jg8p0a8xgvzhh393mw4",
             "base": "factory/chihuahua14p5zgk8muuk486ghdh9jg8p0a8xgvzhh393mw4/jackass",
@@ -3583,6 +3702,28 @@
             "display": "factory/chihuahua14p5zgk8muuk486ghdh9jg8p0a8xgvzhh393mw4/jackass",
             "name": "factory/chihuahua14p5zgk8muuk486ghdh9jg8p0a8xgvzhh393mw4/jackass",
             "symbol": "JKS",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua16678fp4andlsw8e6lczf2l3xvquvadkxd46mtd/NGMIFTW",
+            "admin": "chihuahua16678fp4andlsw8e6lczf2l3xvquvadkxd46mtd",
+            "base": "factory/chihuahua16678fp4andlsw8e6lczf2l3xvquvadkxd46mtd/NGMIFTW",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua16678fp4andlsw8e6lczf2l3xvquvadkxd46mtd/NGMIFTW",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "NGMI_FTW",
+                    "exponent": 6
+                }
+            ],
+            "description": ".",
+            "display": "factory/chihuahua16678fp4andlsw8e6lczf2l3xvquvadkxd46mtd/NGMIFTW",
+            "name": "factory/chihuahua16678fp4andlsw8e6lczf2l3xvquvadkxd46mtd/NGMIFTW",
+            "symbol": "NGMI_FTW",
             "type_asset": "factory"
         },
         {
@@ -3932,6 +4073,28 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/chihuahua1d68fxmcklfs72r6eylg3f7f5fa55y06vldqenl/tonuk",
+            "admin": "chihuahua1d68fxmcklfs72r6eylg3f7f5fa55y06vldqenl",
+            "base": "factory/chihuahua1d68fxmcklfs72r6eylg3f7f5fa55y06vldqenl/tonuk",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1d68fxmcklfs72r6eylg3f7f5fa55y06vldqenl/tonuk",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tonk",
+                    "exponent": 6
+                }
+            ],
+            "description": "The meme coin for crypto boys",
+            "display": "factory/chihuahua1d68fxmcklfs72r6eylg3f7f5fa55y06vldqenl/tonuk",
+            "name": "factory/chihuahua1d68fxmcklfs72r6eylg3f7f5fa55y06vldqenl/tonuk",
+            "symbol": "tonk",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/chihuahua1d9gr9xt04lm9varjazhaqm90pg2xfwh7lpngzn/Darkod73",
             "admin": "chihuahua1d9gr9xt04lm9varjazhaqm90pg2xfwh7lpngzn",
             "base": "factory/chihuahua1d9gr9xt04lm9varjazhaqm90pg2xfwh7lpngzn/Darkod73",
@@ -3967,6 +4130,28 @@
             "display": "factory/chihuahua1dh6kla5mtzt0mhz6sgj3nwtgvrt3uf9klac3u9/LocoLambo",
             "name": "factory/chihuahua1dh6kla5mtzt0mhz6sgj3nwtgvrt3uf9klac3u9/LocoLambo",
             "symbol": "factory/chihuahua1dh6kla5mtzt0mhz6sgj3nwtgvrt3uf9klac3u9/LocoLambo",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua1em0txk4a2dgmujfpa5klgzqzupd6ut5ep8d93r/ALIEN",
+            "admin": "chihuahua1em0txk4a2dgmujfpa5klgzqzupd6ut5ep8d93r",
+            "base": "factory/chihuahua1em0txk4a2dgmujfpa5klgzqzupd6ut5ep8d93r/ALIEN",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1em0txk4a2dgmujfpa5klgzqzupd6ut5ep8d93r/ALIEN",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "ALIEN",
+                    "exponent": 6
+                }
+            ],
+            "description": "Token for aliens to call home",
+            "display": "factory/chihuahua1em0txk4a2dgmujfpa5klgzqzupd6ut5ep8d93r/ALIEN",
+            "name": "factory/chihuahua1em0txk4a2dgmujfpa5klgzqzupd6ut5ep8d93r/ALIEN",
+            "symbol": "ALIEN",
             "type_asset": "factory"
         },
         {
@@ -4251,6 +4436,28 @@
             "display": "factory/chihuahua1l7a5037tzzepvfa3yuhfvny9h7d4w5uujfrakl/ElonMusk",
             "name": "factory/chihuahua1l7a5037tzzepvfa3yuhfvny9h7d4w5uujfrakl/ElonMusk",
             "symbol": "ElonMusk",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua1m4nuuzev0yj3gfjfkhfpf677gm9ug7z7ntvj5m/RetrieverPup",
+            "admin": "chihuahua1m4nuuzev0yj3gfjfkhfpf677gm9ug7z7ntvj5m",
+            "base": "factory/chihuahua1m4nuuzev0yj3gfjfkhfpf677gm9ug7z7ntvj5m/RetrieverPup",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1m4nuuzev0yj3gfjfkhfpf677gm9ug7z7ntvj5m/RetrieverPup",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "REPUP",
+                    "exponent": 6
+                }
+            ],
+            "description": "Retrieverpups because they are the cuttest!",
+            "display": "factory/chihuahua1m4nuuzev0yj3gfjfkhfpf677gm9ug7z7ntvj5m/RetrieverPup",
+            "name": "factory/chihuahua1m4nuuzev0yj3gfjfkhfpf677gm9ug7z7ntvj5m/RetrieverPup",
+            "symbol": "REPUP",
             "type_asset": "factory"
         },
         {
@@ -4836,6 +5043,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw/ciwawa",
+            "admin": "chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw",
+            "base": "factory/chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw/ciwawa",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw/ciwawa",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw/ciwawa",
+            "name": "factory/chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw/ciwawa",
+            "symbol": "factory/chihuahua1n5y96ss2t5qpsz3u8u55hgk2dptx685cypummw/ciwawa",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/Girafa",
             "admin": "chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz",
             "base": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/Girafa",
@@ -4849,6 +5072,22 @@
             "display": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/Girafa",
             "name": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/Girafa",
             "symbol": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/Girafa",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/MonkeyKing",
+            "admin": "chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz",
+            "base": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/MonkeyKing",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/MonkeyKing",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/MonkeyKing",
+            "name": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/MonkeyKing",
+            "symbol": "factory/chihuahua1nw97tyt5eslcsexev2wk5x9fqnth92tvf0fajz/MonkeyKing",
             "type_asset": "factory"
         },
         {
@@ -5192,6 +5431,22 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y/DalmatianDogs",
+            "admin": "chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y",
+            "base": "factory/chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y/DalmatianDogs",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y/DalmatianDogs",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y/DalmatianDogs",
+            "name": "factory/chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y/DalmatianDogs",
+            "symbol": "factory/chihuahua1uxthxgqhmxaqlh5u6990j48x5y0u2udfw6ga6y/DalmatianDogs",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/chihuahua1uyh0rgnar36cvv4qknuqmwewutc29dekccxpc9/Bongo",
             "admin": "chihuahua1uyh0rgnar36cvv4qknuqmwewutc29dekccxpc9",
             "base": "factory/chihuahua1uyh0rgnar36cvv4qknuqmwewutc29dekccxpc9/Bongo",
@@ -5243,6 +5498,28 @@
             "display": "factory/chihuahua1v7n9zcjdehlqexfpjuajatvjc4hq59svnknc7w/MaxDoge",
             "name": "factory/chihuahua1v7n9zcjdehlqexfpjuajatvjc4hq59svnknc7w/MaxDoge",
             "symbol": "MXDOGE",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua1vurpksphqraat4cxs72p6m7vekg4e0uj6vvmvf/atomwifhat",
+            "admin": "chihuahua1vurpksphqraat4cxs72p6m7vekg4e0uj6vvmvf",
+            "base": "factory/chihuahua1vurpksphqraat4cxs72p6m7vekg4e0uj6vvmvf/atomwifhat",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1vurpksphqraat4cxs72p6m7vekg4e0uj6vvmvf/atomwifhat",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "HATOM",
+                    "exponent": 6
+                }
+            ],
+            "description": "atomwifhat",
+            "display": "factory/chihuahua1vurpksphqraat4cxs72p6m7vekg4e0uj6vvmvf/atomwifhat",
+            "name": "factory/chihuahua1vurpksphqraat4cxs72p6m7vekg4e0uj6vvmvf/atomwifhat",
+            "symbol": "HATOM",
             "type_asset": "factory"
         },
         {
@@ -5375,6 +5652,50 @@
             "display": "factory/chihuahua1wtcp7m7589vdmsse30rsrlt357dwy0qyl3ykk6/PDG",
             "name": "factory/chihuahua1wtcp7m7589vdmsse30rsrlt357dwy0qyl3ykk6/PDG",
             "symbol": "PDG",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GAIATIMETOKEN",
+            "admin": "chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5",
+            "base": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GAIATIMETOKEN",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GAIATIMETOKEN",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAIATIMETOKEN",
+                    "exponent": 12
+                }
+            ],
+            "description": "GAIA Time Token",
+            "display": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GAIATIMETOKEN",
+            "name": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GAIATIMETOKEN",
+            "symbol": "GAIATIMETOKEN",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GTT",
+            "admin": "chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5",
+            "base": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GTT",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GTT",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GTT",
+                    "exponent": 8
+                }
+            ],
+            "description": "GAIA Time Token",
+            "display": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GTT",
+            "name": "factory/chihuahua1x0r79r4fr50muw2lkklrfq8lfdxfzz0dk3q5z5/GTT",
+            "symbol": "GTT",
             "type_asset": "factory"
         },
         {
