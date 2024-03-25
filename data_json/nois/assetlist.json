@@ -1,7 +1,7 @@
 {
     "assets": [
         {
-            "base": "ibc/9BFA6D6B49CC6AF8B5B687F11A8C93F94FCD4237D4DBD14CA2446A92A6EC86B8",
+            "base": "ibc/C7F9246988E858B910B6B9A24E15AF0B11519CF4FFC3187A4003184F7B6B37AC",
             "denom_units": [
                 {
                     "aliases": [],
@@ -17,62 +17,12 @@
             "description": "The native token of Nois",
             "display": "nois",
             "ibc": {
-                "dst_channel": "channel-225",
-                "source_channel": "channel-1",
-                "source_denom": "ibc/70F14FE2B8425CBDB2125BEFC2A688017AA1251EE9E88A1D19A4842C31181D8C"
-            },
-            "name": "NOIS",
-            "symbol": "NOIS",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/transfer/channel-20/transfer/channel-137/unois"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/70F14FE2B8425CBDB2125BEFC2A688017AA1251EE9E88A1D19A4842C31181D8C",
-                        "chain_id": "juno-1",
-                        "chain_name": "juno",
-                        "channel_id": "channel-225"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-20",
-                        "path": "transfer/channel-20/transfer/channel-137/unois"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/0F181D9F5BB18A8496153C1666E934169515592C135E8E9FCCC355889858EAF9",
-                        "chain_id": "stargaze-1",
-                        "chain_name": "stargaze",
-                        "channel_id": "channel-5"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-137",
-                        "path": "transfer/channel-137/unois"
-                    },
-                    "counterparty": {
-                        "base_denom": "unois",
-                        "chain_id": "nois-1",
-                        "chain_name": "nois",
-                        "channel_id": "channel-0"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/C7F9246988E858B910B6B9A24E15AF0B11519CF4FFC3187A4003184F7B6B37AC",
-            "ibc": {
                 "dst_channel": "channel-8277",
                 "source_channel": "channel-37",
                 "source_denom": "ibc/812501D156CF6D722CE5B548F2057970F794A16ED7C8BCA39BBD7E07A0DFD310"
             },
+            "name": "NOIS",
+            "symbol": "NOIS",
             "traces": [
                 {
                     "chain": {
@@ -84,6 +34,32 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-8277"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-138/unois"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DD9182E8E2B13C89D6B4707C7B43E8DB6193F9FF486AFA0E6CF86B427B0D231A",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-138",
+                        "path": "transfer/channel-138/unois"
+                    },
+                    "counterparty": {
+                        "base_denom": "unois",
+                        "chain_id": "nois-1",
+                        "chain_name": "nois",
+                        "channel_id": "channel-17"
                     },
                     "type": "ibc"
                 }
@@ -266,8 +242,23 @@
             "ibc": {
                 "dst_channel": "channel-138",
                 "source_channel": "channel-17",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-138"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
