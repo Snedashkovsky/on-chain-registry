@@ -166,11 +166,51 @@
         },
         {
             "base": "ibc/22419A97E07E3F0437BDFF873DD2979EF92318D11BE4FD5F868CF478B6C7FA51",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microneutaro"
+                    ],
+                    "denom": "uneutaro",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millineutaro"
+                    ],
+                    "denom": "mneutaro",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "neutaro",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Neutaro.",
+            "display": "neutaro",
             "ibc": {
                 "dst_channel": "channel-3",
                 "source_channel": "channel-53",
-                "source_denom": ""
+                "source_denom": "uneutaro"
             },
+            "name": "neutaro",
+            "symbol": "$ntmpi",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-53",
+                        "path": "transfer/channel-53/uneutaro"
+                    },
+                    "counterparty": {
+                        "base_denom": "uneutaro",
+                        "chain_id": "Neutaro-1",
+                        "chain_name": "neutaro",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -226,25 +266,28 @@
             "denom_units": [
                 {
                     "aliases": [
-                        "microumee"
+                        "microumee",
+                        "uux"
                     ],
                     "denom": "uumee",
                     "exponent": 0
                 },
                 {
-                    "aliases": [],
-                    "denom": "UMEE",
+                    "aliases": [
+                        "UMEE"
+                    ],
+                    "denom": "UX",
                     "exponent": 6
                 }
             ],
             "description": "The native staking token of the Umee network.",
-            "display": "UMEE",
+            "display": "UX",
             "ibc": {
                 "dst_channel": "channel-35",
                 "source_channel": "channel-1",
                 "source_denom": "uumee"
             },
-            "name": "UMEE",
+            "name": "UX",
             "symbol": "UMEE",
             "traces": [
                 {

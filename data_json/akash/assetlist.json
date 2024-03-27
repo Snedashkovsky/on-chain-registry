@@ -2413,6 +2413,53 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/1C83E3B8A612C4FB7F3D7C20AE3E827BD61FF21CE5343134CC7A4F5ADC57EE43",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microxprt"
+                    ],
+                    "denom": "uxprt",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millixprt"
+                    ],
+                    "denom": "mxprt",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "xprt",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Persistence Core.",
+            "display": "xprt",
+            "ibc": {
+                "dst_channel": "channel-213",
+                "source_channel": "channel-127",
+                "source_denom": "uxprt"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-127",
+                        "path": "transfer/channel-127/uxprt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uxprt",
+                        "chain_id": "core-1",
+                        "chain_name": "persistence",
+                        "channel_id": "channel-213"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/219C3FB64A60CA8E8B0D760D10FF108F6C0484F1AAD2E621232230ECC303803B",
             "ibc": {
                 "dst_channel": "channel-64",
@@ -3163,25 +3210,28 @@
             "denom_units": [
                 {
                     "aliases": [
-                        "microumee"
+                        "microumee",
+                        "uux"
                     ],
                     "denom": "uumee",
                     "exponent": 0
                 },
                 {
-                    "aliases": [],
-                    "denom": "UMEE",
+                    "aliases": [
+                        "UMEE"
+                    ],
+                    "denom": "UX",
                     "exponent": 6
                 }
             ],
             "description": "The native staking token of the Umee network.",
-            "display": "UMEE",
+            "display": "UX",
             "ibc": {
                 "dst_channel": "channel-48",
                 "source_channel": "channel-60",
                 "source_denom": "uumee"
             },
-            "name": "UMEE",
+            "name": "UX",
             "symbol": "UMEE",
             "traces": [
                 {

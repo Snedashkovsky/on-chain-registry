@@ -627,11 +627,51 @@
         },
         {
             "base": "ibc/576B1D63E401B6A9A071C78A1D1316D016EC9333D2FEB14AD503FAC4B8731CD1",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microneutaro"
+                    ],
+                    "denom": "uneutaro",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millineutaro"
+                    ],
+                    "denom": "mneutaro",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "neutaro",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Neutaro.",
+            "display": "neutaro",
             "ibc": {
                 "dst_channel": "channel-1",
                 "source_channel": "channel-189",
-                "source_denom": ""
+                "source_denom": "uneutaro"
             },
+            "name": "neutaro",
+            "symbol": "$ntmpi",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-189",
+                        "path": "transfer/channel-189/uneutaro"
+                    },
+                    "counterparty": {
+                        "base_denom": "uneutaro",
+                        "chain_id": "Neutaro-1",
+                        "chain_name": "neutaro",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
