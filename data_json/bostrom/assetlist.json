@@ -566,11 +566,42 @@
         },
         {
             "base": "ibc/CA5E8F31288514D728AFD1F0533A7F6902AA1192C88C9540F814893C3EAFE244",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "udsm",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "DSM",
+                    "exponent": 6
+                }
+            ],
+            "description": "The token of Desmos",
+            "display": "DSM",
             "ibc": {
                 "dst_channel": "channel-6",
                 "source_channel": "channel-13",
-                "source_denom": ""
+                "source_denom": "udsm"
             },
+            "name": "Desmos DSM",
+            "symbol": "DSM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-13",
+                        "path": "transfer/channel-13/udsm"
+                    },
+                    "counterparty": {
+                        "base_denom": "udsm",
+                        "chain_id": "desmos-mainnet",
+                        "chain_name": "desmos",
+                        "channel_id": "channel-6"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
