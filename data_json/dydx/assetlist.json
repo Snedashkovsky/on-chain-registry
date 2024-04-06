@@ -580,6 +580,53 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/A0CC0CF735BFB30E730C70019D4218A1244FF383503FF7579C9201AB93CA9293",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microxprt"
+                    ],
+                    "denom": "uxprt",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millixprt"
+                    ],
+                    "denom": "mxprt",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "xprt",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Persistence Core.",
+            "display": "xprt",
+            "ibc": {
+                "dst_channel": "channel-131",
+                "source_channel": "channel-4",
+                "source_denom": "uxprt"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uxprt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uxprt",
+                        "chain_id": "core-1",
+                        "chain_name": "persistence",
+                        "channel_id": "channel-131"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/A1CA75737A469737878C6A3CCD0D47738E85CCE0C4C341B298928DE7DADE3CDF",
             "denom_units": [
                 {
