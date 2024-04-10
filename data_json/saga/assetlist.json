@@ -1,0 +1,90 @@
+{
+    "assets": [
+        {
+            "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "dst_channel": "channel-38946",
+                "source_channel": "channel-1",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-38946"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/FF6C2E86490C1C4FBBD24F55032831D2415B9D7882F85C3CC9C2401D79362BEA",
+            "ibc": {
+                "dst_channel": "channel-213",
+                "source_channel": "channel-0",
+                "source_denom": "ustrd"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/ustrd"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustrd",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-213"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "usaga",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsaga"
+                    ],
+                    "denom": "usaga",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "saga",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Saga Security Chain.",
+            "display": "saga",
+            "name": "saga",
+            "symbol": "saga",
+            "type_asset": "sdk.coin"
+        }
+    ],
+    "chain_id": "ssc-1",
+    "chain_name": "saga"
+}
