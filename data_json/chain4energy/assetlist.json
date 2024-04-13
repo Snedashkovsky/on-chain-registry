@@ -25,6 +25,55 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/52A80A58B12B7B2BDAE6AA27132B7432452685EC4B836CD1BB551CCD73F57DF0",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microflix"
+                    ],
+                    "denom": "uflix",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliflix"
+                    ],
+                    "denom": "mflix",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "flix",
+                    "exponent": 6
+                }
+            ],
+            "description": "FLIX is the native token of the OmniFlix Hub which powers the OmniFlix Network.",
+            "display": "flix",
+            "ibc": {
+                "dst_channel": "channel-40",
+                "source_channel": "channel-2",
+                "source_denom": "uflix"
+            },
+            "name": "FLIX",
+            "symbol": "uflix",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uflix"
+                    },
+                    "counterparty": {
+                        "base_denom": "uflix",
+                        "chain_id": "omniflixhub-1",
+                        "chain_name": "omniflixhub",
+                        "channel_id": "channel-40"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "uc4e",
             "denom_units": [
                 {
