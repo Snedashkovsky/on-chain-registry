@@ -2181,6 +2181,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/D7EB107A4F8A4C00701745061BF752A8FD99FE269D1491364AD150F05F175421",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-324",
+                "source_channel": "channel-266",
+                "source_denom": "ibc/2C962DAB9F57FE0921435426AE75196009FAA1981BF86991203C8411F8980FDB"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-266",
+                        "path": "transfer/channel-266/transfer/channel-253/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2C962DAB9F57FE0921435426AE75196009FAA1981BF86991203C8411F8980FDB",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-324"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-253",
+                        "path": "transfer/channel-253/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-30"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/E57C935745A0F44EE296AA8CF57CE9B927A89F3079BFAC6AD298482D5ECCBA20",
             "ibc": {
                 "dst_channel": "channel-6",
