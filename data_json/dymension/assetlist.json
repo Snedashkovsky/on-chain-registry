@@ -272,6 +272,56 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/2C5AECCE487963FFA5E40750533A54D1148B60A41D4C5CCF43796F283D06D741",
+            "ibc": {
+                "dst_channel": "channel-160",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/5721EB13BF58F71E3CC4698C41148F48CB6A2D0361C67A9CC5F64B2ADC1A34E2"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-3/transfer/channel-326/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5721EB13BF58F71E3CC4698C41148F48CB6A2D0361C67A9CC5F64B2ADC1A34E2",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-326/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D53E785DC9C5C2CA50CADB1EFE4DE5D0C30418BE0E9C6F2AF9F092A247E8BC22",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-259"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "stadym",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/A7CA7C8986D88CAC9D6D1F4D65EA6F45D2C5B2A22789A967509781B83FD2942A",
             "denom_units": [
                 {
@@ -710,6 +760,59 @@
                         "chain_id": "agoric-3",
                         "chain_name": "agoric",
                         "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/9F5F51FE0F7341D92678676166261A57D74E39BDD5E46057362AC7F3F6A7499C",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/1827",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-1827",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 1827",
+            "display": "GAMM-1827",
+            "ibc": {
+                "dst_channel": "channel-160",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/1D43D06F5D1D9E532180D47F2403799F047F02AAB3B4415CE37872DDAC9E9566"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-3/gamm/pool/1827"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1D43D06F5D1D9E532180D47F2403799F047F02AAB3B4415CE37872DDAC9E9566",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/gamm/pool/1827"
+                    },
+                    "counterparty": {
+                        "base_denom": "gamm/pool/1827",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-259"
                     },
                     "type": "ibc"
                 }

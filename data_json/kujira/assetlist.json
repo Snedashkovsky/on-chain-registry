@@ -8514,36 +8514,11 @@
         },
         {
             "base": "ibc/06DF40A1D85203C4B8F7EC8DF5CF9D3BEBAF99C6A6C962FC05434BA6C3CA982A",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "microluna"
-                    ],
-                    "denom": "uluna",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [
-                        "milliluna"
-                    ],
-                    "denom": "mluna",
-                    "exponent": 3
-                },
-                {
-                    "aliases": [],
-                    "denom": "luna",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native staking token of Terra 2.0",
-            "display": "luna",
             "ibc": {
                 "dst_channel": "channel-0",
                 "source_channel": "channel-55",
                 "source_denom": "ibc/D70B0FBF97AEB04491E9ABF4467A7F66CD6250F4382CE5192D856114B83738D2"
             },
-            "name": "LUNA",
-            "symbol": "LUNA",
             "traces": [
                 {
                     "chain": {
@@ -8555,19 +8530,6 @@
                         "chain_id": "mars-1",
                         "chain_name": "mars",
                         "channel_id": "channel-0"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/uluna"
-                    },
-                    "counterparty": {
-                        "base_denom": "uluna",
-                        "chain_id": "phoenix-1",
-                        "chain_name": "terra2",
-                        "channel_id": "channel-78"
                     },
                     "type": "ibc"
                 }
@@ -9685,6 +9647,43 @@
                         "chain_id": "stride-1",
                         "chain_name": "stride",
                         "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/5721EB13BF58F71E3CC4698C41148F48CB6A2D0361C67A9CC5F64B2ADC1A34E2",
+            "ibc": {
+                "dst_channel": "channel-259",
+                "source_channel": "channel-3",
+                "source_denom": "ibc/D53E785DC9C5C2CA50CADB1EFE4DE5D0C30418BE0E9C6F2AF9F092A247E8BC22"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-326/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D53E785DC9C5C2CA50CADB1EFE4DE5D0C30418BE0E9C6F2AF9F092A247E8BC22",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-259"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "stadym",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-5"
                     },
                     "type": "ibc"
                 }
@@ -13448,6 +13447,46 @@
                 "source_channel": "channel-50",
                 "source_denom": "gravity0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1"
             },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/1D43D06F5D1D9E532180D47F2403799F047F02AAB3B4415CE37872DDAC9E9566",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/1827",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-1827",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 1827",
+            "display": "GAMM-1827",
+            "ibc": {
+                "dst_channel": "channel-259",
+                "source_channel": "channel-3",
+                "source_denom": "gamm/pool/1827"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/gamm/pool/1827"
+                    },
+                    "counterparty": {
+                        "base_denom": "gamm/pool/1827",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-259"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
