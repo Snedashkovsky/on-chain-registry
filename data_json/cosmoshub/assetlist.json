@@ -3893,11 +3893,27 @@
         },
         {
             "base": "ibc/BC250E043E19B7897B7A2128D57806E3654B9986ED832E866EC40EB8E1759ADD",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-0",
                 "source_channel": "channel-141",
                 "source_denom": "ibc/9BAAC5E33C6FE022E432FD16EE7A5315FB43AA73125AB3905F30CC05D38733CB"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -3922,6 +3938,84 @@
                         "chain_id": "mars-1",
                         "chain_name": "mars",
                         "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-37",
+                        "path": "transfer/channel-37/transfer/channel-1/transfer/channel-293/transfer/channel-3/transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/92EC2D9899CF4ECC09049D56BEA7A596A4D17122252F0AF503104FD86764EE4D",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-16"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-293/transfer/channel-3/transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/802014F49FD6F7C1ADA86D9AD8ABB500BFD240358ABBE5E356A3B1F5C5963FB5",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-569"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-293",
+                        "path": "transfer/channel-293/transfer/channel-3/transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C1C48A930BFA536F85928AFA1BF20DDF0685742B6288C8314286F288BF72B1CF",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C768F080799DD787D3957A27AE1EFD6779601026F9A49371AF05759CB06AAB8F",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-208"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F663521BF1836B00F5F177680F74BFB9A8B5654A694D0D2BC249E03CF2509013",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-536",
+                        "path": "transfer/channel-536/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-4"
                     },
                     "type": "ibc"
                 }
@@ -41413,8 +41507,23 @@
             "ibc": {
                 "dst_channel": "channel-0",
                 "source_channel": "channel-864",
-                "source_denom": ""
+                "source_denom": "ujolt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-864",
+                        "path": "transfer/channel-864/ujolt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ujolt",
+                        "chain_id": "joltify_1729-1",
+                        "chain_name": "joltify",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -46579,8 +46688,23 @@
             "ibc": {
                 "dst_channel": "channel-2",
                 "source_channel": "channel-866",
-                "source_denom": ""
+                "source_denom": "ujolt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-866",
+                        "path": "transfer/channel-866/ujolt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ujolt",
+                        "chain_id": "joltify_1729-1",
+                        "chain_name": "joltify",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -50249,10 +50373,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg/35123",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "cosmosvaloper106yp7zw35wftheyyv9f9pe69t8rteumjrx52jg/37058",
             "type_asset": "sdk.coin"
         },
@@ -50322,6 +50442,10 @@
         },
         {
             "base": "cosmosvaloper13x4pynlp86prhcmtns742kgsgu7pjtzj4djh7s/13894",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "cosmosvaloper13x4pynlp86prhcmtns742kgsgu7pjtzj4djh7s/37679",
             "type_asset": "sdk.coin"
         },
         {
@@ -50533,10 +50657,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "cosmosvaloper16s96n9k9zztdgjy8q4qcxp4hn7ww98qkrka4zk/26628",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "cosmosvaloper16s96n9k9zztdgjy8q4qcxp4hn7ww98qkrka4zk/34669",
             "type_asset": "sdk.coin"
         },
@@ -50706,10 +50826,6 @@
         },
         {
             "base": "cosmosvaloper19j2hd230c3hw6ds843yu8akc0xgvdvyuz9v02v/22481",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "cosmosvaloper1a37ze3yrr2y9nn98l6frhjskmufvd40cpyd0gq/37532",
             "type_asset": "sdk.coin"
         },
         {
@@ -51209,10 +51325,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "cosmosvaloper1aewyh4gtvayx6v7w592jdfylawk4rsu9tfvfgm/26629",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "cosmosvaloper1aewyh4gtvayx6v7w592jdfylawk4rsu9tfvfgm/26648",
             "type_asset": "sdk.coin"
         },
@@ -51637,6 +51749,10 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "cosmosvaloper1e0plfg475phrsvrlzw8gwppeva0zk5yg9fgg8c/37647",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "cosmosvaloper1e4vye322gkjx8n85jgcclnc7nvdvu82axnr5ll/10652",
             "type_asset": "sdk.coin"
         },
@@ -51682,10 +51798,6 @@
         },
         {
             "base": "cosmosvaloper1g48268mu5vfp4wk7dk89r0wdrakm9p5xk0q50k/33061",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "cosmosvaloper1g48268mu5vfp4wk7dk89r0wdrakm9p5xk0q50k/37562",
             "type_asset": "sdk.coin"
         },
         {
@@ -51806,10 +51918,6 @@
         },
         {
             "base": "cosmosvaloper1gpx52r9h3zeul45amvcy2pysgvcwddxrgx6cnv/36363",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "cosmosvaloper1gpx52r9h3zeul45amvcy2pysgvcwddxrgx6cnv/37529",
             "type_asset": "sdk.coin"
         },
         {
@@ -52049,6 +52157,10 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "cosmosvaloper1nuhls0wyf8slhmuasha5pz0u89jrf9nnugq8ak/37673",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "cosmosvaloper1nuhls0wyf8slhmuasha5pz0u89jrf9nnugq8ak/7134",
             "type_asset": "sdk.coin"
         },
@@ -52153,10 +52265,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "cosmosvaloper1sjllsnramtg3ewxqwwrwjxfgc4n4ef9u2lcnj0/37444",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "cosmosvaloper1sjllsnramtg3ewxqwwrwjxfgc4n4ef9u2lcnj0/5949",
             "type_asset": "sdk.coin"
         },
@@ -52178,6 +52286,10 @@
         },
         {
             "base": "cosmosvaloper1ssm0d433seakyak8kcf93yefhknjleeds4y3em/37032",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "cosmosvaloper1ssm0d433seakyak8kcf93yefhknjleeds4y3em/37653",
             "type_asset": "sdk.coin"
         },
         {
@@ -52454,10 +52566,6 @@
         },
         {
             "base": "cosmosvaloper1y0us8xvsvfvqkk9c6nt5cfyu5au5tww2ztve7q/30902",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "cosmosvaloper1y0us8xvsvfvqkk9c6nt5cfyu5au5tww2ztve7q/36806",
             "type_asset": "sdk.coin"
         },
         {
