@@ -2,11 +2,31 @@
     "assets": [
         {
             "base": "ibc/049EE504B5BE4DA33F938EC47266F53270C6EBFDACBF93761CCDF265709220F9",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "nanofund"
+                    ],
+                    "denom": "nund",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "FUND"
+                    ],
+                    "denom": "fund",
+                    "exponent": 9
+                }
+            ],
+            "description": "The native token of FUND mainchain.",
+            "display": "fund",
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-2",
                 "source_denom": "ibc/769660689311183E821E1D00F67C52362BD5AFBD1DA66CE8FDB14AEFE52570A8"
             },
+            "name": "FUND",
+            "symbol": "FUND",
             "traces": [
                 {
                     "chain": {
@@ -18,6 +38,32 @@
                         "chain_id": "gravity-bridge-3",
                         "chain_name": "gravitybridge",
                         "channel_id": "channel-98"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-382/nund"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/608EF5C0CE64FEA097500DB39657BDD36CA708CC5DCC2E250A024B6981DD36BC",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-144"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-382",
+                        "path": "transfer/channel-382/nund"
+                    },
+                    "counterparty": {
+                        "base_denom": "nund",
+                        "chain_id": "FUND-MainNet-2",
+                        "chain_name": "unification",
+                        "channel_id": "channel-0"
                     },
                     "type": "ibc"
                 }

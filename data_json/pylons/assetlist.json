@@ -155,11 +155,40 @@
         },
         {
             "base": "ibc/C17BEA901C0E95951F19646D784F703FEFC03201005712A50D79D7B55669D44B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-17683",
                 "source_channel": "channel-29",
-                "source_denom": ""
+                "source_denom": "uosmo"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-29",
+                        "path": "transfer/channel-29/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-17683"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
