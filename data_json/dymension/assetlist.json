@@ -272,65 +272,49 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/5B7D1800704D2C5FE48BED7782C20000FDF042EF680E5D29351F98D4681517EE",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "microusdc"
-                    ],
-                    "denom": "uusdc",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "usdc",
-                    "exponent": 6
-                }
-            ],
-            "description": "USD Coin",
+            "base": "ibc/2C5AECCE487963FFA5E40750533A54D1148B60A41D4C5CCF43796F283D06D741",
             "ibc": {
-                "dst_channel": "channel-19774",
-                "source_channel": "channel-2",
-                "source_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51"
+                "dst_channel": "channel-160",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/5721EB13BF58F71E3CC4698C41148F48CB6A2D0361C67A9CC5F64B2ADC1A34E2"
             },
-            "name": "usdc",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/transfer/channel-2188/transfer/channel-19/uusdc"
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-3/transfer/channel-326/stadym"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/009956F6823DCA80FC56909CC1AEBECAA099833755BC193F78AEBDD3EC1E3B51",
+                        "base_denom": "ibc/5721EB13BF58F71E3CC4698C41148F48CB6A2D0361C67A9CC5F64B2ADC1A34E2",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-326/stadym"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D53E785DC9C5C2CA50CADB1EFE4DE5D0C30418BE0E9C6F2AF9F092A247E8BC22",
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
-                        "channel_id": "channel-19774"
+                        "channel_id": "channel-259"
                     },
                     "type": "ibc"
                 },
                 {
                     "chain": {
-                        "channel_id": "channel-2188",
-                        "path": "transfer/channel-2188/transfer/channel-19/uusdc"
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/stadym"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
-                        "chain_id": "coreum-mainnet-1",
-                        "chain_name": "coreum",
-                        "channel_id": "channel-2"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-19",
-                        "path": "transfer/channel-19/uusdc"
-                    },
-                    "counterparty": {
-                        "base_denom": "uusdc",
-                        "chain_id": "noble-1",
-                        "chain_name": "noble",
-                        "channel_id": "channel-49"
+                        "base_denom": "stadym",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-5"
                     },
                     "type": "ibc"
                 }
@@ -783,6 +767,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/9F5F51FE0F7341D92678676166261A57D74E39BDD5E46057362AC7F3F6A7499C",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/1827",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-1827",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 1827",
+            "display": "GAMM-1827",
+            "ibc": {
+                "dst_channel": "channel-160",
+                "source_channel": "channel-10",
+                "source_denom": "ibc/1D43D06F5D1D9E532180D47F2403799F047F02AAB3B4415CE37872DDAC9E9566"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-3/gamm/pool/1827"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1D43D06F5D1D9E532180D47F2403799F047F02AAB3B4415CE37872DDAC9E9566",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/gamm/pool/1827"
+                    },
+                    "counterparty": {
+                        "base_denom": "gamm/pool/1827",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-259"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/CC0A89AB09C0A6CF196B761A0861C33DE19A0C42D7D5B1548C2D1C6A16640214",
             "ibc": {
                 "dst_channel": "channel-19774",
@@ -1189,6 +1226,15 @@
                     "type": "ibc"
                 }
             ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/5A26C8DC8DA66F4DD94326E67F94510188F5F7AFE2DB3933A0C823670E56EABF",
+            "ibc": {
+                "dst_channel": "channel-0",
+                "source_channel": "channel-51",
+                "source_denom": ""
+            },
             "type_asset": "ics20"
         },
         {
@@ -1759,6 +1805,26 @@
             ],
             "description": "The share token of the gamm pool 12",
             "display": "GAMM-12",
+            "type_asset": "pool"
+        },
+        {
+            "base": "gamm/pool/13",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/13",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-13",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 13",
+            "display": "GAMM-13",
             "type_asset": "pool"
         },
         {

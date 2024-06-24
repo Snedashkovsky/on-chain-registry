@@ -2078,6 +2078,61 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/EB7702F7862428669576938CD8DD19FBF39F6516F1F94A1B02AC8CBAFF06858B",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microtia"
+                    ],
+                    "denom": "utia",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "TIA",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of the Celestia network.",
+            "display": "TIA",
+            "ibc": {
+                "dst_channel": "channel-1429",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/D79E7D83AB399BFFF93433E54FAA480C191248FC556924A2A8351AE2638B3877"
+            },
+            "name": "TIA",
+            "symbol": "TIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-6994/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D79E7D83AB399BFFF93433E54FAA480C191248FC556924A2A8351AE2638B3877",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-1429"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-6994",
+                        "path": "transfer/channel-6994/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "utia",
+                        "chain_id": "celestia",
+                        "chain_name": "celestia",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/F018FA30AADFFBA09E5B7534DD3F7C1CD94091552E907741A65D98CAD941202D",
             "denom_units": [
                 {
@@ -3003,6 +3058,46 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/5BAD723F09B0CDBB5AC6B439BF9670DA77DEE1F2330CF74D855937E2D6E15E49",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adym",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "DYM",
+                    "exponent": 18
+                }
+            ],
+            "description": "Native staking token of Dymension: DYM (adym)",
+            "display": "DYM",
+            "ibc": {
+                "dst_channel": "channel-45",
+                "source_channel": "channel-123",
+                "source_denom": "adym"
+            },
+            "name": "DYM",
+            "symbol": "DYM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-123",
+                        "path": "transfer/channel-123/adym"
+                    },
+                    "counterparty": {
+                        "base_denom": "adym",
+                        "chain_id": "dymension_1100-1",
+                        "chain_name": "dymension",
+                        "channel_id": "channel-45"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/5DD78FD1394498A738F0B0FC55061046DC73213974E4FEC437841C9CBA2C198E",
             "denom_units": [
                 {
@@ -3289,6 +3384,46 @@
                         "chain_id": "sentinelhub-2",
                         "chain_name": "sentinel",
                         "channel_id": "channel-91"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/880C87D7C8750F91DC88E1E1A8E43D4813CC582A51140395C2ED62AFA375DC7E",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "erc20/0x3c6a5aDB47A984466f52c286d2C1Fb93475FD9A3",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "PlanqAirdropAXV",
+                    "exponent": 6
+                }
+            ],
+            "description": "Cosmos coin token representation of 0x3c6a5aDB47A984466f52c286d2C1Fb93475FD9A3",
+            "display": "PlanqAirdropAXV",
+            "ibc": {
+                "dst_channel": "channel-62",
+                "source_channel": "channel-112",
+                "source_denom": "erc20/0x3c6a5aDB47A984466f52c286d2C1Fb93475FD9A3"
+            },
+            "name": "erc20/0x3c6a5aDB47A984466f52c286d2C1Fb93475FD9A3",
+            "symbol": "PLQADAXV",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-112",
+                        "path": "transfer/channel-112/erc20/0x3c6a5aDB47A984466f52c286d2C1Fb93475FD9A3"
+                    },
+                    "counterparty": {
+                        "base_denom": "erc20/0x3c6a5aDB47A984466f52c286d2C1Fb93475FD9A3",
+                        "chain_id": "planq_7070-2",
+                        "chain_name": "planq",
+                        "channel_id": "channel-62"
                     },
                     "type": "ibc"
                 }
@@ -4369,6 +4504,22 @@
         {
             "base": "aarch",
             "type_asset": "sdk.coin"
+        },
+        {
+            "address": "",
+            "base": "cw20:archway1t2llqsvwwunf98v692nqd5juudcmmlu3zk55utx7xtfvznel030saclvq6",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "sARCH"
+                    ],
+                    "denom": "sarch",
+                    "exponent": 18
+                }
+            ],
+            "name": "Liquid Finance Staked ARCH",
+            "symbol": "sARCH",
+            "type_asset": "cw20"
         }
     ],
     "chain_id": "archway-1",

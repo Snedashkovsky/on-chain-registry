@@ -671,6 +671,63 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/71EF3E3C7774AE81B943B8C6664EE83D5FF1584F8C45AF652DDC5C3745AD93FA",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/neutron1lzecpea0qxw5xae92xkm3vaddeszr278k7w20c/dAsset",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-75",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/BE9E1A87A5A567F6C9E9A3655C0B204F82DF11CAC0D670461BC456BA97359E8D"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-326/transfer/channel-123/factory/neutron1lzecpea0qxw5xae92xkm3vaddeszr278k7w20c/dAsset"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BE9E1A87A5A567F6C9E9A3655C0B204F82DF11CAC0D670461BC456BA97359E8D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-326",
+                        "path": "transfer/channel-326/transfer/channel-123/factory/neutron1lzecpea0qxw5xae92xkm3vaddeszr278k7w20c/dAsset"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E9ED93B74C8A353A6433E9663B0781E96653B4C4718184682071CCBA08A2790D",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-123",
+                        "path": "transfer/channel-123/factory/neutron1lzecpea0qxw5xae92xkm3vaddeszr278k7w20c/dAsset"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/neutron1lzecpea0qxw5xae92xkm3vaddeszr278k7w20c/dAsset",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/74832B70D16B1843750B99E7B529855E3CA9121598E8C39524B6EE1EAF5564C3",
             "denom_units": [
                 {
@@ -1345,63 +1402,6 @@
                         "chain_id": "juno-1",
                         "chain_name": "juno",
                         "channel_id": "channel-0"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/69E4C6A7BB22A9BEF21A18DE5097D9DA74F011BFA168C08E67ECC1E263F8EACE",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "WEIRD"
-                    ],
-                    "denom": "factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [
-                        "factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD"
-                    ],
-                    "denom": "WEIRD",
-                    "exponent": 6
-                }
-            ],
-            "description": "WEIRD token",
-            "display": "WEIRD",
-            "ibc": {
-                "dst_channel": "channel-75",
-                "source_channel": "channel-0",
-                "source_denom": "ibc/38ADC6FFDDDB7D70B72AD0322CEA8844CB18FAA0A23400DBA8A99D43E18B3748"
-            },
-            "name": "WEIRD",
-            "symbol": "WEIRD",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/transfer/channel-874/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/38ADC6FFDDDB7D70B72AD0322CEA8844CB18FAA0A23400DBA8A99D43E18B3748",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-75"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-874",
-                        "path": "transfer/channel-874/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD",
-                        "chain_id": "neutron-1",
-                        "chain_name": "neutron",
-                        "channel_id": "channel-10"
                     },
                     "type": "ibc"
                 }
@@ -3635,7 +3635,7 @@
                     "counterparty": {
                         "base_denom": "uaura",
                         "chain_id": "xstaxy-1",
-                        "chain_name": "aura",
+                        "chain_name": "aura1",
                         "channel_id": "channel-23"
                     },
                     "type": "ibc"
@@ -4048,6 +4048,37 @@
                     },
                     "counterparty": {
                         "base_denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B0263C28B6F44651F4596413B41FDB749EA010BD1220816DAC0ABF9947C1E806",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-75",
+                "source_channel": "channel-0",
+                "source_denom": "factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt",
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-75"
@@ -4491,6 +4522,37 @@
                 "source_channel": "channel-318",
                 "source_denom": ""
             },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/E94BB144B818CB8061F43E202BEA1E9273B87D6326C8C6F4E6AE71C62FD37854",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-75",
+                "source_channel": "channel-0",
+                "source_denom": "factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
