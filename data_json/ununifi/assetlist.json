@@ -1,7 +1,106 @@
 {
     "assets": [
         {
-            "base": "ibc/6AF277BB4F5B1665B2C02D8AC77E0BD355C56BD13C80DE834C21CD6A9C36B16F",
+            "base": "ibc/20D06D04E1BC1FAC482FECC06C2E2879A596904D64D8BA3285B4A3789DEAF910",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-2638",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2638"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A01367FF44D9DE359A984FC14EC5227AA96ED08B8B4B31B539BB63B9B9305F80",
+            "ibc": {
+                "dst_channel": "channel-2638",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-208/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-2638"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/05AC4BBA78C5951339A47DD1BC1E7FC922A9311DF81C85745B1C162F516FF2F1",
             "denom_units": [
                 {
                     "aliases": [],
@@ -17,34 +116,21 @@
             "description": "The native token of Osmosis",
             "display": "osmo",
             "ibc": {
-                "dst_channel": "channel-141",
-                "source_channel": "channel-0",
-                "source_denom": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23"
+                "dst_channel": "channel-2638",
+                "source_channel": "channel-4",
+                "source_denom": "uosmo"
             },
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/transfer/channel-3/uosmo"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
-                        "chain_id": "axelar-dojo-1",
-                        "chain_name": "axelar",
-                        "channel_id": "channel-141"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-3",
-                        "path": "transfer/channel-3/uosmo"
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uosmo"
                     },
                     "counterparty": {
                         "base_denom": "uosmo",
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
-                        "channel_id": "channel-208"
+                        "channel_id": "channel-2638"
                     },
                     "type": "ibc"
                 }
@@ -52,72 +138,48 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/2CC0B1B7A981ACC74854717F221008484603BB8360E81B262411B0D830EDE9B0",
-            "ibc": {
-                "dst_channel": "channel-141",
-                "source_channel": "channel-0",
-                "source_denom": "uaxl"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uaxl"
-                    },
-                    "counterparty": {
-                        "base_denom": "uaxl",
-                        "chain_id": "axelar-dojo-1",
-                        "chain_name": "axelar",
-                        "channel_id": "channel-141"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/52A80A58B12B7B2BDAE6AA27132B7432452685EC4B836CD1BB551CCD73F57DF0",
+            "base": "ibc/25418646C017D377ADF3202FF1E43590D0DAE3346E594E8D78176A139A928F88",
             "denom_units": [
                 {
                     "aliases": [
-                        "microflix"
+                        "microatom"
                     ],
-                    "denom": "uflix",
+                    "denom": "uatom",
                     "exponent": 0
                 },
                 {
                     "aliases": [
-                        "milliflix"
+                        "milliatom"
                     ],
-                    "denom": "mflix",
+                    "denom": "matom",
                     "exponent": 3
                 },
                 {
                     "aliases": [],
-                    "denom": "flix",
+                    "denom": "atom",
                     "exponent": 6
                 }
             ],
-            "description": "FLIX is the native token of the OmniFlix Hub which powers the OmniFlix Network.",
-            "display": "flix",
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
-                "dst_channel": "channel-40",
-                "source_channel": "channel-2",
-                "source_denom": "uflix"
+                "dst_channel": "channel-683",
+                "source_channel": "channel-7",
+                "source_denom": "uatom"
             },
-            "name": "FLIX",
-            "symbol": "uflix",
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/uflix"
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/uatom"
                     },
                     "counterparty": {
-                        "base_denom": "uflix",
-                        "chain_id": "omniflixhub-1",
-                        "chain_name": "omniflixhub",
-                        "channel_id": "channel-40"
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-683"
                     },
                     "type": "ibc"
                 }
@@ -125,25 +187,108 @@
             "type_asset": "ics20"
         },
         {
-            "base": "uc4e",
+            "base": "ibc/8F9F22CDD03CA764C41F9476D20B23BF9247C9BB33E2D679762FEF38B6E893F2",
             "denom_units": [
                 {
-                    "aliases": [
-                        "microc4e"
-                    ],
-                    "denom": "uc4e",
+                    "aliases": [],
+                    "denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+            "ibc": {
+                "dst_channel": "channel-19802",
+                "source_channel": "channel-17",
+                "source_denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO"
+            },
+            "name": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+            "symbol": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19802"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B4314D0E670CB43C88A5DCA09F76E5E812BD831CC2FEC6E434C9E5A9D1F57953",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
                     "exponent": 0
                 },
                 {
                     "aliases": [],
-                    "denom": "c4e",
+                    "denom": "osmo",
                     "exponent": 6
                 }
             ],
-            "description": "Chain4Energy Token",
-            "display": "c4e",
-            "name": "Chain4Energy Coin",
-            "symbol": "C4E",
+            "description": "The native token of Osmosis",
+            "display": "osmo",
+            "ibc": {
+                "dst_channel": "channel-19802",
+                "source_channel": "channel-17",
+                "source_denom": "uosmo"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-19802"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "uguu",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microguu"
+                    ],
+                    "denom": "uguu",
+                    "exponent": 6
+                }
+            ],
+            "description": "UnUniFi governance token",
+            "display": "GUU",
+            "name": "UnUniFi",
+            "symbol": "GUU",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "yieldaggregator/vaults/1",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "yieldaggregator/vaults/5",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "yieldaggregator/vaults/6",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "yieldaggregator/vaults/7",
             "type_asset": "sdk.coin"
         }
     ],
