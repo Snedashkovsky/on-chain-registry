@@ -323,11 +323,29 @@
         },
         {
             "base": "ibc/A7CA7C8986D88CAC9D6D1F4D65EA6F45D2C5B2A22789A967509781B83FD2942A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microtia"
+                    ],
+                    "denom": "utia",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "TIA",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of the Celestia network.",
+            "display": "TIA",
             "ibc": {
                 "dst_channel": "channel-19774",
                 "source_channel": "channel-2",
                 "source_denom": "ibc/39CAB3483680C6C57FC8017314B340118A45F2800D8FDF7A197F3313A9D430B1"
             },
+            "name": "TIA",
+            "symbol": "TIA",
             "traces": [
                 {
                     "chain": {
@@ -339,6 +357,32 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-19774"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-152/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F51BB221BAA275F2EBF654F70B005627D7E713AFFD6D86AFD1E43CAA886149F4",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-152",
+                        "path": "transfer/channel-152/utia"
+                    },
+                    "counterparty": {
+                        "base_denom": "utia",
+                        "chain_id": "celestia",
+                        "chain_name": "celestia",
+                        "channel_id": "channel-7"
                     },
                     "type": "ibc"
                 }
