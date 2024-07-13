@@ -2,11 +2,36 @@
     "assets": [
         {
             "base": "ibc/179034B2991DD42C9AE8CA887E5C7A61A07E18651012E8B693EC6B6298E1A306",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-2016",
                 "source_channel": "channel-66",
                 "source_denom": "ibc/521F856D81E91E2003FA7E6DA52BF82505B3D354BCD8CFFED42298925CEA8B59"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -20,17 +45,159 @@
                         "channel_id": "channel-2016"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-782/transfer/channel-1/transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0AEB07DD28484841348C1636B63E0A127211D4332E876511D6B4B18D492844C6",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-874"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-1/transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/42AD85D11FC47083D3C283643DA15DB2C3A3C36C38704F85370540C2AF858B94",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C6ADBD6A6E2F5634C8ACF14F34E7F2C91814F8EBB8C5837C5447CD0EE2BB4122",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-343",
+                        "path": "transfer/channel-343/transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8C3EEF7F7DB693AA4A060FC77CDE79D277D12BD45772EA59D5DA981F3E9ECC63",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-50",
+                        "path": "transfer/channel-50/transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/85F46C06FB3FE2C75E3872B2BA3203795CCBC8E901B475CDAFC4B008FB266D8E",
+                        "chain_id": "gravity-bridge-3",
+                        "chain_name": "gravitybridge",
+                        "channel_id": "channel-107"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DF12B9C940701C3EBD871F78C7962AC5F3FF48A9974C433B2259053CA2672760",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-281"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/83B4ADB51C3A0472F9A48E2ED1EE72082292E7D7B90D99DC4BC1022C7F394F65",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/42AD85D11FC47083D3C283643DA15DB2C3A3C36C38704F85370540C2AF858B94",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-584",
                 "source_channel": "channel-1",
                 "source_denom": "ibc/C6ADBD6A6E2F5634C8ACF14F34E7F2C91814F8EBB8C5837C5447CD0EE2BB4122"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -83,17 +250,81 @@
                         "channel_id": "channel-281"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/83B4ADB51C3A0472F9A48E2ED1EE72082292E7D7B90D99DC4BC1022C7F394F65",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/A617D2EA1E0C6FD4DD84D550BF94586F979877A386F934C6FC9D84DEC7563BE2",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-132",
                 "source_channel": "channel-18",
                 "source_denom": "ibc/D48AF41B67879B5154C1897EF3BF92501826D6DD1B575FE3824F69983C68DE80"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -107,17 +338,105 @@
                         "channel_id": "channel-132"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-0/transfer/channel-277/transfer/channel-132/transfer/channel-0/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3C10976CF9CDE58D15926E6D499A96CCF603B6549C5BCB4DD04A8D5345471EC9",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-143"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-277/transfer/channel-132/transfer/channel-0/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0CD454D5DF7A441BFDC2463CEF3EC7E49976B30FCA38D755BD195329F0DC1F47",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-277",
+                        "path": "transfer/channel-277/transfer/channel-132/transfer/channel-0/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A8CC572688E2C90F0F4C58D5A972622A4E2C105AAD3650DFC619D2F6511775EE",
+                        "chain_id": "kava_2222-10",
+                        "chain_name": "kava",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-132",
+                        "path": "transfer/channel-132/transfer/channel-0/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6CDD4663F2F09CD62285E2D45891FC149A3568E316CE3EBBE201A71A78A69388",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-18"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/C03652A1E6011D16AD5F889893149ED881F9AC1B6E74F59DFB640CEDF5A01714",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
             "ibc": {
                 "dst_channel": "channel-39",
                 "source_channel": "channel-45",
                 "source_denom": "ibc/CAB52A40B99CD521B238C07246F6AFE93C6465D8711904AE400146392DEAC0C2"
             },
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
             "traces": [
                 {
                     "chain": {
@@ -157,17 +476,94 @@
                         "channel_id": "channel-14"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-122/transfer/channel-102/transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/80D76BC25138C3EA8938B7F634BCE88AAD7E21F4E1EFEA89D840CB917928F415",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-102/transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8A8AA255C5C0C1C58A35D74FE992620E10292BDCE1D2C7F8C7C439D642C42040",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-102",
+                        "path": "transfer/channel-102/transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B49EA1FB55578901C523E157DE1F279BE86BFBC5D2B6DEA3069354A8294E6253",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-57",
+                        "path": "transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-14"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/6B329AAC4010204FE2B7A3A89623184A7423B8625617384D52EFD63C9E7D8BD3",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-584",
                 "source_channel": "channel-1",
                 "source_denom": "ibc/CAD4D23555290CF317ED48114768A779E67E9605860DC27A1B6A1D1170D969C2"
             },
+            "name": "SEI",
+            "symbol": "SEI",
             "traces": [
                 {
                     "chain": {
@@ -181,6 +577,71 @@
                         "channel_id": "channel-584"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/transfer/channel-1/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/DEE652F24B946436174D9D6AC3E1A06D65015F47E2988CBB71301720589B008A",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-1/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2C5F42AE5A584D58B582856CB200EA95E6709BA78989D47BDB5FF4D14F784AF4",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D7B1D6B337D1CD21951E2658FBBD155A89EB26EE55475C490655E29247FB99C9",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-584"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -190,26 +651,277 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/25A6F1F51E7EE458CF6DFC47A9D2D8DB393102BA8341A69C94B76DB7D2B80316"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-208/transfer/channel-103/transfer/channel-3/transfer/channel-6/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/25A6F1F51E7EE458CF6DFC47A9D2D8DB393102BA8341A69C94B76DB7D2B80316",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/transfer/channel-103/transfer/channel-3/transfer/channel-6/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/9C30E46146BCC6F34FFDEE6EB99780086993729F7DBF5BC90D2B53744C025ECD",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-103",
+                        "path": "transfer/channel-103/transfer/channel-3/transfer/channel-6/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6258A086C4E259F7E02137E4386D0C7D856907008FF869073623BAB1A580259A",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-6/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-158"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-11"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/B3F9807BEB9D6FD786DB3F8CAE136CAFE15D7461DD0AE3C8D9D4D5E9C0060126",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/5E409A29F634B76918F17BEBE21CB4DD2E7AA386CECBB7A3F7E0597D9724F662"
             },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-0/transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5E409A29F634B76918F17BEBE21CB4DD2E7AA386CECBB7A3F7E0597D9724F662",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5FC98F5B316C615356515A16887FD375630BCD292F492453EAD9C4A924495582",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-220",
+                        "path": "transfer/channel-220/transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BE749147EF2813020A5A77D29183336CFAA1A53B67E522EF103D6803DE0E084B",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/C3F44751671039E93D658DE399F6F80C2F234DDFA06F2CA125A393DE728C45DE",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/F64E4DB4034C7DCB90217FC8FFE286EDBF3C79D072E002CF9B63D36B7EA617BC"
             },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-208/transfer/channel-2/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F64E4DB4034C7DCB90217FC8FFE286EDBF3C79D072E002CF9B63D36B7EA617BC",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/transfer/channel-2/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/97D63631B7BCAEE498B810F71E5017F5C2C087008A64AD478D0E5E973B102598",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D7B1D6B337D1CD21951E2658FBBD155A89EB26EE55475C490655E29247FB99C9",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-293"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -245,6 +957,32 @@
                         "channel_id": "channel-1"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-782/transfer/channel-8/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/96E7CA89210FF4A848FDFE73781FDCB5E524CAB4BF324B3E90CC4CA0CDF9FDE9",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/transfer/channel-8/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0EC78B75D318EA0AAB6160A12AEE8F3C7FEA3CFEAD001A3B103E11914709F4CE",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -254,8 +992,62 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/1E8D7FA0FFD12722EA6D73A466295F85AAF77E97F046853F2B09A0F5741ACD96"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-251/transfer/channel-255/transfer/channel-8/transfer/channel-212/ucrbrus"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/1E8D7FA0FFD12722EA6D73A466295F85AAF77E97F046853F2B09A0F5741ACD96",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-251",
+                        "path": "transfer/channel-251/transfer/channel-255/transfer/channel-8/transfer/channel-212/ucrbrus"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/319EF7159221103906FBBD90492BF31DC8257A8A4697BE98D8AD391E21C7876C",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-255",
+                        "path": "transfer/channel-255/transfer/channel-8/transfer/channel-212/ucrbrus"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F8D4A8A44D8EF57F83D49624C4C89EECB1472D6D2D1242818CDABA6BC2479DA9",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-151"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-212/ucrbrus"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/41999DF04D9441DAC0DF5D8291DF4333FBCBA810FFD63FDCE34FDF41EF37B6F7",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -263,26 +1055,143 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/6B2B19D874851F631FF0AF82C38A20D4B82F438C7A22F41EDA33568345397244"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-1279/transfer/channel-2/transfer/channel-15/79228162514264337593543950342"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6B2B19D874851F631FF0AF82C38A20D4B82F438C7A22F41EDA33568345397244",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1279",
+                        "path": "transfer/channel-1279/transfer/channel-2/transfer/channel-15/79228162514264337593543950342"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3CC19CEC7E5A3E90E78A5A9ECC5A0E2F8F826A375CF1E096F4515CF09DA3E366",
+                        "chain_id": "centauri-1",
+                        "chain_name": "composable",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/936A02CCC8FFC172C4F7774E44D3CBC8A422CD78423FE480E35EE8028AC777D7",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/80D76BC25138C3EA8938B7F634BCE88AAD7E21F4E1EFEA89D840CB917928F415"
             },
+            "name": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+            "symbol": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-122/transfer/channel-102/transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/80D76BC25138C3EA8938B7F634BCE88AAD7E21F4E1EFEA89D840CB917928F415",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-102/transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8A8AA255C5C0C1C58A35D74FE992620E10292BDCE1D2C7F8C7C439D642C42040",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-102",
+                        "path": "transfer/channel-102/transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B49EA1FB55578901C523E157DE1F279BE86BFBC5D2B6DEA3069354A8294E6253",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-57",
+                        "path": "transfer/channel-57/factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/sei189adguawugk3e55zn63z8r9ll29xrjwca636ra7v7gxuzn98sxyqwzt47l/9fELvUhFo6yWL34ZaLgPbCPzdk9MD1tAzMycgH45qShH",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-14"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/A778AA8C8CDDB9A42A1D24DD70485A495995DEE39B5DF32A723752E21710534D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-584",
                 "source_channel": "channel-1",
                 "source_denom": "ibc/5FC98F5B316C615356515A16887FD375630BCD292F492453EAD9C4A924495582"
             },
+            "name": "SEI",
+            "symbol": "SEI",
             "traces": [
                 {
                     "chain": {
@@ -309,6 +1218,32 @@
                         "channel_id": "channel-1"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -318,8 +1253,49 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/C00CE698F4BF5C468787DED83BAE837A73DA9E9D48EF2C5354B2380EC0A26DED"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-1279/transfer/channel-11/ucre"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C00CE698F4BF5C468787DED83BAE837A73DA9E9D48EF2C5354B2380EC0A26DED",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1279",
+                        "path": "transfer/channel-1279/transfer/channel-11/ucre"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B5AB26FB63C08E1C14B91B4DDC15CA4FE59737052B4432D8A3B328B66F6FE7A1",
+                        "chain_id": "centauri-1",
+                        "chain_name": "composable",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-11",
+                        "path": "transfer/channel-11/ucre"
+                    },
+                    "counterparty": {
+                        "base_denom": "ucre",
+                        "chain_id": "crescent-1",
+                        "chain_name": "crescent",
+                        "channel_id": "channel-64"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -342,26 +1318,143 @@
                         "channel_id": "channel-584"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-143/erc20/tether/usdt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4ABBEF4C8926DDDB320AE5188CFD63267ABBCEFC0583E4AE05D6E5AA2401DDAB",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-143",
+                        "path": "transfer/channel-143/erc20/tether/usdt"
+                    },
+                    "counterparty": {
+                        "base_denom": "erc20/tether/usdt",
+                        "chain_id": "kava_2222-10",
+                        "chain_name": "kava",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/1A46C22A2A87DE46D003B96A1866D2FF6C312FF12DFDEF89DD50E2A4A03390D0",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/AB944E94570810BDCF5CF8C58B57D2FCF8BEE47834DC886D155FC27E28EB998E"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-1279/transfer/channel-4/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/AB944E94570810BDCF5CF8C58B57D2FCF8BEE47834DC886D155FC27E28EB998E",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1279",
+                        "path": "transfer/channel-1279/transfer/channel-4/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0",
+                        "chain_id": "centauri-1",
+                        "chain_name": "composable",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-617"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/2C5F42AE5A584D58B582856CB200EA95E6709BA78989D47BDB5FF4D14F784AF4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-584",
                 "source_channel": "channel-1",
                 "source_denom": "ibc/D7B1D6B337D1CD21951E2658FBBD155A89EB26EE55475C490655E29247FB99C9"
             },
+            "name": "SEI",
+            "symbol": "SEI",
             "traces": [
                 {
                     "chain": {
@@ -375,6 +1468,32 @@
                         "channel_id": "channel-584"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-141",
+                        "path": "transfer/channel-141/transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71F11BC0AF8E526B80E44172EBA9D3F0A8E03950BB882325435691EBC9450B1D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-782",
+                        "path": "transfer/channel-782/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -384,26 +1503,166 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/FDFCC2BD1D609151C3593EC84FD9EA43057FF45F264BC89B18E7085F3F29A248"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-1279/transfer/channel-2/130"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/FDFCC2BD1D609151C3593EC84FD9EA43057FF45F264BC89B18E7085F3F29A248",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1279",
+                        "path": "transfer/channel-1279/transfer/channel-2/130"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F3EC9F834E57DF704FA3AEAF14E8391C2E58397FE56960AD70E67562990D8265",
+                        "chain_id": "centauri-1",
+                        "chain_name": "composable",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/7413E373EBD15B977DC6DB2CF763A9F77E65F4AE7F680F1A27FDF73592D9FB20",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsei"
+                    ],
+                    "denom": "usei",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisei"
+                    ],
+                    "denom": "msei",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "sei",
+                    "exponent": 6
+                }
+            ],
+            "description": "sei",
+            "display": "sei",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/EFD25468CCBACD21D3D018E10F3B8758477DD1E4AA97EDC68C1DA090A0B1B84D"
             },
+            "name": "SEI",
+            "symbol": "SEI",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-0/transfer/channel-584/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/EFD25468CCBACD21D3D018E10F3B8758477DD1E4AA97EDC68C1DA090A0B1B84D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-584/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/261460D72BA2141BC77D439038343CB2B37C87B4148B4D5E30A5168A93E3E1D9",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-584",
+                        "path": "transfer/channel-584/usei"
+                    },
+                    "counterparty": {
+                        "base_denom": "usei",
+                        "chain_id": "pacific-1",
+                        "chain_name": "sei",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/11E3CF372E065ACB1A39C531A3C7E7E03F60B5D0653AD2139D31128ACD2772B5",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4"
             },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-75/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/987C17B11ABC2B20019178ACE62929FE9840202CE79498E29FE8E5CB02B7C0A4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-75",
+                        "path": "transfer/channel-75/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -411,8 +1670,67 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/7D389F0ABF1E4D45BE6D7BBE36A2C50EA0559C01E076B02F8E381E685EC1F942"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-341/cw20:terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/7D389F0ABF1E4D45BE6D7BBE36A2C50EA0559C01E076B02F8E381E685EC1F942",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/2E4A7BAAD00CDE4239CE3C38238088157E6D1BD4B58B0BDB09EC09E4F6DA7996",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/migaloo1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqdhts4u/boneWhale",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-158",
+                "source_channel": "channel-3",
+                "source_denom": "ibc/517E13F14A1245D4DE8CF467ADD4DA0058974CDCC880FA6AE536DBCA1D16D84E"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-86/factory/migaloo1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqdhts4u/boneWhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/517E13F14A1245D4DE8CF467ADD4DA0058974CDCC880FA6AE536DBCA1D16D84E",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-158"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-86",
+                        "path": "transfer/channel-86/factory/migaloo1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqdhts4u/boneWhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/migaloo1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqdhts4u/boneWhale",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -420,8 +1738,36 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/BB6BCDB515050BAE97516111873CCD7BCF1FD0CCB723CC12F3C4F704D6C646CE"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-259/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BB6BCDB515050BAE97516111873CCD7BCF1FD0CCB723CC12F3C4F704D6C646CE",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/ukuji"
+                    },
+                    "counterparty": {
+                        "base_denom": "ukuji",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -429,8 +1775,36 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/EDD6F0D66BCD49C1084FB2C35353B4ACD7B9191117CE63671B61320548F7C89D"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-642/uwhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/EDD6F0D66BCD49C1084FB2C35353B4ACD7B9191117CE63671B61320548F7C89D",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-642",
+                        "path": "transfer/channel-642/uwhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "uwhale",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -509,11 +1883,64 @@
         },
         {
             "base": "ibc/6CDD4663F2F09CD62285E2D45891FC149A3568E316CE3EBBE201A71A78A69388",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -521,8 +1948,23 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/41999DF04D9441DAC0DF5D8291DF4333FBCBA810FFD63FDCE34FDF41EF37B6F7"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-212/ucrbrus"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/41999DF04D9441DAC0DF5D8291DF4333FBCBA810FFD63FDCE34FDF41EF37B6F7",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -530,8 +1972,23 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/C25A2303FE24B922DAFFDCE377AC5A42E5EF746806D32E2ED4B610DE85C203F7"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-21671/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C25A2303FE24B922DAFFDCE377AC5A42E5EF746806D32E2ED4B610DE85C203F7",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -539,8 +1996,36 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/56D7C03B8F6A07AD322EEE1BEF3AE996E09D1C1E34C27CF37E0D4A0AC5972516"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-1279/ppica"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/56D7C03B8F6A07AD322EEE1BEF3AE996E09D1C1E34C27CF37E0D4A0AC5972516",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1279",
+                        "path": "transfer/channel-1279/ppica"
+                    },
+                    "counterparty": {
+                        "base_denom": "ppica",
+                        "chain_id": "centauri-1",
+                        "chain_name": "composable",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -548,8 +2033,36 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-208/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-208",
+                        "path": "transfer/channel-208/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -557,17 +2070,80 @@
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/06EF575844982382F4D1BC3830D294557A30EDB3CD223153AFC8DFEF06349C56"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-341/cw20:terra1xp9hrhthzddnl7j5du83gqqr4wmdjm5t0guzg9jp6jwrtpukwfjsjgy4f3"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/06EF575844982382F4D1BC3830D294557A30EDB3CD223153AFC8DFEF06349C56",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/9DE1CEEB32514C5A9F6C49E92C03FA3B70ADCE30D9E553A9218868743D49BDF3",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "BADDOG"
+                    ],
+                    "denom": "factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat"
+                    ],
+                    "denom": "BADDOG",
+                    "exponent": 6
+                }
+            ],
+            "description": "has a hat",
+            "display": "factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/2FFE07C4B4EFC0DDA099A16C6AF3C9CCA653CC56077E87217A585D48794B0BC7"
             },
+            "name": "factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat",
+            "symbol": "BADDOG",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-113/factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2FFE07C4B4EFC0DDA099A16C6AF3C9CCA653CC56077E87217A585D48794B0BC7",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-113",
+                        "path": "transfer/channel-113/factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat",
+                        "chain_id": "chihuahua-1",
+                        "chain_name": "chihuahua",
+                        "channel_id": "channel-7"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -707,11 +2283,55 @@
         },
         {
             "base": "ibc/F5FABF52B54E65064B57BF6DBD8E5FAD22CEE9F4B8A57ADBB20CCD0173AA72A4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -740,11 +2360,36 @@
         },
         {
             "base": "ibc/0B9F987599FE8F3C065CDFC66BF81166354EB78F247B72A4A4AEAFFD775726F5",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro"
             },
+            "name": "factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro",
+            "symbol": "factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -758,11 +2403,36 @@
         },
         {
             "base": "ibc/16065EE5282C5217685C8F084FC44864C25C706AC37356B0D62811D50B96920F",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
             },
+            "name": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "symbol": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -921,11 +2591,36 @@
         },
         {
             "base": "ibc/4786BEBBFDD989C467C4552AD73065D8B2578230B8428B3B9275D540EB04C851",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn"
             },
+            "name": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+            "symbol": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1114,11 +2809,44 @@
         },
         {
             "base": "ibc/7577185E42939EE57EF73E2DE57A28BBE7693EDC0766C506E570C5D6B7636B33",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "sail"
+                    ],
+                    "denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SAIL",
+                    "exponent": 6
+                }
+            ],
+            "description": "Sail DAO's Governance Token",
+            "display": "SAIL",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
             },
+            "name": "Sail DAO token",
+            "symbol": "SAIL",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1243,11 +2971,36 @@
         },
         {
             "base": "ibc/A5BA3F1C38ADAA11F941D66B19A7CD67B127F25DE2EA581BCD2DC4D8D50BEED9",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
             },
+            "name": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "symbol": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1276,11 +3029,36 @@
         },
         {
             "base": "ibc/AB7C92666DE8C7A977666B8080CABF0127B652B9D40F7251E6914DE942D9942B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO"
             },
+            "name": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+            "symbol": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1502,11 +3280,40 @@
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-782",
                 "source_channel": "channel-0",
-                "source_denom": ""
+                "source_denom": "uosmo"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-782"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -7340,6 +9147,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan/adsf",
+            "admin": "sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan",
+            "base": "factory/sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan/adsf",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan/adsf",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "adsf",
+                    "exponent": 6
+                }
+            ],
+            "description": "adsfdf [ipfs_cid](QmZzwgQJJSLe4CSVHGfSBkXy9CtDWKJcjLguegKgz3FTWi)",
+            "display": "adsf",
+            "name": "asdf",
+            "symbol": "adsf",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan/adsf/vest",
+            "admin": "sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan",
+            "base": "factory/sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan/adsf/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1ddg8mc4yz446tapca666p5jggk3hmtsw68q2xry5g0ax2rvzpqesccgkan/adsf/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "adsf/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for adsf. [ipfs_cid](QmZzwgQJJSLe4CSVHGfSBkXy9CtDWKJcjLguegKgz3FTWi)",
+            "display": "adsf/vest",
+            "name": "asdf Vests",
+            "symbol": "adsf/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1dj8sjapqcnfwa3hcj0ez2qjaqght6xjxpyvt87/seida",
             "admin": "sei1dj8sjapqcnfwa3hcj0ez2qjaqght6xjxpyvt87",
             "base": "factory/sei1dj8sjapqcnfwa3hcj0ez2qjaqght6xjxpyvt87/seida",
@@ -7796,6 +9647,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6/tes",
+            "admin": "sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6",
+            "base": "factory/sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6/tes",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6/tes",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tes",
+                    "exponent": 6
+                }
+            ],
+            "description": "test [ipfs_cid](QmVu4mAAL5HMQBC2fWLSBh56vUaqDvuSdPnnq3KMfjgvop)",
+            "display": "tes",
+            "name": "tes",
+            "symbol": "tes",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6/tes/vest",
+            "admin": "sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6",
+            "base": "factory/sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6/tes/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1eh3su3cv75w9u4xe6vdyzrr0tvdv0k2fvk5u9zh5gu22veegwxqqvlrvt6/tes/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tes/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for tes. [ipfs_cid](QmVu4mAAL5HMQBC2fWLSBh56vUaqDvuSdPnnq3KMfjgvop)",
+            "display": "tes/vest",
+            "name": "tes Vests",
+            "symbol": "tes/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1ehlt4zngl794lw9w6elrada8kmjxpc6qmyuqvrep45hjuyf8qtys7t4g3p/okx",
             "admin": "sei1ehlt4zngl794lw9w6elrada8kmjxpc6qmyuqvrep45hjuyf8qtys7t4g3p",
             "base": "factory/sei1ehlt4zngl794lw9w6elrada8kmjxpc6qmyuqvrep45hjuyf8qtys7t4g3p/okx",
@@ -7964,6 +9859,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns/bos",
+            "admin": "sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns",
+            "base": "factory/sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns/bos",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns/bos",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "bos",
+                    "exponent": 6
+                }
+            ],
+            "description": "BOS [ipfs_cid](QmVPQLVpjAyjgD7rsVg95viakN3j4bUgqWj1Aa1EMjAYYE)",
+            "display": "bos",
+            "name": "BB",
+            "symbol": "BOS",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns/bos/vest",
+            "admin": "sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns",
+            "base": "factory/sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns/bos/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1epa25hnlexec6674zmznhtza6xc37ww6jx59vh3c3va9wjdvfd6qdw3wns/bos/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "bos/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for BOS. [ipfs_cid](QmVPQLVpjAyjgD7rsVg95viakN3j4bUgqWj1Aa1EMjAYYE)",
+            "display": "bos/vest",
+            "name": "BB Vests",
+            "symbol": "BOS/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1epyu0nrw0gzllswnmlt42a58gl8wlzmr4u86gv/SEIWA",
             "admin": "sei1epyu0nrw0gzllswnmlt42a58gl8wlzmr4u86gv",
             "base": "factory/sei1epyu0nrw0gzllswnmlt42a58gl8wlzmr4u86gv/SEIWA",
@@ -7983,6 +9922,50 @@
             "display": "SEIWA",
             "name": "SEIWA - 清和",
             "symbol": "SEIWA",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa/xvr",
+            "admin": "sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa",
+            "base": "factory/sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa/xvr",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa/xvr",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "xvr",
+                    "exponent": 6
+                }
+            ],
+            "description": "Xavier Des [ipfs_cid](QmT37kBS7ogLXAgErCVJLBBZKSQ1evbvnq9wwcxUbHy1nz)",
+            "display": "xvr",
+            "name": "Xavier",
+            "symbol": "XVR",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa/xvr/vest",
+            "admin": "sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa",
+            "base": "factory/sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa/xvr/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1eq37sws250klhcethnfyl0fk09l4l2jkrawgc6hyl9cg385k3ypsnnrfqa/xvr/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "xvr/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for XVR. [ipfs_cid](QmT37kBS7ogLXAgErCVJLBBZKSQ1evbvnq9wwcxUbHy1nz)",
+            "display": "xvr/vest",
+            "name": "Xavier Vests",
+            "symbol": "XVR/VEST",
             "type_asset": "factory"
         },
         {
@@ -8373,6 +10356,50 @@
             "display": "popeye",
             "name": "Popeye",
             "symbol": "POPEYE",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e/txt",
+            "admin": "sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e",
+            "base": "factory/sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e/txt",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e/txt",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "txt",
+                    "exponent": 6
+                }
+            ],
+            "description": "https://www.tailwind.zone/ventures [ipfs_cid](QmbbNCgjBWhrdjLWQ5XT1dKuiPCTwP4fV86EP1SxFQ2Qa2)",
+            "display": "txt",
+            "name": "txt",
+            "symbol": "txt",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e/txt/vest",
+            "admin": "sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e",
+            "base": "factory/sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e/txt/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1fuxmja9e7044l80e0r4ugr6xp44wydx960jdfk893d4a6k5ng4fsqwys5e/txt/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "txt/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for txt. [ipfs_cid](QmbbNCgjBWhrdjLWQ5XT1dKuiPCTwP4fV86EP1SxFQ2Qa2)",
+            "display": "txt/vest",
+            "name": "txt Vests",
+            "symbol": "txt/VEST",
             "type_asset": "factory"
         },
         {
@@ -8859,6 +10886,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu/keith",
+            "admin": "sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu",
+            "base": "factory/sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu/keith",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu/keith",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "keith",
+                    "exponent": 6
+                }
+            ],
+            "description": "lol [ipfs_cid](QmZzwgQJJSLe4CSVHGfSBkXy9CtDWKJcjLguegKgz3FTWi)",
+            "display": "keith",
+            "name": "M00n",
+            "symbol": "KEITH",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu/keith/vest",
+            "admin": "sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu",
+            "base": "factory/sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu/keith/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1h7p3mk76ha66f69p5ntzzxrxauf42q9jtuuevnusdqsw5dct55pswg77hu/keith/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "keith/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for KEITH. [ipfs_cid](QmZzwgQJJSLe4CSVHGfSBkXy9CtDWKJcjLguegKgz3FTWi)",
+            "display": "keith/vest",
+            "name": "M00n Vests",
+            "symbol": "KEITH/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1h8k345qsauavf2lts0mhz6c5q550nqk89rltee/seinnheiser",
             "admin": "sei1h8k345qsauavf2lts0mhz6c5q550nqk89rltee",
             "base": "factory/sei1h8k345qsauavf2lts0mhz6c5q550nqk89rltee/seinnheiser",
@@ -9059,6 +11130,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm/reid",
+            "admin": "sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm",
+            "base": "factory/sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm/reid",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm/reid",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "reid",
+                    "exponent": 6
+                }
+            ],
+            "description": " [ipfs_cid](QmZ6g8k9Fqv59ko8hoEVHtQitqUyr9zCDWAw1c9mxh9N58)",
+            "display": "reid",
+            "name": "Reid cc",
+            "symbol": "REID",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm/reid/vest",
+            "admin": "sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm",
+            "base": "factory/sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm/reid/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1hr9f3af3qrnmasaug9dp8tvuu4a87kjuynef6npjmw28qu3x0snsqme0lm/reid/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "reid/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for REID. [ipfs_cid](QmZ6g8k9Fqv59ko8hoEVHtQitqUyr9zCDWAw1c9mxh9N58)",
+            "display": "reid/vest",
+            "name": "Reid cc Vests",
+            "symbol": "REID/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1huuk9d9kmka9yf2m5gltaxxacxmn4jjnjmu6n0/seidojo",
             "admin": "sei1huuk9d9kmka9yf2m5gltaxxacxmn4jjnjmu6n0",
             "base": "factory/sei1huuk9d9kmka9yf2m5gltaxxacxmn4jjnjmu6n0/seidojo",
@@ -9088,6 +11203,50 @@
             "display": "factory/sei1hv076n2qxmvxwwk484v8n5velheqcvca9u523a/hussein",
             "name": "factory/sei1hv076n2qxmvxwwk484v8n5velheqcvca9u523a/hussein",
             "symbol": "factory/sei1hv076n2qxmvxwwk484v8n5velheqcvca9u523a/hussein",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q/tes",
+            "admin": "sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q",
+            "base": "factory/sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q/tes",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q/tes",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tes",
+                    "exponent": 6
+                }
+            ],
+            "description": "tes [ipfs_cid](QmSJZxjPJMaXubi32zQsKGSzM1hWiJpnPT9sXCkH25friK)",
+            "display": "tes",
+            "name": "tes",
+            "symbol": "tes",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q/tes/vest",
+            "admin": "sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q",
+            "base": "factory/sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q/tes/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1hvhrx8lncy72kk0j3zhvfswm40tw5tccvzdqstsg6l4pdlr6p0uq8xv29q/tes/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tes/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for tes. [ipfs_cid](QmSJZxjPJMaXubi32zQsKGSzM1hWiJpnPT9sXCkH25friK)",
+            "display": "tes/vest",
+            "name": "tes Vests",
+            "symbol": "tes/VEST",
             "type_asset": "factory"
         },
         {
@@ -11310,6 +13469,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4/jack",
+            "admin": "sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4",
+            "base": "factory/sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4/jack",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4/jack",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "jack",
+                    "exponent": 6
+                }
+            ],
+            "description": "Making my way [ipfs_cid](QmTybLj8XrLFAxLNGFbGcByd5gaxqXoEMREPNK7vRmpQKo)",
+            "display": "jack",
+            "name": "JACK-5M",
+            "symbol": "JACK",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4/jack/vest",
+            "admin": "sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4",
+            "base": "factory/sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4/jack/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nmm3gzqhtsq9xjakn292544a3twdxrz2jy3azydp4k4j62z282pqd00am4/jack/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "jack/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for JACK. [ipfs_cid](QmTybLj8XrLFAxLNGFbGcByd5gaxqXoEMREPNK7vRmpQKo)",
+            "display": "jack/vest",
+            "name": "JACK-5M Vests",
+            "symbol": "JACK/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1nqh9fxwmlms38j0x4zftyfpav7alr56u3m2st6/seiportal",
             "admin": "sei1nqh9fxwmlms38j0x4zftyfpav7alr56u3m2st6",
             "base": "factory/sei1nqh9fxwmlms38j0x4zftyfpav7alr56u3m2st6/seiportal",
@@ -11557,6 +13760,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5/pamp",
+            "admin": "sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5",
+            "base": "factory/sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5/pamp",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5/pamp",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "pamp",
+                    "exponent": 6
+                }
+            ],
+            "description": "234 [ipfs_cid](QmdwzYBpoN99rATHCeiGo5h3VAtdJf6Ktsy4i3DnJRLTnZ)",
+            "display": "pamp",
+            "name": "234",
+            "symbol": "PAMP",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5/pamp/vest",
+            "admin": "sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5",
+            "base": "factory/sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5/pamp/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1nz4zj0ql4dcw2x6lljacl5f9cy8hwelum3mqfs9vg7hjr56thxusdpw8n5/pamp/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "pamp/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for PAMP. [ipfs_cid](QmdwzYBpoN99rATHCeiGo5h3VAtdJf6Ktsy4i3DnJRLTnZ)",
+            "display": "pamp/vest",
+            "name": "234 Vests",
+            "symbol": "PAMP/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1p0eustxuql448j03mudjjx6vnk2nauezu6htd9/seinal",
             "admin": "sei1p0eustxuql448j03mudjjx6vnk2nauezu6htd9",
             "base": "factory/sei1p0eustxuql448j03mudjjx6vnk2nauezu6htd9/seinal",
@@ -11690,6 +13937,50 @@
             "display": "factory/sei1p7j36cyh20n4ght29n7knxqr87wh5ap8th6dsa/gypsei",
             "name": "factory/sei1p7j36cyh20n4ght29n7knxqr87wh5ap8th6dsa/gypsei",
             "symbol": "factory/sei1p7j36cyh20n4ght29n7knxqr87wh5ap8th6dsa/gypsei",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk/adf",
+            "admin": "sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk",
+            "base": "factory/sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk/adf",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk/adf",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "adf",
+                    "exponent": 6
+                }
+            ],
+            "description": "dsf [ipfs_cid](QmWCroGn4swF6EGwAN5NRnigkiQEhuUaoDMoREiEPipMdr)",
+            "display": "adf",
+            "name": "sdf",
+            "symbol": "adf",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk/adf/vest",
+            "admin": "sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk",
+            "base": "factory/sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk/adf/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1p8avl5qq0ataecx4hdceys2yqn25n2tkcdj9hwp8svrhm2dnfwgsw9wezk/adf/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "adf/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for adf. [ipfs_cid](QmWCroGn4swF6EGwAN5NRnigkiQEhuUaoDMoREiEPipMdr)",
+            "display": "adf/vest",
+            "name": "sdf Vests",
+            "symbol": "adf/VEST",
             "type_asset": "factory"
         },
         {
@@ -12663,6 +14954,50 @@
             "display": "savsei",
             "name": "SailorVenus",
             "symbol": "SAV",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk/tes",
+            "admin": "sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk",
+            "base": "factory/sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk/tes",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk/tes",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tes",
+                    "exponent": 6
+                }
+            ],
+            "description": "test [ipfs_cid](QmdGdeLKiUQhyJhhdvgQHDS7fs1SYraRvsUj6Jitgumofn)",
+            "display": "tes",
+            "name": "test",
+            "symbol": "tes",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk/tes/vest",
+            "admin": "sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk",
+            "base": "factory/sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk/tes/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1r6m3a08xt4hkghqfdd70dclacyr7lcgkfv62pmqlw6hmhcgx620slzx6kk/tes/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "tes/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for tes. [ipfs_cid](QmdGdeLKiUQhyJhhdvgQHDS7fs1SYraRvsUj6Jitgumofn)",
+            "display": "tes/vest",
+            "name": "test Vests",
+            "symbol": "tes/VEST",
             "type_asset": "factory"
         },
         {
@@ -14333,6 +16668,50 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c/pumpit",
+            "admin": "sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c",
+            "base": "factory/sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c/pumpit",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c/pumpit",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "pumpit",
+                    "exponent": 6
+                }
+            ],
+            "description": "GET BOGGED [ipfs_cid](QmdwzYBpoN99rATHCeiGo5h3VAtdJf6Ktsy4i3DnJRLTnZ)",
+            "display": "pumpit",
+            "name": "BOGGED",
+            "symbol": "PUMPIT",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c/pumpit/vest",
+            "admin": "sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c",
+            "base": "factory/sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c/pumpit/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1uz6n29dx4udlauf66stkgxqx5huw9u9ha2m64sf56yyzkgqtnmcq9yqz2c/pumpit/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "pumpit/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for PUMPIT. [ipfs_cid](QmdwzYBpoN99rATHCeiGo5h3VAtdJf6Ktsy4i3DnJRLTnZ)",
+            "display": "pumpit/vest",
+            "name": "BOGGED Vests",
+            "symbol": "PUMPIT/VEST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
             "admin": "sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53",
             "base": "factory/sei1v3kj7dwfttttf36905dr82wnd3jtxewwuuec53/divisei",
@@ -15712,6 +18091,50 @@
             "display": "factory/sei1yg63c0kcy2lrcq2szzcctysuyltyxm8d752ee6/seimars",
             "name": "factory/sei1yg63c0kcy2lrcq2szzcctysuyltyxm8d752ee6/seimars",
             "symbol": "factory/sei1yg63c0kcy2lrcq2szzcctysuyltyxm8d752ee6/seimars",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z/future",
+            "admin": "sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z",
+            "base": "factory/sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z/future",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z/future",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "future",
+                    "exponent": 6
+                }
+            ],
+            "description": "woof [ipfs_cid](QmXqW49qqH8A1UYJB9tpZNpzPC8rmKX9Gwabbhzy3gLV2S)",
+            "display": "future",
+            "name": "ze future",
+            "symbol": "future",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z/future/vest",
+            "admin": "sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z",
+            "base": "factory/sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z/future/vest",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/sei1yj9n8w3q7z0j2em809a3pz9mf09avavl6fdhl6nahawck7vvtjqsuhsn9z/future/vest",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "future/vest",
+                    "exponent": 6
+                }
+            ],
+            "description": "TAILWIND vest tokens for future. [ipfs_cid](QmXqW49qqH8A1UYJB9tpZNpzPC8rmKX9Gwabbhzy3gLV2S)",
+            "display": "future/vest",
+            "name": "ze future Vests",
+            "symbol": "future/VEST",
             "type_asset": "factory"
         },
         {
