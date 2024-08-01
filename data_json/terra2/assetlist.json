@@ -2559,6 +2559,94 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/9F8A44B0AEDD7DF9E34CB88ABC9FD2DD70EAC1AD7FCC716C5C1B0097D197ADE4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Terra Columbus.",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-251",
+                "source_channel": "channel-1",
+                "source_denom": "ibc/6E64CE161511E64B55ED5BD1CDA539129E095DE083AF630FE00FE43051A0531C"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-0/transfer/channel-207/transfer/channel-27/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6E64CE161511E64B55ED5BD1CDA539129E095DE083AF630FE00FE43051A0531C",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-251"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-207/transfer/channel-27/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A2A0769D568D330C6C6CAB8B5D827EF8BD9B5D505FCA587DCC8DA694E1799B06",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-207",
+                        "path": "transfer/channel-207/transfer/channel-27/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8F865D9760B482FF6254EDFEC1FF2F1273B9AB6873A7DE484F89639795D73D75",
+                        "chain_id": "juno-1",
+                        "chain_name": "juno",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-27",
+                        "path": "transfer/channel-27/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "columbus-5",
+                        "chain_name": "terra",
+                        "channel_id": "channel-20"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/A1BFD1043871E3D677D177EA8D9B96B3F7021AAF9D7857D4A302DDDC2057D896",
             "ibc": {
                 "dst_channel": "channel-51",
@@ -14085,22 +14173,6 @@
             ],
             "name": "CUB",
             "symbol": "CUB",
-            "type_asset": "cw20"
-        },
-        {
-            "address": "",
-            "base": "cw20:terra1ynvsz80w9xmhdxucv96gkwpxlwvjgsq75xh2f3pf825c4wfmkfxskq6pqv",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "GEM"
-                    ],
-                    "denom": "gem",
-                    "exponent": 6
-                }
-            ],
-            "name": "GEM DAO",
-            "symbol": "GEM",
             "type_asset": "cw20"
         },
         {
