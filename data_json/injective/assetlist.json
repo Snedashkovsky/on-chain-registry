@@ -1770,6 +1770,56 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/5AC3EB515892B130EA995D4B13BEA8B4C4BC063AEB95CAE6A0A49DC16B4B3578",
+            "ibc": {
+                "dst_channel": "channel-60",
+                "source_channel": "channel-177",
+                "source_denom": "ibc/F3C1A0F54602A7168B20985930583D9BB6CBAAF6B712A92E8CD8F9A5E03618E8"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-177",
+                        "path": "transfer/channel-177/transfer/channel-25/transfer/channel-10/transfer/channel-43/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/F3C1A0F54602A7168B20985930583D9BB6CBAAF6B712A92E8CD8F9A5E03618E8",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-60"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-25",
+                        "path": "transfer/channel-25/transfer/channel-10/transfer/channel-43/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/AF01FCCAC01D6F199D7065128DEED24E102920F8EA52E6A28B9EE05568CB5A71",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-229"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-43/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/640E1C3E28FD45F611971DF891AE3DC90C825DF759DF8FAA8F33F7F72B35AD56",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/5B8F90B1E3A33B45FF7AE086621456E8C2C162CABCC95406001322818AE92B63",
             "ibc": {
                 "dst_channel": "channel-122",
@@ -3036,49 +3086,74 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/0C8737145CF8CAE5DC1007450882E251744B57119600E1A2DACE72C8C272849D",
+            "base": "ibc/057B70A05AFF2A38C082ACE15A260080D29627CCBF1655EA38B043275AFAADCE",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
-                "dst_channel": "channel-54",
-                "source_channel": "channel-98",
-                "source_denom": "ibc/5F7043B81DD80A6BBB20E73107D517E9636C39385C8C7003DF6A6E52BC7A481F"
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/8787DA288F4EA68FA80EDB388333A1BF9ED1C976BB8443F031C89E5DDD5ED98A"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-98",
-                        "path": "transfer/channel-98/transfer/channel-75/transfer/channel-2/wglmr-wei"
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-362/transfer/channel-10/uatom"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/5F7043B81DD80A6BBB20E73107D517E9636C39385C8C7003DF6A6E52BC7A481F",
-                        "chain_id": "kaiyo-1",
-                        "chain_name": "kujira",
-                        "channel_id": "channel-54"
+                        "base_denom": "ibc/8787DA288F4EA68FA80EDB388333A1BF9ED1C976BB8443F031C89E5DDD5ED98A",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
                     },
                     "type": "ibc"
                 },
                 {
                     "chain": {
-                        "channel_id": "channel-75",
-                        "path": "transfer/channel-75/transfer/channel-2/wglmr-wei"
+                        "channel_id": "channel-362",
+                        "path": "transfer/channel-362/transfer/channel-10/uatom"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/5103F3B79845E445F46120B476A8336D76DE39A16E77132B2BB19BEA3857AF9B",
-                        "chain_id": "neutron-1",
-                        "chain_name": "neutron",
-                        "channel_id": "channel-3"
+                        "base_denom": "ibc/A670D9568B3E399316EEDE40C1181B7AA4BD0695F0B37513CE9B95B977DFC12E",
+                        "chain_id": "teritori-1",
+                        "chain_name": "teritori",
+                        "channel_id": "channel-0"
                     },
                     "type": "ibc"
                 },
                 {
                     "chain": {
-                        "channel_id": "channel-2",
-                        "path": "transfer/channel-2/wglmr-wei"
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/uatom"
                     },
                     "counterparty": {
-                        "base_denom": "wglmr-wei",
-                        "chain_id": "axelar-dojo-1",
-                        "chain_name": "axelar",
-                        "channel_id": "channel-78"
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-431"
                     },
                     "type": "ibc"
                 }
@@ -4715,6 +4790,43 @@
                         "chain_id": "axelar-dojo-1",
                         "chain_name": "axelar",
                         "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/DA9F0C043A4A9DCFC96E4C75EE391AC5F7610C902E1E29EC0F7B90088BE35029",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/9B8FC796851D97DB7D557EAD04C383A34BBEF9A3C77F0719FCAD78430E0A108E"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-259/transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/9B8FC796851D97DB7D557EAD04C383A34BBEF9A3C77F0719FCAD78430E0A108E",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-259",
+                        "path": "transfer/channel-259/transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -7952,6 +8064,48 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/2718A31D59C81CD1F972C829F097BDBE32D7B84025F909FFB6163AAD314961B3",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "sail"
+                    ],
+                    "denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "SAIL",
+                    "exponent": 6
+                }
+            ],
+            "description": "Sail DAO's Governance Token",
+            "display": "SAIL",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+            },
+            "name": "Sail DAO token",
+            "symbol": "SAIL",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/28E915262E40A4CA526D5BFB0BAF67A1C024F8318B779C3379147A6C26D11EA8",
             "denom_units": [
                 {
@@ -8348,6 +8502,15 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/36C811A2253AA64B58A9B66C537B89348FE5792A8808AAA343082CBFCAA72278",
+            "ibc": {
+                "dst_channel": "channel-13",
+                "source_channel": "channel-183",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/3A6DD3358D9F7ADD18CDE79BA10B400511A5DE4AE2C037D7C9639B52ADAF35C6",
             "ibc": {
                 "dst_channel": "channel-23",
@@ -8469,7 +8632,60 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/40C510742D7CE7F5EB2EF894AA9AD5056183D80628A73A04B48708A660FD088D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/test"
+                    ],
+                    "denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/test",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "TEST"
+                    ],
+                    "denom": "TEST",
+                    "exponent": 6
+                }
+            ],
+            "description": "This is a test",
+            "display": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/test",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/test"
+            },
+            "name": "Test",
+            "symbol": "TEST",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/test"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/test",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/4367FD29E33CDF0487219CD3E88D8C432BD4C2776C0C1034FF05A3E6451B8B11",
+            "ibc": {
+                "dst_channel": "channel-13",
+                "source_channel": "channel-183",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/43FE0A8A934D3A708B52F5B31B3591BF3B53EBBCEB4B3C4310A5A3D9D02D3D1D",
             "ibc": {
                 "dst_channel": "channel-13",
                 "source_channel": "channel-183",
@@ -8776,6 +8992,40 @@
                     },
                     "counterparty": {
                         "base_denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/djjtga",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/5339B0D20986A7C20C2548ED9D6B8DE47BB64E03ABFD051B7792E713036EA20C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP"
+            },
+            "name": "factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP",
+            "symbol": "factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP",
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-122"
@@ -9128,6 +9378,40 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/7991930BA02EBF3893A7E244233E005C2CB14679898D8C9E680DA5F7D54E647D",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+                    "exponent": 0
+                }
+            ],
+            "display": "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT"
+            },
+            "name": "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+            "symbol": "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/7A39488A287BF7DBC4A33DDA2BE3DDAC0F281FBCFF23934B7194893C136AAA99",
             "ibc": {
                 "dst_channel": "channel-13",
@@ -9466,6 +9750,48 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/93EAE5F9D6C14BFAC8DD1AFDBE95501055A7B22C5D8FA8C986C31D6EFADCA8A9",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attousdy"
+                    ],
+                    "denom": "ausdy",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdy",
+                    "exponent": 18
+                }
+            ],
+            "description": "Ondo US Dollar Yield",
+            "display": "usdy",
+            "ibc": {
+                "dst_channel": "channel-31",
+                "source_channel": "channel-148",
+                "source_denom": "ausdy"
+            },
+            "name": "Ondo US Dollar Yield",
+            "symbol": "USDY",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-148",
+                        "path": "transfer/channel-148/ausdy"
+                    },
+                    "counterparty": {
+                        "base_denom": "ausdy",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-31"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/984E90A8E0265B9804B7345C7542BF9B3046978AE5557B4AABADDFE605CACABE",
             "denom_units": [
                 {
@@ -9571,6 +9897,37 @@
                         "chain_id": "archway-1",
                         "chain_name": "archway",
                         "channel_id": "channel-102"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/A07BB73539F556DA5238F1B7E9471B34DD19897B1EE7050B959989F13EFE73B3",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
                     },
                     "type": "ibc"
                 }
@@ -9990,6 +10347,37 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/B52F9774CA89A45FFB924CEE4D1E586013E33628A3784F3CCF10C8CE26A89E7F",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/migaloo1nsskhvvh0msm7d5ke2kfg24a8d4jecsnxd28s27h0uz5kf9ap60shlqmcl/ampGASH",
+                    "exponent": 0
+                }
+            ],
+            "ibc": {
+                "dst_channel": "channel-3",
+                "source_channel": "channel-102",
+                "source_denom": "factory/migaloo1nsskhvvh0msm7d5ke2kfg24a8d4jecsnxd28s27h0uz5kf9ap60shlqmcl/ampGASH"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-102",
+                        "path": "transfer/channel-102/factory/migaloo1nsskhvvh0msm7d5ke2kfg24a8d4jecsnxd28s27h0uz5kf9ap60shlqmcl/ampGASH"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/migaloo1nsskhvvh0msm7d5ke2kfg24a8d4jecsnxd28s27h0uz5kf9ap60shlqmcl/ampGASH",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/B68C1D2682A8B69E20BB921E34C6A3A2B6D1E13E3E8C0092E373826F546DEE65",
             "ibc": {
                 "dst_channel": "channel-10",
@@ -10183,6 +10571,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/B8E30AECB0FB5BA1B02747BE003E55934A9E42488495412C7E9934FBEC06B201",
+            "ibc": {
+                "dst_channel": "channel-41",
+                "source_channel": "channel-82",
+                "source_denom": "stk/uatom"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-82",
+                        "path": "transfer/channel-82/stk/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "stk/uatom",
+                        "chain_id": "core-1",
+                        "chain_name": "persistence",
+                        "channel_id": "channel-41"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BA26BE85B9D5F046FC7071ED0F77053662A4B2F5B7552B3834A3F1B2DD3BD18F",
             "ibc": {
                 "dst_channel": "channel-42",
@@ -10273,6 +10685,71 @@
                         "chain_id": "pacific-1",
                         "chain_name": "sei",
                         "channel_id": "channel-54"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/C1D3666F27EA64209584F18BC79648E0C1783BB6EEC04A8060E4A8E9881C841B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "FET",
+                    "exponent": 18
+                },
+                {
+                    "aliases": [],
+                    "denom": "mfet",
+                    "exponent": 15
+                },
+                {
+                    "aliases": [],
+                    "denom": "ufet",
+                    "exponent": 12
+                },
+                {
+                    "aliases": [],
+                    "denom": "nfet",
+                    "exponent": 9
+                },
+                {
+                    "aliases": [],
+                    "denom": "pfet",
+                    "exponent": 6
+                },
+                {
+                    "aliases": [],
+                    "denom": "ffet",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "afet",
+                    "exponent": 0
+                }
+            ],
+            "description": "Fetch-ai Network token",
+            "display": "FET",
+            "ibc": {
+                "dst_channel": "channel-33",
+                "source_channel": "channel-283",
+                "source_denom": "afet"
+            },
+            "name": "FET",
+            "symbol": "FET",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-283",
+                        "path": "transfer/channel-283/afet"
+                    },
+                    "counterparty": {
+                        "base_denom": "afet",
+                        "chain_id": "fetchhub-4",
+                        "chain_name": "fetchhub",
+                        "channel_id": "channel-33"
                     },
                     "type": "ibc"
                 }
@@ -10429,6 +10906,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/C9D55B62C9D9CA84DD94DC019009B840DDFD861BF2F33F7CF2A8A74933797680",
+            "ibc": {
+                "dst_channel": "channel-116",
+                "source_channel": "channel-118",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/C9EC3080B046D49949239E1704522EE8B7BE0A668027028059A7FE7BC20B0976",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK"
+                    ],
+                    "denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "COOK"
+                    ],
+                    "denom": "COOK",
+                    "exponent": 6
+                }
+            ],
+            "description": "Start.Cooking Governance Token",
+            "display": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK"
+            },
+            "name": "Cook",
+            "symbol": "COOK",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/CAA5AB050F6C3DFE878212A37A4A6D3BEA6670F5B9786FFF7EF2D34213025272",
             "denom_units": [
                 {
@@ -10574,42 +11104,11 @@
         },
         {
             "base": "ibc/D807D81AB6C2983C9DCC2E1268051C4195405A030E1999549C562BCB7E1251A5",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "wormhole/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r/8",
-                    "exponent": 8
-                }
-            ],
-            "description": "Aptos Coin (Wormhole), APT, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r",
-            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r",
             "ibc": {
                 "dst_channel": "channel-13",
                 "source_channel": "channel-183",
-                "source_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r"
+                "source_denom": ""
             },
-            "name": "Aptos Coin (Wormhole)",
-            "symbol": "APT",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-183",
-                        "path": "transfer/channel-183/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5wS2fGojbL9RhGEAeQBdkHPUAciYDxjDTMYvdf9aDn2r",
-                        "chain_id": "wormchain",
-                        "chain_name": "gateway",
-                        "channel_id": "channel-13"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -10753,6 +11252,55 @@
                         "chain_id": "nois-1",
                         "chain_name": "nois",
                         "channel_id": "channel-17"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/E2C56B24C032D2C54CF12EAD43432D65FDF22C64E819F97AAD3B141829EF3E60",
+            "ibc": {
+                "dst_channel": "channel-13",
+                "source_channel": "channel-183",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/E5C73EB0B0C185B59ED34665650485E1E3A2AA4F82485DB3EB191B3F6A3044A1",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "wormhole/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2/6",
+                    "exponent": 6
+                }
+            ],
+            "description": "Tether USD (Wormhole), USDT, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2",
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2",
+            "ibc": {
+                "dst_channel": "channel-13",
+                "source_channel": "channel-183",
+                "source_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2"
+            },
+            "name": "Tether USD (Wormhole)",
+            "symbol": "USDT",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-183",
+                        "path": "transfer/channel-183/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5eMiVvpg3iaY8oU5pD8yZJ16ECnFqAZrQKrvP1rq2mN2",
+                        "chain_id": "wormchain",
+                        "chain_name": "gateway",
+                        "channel_id": "channel-13"
                     },
                     "type": "ibc"
                 }
@@ -11454,6 +12002,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj106u05e6rwg7n7xnmp2uet7jucyw5msuskyefvu/position",
+            "admin": "inj106u05e6rwg7n7xnmp2uet7jucyw5msuskyefvu",
+            "base": "factory/inj106u05e6rwg7n7xnmp2uet7jucyw5msuskyefvu/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj106u05e6rwg7n7xnmp2uet7jucyw5msuskyefvu/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj107grqcr0ugrx8jt8rdyru2ywmfngz5lrermw8q/INJ",
             "admin": "inj107grqcr0ugrx8jt8rdyru2ywmfngz5lrermw8q",
             "base": "factory/inj107grqcr0ugrx8jt8rdyru2ywmfngz5lrermw8q/INJ",
@@ -12134,19 +12695,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1255swku4m04m533wmkmtmvhnh77zrk83dqgwfr/position",
-            "admin": "inj1255swku4m04m533wmkmtmvhnh77zrk83dqgwfr",
-            "base": "factory/inj1255swku4m04m533wmkmtmvhnh77zrk83dqgwfr/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1255swku4m04m533wmkmtmvhnh77zrk83dqgwfr/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj125anxwhzcsqksvthce0xhktqhn4x406vfgxasx/INJ",
             "admin": "inj125anxwhzcsqksvthce0xhktqhn4x406vfgxasx",
             "base": "factory/inj125anxwhzcsqksvthce0xhktqhn4x406vfgxasx/INJ",
@@ -12702,6 +13250,19 @@
             "display": "foo",
             "name": "foo",
             "symbol": "foo",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj12wkmu2y4vp0hg69k36pkve6rgczwga0yzff7ha/position",
+            "admin": "inj12wkmu2y4vp0hg69k36pkve6rgczwga0yzff7ha",
+            "base": "factory/inj12wkmu2y4vp0hg69k36pkve6rgczwga0yzff7ha/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj12wkmu2y4vp0hg69k36pkve6rgczwga0yzff7ha/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -13311,6 +13872,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj13q8npcxrx6yd22c096495qyf3mgvq2ekzflge3/position",
+            "admin": "inj13q8npcxrx6yd22c096495qyf3mgvq2ekzflge3",
+            "base": "factory/inj13q8npcxrx6yd22c096495qyf3mgvq2ekzflge3/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj13q8npcxrx6yd22c096495qyf3mgvq2ekzflge3/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj13qhzj4fr4u7t7gqj5pqy0yts07eu6k6dkjdcsx/gojo",
             "admin": "inj13qhzj4fr4u7t7gqj5pqy0yts07eu6k6dkjdcsx",
             "base": "factory/inj13qhzj4fr4u7t7gqj5pqy0yts07eu6k6dkjdcsx/gojo",
@@ -13463,6 +14037,19 @@
             "display": "MEOWW",
             "name": "MEOW",
             "symbol": "MEOW",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj13xdqhnegnj37fna95nyjtj68cyk4exut9mp9am/position",
+            "admin": "inj13xdqhnegnj37fna95nyjtj68cyk4exut9mp9am",
+            "base": "factory/inj13xdqhnegnj37fna95nyjtj68cyk4exut9mp9am/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj13xdqhnegnj37fna95nyjtj68cyk4exut9mp9am/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -13725,19 +14312,6 @@
             "display": "INJ",
             "name": "injective",
             "symbol": "INJ",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj144javr53kzz7qedyynwrpa83tnykw9lrzzxsr9/position",
-            "admin": "inj144javr53kzz7qedyynwrpa83tnykw9lrzzxsr9",
-            "base": "factory/inj144javr53kzz7qedyynwrpa83tnykw9lrzzxsr9/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj144javr53kzz7qedyynwrpa83tnykw9lrzzxsr9/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -15332,6 +15906,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1mgypkdu4esseefz7dgahuduft33a3any5lrx8a",
+            "admin": "inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk",
+            "base": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1mgypkdu4esseefz7dgahuduft33a3any5lrx8a",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1mgypkdu4esseefz7dgahuduft33a3any5lrx8a",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1mhmln627samtkuwe459ylq763r4n7n69gxxc9x",
             "admin": "inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk",
             "base": "factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1mhmln627samtkuwe459ylq763r4n7n69gxxc9x",
@@ -16566,6 +17153,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1598f9vtwc3furg3dnat9lnjw5eflcyuazv2c3m/position",
+            "admin": "inj1598f9vtwc3furg3dnat9lnjw5eflcyuazv2c3m",
+            "base": "factory/inj1598f9vtwc3furg3dnat9lnjw5eflcyuazv2c3m/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1598f9vtwc3furg3dnat9lnjw5eflcyuazv2c3m/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj15d5v02thnac8mc79hx0nzuz4rjxuccy7rc63x3/RAMEN2",
             "admin": "inj15d5v02thnac8mc79hx0nzuz4rjxuccy7rc63x3",
             "base": "factory/inj15d5v02thnac8mc79hx0nzuz4rjxuccy7rc63x3/RAMEN2",
@@ -17343,19 +17943,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj169rj69y0td97a0gvz3jthr63ml79h0ez2sc0rm/position",
-            "admin": "inj169rj69y0td97a0gvz3jthr63ml79h0ez2sc0rm",
-            "base": "factory/inj169rj69y0td97a0gvz3jthr63ml79h0ez2sc0rm/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj169rj69y0td97a0gvz3jthr63ml79h0ez2sc0rm/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj16a7s0v3c2hp575s0ugmva8cedq9yvsmz4mvdcd/YKZ",
             "admin": "inj16a7s0v3c2hp575s0ugmva8cedq9yvsmz4mvdcd",
             "base": "factory/inj16a7s0v3c2hp575s0ugmva8cedq9yvsmz4mvdcd/YKZ",
@@ -17401,6 +17988,19 @@
             "display": "TRUMP",
             "name": "TRUMP",
             "symbol": "TRUMP",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj16dz5cway50f6sv0l4hus2wg84mltfs7c6zwggs/position",
+            "admin": "inj16dz5cway50f6sv0l4hus2wg84mltfs7c6zwggs",
+            "base": "factory/inj16dz5cway50f6sv0l4hus2wg84mltfs7c6zwggs/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj16dz5cway50f6sv0l4hus2wg84mltfs7c6zwggs/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -17579,19 +18179,6 @@
             "display": "SNIPE",
             "name": "SNIPE",
             "symbol": "SNIPE",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj16hsmv4grd5ru3axtvgc8c0dygc0skpfct837dv/position",
-            "admin": "inj16hsmv4grd5ru3axtvgc8c0dygc0skpfct837dv",
-            "base": "factory/inj16hsmv4grd5ru3axtvgc8c0dygc0skpfct837dv/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj16hsmv4grd5ru3axtvgc8c0dygc0skpfct837dv/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -17781,19 +18368,6 @@
             "display": "PEPE",
             "name": "PEPE ",
             "symbol": "PEPE",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj16zquths3dwk0varlj32ur9skutl640umvllxeu/position",
-            "admin": "inj16zquths3dwk0varlj32ur9skutl640umvllxeu",
-            "base": "factory/inj16zquths3dwk0varlj32ur9skutl640umvllxeu/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj16zquths3dwk0varlj32ur9skutl640umvllxeu/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -18967,13 +19541,26 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj19g8xh8wfaxl7a4z5pr67e908ph68n5zamsagxt/position",
-            "admin": "inj19g8xh8wfaxl7a4z5pr67e908ph68n5zamsagxt",
-            "base": "factory/inj19g8xh8wfaxl7a4z5pr67e908ph68n5zamsagxt/position",
+            "address": "factory/inj19a6vl3srten0csmjgeek26vkppxtpy4veyh6wj/position",
+            "admin": "inj19a6vl3srten0csmjgeek26vkppxtpy4veyh6wj",
+            "base": "factory/inj19a6vl3srten0csmjgeek26vkppxtpy4veyh6wj/position",
             "denom_units": [
                 {
                     "aliases": [],
-                    "denom": "factory/inj19g8xh8wfaxl7a4z5pr67e908ph68n5zamsagxt/position",
+                    "denom": "factory/inj19a6vl3srten0csmjgeek26vkppxtpy4veyh6wj/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj19fa4pmpnxysawtps7aq7nhh7k2x8wvvqwxv7kl/position",
+            "admin": "inj19fa4pmpnxysawtps7aq7nhh7k2x8wvvqwxv7kl",
+            "base": "factory/inj19fa4pmpnxysawtps7aq7nhh7k2x8wvvqwxv7kl/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj19fa4pmpnxysawtps7aq7nhh7k2x8wvvqwxv7kl/position",
                     "exponent": 0
                 }
             ],
@@ -19089,19 +19676,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj19xq90yxtaar7xlz5jdzvqgkjw285rqzsjvxc2j/position",
-            "admin": "inj19xq90yxtaar7xlz5jdzvqgkjw285rqzsjvxc2j",
-            "base": "factory/inj19xq90yxtaar7xlz5jdzvqgkjw285rqzsjvxc2j/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj19xq90yxtaar7xlz5jdzvqgkjw285rqzsjvxc2j/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj19y42qwvf6s9aq6qqjk09qfe0f4n78e48cqe7w4/INJ",
             "admin": "inj19y42qwvf6s9aq6qqjk09qfe0f4n78e48cqe7w4",
             "base": "factory/inj19y42qwvf6s9aq6qqjk09qfe0f4n78e48cqe7w4/INJ",
@@ -19123,19 +19697,6 @@
             "display": "INJ",
             "name": "injective",
             "symbol": "INJ",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj19yyllwqvapt4hsn7cpcg540qt5c3fekxxhjppg/position",
-            "admin": "inj19yyllwqvapt4hsn7cpcg540qt5c3fekxxhjppg",
-            "base": "factory/inj19yyllwqvapt4hsn7cpcg540qt5c3fekxxhjppg/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj19yyllwqvapt4hsn7cpcg540qt5c3fekxxhjppg/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -19327,6 +19888,60 @@
             "display": "SAVEOURSTRAYS",
             "name": "Save Our Strays",
             "symbol": "SAVEOURSTRAYS",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1a6auh4knescu6nr4mfafs906434lw24dd0c3zn/GAMBIT-T",
+            "admin": "inj1a6auh4knescu6nr4mfafs906434lw24dd0c3zn",
+            "base": "factory/inj1a6auh4knescu6nr4mfafs906434lw24dd0c3zn/GAMBIT-T",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ugambit-t"
+                    ],
+                    "denom": "factory/inj1a6auh4knescu6nr4mfafs906434lw24dd0c3zn/GAMBIT-T",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMBIT-T",
+                    "exponent": 6
+                }
+            ],
+            "description": "Test Token for the Gambit Protocol",
+            "display": "GAMBIT-T",
+            "name": "Gambit-Test",
+            "symbol": "GAMBIT-T",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/SYN",
+            "admin": "inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e",
+            "base": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/SYN",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/SYN",
+                    "exponent": 0
+                }
+            ],
+            "name": "SYN",
+            "symbol": "SYN",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/uabc",
+            "admin": "inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e",
+            "base": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/uabc",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/uabc",
+                    "exponent": 0
+                }
+            ],
+            "name": "ABC",
+            "symbol": "ABC",
             "type_asset": "factory"
         },
         {
@@ -19841,19 +20456,6 @@
             "display": "DRAGON",
             "name": "DRAGON",
             "symbol": "DRAGON",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1aq5rpkexhycqk54afj630ktmgaqvc468fwk34k/position",
-            "admin": "inj1aq5rpkexhycqk54afj630ktmgaqvc468fwk34k",
-            "base": "factory/inj1aq5rpkexhycqk54afj630ktmgaqvc468fwk34k/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1aq5rpkexhycqk54afj630ktmgaqvc468fwk34k/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -20397,6 +20999,28 @@
             "display": "RAY",
             "name": "Raymond",
             "symbol": "RAY",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cm0jn67exeqm5af8lrlra4epfhyk0v38w98g42/ryu",
+            "admin": "inj1cm0jn67exeqm5af8lrlra4epfhyk0v38w98g42",
+            "base": "factory/inj1cm0jn67exeqm5af8lrlra4epfhyk0v38w98g42/ryu",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cm0jn67exeqm5af8lrlra4epfhyk0v38w98g42/ryu",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "RYU",
+                    "exponent": 18
+                }
+            ],
+            "description": "Ryu is a young ninja prodigy, known for his extraordinary agility and intelligence. His determination and indomitable spirit make him a formidable opponent, always ready to defend the weak and protect his community. Ryu the ninja created by the community for the community.",
+            "display": "RYU",
+            "name": "Ryu the Ninja",
+            "symbol": "RYU",
             "type_asset": "factory"
         },
         {
@@ -20957,19 +21581,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1713974528InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1713974528InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1713974528InjUsdt16d0.85P",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1713974528InjUsdt24d1.17C",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1713974528InjUsdt24d1.17C",
@@ -21048,19 +21659,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715000420InjUsdt28d1.13C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715000420InjUsdt28d1.13C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715000420InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715346009InjUsdt24d1.17C",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715346009InjUsdt24d1.17C",
@@ -21100,45 +21698,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715691712InjUsdt28d1.13C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715691712InjUsdt28d1.13C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1715691712InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716037433InjUsdt24d1.17C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716037433InjUsdt24d1.17C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716037433InjUsdt24d1.17C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716037433InjUsdt28d1.13C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716037433InjUsdt28d1.13C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716037433InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716385437InjUsdt16d0.85P",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716385437InjUsdt16d0.85P",
@@ -21146,19 +21705,6 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716385437InjUsdt16d0.85P",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716385437InjUsdt24d1.17C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716385437InjUsdt24d1.17C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716385437InjUsdt24d1.17C",
                     "exponent": 0
                 }
             ],
@@ -21178,71 +21724,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt16d0.85P",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt24d1.17C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt24d1.17C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt24d1.17C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt28d1.13C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt28d1.13C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1716728415InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt16d0.85P",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt24d1.17C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt24d1.17C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt24d1.17C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt28d1.13C",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt28d1.13C",
@@ -21250,19 +21731,6 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717074021InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717419602InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717419602InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717419602InjUsdt16d0.85P",
                     "exponent": 0
                 }
             ],
@@ -21282,32 +21750,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717419602InjUsdt28d1.13C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717419602InjUsdt28d1.13C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717419602InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717769182InjUsdt24d1.17C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717769182InjUsdt24d1.17C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717769182InjUsdt24d1.17C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717769182InjUsdt28d1.13C",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717769182InjUsdt28d1.13C",
@@ -21315,19 +21757,6 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1717769182InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718110812InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718110812InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718110812InjUsdt16d0.85P",
                     "exponent": 0
                 }
             ],
@@ -21360,19 +21789,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt16d0.85P",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt24d1.17C",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt24d1.17C",
@@ -21386,45 +21802,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt28d1.13C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt28d1.13C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718456416InjUsdt28d1.13C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt16d0.85P",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt16d0.85P",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt16d0.85P",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt24d1.17C",
-            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
-            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt24d1.17C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt24d1.17C",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt28d1.13C",
             "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
             "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt28d1.13C",
@@ -21432,6 +21809,409 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1718802323InjUsdt28d1.13C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719147607InjUsdt24d1.17C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719147607InjUsdt24d1.17C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719147607InjUsdt24d1.17C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719147607InjUsdt28d1.13C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719147607InjUsdt28d1.13C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719147607InjUsdt28d1.13C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719493268InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719493268InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719493268InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719804902InjUsdt16d0.82P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719804902InjUsdt16d0.82P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719804902InjUsdt16d0.82P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719805152InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719805152InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1719805152InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720184412InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720184412InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720184412InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt16d0.82P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt16d0.82P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt16d0.82P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720530062InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720875614InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720875614InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720875614InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720875614InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720875614InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1720875614InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721221498InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721221498InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721221498InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721221498InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721221498InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721221498InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt16d0.82P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt16d0.82P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt16d0.82P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721566814InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt16d0.82P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt16d0.82P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt16d0.82P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1721912418InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt16d0.82P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt16d0.82P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt16d0.82P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722259395InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607035InjUsdt16d0.82P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607035InjUsdt16d0.82P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607035InjUsdt16d0.82P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607164InjUsdt24d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607164InjUsdt24d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607164InjUsdt24d1.25C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607245InjUsdt28d1.18C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607245InjUsdt28d1.18C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722607245InjUsdt28d1.18C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt16d0.76P",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt16d0.76P",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt16d0.76P",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt24d1.35C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt24d1.35C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt24d1.35C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt28d1.27C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt28d1.27C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1722949211InjUsdt28d1.27C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723277252InjUsdt30d1.2C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723277252InjUsdt30d1.2C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723277252InjUsdt30d1.2C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723290960InjUsdt24d1.3C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723290960InjUsdt24d1.3C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723290960InjUsdt24d1.3C",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723290960InjUsdt28d1.25C",
+            "admin": "inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh",
+            "base": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723290960InjUsdt28d1.25C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cs57nurqssdy09a0tuzqetxn6nyzphj5w220jh/1723290960InjUsdt28d1.25C",
                     "exponent": 0
                 }
             ],
@@ -21536,6 +22316,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1cvhsxdjs64q9l83s7twdhsw3vjx54haqgv2d6k/position",
+            "admin": "inj1cvhsxdjs64q9l83s7twdhsw3vjx54haqgv2d6k",
+            "base": "factory/inj1cvhsxdjs64q9l83s7twdhsw3vjx54haqgv2d6k/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1cvhsxdjs64q9l83s7twdhsw3vjx54haqgv2d6k/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1cxcjn04l2vxg4zwrlhpghh32fdel856xn3a3rr/BONK",
             "admin": "inj1cxcjn04l2vxg4zwrlhpghh32fdel856xn3a3rr",
             "base": "factory/inj1cxcjn04l2vxg4zwrlhpghh32fdel856xn3a3rr/BONK",
@@ -21606,6 +22399,30 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1d3nq64h56hvjvdqatk9e4p26z5y4g4l6uf2a7w/JIT",
+            "admin": "inj1d3nq64h56hvjvdqatk9e4p26z5y4g4l6uf2a7w",
+            "base": "factory/inj1d3nq64h56hvjvdqatk9e4p26z5y4g4l6uf2a7w/JIT",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ujit"
+                    ],
+                    "denom": "factory/inj1d3nq64h56hvjvdqatk9e4p26z5y4g4l6uf2a7w/JIT",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "JIT",
+                    "exponent": 18
+                }
+            ],
+            "description": "Custom token on Injective Mainnet to test fund extraction",
+            "display": "JIT",
+            "name": "J Injective Token",
+            "symbol": "JIT",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1d4ld9w7mf8wjyv5y7fnhpate07fguv3s3tmngm/karmainj",
             "admin": "inj1d4ld9w7mf8wjyv5y7fnhpate07fguv3s3tmngm",
             "base": "factory/inj1d4ld9w7mf8wjyv5y7fnhpate07fguv3s3tmngm/karmainj",
@@ -21625,6 +22442,19 @@
             "display": "KARMA",
             "name": "Karma",
             "symbol": "KARMA",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1d4zluv70jrx4nl68fp7rqjhpq7egdey2433l96/position",
+            "admin": "inj1d4zluv70jrx4nl68fp7rqjhpq7egdey2433l96",
+            "base": "factory/inj1d4zluv70jrx4nl68fp7rqjhpq7egdey2433l96/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1d4zluv70jrx4nl68fp7rqjhpq7egdey2433l96/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -21649,19 +22479,6 @@
             "display": "TEST",
             "name": "TEST TOKEN",
             "symbol": "TEST",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1d80r2q4lcsajwr494wyswykn46smag0yy8scfv/position",
-            "admin": "inj1d80r2q4lcsajwr494wyswykn46smag0yy8scfv",
-            "base": "factory/inj1d80r2q4lcsajwr494wyswykn46smag0yy8scfv/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1d80r2q4lcsajwr494wyswykn46smag0yy8scfv/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -21761,19 +22578,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1dg6eay6q34r2eh88u6hghlz5r3y25n2wpp494v/position",
-            "admin": "inj1dg6eay6q34r2eh88u6hghlz5r3y25n2wpp494v",
-            "base": "factory/inj1dg6eay6q34r2eh88u6hghlz5r3y25n2wpp494v/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1dg6eay6q34r2eh88u6hghlz5r3y25n2wpp494v/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1dkwqv24lyt94ukg65qf4xc8tj8wsu7x9p76enk/x69",
             "admin": "inj1dkwqv24lyt94ukg65qf4xc8tj8wsu7x9p76enk",
             "base": "factory/inj1dkwqv24lyt94ukg65qf4xc8tj8wsu7x9p76enk/x69",
@@ -21795,19 +22599,6 @@
             "display": "x69",
             "name": "x69",
             "symbol": "x69",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1dl8d43lz8ctmtka5d0tta8yj2urmgal7fgqcmh/position",
-            "admin": "inj1dl8d43lz8ctmtka5d0tta8yj2urmgal7fgqcmh",
-            "base": "factory/inj1dl8d43lz8ctmtka5d0tta8yj2urmgal7fgqcmh/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1dl8d43lz8ctmtka5d0tta8yj2urmgal7fgqcmh/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -21856,6 +22647,19 @@
             "display": "INJ",
             "name": "injective",
             "symbol": "INJ",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1drpns3cxn82e5q0nmmdaz8zxmla5lqsh6txmc9/position",
+            "admin": "inj1drpns3cxn82e5q0nmmdaz8zxmla5lqsh6txmc9",
+            "base": "factory/inj1drpns3cxn82e5q0nmmdaz8zxmla5lqsh6txmc9/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1drpns3cxn82e5q0nmmdaz8zxmla5lqsh6txmc9/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -22115,6 +22919,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1e2pu02vjnh27mte3s0wqld9f85mzglyrxxuuvz/position",
+            "admin": "inj1e2pu02vjnh27mte3s0wqld9f85mzglyrxxuuvz",
+            "base": "factory/inj1e2pu02vjnh27mte3s0wqld9f85mzglyrxxuuvz/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1e2pu02vjnh27mte3s0wqld9f85mzglyrxxuuvz/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1e5va7kntnq245j57hfe78tqhnd763ekrtu9fez/TRUFFLE",
             "admin": "inj1e5va7kntnq245j57hfe78tqhnd763ekrtu9fez",
             "base": "factory/inj1e5va7kntnq245j57hfe78tqhnd763ekrtu9fez/TRUFFLE",
@@ -22158,6 +22975,19 @@
             "display": "INJ",
             "name": "injective",
             "symbol": "INJ",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1e6wv0fn2cggsgwlmywp9u5pyd0zcx5vth3djrv/position",
+            "admin": "inj1e6wv0fn2cggsgwlmywp9u5pyd0zcx5vth3djrv",
+            "base": "factory/inj1e6wv0fn2cggsgwlmywp9u5pyd0zcx5vth3djrv/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1e6wv0fn2cggsgwlmywp9u5pyd0zcx5vth3djrv/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -22206,19 +23036,6 @@
             "display": "INJ",
             "name": "injective",
             "symbol": "INJ",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1egnhxmtnh76p2lgdky8985msrue92ag499ev6w/position",
-            "admin": "inj1egnhxmtnh76p2lgdky8985msrue92ag499ev6w",
-            "base": "factory/inj1egnhxmtnh76p2lgdky8985msrue92ag499ev6w/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1egnhxmtnh76p2lgdky8985msrue92ag499ev6w/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -22502,19 +23319,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1ezvtzukpf6x7aa4p52sejvyky8lkl6l5j47tym/position",
-            "admin": "inj1ezvtzukpf6x7aa4p52sejvyky8lkl6l5j47tym",
-            "base": "factory/inj1ezvtzukpf6x7aa4p52sejvyky8lkl6l5j47tym/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1ezvtzukpf6x7aa4p52sejvyky8lkl6l5j47tym/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1ezzzfm2exjz57hxuc65sl8s3d5y6ee0kxvu67n/ninjb",
             "admin": "inj1ezzzfm2exjz57hxuc65sl8s3d5y6ee0kxvu67n",
             "base": "factory/inj1ezzzfm2exjz57hxuc65sl8s3d5y6ee0kxvu67n/ninjb",
@@ -22630,19 +23434,6 @@
             "display": "KIDZ",
             "name": "$KIDZ",
             "symbol": "KIDZ",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1f79dkr20ax43ah3c3velf3ttxjdqe645k5rws3/position",
-            "admin": "inj1f79dkr20ax43ah3c3velf3ttxjdqe645k5rws3",
-            "base": "factory/inj1f79dkr20ax43ah3c3velf3ttxjdqe645k5rws3/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1f79dkr20ax43ah3c3velf3ttxjdqe645k5rws3/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -22819,19 +23610,6 @@
             "display": "stinjer",
             "name": "The Stinjer",
             "symbol": "STINJER",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1ff64ftrd6plvxurruzh3kthaxk5h050e0s5t95/position",
-            "admin": "inj1ff64ftrd6plvxurruzh3kthaxk5h050e0s5t95",
-            "base": "factory/inj1ff64ftrd6plvxurruzh3kthaxk5h050e0s5t95/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1ff64ftrd6plvxurruzh3kthaxk5h050e0s5t95/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -23343,6 +24121,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1fzej8p0acdplqad876a0mdewejqwuaea9e0rjl/position",
+            "admin": "inj1fzej8p0acdplqad876a0mdewejqwuaea9e0rjl",
+            "base": "factory/inj1fzej8p0acdplqad876a0mdewejqwuaea9e0rjl/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1fzej8p0acdplqad876a0mdewejqwuaea9e0rjl/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1fzhwjv2kjv7xr2h4phue5yqsjawjypcamcpl5a/mubi",
             "admin": "inj1fzhwjv2kjv7xr2h4phue5yqsjawjypcamcpl5a",
             "base": "factory/inj1fzhwjv2kjv7xr2h4phue5yqsjawjypcamcpl5a/mubi",
@@ -23675,6 +24466,19 @@
             "display": "DOGE",
             "name": "DOGE",
             "symbol": "DOGE",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1gk4thnx4t9y4ltnau60mpst5xyu0u57hqfl0qs/uLP",
+            "admin": "inj1gk4thnx4t9y4ltnau60mpst5xyu0u57hqfl0qs",
+            "base": "factory/inj1gk4thnx4t9y4ltnau60mpst5xyu0u57hqfl0qs/uLP",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1gk4thnx4t9y4ltnau60mpst5xyu0u57hqfl0qs/uLP",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -25265,6 +26069,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1jpaxtp8jvepvhc7pqk5xgumz3jghwuh7xrqatw/position",
+            "admin": "inj1jpaxtp8jvepvhc7pqk5xgumz3jghwuh7xrqatw",
+            "base": "factory/inj1jpaxtp8jvepvhc7pqk5xgumz3jghwuh7xrqatw/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1jpaxtp8jvepvhc7pqk5xgumz3jghwuh7xrqatw/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1jpddz58n2ugstuhp238qwwvdf3shxsxy5g6jkn/CITY",
             "admin": "inj1jpddz58n2ugstuhp238qwwvdf3shxsxy5g6jkn",
             "base": "factory/inj1jpddz58n2ugstuhp238qwwvdf3shxsxy5g6jkn/CITY",
@@ -25355,6 +26172,19 @@
             "display": "KAGE",
             "name": "KAGECoin",
             "symbol": "KAGE",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1js4qpjl2f9cpl8s764d0y9jl96ham3g4kkaaqd/position",
+            "admin": "inj1js4qpjl2f9cpl8s764d0y9jl96ham3g4kkaaqd",
+            "base": "factory/inj1js4qpjl2f9cpl8s764d0y9jl96ham3g4kkaaqd/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1js4qpjl2f9cpl8s764d0y9jl96ham3g4kkaaqd/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -25713,6 +26543,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1k9jy245r9749kl008h7nf764wnrnj9kgkmj6vz/position",
+            "admin": "inj1k9jy245r9749kl008h7nf764wnrnj9kgkmj6vz",
+            "base": "factory/inj1k9jy245r9749kl008h7nf764wnrnj9kgkmj6vz/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1k9jy245r9749kl008h7nf764wnrnj9kgkmj6vz/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1k9k62nfrsnznd2ekzgmsxr74apglqfa2h6wz9g/INJ",
             "admin": "inj1k9k62nfrsnznd2ekzgmsxr74apglqfa2h6wz9g",
             "base": "factory/inj1k9k62nfrsnznd2ekzgmsxr74apglqfa2h6wz9g/INJ",
@@ -25957,6 +26800,19 @@
             "display": "babyINJUSSY",
             "name": "babyINJUSSY",
             "symbol": "babyINJUSSY",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1kkarwsh947c34emv3wju779ys2tt2g76m6kequ/position",
+            "admin": "inj1kkarwsh947c34emv3wju779ys2tt2g76m6kequ",
+            "base": "factory/inj1kkarwsh947c34emv3wju779ys2tt2g76m6kequ/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1kkarwsh947c34emv3wju779ys2tt2g76m6kequ/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -26290,6 +27146,30 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1l2gcrfr6aenjyt5jddk79j7w5v0twskw6n70y8/PROP420",
+            "admin": "inj1l2gcrfr6aenjyt5jddk79j7w5v0twskw6n70y8",
+            "base": "factory/inj1l2gcrfr6aenjyt5jddk79j7w5v0twskw6n70y8/PROP420",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "uprop420"
+                    ],
+                    "denom": "factory/inj1l2gcrfr6aenjyt5jddk79j7w5v0twskw6n70y8/PROP420",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "PROP420",
+                    "exponent": 6
+                }
+            ],
+            "description": "PROP420 is a community token created to honor the dedicated ninjas who voted YES on the historic Proposal 420 for the Altaris chain upgrade. With a total supply of 1 billion tokens, 50% will be airdropped to YES voters, and the remaining 50% will be airdropped to @TheMirza. FOR THE CULTURE!",
+            "display": "PROP420",
+            "name": "PROP420",
+            "symbol": "PROP420",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1l2kcs4yxsxe0c87qy4ejmvkgegvjf0hkyhqk59/DGNZ",
             "admin": "inj1l2kcs4yxsxe0c87qy4ejmvkgegvjf0hkyhqk59",
             "base": "factory/inj1l2kcs4yxsxe0c87qy4ejmvkgegvjf0hkyhqk59/DGNZ",
@@ -26313,6 +27193,19 @@
             "display": "DGNZ",
             "name": "Injective Degens",
             "symbol": "DGNZ",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1l2r43rx3p79yhspt48qvtd0qvqz4zyf70puxv6/position",
+            "admin": "inj1l2r43rx3p79yhspt48qvtd0qvqz4zyf70puxv6",
+            "base": "factory/inj1l2r43rx3p79yhspt48qvtd0qvqz4zyf70puxv6/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1l2r43rx3p79yhspt48qvtd0qvqz4zyf70puxv6/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -26461,6 +27354,76 @@
             "display": "BINJ",
             "name": "Bird INJ",
             "symbol": "BINJ",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1ljdraxlvy4cjdhytpxd7vhw387dq0r0g0fqucd/nbla",
+            "admin": "inj1ljdraxlvy4cjdhytpxd7vhw387dq0r0g0fqucd",
+            "base": "factory/inj1ljdraxlvy4cjdhytpxd7vhw387dq0r0g0fqucd/nbla",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1ljdraxlvy4cjdhytpxd7vhw387dq0r0g0fqucd/nbla",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/MYSTERYBOX1",
+            "admin": "inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz",
+            "base": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/MYSTERYBOX1",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "mysterybox1"
+                    ],
+                    "denom": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/MYSTERYBOX1",
+                    "exponent": 0
+                }
+            ],
+            "description": "MYSTERYBOX1",
+            "display": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/MYSTERYBOX1",
+            "name": "MYSTERYBOX1",
+            "symbol": "MYSTERYBOX1",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZAIRDROP",
+            "admin": "inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz",
+            "base": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZAIRDROP",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "nbzairdrop"
+                    ],
+                    "denom": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZAIRDROP",
+                    "exponent": 0
+                }
+            ],
+            "description": "Ninja Blaze Airdrop",
+            "display": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZAIRDROP",
+            "name": "Ninja Blaze Airdrop",
+            "symbol": "NBZAIRDROP",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZPROMO1",
+            "admin": "inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz",
+            "base": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZPROMO1",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "nbzpromo1"
+                    ],
+                    "denom": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZPROMO1",
+                    "exponent": 0
+                }
+            ],
+            "description": "NBZPROMO1",
+            "display": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZPROMO1",
+            "name": "NBZPROMO1",
+            "symbol": "NBZPROMO1",
             "type_asset": "factory"
         },
         {
@@ -26714,6 +27677,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1lszpzvlcvjg60x0ndqj98mct28m5j8resxs9de/position",
+            "admin": "inj1lszpzvlcvjg60x0ndqj98mct28m5j8resxs9de",
+            "base": "factory/inj1lszpzvlcvjg60x0ndqj98mct28m5j8resxs9de/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1lszpzvlcvjg60x0ndqj98mct28m5j8resxs9de/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1lttm52qk6hs43vqak5qyk4hl4fzu2snq2gmg0c/nyan",
             "admin": "inj1lttm52qk6hs43vqak5qyk4hl4fzu2snq2gmg0c",
             "base": "factory/inj1lttm52qk6hs43vqak5qyk4hl4fzu2snq2gmg0c/nyan",
@@ -26860,6 +27836,19 @@
             "display": "Test",
             "name": "MitoTutorial",
             "symbol": "Test",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1m3lcqdyfrnqqva6mvefmqvt9nfwatsqmwg3qq3/position",
+            "admin": "inj1m3lcqdyfrnqqva6mvefmqvt9nfwatsqmwg3qq3",
+            "base": "factory/inj1m3lcqdyfrnqqva6mvefmqvt9nfwatsqmwg3qq3/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1m3lcqdyfrnqqva6mvefmqvt9nfwatsqmwg3qq3/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -27109,6 +28098,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1me8ewn42y8n0snvnecf3skpu8eq2rsph74kgmt/position",
+            "admin": "inj1me8ewn42y8n0snvnecf3skpu8eq2rsph74kgmt",
+            "base": "factory/inj1me8ewn42y8n0snvnecf3skpu8eq2rsph74kgmt/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1me8ewn42y8n0snvnecf3skpu8eq2rsph74kgmt/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1mfe2m554uffc9lul3q3fxzmzw8k7cuglnxvxjc/INJ",
             "admin": "inj1mfe2m554uffc9lul3q3fxzmzw8k7cuglnxvxjc",
             "base": "factory/inj1mfe2m554uffc9lul3q3fxzmzw8k7cuglnxvxjc/INJ",
@@ -27267,21 +28269,21 @@
             "denom_units": [
                 {
                     "aliases": [
-                        "ukat"
+                        "ukatana"
                     ],
                     "denom": "factory/inj1ms8lr6y6qf2nsffshfmusr8amth5y5wnrjrzur/KAT",
                     "exponent": 0
                 },
                 {
                     "aliases": [],
-                    "denom": "KAT",
+                    "denom": "KATANA",
                     "exponent": 6
                 }
             ],
-            "description": "Katana Token",
-            "display": "KAT",
+            "description": "KATANA TOKEN",
+            "display": "KATANA",
             "name": "KATANA",
-            "symbol": "KAT",
+            "symbol": "KATANA",
             "type_asset": "factory"
         },
         {
@@ -27307,19 +28309,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1mthhttrxpewts2k8vlp276xtsa5te9mt8vws38/position",
-            "admin": "inj1mthhttrxpewts2k8vlp276xtsa5te9mt8vws38",
-            "base": "factory/inj1mthhttrxpewts2k8vlp276xtsa5te9mt8vws38/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1mthhttrxpewts2k8vlp276xtsa5te9mt8vws38/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1mtxwccht2hpfn2498jc8u4k7sgrurxt04jzgcn/DUCKS",
             "admin": "inj1mtxwccht2hpfn2498jc8u4k7sgrurxt04jzgcn",
             "base": "factory/inj1mtxwccht2hpfn2498jc8u4k7sgrurxt04jzgcn/DUCKS",
@@ -27341,6 +28330,19 @@
             "display": "DUCKS",
             "name": "DUCKS",
             "symbol": "DUCKS",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1mu6w5fmvrp8kkxpaxxdvkcqfmm7rh79tr9pzr4/position",
+            "admin": "inj1mu6w5fmvrp8kkxpaxxdvkcqfmm7rh79tr9pzr4",
+            "base": "factory/inj1mu6w5fmvrp8kkxpaxxdvkcqfmm7rh79tr9pzr4/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1mu6w5fmvrp8kkxpaxxdvkcqfmm7rh79tr9pzr4/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -27560,6 +28562,19 @@
             "display": "FUCKSOL",
             "name": "Fuck solana /̵͇̿̿/'̿̿ ̿̿ ̿̿",
             "symbol": "FuckSol",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1nassp2d59e6glt27vfcj0wrfnrtwmuyzm9jdy2/position",
+            "admin": "inj1nassp2d59e6glt27vfcj0wrfnrtwmuyzm9jdy2",
+            "base": "factory/inj1nassp2d59e6glt27vfcj0wrfnrtwmuyzm9jdy2/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1nassp2d59e6glt27vfcj0wrfnrtwmuyzm9jdy2/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -27846,6 +28861,19 @@
             "display": "WEED",
             "name": "WEED",
             "symbol": "WEED",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1nma9d4a2eaqcht9826wrw26y3n3aakqg727qys/position",
+            "admin": "inj1nma9d4a2eaqcht9826wrw26y3n3aakqg727qys",
+            "base": "factory/inj1nma9d4a2eaqcht9826wrw26y3n3aakqg727qys/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1nma9d4a2eaqcht9826wrw26y3n3aakqg727qys/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -28607,19 +29635,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1ptze5zs7f8upr3fdj6dsrh0gpq97rsugfl5efe/position",
-            "admin": "inj1ptze5zs7f8upr3fdj6dsrh0gpq97rsugfl5efe",
-            "base": "factory/inj1ptze5zs7f8upr3fdj6dsrh0gpq97rsugfl5efe/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1ptze5zs7f8upr3fdj6dsrh0gpq97rsugfl5efe/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1put8lfpkwm47tqcl9fgh8grz987mezvrx4arls/DDL",
             "admin": "inj1put8lfpkwm47tqcl9fgh8grz987mezvrx4arls",
             "base": "factory/inj1put8lfpkwm47tqcl9fgh8grz987mezvrx4arls/DDL",
@@ -28827,19 +29842,6 @@
             "display": "BOYS",
             "name": "BOYS",
             "symbol": "BOYS",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1q8ky6w56wcv2ya3kxzg83s667q86xtrlvwytcs/position",
-            "admin": "inj1q8ky6w56wcv2ya3kxzg83s667q86xtrlvwytcs",
-            "base": "factory/inj1q8ky6w56wcv2ya3kxzg83s667q86xtrlvwytcs/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1q8ky6w56wcv2ya3kxzg83s667q86xtrlvwytcs/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -29316,19 +30318,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1r42k2w9rf6jtqktpfceg3f0a8eu2flm98vm9cs/position",
-            "admin": "inj1r42k2w9rf6jtqktpfceg3f0a8eu2flm98vm9cs",
-            "base": "factory/inj1r42k2w9rf6jtqktpfceg3f0a8eu2flm98vm9cs/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1r42k2w9rf6jtqktpfceg3f0a8eu2flm98vm9cs/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1r4usuj62gywdwhq9uvx6tg0ywqpppcjqu7z4js/crinj",
             "admin": "inj1r4usuj62gywdwhq9uvx6tg0ywqpppcjqu7z4js",
             "base": "factory/inj1r4usuj62gywdwhq9uvx6tg0ywqpppcjqu7z4js/crinj",
@@ -29420,6 +30409,32 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1r7thtn5zj6mv9zupelkkw645ve8kgx35rf43ja/POTION",
+            "admin": "inj1r7thtn5zj6mv9zupelkkw645ve8kgx35rf43ja",
+            "base": "factory/inj1r7thtn5zj6mv9zupelkkw645ve8kgx35rf43ja/POTION",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "uPOTION"
+                    ],
+                    "denom": "factory/inj1r7thtn5zj6mv9zupelkkw645ve8kgx35rf43ja/POTION",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "POTION"
+                    ],
+                    "denom": "POTION",
+                    "exponent": 18
+                }
+            ],
+            "description": "$POTION is a high utility meme & governance token created by Wizard DAO. A leading OG animated NFT collection on Injective.",
+            "display": "POTION",
+            "name": "Potion",
+            "symbol": "POTION",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1r9h59ke0a77zkaarr4tuq25r3lt9za4r2mgyf4/NLC",
             "admin": "inj1r9h59ke0a77zkaarr4tuq25r3lt9za4r2mgyf4",
             "base": "factory/inj1r9h59ke0a77zkaarr4tuq25r3lt9za4r2mgyf4/NLC",
@@ -29507,6 +30522,19 @@
             "display": "TEST",
             "name": "TestorCoin",
             "symbol": "TEST",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1rfw3sugvss3z22zzuhlccqug0y8lvd4q95runz/position",
+            "admin": "inj1rfw3sugvss3z22zzuhlccqug0y8lvd4q95runz",
+            "base": "factory/inj1rfw3sugvss3z22zzuhlccqug0y8lvd4q95runz/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1rfw3sugvss3z22zzuhlccqug0y8lvd4q95runz/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -30151,19 +31179,6 @@
             "display": "CHEN",
             "name": "CHEN",
             "symbol": "CHEN",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1s8uw9vqpk7tvhjj2znqyhfxwfcvfl9g6d2drtc/position",
-            "admin": "inj1s8uw9vqpk7tvhjj2znqyhfxwfcvfl9g6d2drtc",
-            "base": "factory/inj1s8uw9vqpk7tvhjj2znqyhfxwfcvfl9g6d2drtc/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1s8uw9vqpk7tvhjj2znqyhfxwfcvfl9g6d2drtc/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -31249,13 +32264,13 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1tm6kuf59h46q0sy73cdyxyjwexwjp4a3h07yvt/position",
-            "admin": "inj1tm6kuf59h46q0sy73cdyxyjwexwjp4a3h07yvt",
-            "base": "factory/inj1tm6kuf59h46q0sy73cdyxyjwexwjp4a3h07yvt/position",
+            "address": "factory/inj1tn2nqgzsgu8ts87fe3fdhh2zy85ymdrc4qd37s/position",
+            "admin": "inj1tn2nqgzsgu8ts87fe3fdhh2zy85ymdrc4qd37s",
+            "base": "factory/inj1tn2nqgzsgu8ts87fe3fdhh2zy85ymdrc4qd37s/position",
             "denom_units": [
                 {
                     "aliases": [],
-                    "denom": "factory/inj1tm6kuf59h46q0sy73cdyxyjwexwjp4a3h07yvt/position",
+                    "denom": "factory/inj1tn2nqgzsgu8ts87fe3fdhh2zy85ymdrc4qd37s/position",
                     "exponent": 0
                 }
             ],
@@ -31363,19 +32378,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1tvnxhtnlkad7xzq7kkd0fcrtn0lncnvydp8mh3/position",
-            "admin": "inj1tvnxhtnlkad7xzq7kkd0fcrtn0lncnvydp8mh3",
-            "base": "factory/inj1tvnxhtnlkad7xzq7kkd0fcrtn0lncnvydp8mh3/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1tvnxhtnlkad7xzq7kkd0fcrtn0lncnvydp8mh3/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1u09lh0p69n7salm6l8ufytfsm0p40pnlxgpcz5/TOTS",
             "admin": "inj1u09lh0p69n7salm6l8ufytfsm0p40pnlxgpcz5",
             "base": "factory/inj1u09lh0p69n7salm6l8ufytfsm0p40pnlxgpcz5/TOTS",
@@ -31445,19 +32447,6 @@
             "display": "CWL",
             "name": "Cat Wif Luck",
             "symbol": "CWL",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1u2nhcc06qvxscfmqwqwq5x6saf0smlhmykgg2j/position",
-            "admin": "inj1u2nhcc06qvxscfmqwqwq5x6saf0smlhmykgg2j",
-            "base": "factory/inj1u2nhcc06qvxscfmqwqwq5x6saf0smlhmykgg2j/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1u2nhcc06qvxscfmqwqwq5x6saf0smlhmykgg2j/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -31747,19 +32736,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1utkmtctnp767m0rdl294ypshrjjv8qendcm3md/position",
-            "admin": "inj1utkmtctnp767m0rdl294ypshrjjv8qendcm3md",
-            "base": "factory/inj1utkmtctnp767m0rdl294ypshrjjv8qendcm3md/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1utkmtctnp767m0rdl294ypshrjjv8qendcm3md/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1utlxkwfxhmfc826gu07w20mvguysavz72edy4n/fbi",
             "admin": "inj1utlxkwfxhmfc826gu07w20mvguysavz72edy4n",
             "base": "factory/inj1utlxkwfxhmfc826gu07w20mvguysavz72edy4n/fbi",
@@ -31835,19 +32811,6 @@
             "display": "yakuza",
             "name": "Yakuza Clan (ヤクザ)",
             "symbol": "YAKUZA",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1utyrpze9qzx037av0vrxz2w63y2et4wcd84j3q/position",
-            "admin": "inj1utyrpze9qzx037av0vrxz2w63y2et4wcd84j3q",
-            "base": "factory/inj1utyrpze9qzx037av0vrxz2w63y2et4wcd84j3q/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1utyrpze9qzx037av0vrxz2w63y2et4wcd84j3q/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -32127,6 +33090,110 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aai",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aai",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aai"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aai",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "AAI"
+                    ],
+                    "denom": "AAI",
+                    "exponent": 6
+                }
+            ],
+            "description": "Every civilization has them. The Alien underclass has invaded on a dare.",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aai",
+            "name": "Alien Asshole Invasion",
+            "symbol": "AAI",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aragorn",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aragorn",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aragorn"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aragorn",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "ARAGORN"
+                    ],
+                    "denom": "ARAGORN",
+                    "exponent": 6
+                }
+            ],
+            "description": "No Introduction Needed",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/aragorn",
+            "name": "AragornSonOfArathorn",
+            "symbol": "ARAGORN",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/been",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/been",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/been"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/been",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "BEEN"
+                    ],
+                    "denom": "BEEN",
+                    "exponent": 6
+                }
+            ],
+            "description": "It's just a realy difficoult to find bee",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/been",
+            "name": "Bee Laden",
+            "symbol": "BEEN",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cat",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cat",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cat"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cat",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "cat"
+                    ],
+                    "denom": "cat",
+                    "exponent": 6
+                }
+            ],
+            "description": "ninja cat ",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cat",
+            "name": "catninja",
+            "symbol": "cat",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cook",
             "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
             "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/cook",
@@ -32179,6 +33246,448 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/depe",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/depe",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/depe"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/depe",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "DEPE"
+                    ],
+                    "denom": "DEPE",
+                    "exponent": 6
+                }
+            ],
+            "description": "pepe wif dark triad. join us",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/depe",
+            "name": "Dark Pepe",
+            "symbol": "DEPE",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dices",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dices",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dices"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dices",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "DICES"
+                    ],
+                    "denom": "DICES",
+                    "exponent": 6
+                }
+            ],
+            "description": " ",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dices",
+            "name": "Dices",
+            "symbol": "DICES",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dotrump",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dotrump",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dotrump"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dotrump",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "DOTRUMP"
+                    ],
+                    "denom": "DOTRUMP",
+                    "exponent": 6
+                }
+            ],
+            "description": "President Trump is here!",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/dotrump",
+            "name": "The-Donald-Trump",
+            "symbol": "DOTRUMP",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/drachme",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/drachme",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/drachme"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/drachme",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "Drachme"
+                    ],
+                    "denom": "Drachme",
+                    "exponent": 6
+                }
+            ],
+            "description": "Drachme is future of france",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/drachme",
+            "name": "Fresh greek moneys ",
+            "symbol": "Drachme",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/frog",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/frog",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/frog"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/frog",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "FROG"
+                    ],
+                    "denom": "FROG",
+                    "exponent": 6
+                }
+            ],
+            "description": "$FROG is future of france",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/frog",
+            "name": "FROGGY ",
+            "symbol": "FROG",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ggbond",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ggbond",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ggbond"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ggbond",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "GGBOND"
+                    ],
+                    "denom": "GGBOND",
+                    "exponent": 6
+                }
+            ],
+            "description": "GGBOND",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ggbond",
+            "name": "GGBOND",
+            "symbol": "GGBOND",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/hair",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/hair",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/hair"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/hair",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "HAIR"
+                    ],
+                    "denom": "HAIR",
+                    "exponent": 6
+                }
+            ],
+            "description": "She wants you to buy her hairstyle",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/hair",
+            "name": "HAIR",
+            "symbol": "HAIR",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/herb",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/herb",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/herb"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/herb",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "HERB"
+                    ],
+                    "denom": "HERB",
+                    "exponent": 6
+                }
+            ],
+            "description": "How High?",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/herb",
+            "name": "HERB",
+            "symbol": "HERB",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ksdhjkahkjhaskj",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ksdhjkahkjhaskj",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ksdhjkahkjhaskj"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ksdhjkahkjhaskj",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "ksdhjkahkjhaskj"
+                    ],
+                    "denom": "ksdhjkahkjhaskj",
+                    "exponent": 6
+                }
+            ],
+            "description": "Ultraman Tiga lights",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ksdhjkahkjhaskj",
+            "name": "TIGA",
+            "symbol": "ksdhjkahkjhaskj",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meme2",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meme2",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meme2"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meme2",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "meme2"
+                    ],
+                    "denom": "meme2",
+                    "exponent": 6
+                }
+            ],
+            "description": "It's a cat that became a meme and now a memecoin",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meme2",
+            "name": "memefica2",
+            "symbol": "meme2",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meta",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meta",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meta"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meta",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "META"
+                    ],
+                    "denom": "META",
+                    "exponent": 6
+                }
+            ],
+            "description": "For now I see a lot of toxic bad actors dress as white knights,  dev team that will dump on everyone's heads and a lack of support for new projects",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/meta",
+            "name": "BAD ACTOR",
+            "symbol": "META",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/mng",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/mng",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/mng"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/mng",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "MNG"
+                    ],
+                    "denom": "MNG",
+                    "exponent": 6
+                }
+            ],
+            "description": "Eat a mango - restore your mana",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/mng",
+            "name": "Mango",
+            "symbol": "MNG",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninga",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninga",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninga"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninga",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "ninga"
+                    ],
+                    "denom": "ninga",
+                    "exponent": 6
+                }
+            ],
+            "description": "In the heart of a bustling city, a shadowy figure moves with stealth and precision.",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninga",
+            "name": "ninga",
+            "symbol": "ninga",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninja",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninja",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninja"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninja",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "NINJA"
+                    ],
+                    "denom": "NINJA",
+                    "exponent": 6
+                }
+            ],
+            "description": "The NINJAs are the real community cooking at Injecitve ",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/ninja",
+            "name": "nINJa",
+            "symbol": "NINJA",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/oly",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/oly",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/oly"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/oly",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "OLY"
+                    ],
+                    "denom": "OLY",
+                    "exponent": 6
+                }
+            ],
+            "description": "An Olympic Meme Character",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/oly",
+            "name": "OlympicMeme",
+            "symbol": "OLY",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/pass",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/pass",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/pass"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/pass",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "PASS"
+                    ],
+                    "denom": "PASS",
+                    "exponent": 6
+                }
+            ],
+            "description": "The only rotation you need to be worried about mf",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/pass",
+            "name": "Rotatoor",
+            "symbol": "PASS",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/putin",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/putin",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/putin"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/putin",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "PUTIN"
+                    ],
+                    "denom": "PUTIN",
+                    "exponent": 6
+                }
+            ],
+            "description": "The villain of our century.",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/putin",
+            "name": "PUTIN",
+            "symbol": "PUTIN",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/spdr",
             "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
             "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/spdr",
@@ -32202,6 +33711,136 @@
             "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/spdr",
             "name": "Spooder",
             "symbol": "SPDR",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tet1w3112",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tet1w3112",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tet1w3112"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tet1w3112",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "tet1w3112"
+                    ],
+                    "denom": "tet1w3112",
+                    "exponent": 6
+                }
+            ],
+            "description": "adasdad",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tet1w3112",
+            "name": "admin",
+            "symbol": "tet1w3112",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tsng",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tsng",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tsng"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tsng",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "TSNG"
+                    ],
+                    "denom": "TSNG",
+                    "exponent": 6
+                }
+            ],
+            "description": "testing",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/tsng",
+            "name": "Testingggg",
+            "symbol": "TSNG",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wen",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wen",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wen"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wen",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "wen"
+                    ],
+                    "denom": "wen",
+                    "exponent": 6
+                }
+            ],
+            "description": "wen wen wen wen wen",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wen",
+            "name": "wen",
+            "symbol": "wen",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wif",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wif",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wif"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wif",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "WIF"
+                    ],
+                    "denom": "WIF",
+                    "exponent": 6
+                }
+            ],
+            "description": "Master in greek economics",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wif",
+            "name": "Greek Pepe wif hat",
+            "symbol": "WIF",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wifdog",
+            "admin": "inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5",
+            "base": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wifdog",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wifdog"
+                    ],
+                    "denom": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wifdog",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "WIFDOG"
+                    ],
+                    "denom": "WIFDOG",
+                    "exponent": 6
+                }
+            ],
+            "description": "WIFDOG",
+            "display": "factory/inj1v5vml3038t0expy7vf5vkwj7t9xly9kudtjdg5/wifdog",
+            "name": "WIFDOG",
+            "symbol": "WIFDOG",
             "type_asset": "factory"
         },
         {
@@ -32437,6 +34076,32 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1djuudn6jj6g70kunu8sgtnrvytw9e27xtzyphe",
+            "admin": "inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3",
+            "base": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1djuudn6jj6g70kunu8sgtnrvytw9e27xtzyphe",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1djuudn6jj6g70kunu8sgtnrvytw9e27xtzyphe",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1dvrvhcpq6aru0g5d9m9wjnz7utr67we5dlaq79",
+            "admin": "inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3",
+            "base": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1dvrvhcpq6aru0g5d9m9wjnz7utr67we5dlaq79",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1dvrvhcpq6aru0g5d9m9wjnz7utr67we5dlaq79",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1e6f0ma2j0j9duwyn7vv0jdn6qaztxgmqpr56hu",
             "admin": "inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3",
             "base": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1e6f0ma2j0j9duwyn7vv0jdn6qaztxgmqpr56hu",
@@ -32457,6 +34122,19 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1g89dl74lyre9q6rjua9l37pcc7psnw66capurp",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1gqmr3vdr9k0hwyjkkphn9etqqsj06mm0tuj7vl",
+            "admin": "inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3",
+            "base": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1gqmr3vdr9k0hwyjkkphn9etqqsj06mm0tuj7vl",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1gqmr3vdr9k0hwyjkkphn9etqqsj06mm0tuj7vl",
                     "exponent": 0
                 }
             ],
@@ -32561,6 +34239,19 @@
                 {
                     "aliases": [],
                     "denom": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1nvq8pyvt2kf5xctc4v3xt4gszq5a9lhpadyfwg",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1nyv50r7vnktgpp5s22fh8nzf7ak8sthh6l7s3t",
+            "admin": "inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3",
+            "base": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1nyv50r7vnktgpp5s22fh8nzf7ak8sthh6l7s3t",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1vcqkkvqs7prqu70dpddfj7kqeqfdz5gg662qs3/lpinj1nyv50r7vnktgpp5s22fh8nzf7ak8sthh6l7s3t",
                     "exponent": 0
                 }
             ],
@@ -33086,6 +34777,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1vtc2rlvqzfzdezn3dmg7ggyeylr6qzpq0ak88r/position",
+            "admin": "inj1vtc2rlvqzfzdezn3dmg7ggyeylr6qzpq0ak88r",
+            "base": "factory/inj1vtc2rlvqzfzdezn3dmg7ggyeylr6qzpq0ak88r/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1vtc2rlvqzfzdezn3dmg7ggyeylr6qzpq0ak88r/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1vug68m8evczhxm26hfe7tetycsfnmm92mr6aaj/GODS",
             "admin": "inj1vug68m8evczhxm26hfe7tetycsfnmm92mr6aaj",
             "base": "factory/inj1vug68m8evczhxm26hfe7tetycsfnmm92mr6aaj/GODS",
@@ -33155,19 +34859,6 @@
             "display": "KATANA",
             "name": "Dog Wif Katana",
             "symbol": "KATANA",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1vyelgqnlmnwd8sq2rcmg7d0jglrvggdk6s5y4k/position",
-            "admin": "inj1vyelgqnlmnwd8sq2rcmg7d0jglrvggdk6s5y4k",
-            "base": "factory/inj1vyelgqnlmnwd8sq2rcmg7d0jglrvggdk6s5y4k/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1vyelgqnlmnwd8sq2rcmg7d0jglrvggdk6s5y4k/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -33750,6 +35441,21 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1wmu4fq03zvu60crvjdhksk62e8m08xsn9d5nv3/stream-swap-test",
+            "admin": "inj1wmu4fq03zvu60crvjdhksk62e8m08xsn9d5nv3",
+            "base": "factory/inj1wmu4fq03zvu60crvjdhksk62e8m08xsn9d5nv3/stream-swap-test",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1wmu4fq03zvu60crvjdhksk62e8m08xsn9d5nv3/stream-swap-test",
+                    "exponent": 0
+                }
+            ],
+            "name": "stream swap test",
+            "symbol": "SSTST",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1wnrxrkj59t6jeg3jxzhkc0efr2y24y6knvsnmp/boden",
             "admin": "inj1wnrxrkj59t6jeg3jxzhkc0efr2y24y6knvsnmp",
             "base": "factory/inj1wnrxrkj59t6jeg3jxzhkc0efr2y24y6knvsnmp/boden",
@@ -33911,6 +35617,19 @@
             "display": "WOOF",
             "name": "WOOF",
             "symbol": "WOOF",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1wud39wkdk6vlqy65v4ytqrmldagvaz8c7gtnjm/position",
+            "admin": "inj1wud39wkdk6vlqy65v4ytqrmldagvaz8c7gtnjm",
+            "base": "factory/inj1wud39wkdk6vlqy65v4ytqrmldagvaz8c7gtnjm/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1wud39wkdk6vlqy65v4ytqrmldagvaz8c7gtnjm/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -34084,6 +35803,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1xaw8dvp6v05vsnxxwa4y7gpuddxhes97rqmcv6/position",
+            "admin": "inj1xaw8dvp6v05vsnxxwa4y7gpuddxhes97rqmcv6",
+            "base": "factory/inj1xaw8dvp6v05vsnxxwa4y7gpuddxhes97rqmcv6/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1xaw8dvp6v05vsnxxwa4y7gpuddxhes97rqmcv6/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1xawhm3d8lf9n0rqdljpal033yackja3dt0kvp0/SHINOBI",
             "admin": "inj1xawhm3d8lf9n0rqdljpal033yackja3dt0kvp0",
             "base": "factory/inj1xawhm3d8lf9n0rqdljpal033yackja3dt0kvp0/SHINOBI",
@@ -34131,19 +35863,6 @@
             "display": "BABYQUNT",
             "name": "BABYQUNT",
             "symbol": "BABYQUNT",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1xfl2jxuwpvpxxc5upxm8fxxzv6nxd65z5kpqny/position",
-            "admin": "inj1xfl2jxuwpvpxxc5upxm8fxxzv6nxd65z5kpqny",
-            "base": "factory/inj1xfl2jxuwpvpxxc5upxm8fxxzv6nxd65z5kpqny/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1xfl2jxuwpvpxxc5upxm8fxxzv6nxd65z5kpqny/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -34507,6 +36226,30 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1xy7dcllc7wn5prcy73xr7xhpt9zwg49c6szqcz/fff",
+            "admin": "inj1xy7dcllc7wn5prcy73xr7xhpt9zwg49c6szqcz",
+            "base": "factory/inj1xy7dcllc7wn5prcy73xr7xhpt9zwg49c6szqcz/fff",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ufff"
+                    ],
+                    "denom": "factory/inj1xy7dcllc7wn5prcy73xr7xhpt9zwg49c6szqcz/fff",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "fff",
+                    "exponent": 6
+                }
+            ],
+            "description": "jjj",
+            "display": "fff",
+            "name": "hhh",
+            "symbol": "fff",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1xz4h76wctruu6l0hezq3dhtfkxzv56ztg4l29t/HANZO",
             "admin": "inj1xz4h76wctruu6l0hezq3dhtfkxzv56ztg4l29t",
             "base": "factory/inj1xz4h76wctruu6l0hezq3dhtfkxzv56ztg4l29t/HANZO",
@@ -34646,6 +36389,43 @@
             "display": "ipdai",
             "name": "Injective Panda AI",
             "symbol": "IPDAI",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1y3tkh4dph28gf2fprxy98sg7w5s7e6ymnrvwgv/KET",
+            "admin": "inj1y3tkh4dph28gf2fprxy98sg7w5s7e6ymnrvwgv",
+            "base": "factory/inj1y3tkh4dph28gf2fprxy98sg7w5s7e6ymnrvwgv/KET",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "uket"
+                    ],
+                    "denom": "factory/inj1y3tkh4dph28gf2fprxy98sg7w5s7e6ymnrvwgv/KET",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "KET",
+                    "exponent": 6
+                }
+            ],
+            "description": "Token de la plateforme KING EXCHANGE ",
+            "display": "KET",
+            "name": "KING EXCHANGE TOKEN",
+            "symbol": "KET",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1y4mmnuck96ffjswgd37963f5ch9kph8sk99zuj/position",
+            "admin": "inj1y4mmnuck96ffjswgd37963f5ch9kph8sk99zuj",
+            "base": "factory/inj1y4mmnuck96ffjswgd37963f5ch9kph8sk99zuj/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1y4mmnuck96ffjswgd37963f5ch9kph8sk99zuj/position",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -34856,19 +36636,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1yg49drflp8vmf4hj07jy9c8wl2fmqrfq09etpm/position",
-            "admin": "inj1yg49drflp8vmf4hj07jy9c8wl2fmqrfq09etpm",
-            "base": "factory/inj1yg49drflp8vmf4hj07jy9c8wl2fmqrfq09etpm/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1yg49drflp8vmf4hj07jy9c8wl2fmqrfq09etpm/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1yjeq7tz86a8su0asaxckpa3a9rslfp97vpq3zq/AOT",
             "admin": "inj1yjeq7tz86a8su0asaxckpa3a9rslfp97vpq3zq",
             "base": "factory/inj1yjeq7tz86a8su0asaxckpa3a9rslfp97vpq3zq/AOT",
@@ -35006,6 +36773,19 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj1yqnt9aswsjdujxxdeyzm4twqchjtaw2ddrxkqv/position",
+            "admin": "inj1yqnt9aswsjdujxxdeyzm4twqchjtaw2ddrxkqv",
+            "base": "factory/inj1yqnt9aswsjdujxxdeyzm4twqchjtaw2ddrxkqv/position",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1yqnt9aswsjdujxxdeyzm4twqchjtaw2ddrxkqv/position",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj1yt3dxjvwyq5f4hw86sadk5jd9nqu6dnml3v7sv/INJ",
             "admin": "inj1yt3dxjvwyq5f4hw86sadk5jd9nqu6dnml3v7sv",
             "base": "factory/inj1yt3dxjvwyq5f4hw86sadk5jd9nqu6dnml3v7sv/INJ",
@@ -35053,19 +36833,6 @@
             "display": "Quants",
             "name": "Injective Quants",
             "symbol": "Quants",
-            "type_asset": "factory"
-        },
-        {
-            "address": "factory/inj1yu54sj0phd59dgcd023hhlezxmtzqwgf44c6ka/position",
-            "admin": "inj1yu54sj0phd59dgcd023hhlezxmtzqwgf44c6ka",
-            "base": "factory/inj1yu54sj0phd59dgcd023hhlezxmtzqwgf44c6ka/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1yu54sj0phd59dgcd023hhlezxmtzqwgf44c6ka/position",
-                    "exponent": 0
-                }
-            ],
             "type_asset": "factory"
         },
         {
@@ -35167,19 +36934,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1z3mux0g3fw2ggem5qnuqcy46nl5wwsdcm9q5eg/position",
-            "admin": "inj1z3mux0g3fw2ggem5qnuqcy46nl5wwsdcm9q5eg",
-            "base": "factory/inj1z3mux0g3fw2ggem5qnuqcy46nl5wwsdcm9q5eg/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1z3mux0g3fw2ggem5qnuqcy46nl5wwsdcm9q5eg/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1z426atp9k68uv49kaam7m0vnehw5fulxkyvde0/SHURIKEN",
             "admin": "inj1z426atp9k68uv49kaam7m0vnehw5fulxkyvde0",
             "base": "factory/inj1z426atp9k68uv49kaam7m0vnehw5fulxkyvde0/SHURIKEN",
@@ -35224,19 +36978,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1z60w4nx27cyt8tygmwxe045aa5h8u0acupv3dl/position",
-            "admin": "inj1z60w4nx27cyt8tygmwxe045aa5h8u0acupv3dl",
-            "base": "factory/inj1z60w4nx27cyt8tygmwxe045aa5h8u0acupv3dl/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1z60w4nx27cyt8tygmwxe045aa5h8u0acupv3dl/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1z70nam7mp5qq4wd45ker230n3x4e35dkca9la4/ZORO",
             "admin": "inj1z70nam7mp5qq4wd45ker230n3x4e35dkca9la4",
             "base": "factory/inj1z70nam7mp5qq4wd45ker230n3x4e35dkca9la4/ZORO",
@@ -35260,6 +37001,19 @@
             "display": "ZORO",
             "name": "ZORO",
             "symbol": "ZORO",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj1z7mx2tc9ea4y2y0nx230pe7knm8fryk3rv6r2c/uLP",
+            "admin": "inj1z7mx2tc9ea4y2y0nx230pe7knm8fryk3rv6r2c",
+            "base": "factory/inj1z7mx2tc9ea4y2y0nx230pe7knm8fryk3rv6r2c/uLP",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj1z7mx2tc9ea4y2y0nx230pe7knm8fryk3rv6r2c/uLP",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {
@@ -35570,19 +37324,6 @@
             "type_asset": "factory"
         },
         {
-            "address": "factory/inj1zt0ts2z4r0sx0g3ae87ct9r9pgjmxexe4lj2h3/position",
-            "admin": "inj1zt0ts2z4r0sx0g3ae87ct9r9pgjmxexe4lj2h3",
-            "base": "factory/inj1zt0ts2z4r0sx0g3ae87ct9r9pgjmxexe4lj2h3/position",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1zt0ts2z4r0sx0g3ae87ct9r9pgjmxexe4lj2h3/position",
-                    "exponent": 0
-                }
-            ],
-            "type_asset": "factory"
-        },
-        {
             "address": "factory/inj1ztugej2ytfwj9kxa8m5md85e5z3v8jvaxapz6n/skibidi",
             "admin": "inj1ztugej2ytfwj9kxa8m5md85e5z3v8jvaxapz6n",
             "base": "factory/inj1ztugej2ytfwj9kxa8m5md85e5z3v8jvaxapz6n/skibidi",
@@ -35780,6 +37521,10 @@
         },
         {
             "base": "peggy0x57e114B691Db790C35207b2e685D4A43181e6061",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "peggy0x6982508145454Ce325dDbE47a25d4ec3d2311933",
             "type_asset": "sdk.coin"
         },
         {
@@ -36863,6 +38608,46 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "share58",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "share58",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "INSURANCE-0x85f12da064199cf316d69344f60c0c3bbf00cf619a455cfd340b84e3d4783246",
+                    "exponent": 6
+                }
+            ],
+            "description": "The share token of the insurance fund 0x85f12da064199cf316d69344f60c0c3bbf00cf619a455cfd340b84e3d4783246",
+            "display": "INSURANCE-0x85f12da064199cf316d69344f60c0c3bbf00cf619a455cfd340b84e3d4783246",
+            "name": "BTC/wUSDM PERP share token",
+            "symbol": "INSURANCE-BTC/wUSDM PERP",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "share59",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "share59",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "INSURANCE-0x0d4c722badb032f14dfc07355258a4bcbd354cbc5d79cb5b69ddd52b1eb2f709",
+                    "exponent": 6
+                }
+            ],
+            "description": "The share token of the insurance fund 0x0d4c722badb032f14dfc07355258a4bcbd354cbc5d79cb5b69ddd52b1eb2f709",
+            "display": "INSURANCE-0x0d4c722badb032f14dfc07355258a4bcbd354cbc5d79cb5b69ddd52b1eb2f709",
+            "name": "BTC/wUSDM Perp share token",
+            "symbol": "INSURANCE-BTC/wUSDM Perp",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "share6",
             "denom_units": [
                 {
@@ -36878,6 +38663,46 @@
             ],
             "description": "The share token of the insurance fund 0x54d4505adef6a5cef26bc403a33d595620ded4e15b9e2bc3dd489b714813366a",
             "display": "INSURANCE-0x54d4505adef6a5cef26bc403a33d595620ded4e15b9e2bc3dd489b714813366a",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "share60",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "share60",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "INSURANCE-0x5e7be7948c78f0c7fb1170655b5faa0a519ee0801250dde0b50308791474e61c",
+                    "exponent": 6
+                }
+            ],
+            "description": "The share token of the insurance fund 0x5e7be7948c78f0c7fb1170655b5faa0a519ee0801250dde0b50308791474e61c",
+            "display": "INSURANCE-0x5e7be7948c78f0c7fb1170655b5faa0a519ee0801250dde0b50308791474e61c",
+            "name": "ETH/USDT 19SEP22 share token",
+            "symbol": "INSURANCE-ETH/USDT 19SEP22",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "share61",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "share61",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "INSURANCE-0xc60c2ba4c11976e4c10ed7c1f5ca789b63282d0b3782ec3d7fc29dec9f43415e",
+                    "exponent": 6
+                }
+            ],
+            "description": "The share token of the insurance fund 0xc60c2ba4c11976e4c10ed7c1f5ca789b63282d0b3782ec3d7fc29dec9f43415e",
+            "display": "INSURANCE-0xc60c2ba4c11976e4c10ed7c1f5ca789b63282d0b3782ec3d7fc29dec9f43415e",
+            "name": "STX/USDT PERP share token",
+            "symbol": "INSURANCE-STX/USDT PERP",
             "type_asset": "sdk.coin"
         },
         {
