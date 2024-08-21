@@ -3398,6 +3398,48 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/43C82ECE074C1A96338371706E18FDFFECFE9E0CE2E3F90F735B12C10067BA1F",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "umars"
+                    ],
+                    "denom": "factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "MARS",
+                    "exponent": 6
+                }
+            ],
+            "description": "Mars protocol token",
+            "display": "MARS",
+            "ibc": {
+                "dst_channel": "channel-4457",
+                "source_channel": "channel-126",
+                "source_denom": "factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS"
+            },
+            "name": "Mars protocol token",
+            "symbol": "MARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-126",
+                        "path": "transfer/channel-126/factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-4457"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/452372B8214E22C625E98958C5EDFB939C48E6590E40B711E9D30206EF8EDC9B",
             "denom_units": [
                 {
@@ -4904,53 +4946,6 @@
                         "chain_id": "quicksilver-2",
                         "chain_name": "quicksilver",
                         "channel_id": "channel-49"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/CC30F2A979C7D1BB907582C1B4DBDBBA89E82AA8C0EFCA099AE556EB37D83AAB",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "microxprt"
-                    ],
-                    "denom": "uxprt",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [
-                        "millixprt"
-                    ],
-                    "denom": "mxprt",
-                    "exponent": 3
-                },
-                {
-                    "aliases": [],
-                    "denom": "xprt",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native staking token of the Persistence Core.",
-            "display": "xprt",
-            "ibc": {
-                "dst_channel": "channel-81",
-                "source_channel": "channel-51",
-                "source_denom": "uxprt"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-51",
-                        "path": "transfer/channel-51/uxprt"
-                    },
-                    "counterparty": {
-                        "base_denom": "uxprt",
-                        "chain_id": "core-1",
-                        "chain_name": "persistence",
-                        "channel_id": "channel-81"
                     },
                     "type": "ibc"
                 }
