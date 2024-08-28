@@ -192,30 +192,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/7C260B17626EBB2FEC3A96CFE4D168235318DFD5B96D6A292E6BEF799553900F",
-            "ibc": {
-                "dst_channel": "channel-216",
-                "source_channel": "channel-13",
-                "source_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-13",
-                        "path": "transfer/channel-13/transfer/channel-122/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-216"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/ADDAB18225E6B7BE37130BA645FC76370126D9076408E6C5B245B26EC5C56A22",
             "ibc": {
                 "dst_channel": "channel-216",
@@ -583,11 +559,46 @@
         },
         {
             "base": "ibc/421BECB060285E10D08BB53592FEB4EE0EFADB24899A860B43070F5D7EB577A9",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microTalis"
+                    ],
+                    "denom": "factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/Talis",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "Talis"
+                    ],
+                    "denom": "Talis",
+                    "exponent": 6
+                }
+            ],
+            "description": "Talis governance token, stake token to vote on proposals",
+            "display": "Talis",
             "ibc": {
                 "dst_channel": "channel-147",
                 "source_channel": "channel-146",
-                "source_denom": ""
+                "source_denom": "factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/Talis"
             },
+            "name": "Talis",
+            "symbol": "TALIS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-146",
+                        "path": "transfer/channel-146/factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/Talis"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/Talis",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-147"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -662,8 +673,23 @@
             "ibc": {
                 "dst_channel": "channel-147",
                 "source_channel": "channel-146",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-146",
+                        "path": "transfer/channel-146/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-147"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1296,20 +1322,88 @@
         },
         {
             "base": "ibc/AEC0C79BDC2933BBD3DD5EE52665B7F7FBB7F9696292FB3417F11C73526F3B8A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microxTalis"
+                    ],
+                    "denom": "factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/xTalis",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "xTalis"
+                    ],
+                    "denom": "xTalis",
+                    "exponent": 6
+                }
+            ],
+            "description": "Talis stake-token, stake token to share revenue from the protocol",
+            "display": "xTalis",
             "ibc": {
                 "dst_channel": "channel-147",
                 "source_channel": "channel-146",
-                "source_denom": ""
+                "source_denom": "factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/xTalis"
             },
+            "name": "xTalis",
+            "symbol": "XTALIS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-146",
+                        "path": "transfer/channel-146/factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/xTalis"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/xTalis",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-147"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
             "base": "ibc/B3D6D25339F518AAEDD2B1C49EA651FB2A4DE5E71BAD146D69EE74C80ABA0849",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ucosmo"
+                    ],
+                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "COSMO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Don’t be evil",
+            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-147",
                 "source_channel": "channel-146",
-                "source_denom": ""
+                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
+            "name": "Cosmo",
+            "symbol": "COSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-146",
+                        "path": "transfer/channel-146/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-147"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1597,6 +1691,19 @@
                 {
                     "aliases": [],
                     "denom": "factory/orai17hyr3eg92fv34fdnkend48scu32hn26gqxw3hnwkfy904lk9r09qqzty42/XuanDang",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/orai1wuvhex9xqs3r539mvc6mtm7n20fcj3qr2m0y9khx6n5vtlngfzes3k0rq9/XRP",
+            "admin": "orai1wuvhex9xqs3r539mvc6mtm7n20fcj3qr2m0y9khx6n5vtlngfzes3k0rq9",
+            "base": "factory/orai1wuvhex9xqs3r539mvc6mtm7n20fcj3qr2m0y9khx6n5vtlngfzes3k0rq9/XRP",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/orai1wuvhex9xqs3r539mvc6mtm7n20fcj3qr2m0y9khx6n5vtlngfzes3k0rq9/XRP",
                     "exponent": 0
                 }
             ],
