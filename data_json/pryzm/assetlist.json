@@ -939,11 +939,42 @@
         },
         {
             "base": "ibc/F8CA5236869F819BC006EEF088E67889A26E4140339757878F0F4E229CDDA858",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-71",
                 "source_channel": "channel-24",
-                "source_denom": ""
+                "source_denom": "adydx"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-24",
+                        "path": "transfer/channel-24/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-71"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {

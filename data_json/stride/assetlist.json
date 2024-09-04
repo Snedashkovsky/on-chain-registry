@@ -5795,11 +5795,42 @@
         },
         {
             "base": "ibc/561C70B20188A047BFDE6F9946BDDC5D8AC172B9BE04FF868DFABF819E5A9CCE",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-1",
                 "source_channel": "channel-160",
-                "source_denom": ""
+                "source_denom": "adydx"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-160",
+                        "path": "transfer/channel-160/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -11272,6 +11303,15 @@
             "ibc": {
                 "dst_channel": "channel-32",
                 "source_channel": "channel-8",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/E2234780C8E73C3BECD583647CFBBD95CA2243643F5586C8DAFD57168ADDCF52",
+            "ibc": {
+                "dst_channel": "channel-391",
+                "source_channel": "channel-0",
                 "source_denom": ""
             },
             "type_asset": "ics20"

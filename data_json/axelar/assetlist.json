@@ -3448,11 +3448,27 @@
         },
         {
             "base": "ibc/72BDBDBECCA888D458835F9EA2CFC58E5E73160D53E06AFBAD8BDBEB38BC5AFA",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-6",
                 "source_channel": "channel-11",
                 "source_denom": "ibc/21F3876A6F5A1A1231768FE8A065C04B5C728632B9B8BA8CA418829E0214D8EE"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
             "traces": [
                 {
                     "chain": {
@@ -3464,6 +3480,19 @@
                         "chain_id": "phoenix-1",
                         "chain_name": "terra2",
                         "channel_id": "channel-6"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-299",
+                        "path": "transfer/channel-299/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-9"
                     },
                     "type": "ibc"
                 }

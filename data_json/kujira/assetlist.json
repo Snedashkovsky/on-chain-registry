@@ -2979,8 +2979,49 @@
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-118",
-                "source_denom": ""
+                "source_denom": "ibc/53065F29D5AF251058D0725BA9C2ECCF8ECDC1303AD318E4635FFE3E99D10691"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-118",
+                        "path": "transfer/channel-118/transfer/channel-10/transfer/channel-2/uakt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/53065F29D5AF251058D0725BA9C2ECCF8ECDC1303AD318E4635FFE3E99D10691",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/transfer/channel-2/uakt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/6D717BFF5537D129035BAB39F593D638BA258A9F8D86FB7ECCEAB05B6950CC3E",
+                        "chain_id": "sifchain-1",
+                        "chain_name": "sifchain",
+                        "channel_id": "channel-92"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uakt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uakt",
+                        "chain_id": "akashnet-2",
+                        "chain_name": "akash",
+                        "channel_id": "channel-24"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -4582,11 +4623,27 @@
         },
         {
             "base": "ibc/740B90AF92404589BC5D76E0A2A0EB355698BB93582639EFFEE9AEC78E2659C3",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-10",
                 "source_channel": "channel-5",
                 "source_denom": "ibc/21F3876A6F5A1A1231768FE8A065C04B5C728632B9B8BA8CA418829E0214D8EE"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
             "traces": [
                 {
                     "chain": {
@@ -4598,6 +4655,19 @@
                         "chain_id": "phoenix-1",
                         "chain_name": "terra2",
                         "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-299",
+                        "path": "transfer/channel-299/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-9"
                     },
                     "type": "ibc"
                 }
@@ -5170,11 +5240,55 @@
         },
         {
             "base": "ibc/AF62E69333BAF0AB427E36B00166E6A317660BCDB949631A6DA006B231D28FD8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-118",
-                "source_denom": ""
+                "source_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-118",
+                        "path": "transfer/channel-118/transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-33"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -9034,11 +9148,42 @@
         },
         {
             "base": "ibc/6A4CEDCEA40B587A4BCF7FDFB1D5A13D13F8A807A22A4E759EA702640CE086B0",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-118",
-                "source_denom": ""
+                "source_denom": "adydx"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-118",
+                        "path": "transfer/channel-118/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
