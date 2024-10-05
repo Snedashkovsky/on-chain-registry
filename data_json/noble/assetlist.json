@@ -1700,6 +1700,15 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/5FC40E6EF93319DCB53E5EB64F82B7BE041DBF7C82A1FB0187129AE5BFA4EB4A",
+            "ibc": {
+                "dst_channel": "channel-750",
+                "source_channel": "channel-1",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/616AC9530A57E06B77745C89A29A49AE15925820077C2797B39485B6F4474D91",
             "denom_units": [
                 {
@@ -3249,8 +3258,23 @@
             "ibc": {
                 "dst_channel": "channel-88",
                 "source_channel": "channel-17",
-                "source_denom": ""
+                "source_denom": "uscrt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-17",
+                        "path": "transfer/channel-17/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-88"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {

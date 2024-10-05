@@ -2102,8 +2102,23 @@
             "ibc": {
                 "dst_channel": "channel-160",
                 "source_channel": "channel-45",
-                "source_denom": ""
+                "source_denom": "uscrt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-45",
+                        "path": "transfer/channel-45/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -2435,6 +2450,10 @@
         },
         {
             "base": "bneo.1.14.e2e5f6",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "brdg/a02afc2c1edf77cc023eefa25fc036c184612faf9365cda9c1daa3b1675ebf8f",
             "type_asset": "sdk.coin"
         },
         {

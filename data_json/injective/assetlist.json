@@ -961,45 +961,6 @@
                         "channel_id": "channel-6"
                     },
                     "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-40",
-                        "path": "transfer/channel-40/transfer/channel-22/transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/3B97315FE7A2DBAA1C18E486F689350F2F2939177153046966FAF7BA5D485998",
-                        "chain_id": "secret-4",
-                        "chain_name": "secretnetwork",
-                        "channel_id": "channel-37"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-22",
-                        "path": "transfer/channel-22/transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/C19813F6D22F91CC64D2EEDF8702904DD61E0D022972EDFE0039F70C8A6EAD24",
-                        "chain_id": "kaiyo-1",
-                        "chain_name": "kujira",
-                        "channel_id": "channel-10"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-32",
-                        "path": "transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "stinj",
-                        "chain_id": "stride-1",
-                        "chain_name": "stride",
-                        "channel_id": "channel-8"
-                    },
-                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -1590,6 +1551,19 @@
                         "chain_id": "axelar-dojo-1",
                         "chain_name": "axelar",
                         "channel_id": "channel-72"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-12",
+                        "path": "transfer/channel-12/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-20"
                     },
                     "type": "ibc"
                 }
@@ -3282,6 +3256,19 @@
                         "channel_id": "channel-10"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-12",
+                        "path": "transfer/channel-12/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-20"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -3481,8 +3468,23 @@
             "ibc": {
                 "dst_channel": "channel-23",
                 "source_channel": "channel-88",
-                "source_denom": ""
+                "source_denom": "uscrt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-88",
+                        "path": "transfer/channel-88/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-23"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -4223,8 +4225,23 @@
             "ibc": {
                 "dst_channel": "channel-7",
                 "source_channel": "channel-74",
-                "source_denom": ""
+                "source_denom": "uscrt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-74",
+                        "path": "transfer/channel-74/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-7"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -13787,6 +13804,54 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs/DRUGS",
+            "admin": "inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs",
+            "base": "factory/inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs/DRUGS",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "udrugs"
+                    ],
+                    "denom": "factory/inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs/DRUGS",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "DRUGS",
+                    "exponent": 6
+                }
+            ],
+            "description": "Distributing happiness, is a serious business",
+            "display": "DRUGS",
+            "name": "DRUGS",
+            "symbol": "DRUGS",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs/FUCKINJ",
+            "admin": "inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs",
+            "base": "factory/inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs/FUCKINJ",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ufuckinj"
+                    ],
+                    "denom": "factory/inj170xy50dryyk9ur52laks9d02u33gcz4l8g94gs/FUCKINJ",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "FUCKINJ",
+                    "exponent": 6
+                }
+            ],
+            "description": "FUCKINJ",
+            "display": "FUCKINJ",
+            "name": "FUCKINJ",
+            "symbol": "FUCKINJ",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/inj172ccd0gddgz203e4pf86ype7zjx573tn8g0df9/GINGER",
             "admin": "inj172ccd0gddgz203e4pf86ype7zjx573tn8g0df9",
             "base": "factory/inj172ccd0gddgz203e4pf86ype7zjx573tn8g0df9/GINGER",
@@ -13978,6 +14043,30 @@
             "display": "MAFIAz",
             "name": "Mafia z",
             "symbol": "MAFIAz",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS",
+            "admin": "inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89",
+            "base": "factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "udrugs"
+                    ],
+                    "denom": "factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "DRUGS",
+                    "exponent": 6
+                }
+            ],
+            "description": "Distributing happiness, is a serious business",
+            "display": "DRUGS",
+            "name": "DRUGS",
+            "symbol": "DRUGS",
             "type_asset": "factory"
         },
         {
