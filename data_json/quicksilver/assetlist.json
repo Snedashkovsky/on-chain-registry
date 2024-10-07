@@ -707,27 +707,11 @@
         },
         {
             "base": "ibc/606D8CE799A95FC8CB680981F39824BD3D99131A34E0098112A1C4276AEED0F3",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "HAVA",
-                    "exponent": 6
-                }
-            ],
-            "description": "Hava Coin is the lifeblood of the Cosmos & Injective networks, rewarding builders and welcoming supporters. https://havacoin.xyz/",
-            "display": "HAVA",
             "ibc": {
                 "dst_channel": "channel-467",
                 "source_channel": "channel-1",
                 "source_denom": "ibc/C59705689D6B08643B65834305A343DE86B85DB5819F00B6C6E11AC2D3656EE2"
             },
-            "name": "Hava Coin",
-            "symbol": "HAVA",
             "traces": [
                 {
                     "chain": {
@@ -739,19 +723,6 @@
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-467"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-220",
-                        "path": "transfer/channel-220/factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-1"
                     },
                     "type": "ibc"
                 }
@@ -1217,8 +1188,23 @@
             "ibc": {
                 "dst_channel": "channel-65",
                 "source_channel": "channel-52",
-                "source_denom": ""
+                "source_denom": "uscrt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-52",
+                        "path": "transfer/channel-52/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-65"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
