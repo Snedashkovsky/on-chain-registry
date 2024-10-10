@@ -2,40 +2,11 @@
     "assets": [
         {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-78292",
                 "source_channel": "channel-1",
-                "source_denom": "uosmo"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uosmo"
-                    },
-                    "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-78292"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -81,6 +52,30 @@
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-892"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/AE650BD48F6712E412D2F982E44C9BB9B232F182F6D8C08B38E56613F53DCC3C",
+            "ibc": {
+                "dst_channel": "channel-8",
+                "source_channel": "channel-6",
+                "source_denom": "route"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/route"
+                    },
+                    "counterparty": {
+                        "base_denom": "route",
+                        "chain_id": "router_9600-1",
+                        "chain_name": "routerchain",
+                        "channel_id": "channel-8"
                     },
                     "type": "ibc"
                 }

@@ -1,37 +1,59 @@
 {
     "assets": [
         {
+            "base": "ibc/D033E88EB94ADB1845E0EF65FAECB9269846EBA5B1C32831FFCFB5B270759DCD",
+            "ibc": {
+                "dst_channel": "channel-76971",
+                "source_channel": "channel-1",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+            "ibc": {
+                "dst_channel": "channel-76971",
+                "source_channel": "channel-1",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/078EAF11288A47609FD894070CA8A1BFCEBD9E08745EA7030F95D7ADEE2E22CA",
             "denom_units": [
                 {
-                    "aliases": [],
-                    "denom": "uosmo",
+                    "aliases": [
+                        "attoevmos"
+                    ],
+                    "denom": "aevmos",
                     "exponent": 0
                 },
                 {
                     "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
+                    "denom": "evmos",
+                    "exponent": 18
                 }
             ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
+            "description": "The native EVM, governance and staking token of the Evmos Hub",
+            "display": "evmos",
             "ibc": {
-                "dst_channel": "channel-76971",
-                "source_channel": "channel-1",
-                "source_denom": "uosmo"
+                "dst_channel": "channel-117",
+                "source_channel": "channel-8",
+                "source_denom": "aevmos"
             },
+            "name": "Evmos",
+            "symbol": "EVMOS",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uosmo"
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/aevmos"
                     },
                     "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-76971"
+                        "base_denom": "aevmos",
+                        "chain_id": "evmos_9001-2",
+                        "chain_name": "evmos",
+                        "channel_id": "channel-117"
                     },
                     "type": "ibc"
                 }
@@ -56,6 +78,48 @@
                         "chain_id": "axelar-dojo-1",
                         "chain_name": "axelar",
                         "channel_id": "channel-156"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
+            "ibc": {
+                "dst_channel": "channel-391",
+                "source_channel": "channel-7",
+                "source_denom": "ustars"
+            },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-391"
                     },
                     "type": "ibc"
                 }
