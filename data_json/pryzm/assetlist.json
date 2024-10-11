@@ -50,11 +50,40 @@
         },
         {
             "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-75755",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "uosmo"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75755"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -252,11 +281,44 @@
         },
         {
             "base": "ibc/6DE0F51215FD3A0B34BDDC97C78D327A8D8A05E5AD817B34343BDE830D0FC524",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ucosmo"
+                    ],
+                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "COSMO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Don’t be evil",
+            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
+            "name": "Cosmo",
+            "symbol": "COSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -725,8 +787,23 @@
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1243,6 +1320,10 @@
         },
         {
             "base": "u:uatom:channel-0:47",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uatom:channel-0:48",
             "type_asset": "sdk.coin"
         },
         {
