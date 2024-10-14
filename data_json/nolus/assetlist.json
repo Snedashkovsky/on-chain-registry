@@ -254,6 +254,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/18161D8EFBD00FF5B7683EF8E923B8913453567FBE3FB6672D75712B0DEB6682",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-44",
+                "source_channel": "channel-3839",
+                "source_denom": "ibc/B559A80D62249C8AA07A380E2A2BEA6E5CA9A6F079C912C3A9E9B494105E4F81"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3839",
+                        "path": "transfer/channel-3839/transfer/channel-30/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/B559A80D62249C8AA07A380E2A2BEA6E5CA9A6F079C912C3A9E9B494105E4F81",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-44"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-30",
+                        "path": "transfer/channel-30/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-18"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/1B03A71B8E6F6EF424411DC9326A8E0D25D096E4D2616425CFAF2AF06F0FE717",
             "ibc": {
                 "dst_channel": "channel-783",
@@ -481,19 +534,6 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-783"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-122",
-                        "path": "transfer/channel-122/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-8"
                     },
                     "type": "ibc"
                 }
@@ -1130,6 +1170,96 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/BB9810E7FE8836311126F15BE0B20E7463189751840F8C3FEF3AC8F87D8AB7C8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attocudos"
+                    ],
+                    "denom": "acudos",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "femtocudos"
+                    ],
+                    "denom": "fcudos",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "picocudos"
+                    ],
+                    "denom": "pcudos",
+                    "exponent": 6
+                },
+                {
+                    "aliases": [
+                        "nanocudos"
+                    ],
+                    "denom": "ncudos",
+                    "exponent": 9
+                },
+                {
+                    "aliases": [
+                        "microcudos"
+                    ],
+                    "denom": "ucudos",
+                    "exponent": 12
+                },
+                {
+                    "aliases": [
+                        "millicudos"
+                    ],
+                    "denom": "mcudos",
+                    "exponent": 15
+                },
+                {
+                    "aliases": [],
+                    "denom": "cudos",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native staking token of the Cudos Hub",
+            "display": "cudos",
+            "ibc": {
+                "dst_channel": "channel-783",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/E09ED39F390EC51FA9F3F69BEA08B5BBE6A48B3057B2B1C3467FAAE9E58B021B"
+            },
+            "name": "cudos",
+            "symbol": "CUDOS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-298/acudos"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/E09ED39F390EC51FA9F3F69BEA08B5BBE6A48B3057B2B1C3467FAAE9E58B021B",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-783"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-298",
+                        "path": "transfer/channel-298/acudos"
+                    },
+                    "counterparty": {
+                        "base_denom": "acudos",
+                        "chain_id": "cudos-1",
+                        "chain_name": "cudos",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BF25D70C6347C21597B23469BD91DD5E9493E973E7FC853A6DA57A6D6CFAEBDF",
             "ibc": {
                 "dst_channel": "channel-783",
@@ -1539,6 +1669,30 @@
                         "chain_id": "phoenix-1",
                         "chain_name": "terra2",
                         "channel_id": "channel-209"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/374F4F22F8BA560D182922841988E56D671A901272483A619372813B8F10B0BB",
+            "ibc": {
+                "dst_channel": "channel-143",
+                "source_channel": "channel-10177",
+                "source_denom": "uusdc"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10177",
+                        "path": "transfer/channel-10177/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-143"
                     },
                     "type": "ibc"
                 }

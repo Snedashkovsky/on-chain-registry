@@ -54,6 +54,46 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-100",
+                "source_channel": "channel-9",
+                "source_denom": "uusdc"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-100"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
             "denom_units": [
                 {
@@ -85,6 +125,54 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-79068"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/719CB50B4BD057FCFB67A9F2CB59D5035829A863D129D64CDC2286DBE94F2BCB",
+            "ibc": {
+                "dst_channel": "channel-7",
+                "source_channel": "channel-10",
+                "source_denom": "uslf"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/uslf"
+                    },
+                    "counterparty": {
+                        "base_denom": "uslf",
+                        "chain_id": "self-1",
+                        "chain_name": "self",
+                        "channel_id": "channel-7"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/9B241C6E36A45D7DE8B12B8DEDF871BFFAD11350505D8952FCDF445AC3065F6F",
+            "ibc": {
+                "dst_channel": "channel-6",
+                "source_channel": "channel-8",
+                "source_denom": "uslf"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/uslf"
+                    },
+                    "counterparty": {
+                        "base_denom": "uslf",
+                        "chain_id": "self-1",
+                        "chain_name": "self",
+                        "channel_id": "channel-6"
                     },
                     "type": "ibc"
                 }

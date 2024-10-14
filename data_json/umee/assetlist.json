@@ -927,19 +927,6 @@
                         "channel_id": "channel-208"
                     },
                     "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-122",
-                        "path": "transfer/channel-122/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-8"
-                    },
-                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -2100,6 +2087,13 @@
                     ],
                     "denom": "boot",
                     "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "ROOT"
+                    ],
+                    "denom": "root",
+                    "exponent": 9
                 }
             ],
             "description": "The staking token of Bostrom",
@@ -2400,6 +2394,59 @@
                         "chain_id": "stride-1",
                         "chain_name": "stride",
                         "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/AF62E69333BAF0AB427E36B00166E6A317660BCDB949631A6DA006B231D28FD8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-8",
+                "source_channel": "channel-118",
+                "source_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-118",
+                        "path": "transfer/channel-118/transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-33"
                     },
                     "type": "ibc"
                 }
@@ -3152,44 +3199,11 @@
         },
         {
             "base": "ibc/38D81C86C138B1AB30849BA5BB5306C4888A50607A0AA06F6B36C886272F53EB",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "ucosmo"
-                    ],
-                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "COSMO",
-                    "exponent": 6
-                }
-            ],
-            "description": "Don’t be evil",
-            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-159",
                 "source_channel": "channel-116",
-                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                "source_denom": ""
             },
-            "name": "Cosmo",
-            "symbol": "COSMO",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-116",
-                        "path": "transfer/channel-116/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-159"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -3391,6 +3405,48 @@
                         "chain_id": "quicksilver-2",
                         "chain_name": "quicksilver",
                         "channel_id": "channel-49"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/43C82ECE074C1A96338371706E18FDFFECFE9E0CE2E3F90F735B12C10067BA1F",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "umars"
+                    ],
+                    "denom": "factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "MARS",
+                    "exponent": 6
+                }
+            ],
+            "description": "Mars protocol token",
+            "display": "MARS",
+            "ibc": {
+                "dst_channel": "channel-4457",
+                "source_channel": "channel-126",
+                "source_denom": "factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS"
+            },
+            "name": "Mars protocol token",
+            "symbol": "MARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-126",
+                        "path": "transfer/channel-126/factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-4457"
                     },
                     "type": "ibc"
                 }
@@ -3725,23 +3781,8 @@
             "ibc": {
                 "dst_channel": "channel-154",
                 "source_channel": "channel-113",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-113",
-                        "path": "transfer/channel-113/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-154"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -4911,53 +4952,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/CC30F2A979C7D1BB907582C1B4DBDBBA89E82AA8C0EFCA099AE556EB37D83AAB",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "microxprt"
-                    ],
-                    "denom": "uxprt",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [
-                        "millixprt"
-                    ],
-                    "denom": "mxprt",
-                    "exponent": 3
-                },
-                {
-                    "aliases": [],
-                    "denom": "xprt",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native staking token of the Persistence Core.",
-            "display": "xprt",
-            "ibc": {
-                "dst_channel": "channel-81",
-                "source_channel": "channel-51",
-                "source_denom": "uxprt"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-51",
-                        "path": "transfer/channel-51/uxprt"
-                    },
-                    "counterparty": {
-                        "base_denom": "uxprt",
-                        "chain_id": "core-1",
-                        "chain_name": "persistence",
-                        "channel_id": "channel-81"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/CE99B4D2A172275C064595B750827855E04D5E068FB7C642C8469CA9B5DB0EE1",
             "denom_units": [
                 {
@@ -5161,23 +5155,8 @@
             "ibc": {
                 "dst_channel": "channel-159",
                 "source_channel": "channel-116",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-116",
-                        "path": "transfer/channel-116/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-159"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -5447,23 +5426,8 @@
             "ibc": {
                 "dst_channel": "channel-158",
                 "source_channel": "channel-115",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-115",
-                        "path": "transfer/channel-115/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-158"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {

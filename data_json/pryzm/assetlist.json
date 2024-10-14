@@ -1,6 +1,68 @@
 {
     "assets": [
         {
+            "base": "ibc/5F78C42BCC76287AE6B3185C6C1455DFFF8D805B1847F94B9B625384B93885C7",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-75755",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75755"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/0BF33797C0B4923ED612EDB6A62AAC6904B10AD77004D8C45A044B9927F1E4F3",
             "ibc": {
                 "dst_channel": "channel-4329",
@@ -18,30 +80,6 @@
                         "chain_id": "neutron-1",
                         "chain_name": "neutron",
                         "channel_id": "channel-4329"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/108CBAF21E61BAC2D945F384CD3B5007C2EC61560FAED01D73E7E20B2D93869F",
-            "ibc": {
-                "dst_channel": "channel-859",
-                "source_channel": "channel-0",
-                "source_denom": "cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/39226"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/39226"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/39226",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-859"
                     },
                     "type": "ibc"
                 }
@@ -159,30 +197,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/20C0C22DC7797A54924A199CD4BE818868ECBF9D920009C8902BF056AE1C9E67",
-            "ibc": {
-                "dst_channel": "channel-859",
-                "source_channel": "channel-0",
-                "source_denom": "cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/43201"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/43201"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/43201",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-859"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/24B6A4371C057738E5DD12A777B3B69998808E031CA3854768D3DD6F35E6059F",
             "ibc": {
                 "dst_channel": "channel-859",
@@ -246,30 +260,6 @@
                     },
                     "counterparty": {
                         "base_denom": "uatom",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-859"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/38B7DD8DCAE2F43722942C981121F09C1AF5C913CB8698D12C02E02292EC4195",
-            "ibc": {
-                "dst_channel": "channel-859",
-                "source_channel": "channel-0",
-                "source_denom": "cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/43574"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/43574"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1hmd535f69t3x262m6s9wc6jd0dmel2zevhyuhm/43574",
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-859"
@@ -353,44 +343,11 @@
         },
         {
             "base": "ibc/6DE0F51215FD3A0B34BDDC97C78D327A8D8A05E5AD817B34343BDE830D0FC524",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "ucosmo"
-                    ],
-                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "COSMO",
-                    "exponent": 6
-                }
-            ],
-            "description": "Don’t be evil",
-            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                "source_denom": ""
             },
-            "name": "Cosmo",
-            "symbol": "COSMO",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-284"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -859,23 +816,8 @@
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-284"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -920,6 +862,46 @@
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-859"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/EA6E1E8BA2EB9F681C4BD12C8C81A46530A62934F2BD561B120A00F46946CE87",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/neutron1k6hr0f83e7un2wjf29cspk7j69jrnskk65k3ek2nj9dztrlzpj6q00rtsa/udatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "udatom",
+                    "exponent": 6
+                }
+            ],
+            "description": "Staked",
+            "display": "udatom",
+            "ibc": {
+                "dst_channel": "channel-4329",
+                "source_channel": "channel-6",
+                "source_denom": "factory/neutron1k6hr0f83e7un2wjf29cspk7j69jrnskk65k3ek2nj9dztrlzpj6q00rtsa/udatom"
+            },
+            "name": "Drop",
+            "symbol": "dATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/factory/neutron1k6hr0f83e7un2wjf29cspk7j69jrnskk65k3ek2nj9dztrlzpj6q00rtsa/udatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/neutron1k6hr0f83e7un2wjf29cspk7j69jrnskk65k3ek2nj9dztrlzpj6q00rtsa/udatom",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-4329"
                     },
                     "type": "ibc"
                 }
@@ -1031,6 +1013,10 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "c:utia",
+            "type_asset": "sdk.coin"
+        },
+        {
             "address": "factory/pryzm1jnhcsa5ddjsjq2t97v6a82z542rduxvtw6wd9h/uauuu",
             "admin": "pryzm1jnhcsa5ddjsjq2t97v6a82z542rduxvtw6wd9h",
             "base": "factory/pryzm1jnhcsa5ddjsjq2t97v6a82z542rduxvtw6wd9h/uauuu",
@@ -1116,6 +1102,22 @@
         },
         {
             "base": "lp:21:utia-uusdc",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "lp:22:udatom",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "lp:23:udatomypt-uatom",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "lp:24:utia",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "lp:25:utiaypt-utia",
             "type_asset": "sdk.coin"
         },
         {
@@ -1211,6 +1213,18 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "p:udatom:30Jun2025",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "p:udatom:31Dec2024",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "p:udatom:31Dec2025",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "p:uluna:30Sep2024",
             "type_asset": "sdk.coin"
         },
@@ -1235,11 +1249,15 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:inj:channel-1:14",
+            "base": "p:utia:31Dec2024",
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:inj:channel-1:22",
+            "base": "p:utia:31Dec2025",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:inj:channel-1:14",
             "type_asset": "sdk.coin"
         },
         {
@@ -1251,7 +1269,23 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:inj:channel-1:29",
+            "base": "u:inj:channel-1:36",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:inj:channel-1:44",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:inj:channel-1:47",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:inj:channel-1:48",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:inj:channel-1:50",
             "type_asset": "sdk.coin"
         },
         {
@@ -1279,15 +1313,7 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uatom:channel-0:28",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "u:uatom:channel-0:29",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "u:uatom:channel-0:30",
+            "base": "u:uatom:channel-0:33",
             "type_asset": "sdk.coin"
         },
         {
@@ -1295,15 +1321,39 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uluna:channel-4:23",
+            "base": "u:uatom:channel-0:44",
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uluna:channel-4:25",
+            "base": "u:uatom:channel-0:45",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uatom:channel-0:46",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uatom:channel-0:47",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uatom:channel-0:48",
             "type_asset": "sdk.coin"
         },
         {
             "base": "u:uluna:channel-4:28",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uluna:channel-4:43",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uluna:channel-4:44",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uluna:channel-4:45",
             "type_asset": "sdk.coin"
         },
         {
@@ -1319,11 +1369,15 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uosmo:channel-2:39",
+            "base": "u:uosmo:channel-2:63",
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uosmo:channel-2:41",
+            "base": "u:uosmo:channel-2:65",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "u:uosmo:channel-2:68",
             "type_asset": "sdk.coin"
         },
         {
@@ -1391,6 +1445,18 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "y:udatom:30Jun2025",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "y:udatom:31Dec2024",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "y:udatom:31Dec2025",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "y:uluna:30Sep2024",
             "type_asset": "sdk.coin"
         },
@@ -1412,6 +1478,14 @@
         },
         {
             "base": "y:uosmo:31Dec2025",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "y:utia:31Dec2024",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "y:utia:31Dec2025",
             "type_asset": "sdk.coin"
         }
     ],
