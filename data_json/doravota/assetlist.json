@@ -5,19 +5,46 @@
             "ibc": {
                 "dst_channel": "channel-2694",
                 "source_channel": "channel-0",
-                "source_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273"
+                "source_denom": ""
             },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/07FA7831E1920D0C87C9388F86B0108677F6ED0C9DE7E4063F05ED675192405C",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
+            "ibc": {
+                "dst_channel": "channel-394",
+                "source_channel": "channel-15",
+                "source_denom": "ustars"
+            },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/transfer/channel-122/inj"
+                        "channel_id": "channel-15",
+                        "path": "transfer/channel-15/ustars"
                     },
                     "counterparty": {
-                        "base_denom": "ibc/64BA6E31FE887D66C6F8F31C7B1A80C7CA179239677B4088BB55F5EA07DBE273",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-2694"
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-394"
                     },
                     "type": "ibc"
                 }
@@ -142,8 +169,23 @@
             "ibc": {
                 "dst_channel": "channel-182",
                 "source_channel": "channel-5",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-182"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -276,40 +318,11 @@
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-2694",
                 "source_channel": "channel-0",
-                "source_denom": "uosmo"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
-                    },
-                    "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-2694"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
