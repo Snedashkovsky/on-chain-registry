@@ -67,30 +67,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/15BC861D5D8552BE1BF2F44870A7712E44A5DF559CAC865766916DA8919603A8",
-            "ibc": {
-                "dst_channel": "channel-859",
-                "source_channel": "channel-0",
-                "source_denom": "cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/59444"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/59444"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/59444",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-859"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/17DAD75C8913234527FE4A561228C70E46DBCD98D0AA7C500C1DE582B17A858A",
             "ibc": {
                 "dst_channel": "channel-859",
@@ -309,11 +285,44 @@
         },
         {
             "base": "ibc/6DE0F51215FD3A0B34BDDC97C78D327A8D8A05E5AD817B34343BDE830D0FC524",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ucosmo"
+                    ],
+                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "COSMO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Don’t be evil",
+            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
+            "name": "Cosmo",
+            "symbol": "COSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -806,8 +815,23 @@
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1332,14 +1356,6 @@
         },
         {
             "base": "u:uluna:channel-4:28",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "u:uluna:channel-4:43",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "u:uluna:channel-4:47",
             "type_asset": "sdk.coin"
         },
         {
