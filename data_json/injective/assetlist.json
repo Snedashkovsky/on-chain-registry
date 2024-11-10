@@ -2625,6 +2625,45 @@
                         "channel_id": "channel-6"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-40",
+                        "path": "transfer/channel-40/transfer/channel-22/transfer/channel-32/stinj"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3B97315FE7A2DBAA1C18E486F689350F2F2939177153046966FAF7BA5D485998",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-37"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-22",
+                        "path": "transfer/channel-22/transfer/channel-32/stinj"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C19813F6D22F91CC64D2EEDF8702904DD61E0D022972EDFE0039F70C8A6EAD24",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-32",
+                        "path": "transfer/channel-32/stinj"
+                    },
+                    "counterparty": {
+                        "base_denom": "stinj",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -3985,19 +4024,6 @@
                         "channel_id": "channel-72"
                     },
                     "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-12",
-                        "path": "transfer/channel-12/uscrt"
-                    },
-                    "counterparty": {
-                        "base_denom": "uscrt",
-                        "chain_id": "secret-4",
-                        "chain_name": "secretnetwork",
-                        "channel_id": "channel-20"
-                    },
-                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -4096,6 +4122,72 @@
                         "chain_id": "injective-1",
                         "chain_name": "injective",
                         "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B3CA12BA05D4A5D388410EA2ECE3A9BB7EF2987C6A94368D8781A95183AEE771",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-122",
+                "source_channel": "channel-8",
+                "source_denom": "ibc/A80F928DBB25E69A7A1D1491255079AD327B2B9C82D281B309531FCE9C082ADC"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/transfer/channel-42/transfer/channel-224/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A80F928DBB25E69A7A1D1491255079AD327B2B9C82D281B309531FCE9C082ADC",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-122"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-42",
+                        "path": "transfer/channel-42/transfer/channel-224/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4A482FA914A4B9B05801ED81C33713899F322B24F76A06F4B8FE872485EA22FF",
+                        "chain_id": "juno-1",
+                        "chain_name": "juno",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-224",
+                        "path": "transfer/channel-224/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -7084,19 +7176,6 @@
                         "channel_id": "channel-10"
                     },
                     "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-12",
-                        "path": "transfer/channel-12/uscrt"
-                    },
-                    "counterparty": {
-                        "base_denom": "uscrt",
-                        "chain_id": "secret-4",
-                        "chain_name": "secretnetwork",
-                        "channel_id": "channel-20"
-                    },
-                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -7448,23 +7527,8 @@
             "ibc": {
                 "dst_channel": "channel-23",
                 "source_channel": "channel-88",
-                "source_denom": "uscrt"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-88",
-                        "path": "transfer/channel-88/uscrt"
-                    },
-                    "counterparty": {
-                        "base_denom": "uscrt",
-                        "chain_id": "secret-4",
-                        "chain_name": "secretnetwork",
-                        "channel_id": "channel-23"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -8331,23 +8395,8 @@
             "ibc": {
                 "dst_channel": "channel-7",
                 "source_channel": "channel-74",
-                "source_denom": "uscrt"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-74",
-                        "path": "transfer/channel-74/uscrt"
-                    },
-                    "counterparty": {
-                        "base_denom": "uscrt",
-                        "chain_id": "secret-4",
-                        "chain_name": "secretnetwork",
-                        "channel_id": "channel-7"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
