@@ -1,6 +1,72 @@
 {
     "assets": [
         {
+            "base": "ibc/FB11D29C63733B84CC9ECEE56DCC3A2D8C766CA5A7243D0638C7938B16F5200D",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "udgn",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "DGN",
+                    "exponent": 6
+                }
+            ],
+            "description": "Denom metadata for Dragon Token (udgn / DGN)",
+            "display": "DGN",
+            "ibc": {
+                "dst_channel": "channel-85791",
+                "source_channel": "channel-2",
+                "source_denom": "ibc/71A8515CBA9B121B70FBC4479DDDDB7514D843EC87B43E0FAEAC75D52590A0B9"
+            },
+            "name": "DGN",
+            "symbol": "DGN",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-874/transfer/channel-5481/udgn"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/71A8515CBA9B121B70FBC4479DDDDB7514D843EC87B43E0FAEAC75D52590A0B9",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-85791"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-874",
+                        "path": "transfer/channel-874/transfer/channel-5481/udgn"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2ECB3D2ADFE9F1CA85258C6330FA666120549349BC526D56B098A2A782D75455",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-5481",
+                        "path": "transfer/channel-5481/udgn"
+                    },
+                    "counterparty": {
+                        "base_denom": "udgn",
+                        "chain_id": "dungeon-1",
+                        "chain_name": "dungeon",
+                        "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
             "denom_units": [
                 {
@@ -32,6 +98,79 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-85791"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/3A5933F14B4B1F9FF39B786CD3C37740D85C8D02CB1EF998471F4F945E515F98",
+            "ibc": {
+                "dst_channel": "channel-142",
+                "source_channel": "channel-6",
+                "source_denom": "uwhale"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/uwhale"
+                    },
+                    "counterparty": {
+                        "base_denom": "uwhale",
+                        "chain_id": "migaloo-1",
+                        "chain_name": "migaloo",
+                        "channel_id": "channel-142"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/7B510288CA9EC3C8D034DDC1777DD6A0297B4A2BC6D4BC290ECDE977FA44E9E4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microluna"
+                    ],
+                    "denom": "uluna",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliluna"
+                    ],
+                    "denom": "mluna",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "luna",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of Terra 2.0",
+            "display": "luna",
+            "ibc": {
+                "dst_channel": "channel-582",
+                "source_channel": "channel-7",
+                "source_denom": "uluna"
+            },
+            "name": "LUNA",
+            "symbol": "LUNA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/uluna"
+                    },
+                    "counterparty": {
+                        "base_denom": "uluna",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-582"
                     },
                     "type": "ibc"
                 }

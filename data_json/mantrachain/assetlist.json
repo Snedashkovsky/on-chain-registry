@@ -2,11 +2,36 @@
     "assets": [
         {
             "base": "ibc/6CDD4663F2F09CD62285E2D45891FC149A3568E316CE3EBBE201A71A78A69388",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-85077",
                 "source_channel": "channel-0",
                 "source_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -18,6 +43,19 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-85077"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
                     },
                     "type": "ibc"
                 }
@@ -143,6 +181,32 @@
                 }
             ],
             "type_asset": "ics20"
+        },
+        {
+            "address": "factory/mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm/o.uom.ausdy.LP",
+            "admin": "mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm",
+            "base": "factory/mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm/o.uom.ausdy.LP",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm/o.uom.ausdy.LP",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm/o.uom.uusdc.LP",
+            "admin": "mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm",
+            "base": "factory/mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm/o.uom.uusdc.LP",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/mantra1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqagspfm/o.uom.uusdc.LP",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
         },
         {
             "address": "factory/mantra14apenew5zdg4aej5j6ht6tm73e7sx2fkxlsgvf/uDLD-24-28317-FYCMLN-01",
