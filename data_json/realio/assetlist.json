@@ -1,6 +1,59 @@
 {
     "assets": [
         {
+            "base": "ibc/2A607DB8C6ECA0A30750D55CD698D02204485908D2E8F2DFA8F5D0B8E97EDEE4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-115",
+                "source_channel": "channel-4",
+                "source_denom": "ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-62/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-115"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-62",
+                        "path": "transfer/channel-62/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/03FB4E4D1043755015ABF1A84773EA334B2726EF464CF90D926C888ECE2D64FD",
             "denom_units": [
                 {
