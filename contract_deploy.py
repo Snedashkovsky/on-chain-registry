@@ -38,11 +38,11 @@ def store_code(
     :return: code id
     """
     print(f"{cli_name} tx wasm store ./cw-on-chain-registry/artifacts/on_chain_registry-aarch64.wasm "
-          f"--from={wallet_address} --chain-id={chain_id} --broadcast-mode=block --note='{note}' "
+          f"--from={wallet_address} --chain-id={chain_id} --note='{note}' "
           f"--gas={gas} -y -o=json --node={node_rpc_url}")
     _res, _ = execute_bash(
         bash_command=f"{cli_name} tx wasm store ./cw-on-chain-registry/artifacts/on_chain_registry-aarch64.wasm "
-                     f"--from={wallet_address} --chain-id={chain_id} --broadcast-mode=block --note='{note}' "
+                     f"--from={wallet_address} --chain-id={chain_id} --note='{note}' "
                      f"{'--fees=30000uosmo ' if chain_id[:4] == 'osmo' else ''}"
                      f"--gas={gas} -y -o=json --node={node_rpc_url}",
         shell=True)
@@ -87,7 +87,7 @@ def instantiate_contract(
             {'--amount=' + amount if amount else ''} --label="{contract_label}" \
             {'--admin=' + contract_admin if contract_admin else '--no-admin'} \
             {'--fees=10000uosmo ' if chain_id[:4] == 'osmo' else ''} \
-            -y --gas={gas} --broadcast-mode=block -o=json --chain-id={chain_id} --node={node_rpc_url}''',
+            -y --gas={gas} -o=json --chain-id={chain_id} --node={node_rpc_url}''',
         shell=True)
     if display_data:
         try:
