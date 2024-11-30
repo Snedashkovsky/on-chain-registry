@@ -5972,6 +5972,72 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/35BE52E65E495104695E4B63B9BB3563FB973F3B13186C807944DBB05A626AA3",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-26",
+                "source_channel": "channel-15",
+                "source_denom": "ibc/3C58AC56E392E53BBA24A1021D9D7615CD229226111F089AE6A95F05E50C776F"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-15",
+                        "path": "transfer/channel-15/transfer/channel-4/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3C58AC56E392E53BBA24A1021D9D7615CD229226111F089AE6A95F05E50C776F",
+                        "chain_id": "ixo-5",
+                        "chain_name": "impacthub",
+                        "channel_id": "channel-26"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-38"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/3AECC8A7536C7DA883079E5D1AA15BA5487256BDB9DE113986700DD9206E38A9",
             "denom_units": [
                 {
@@ -10240,6 +10306,53 @@
                         "chain_id": "cataclysm-1",
                         "chain_name": "nibiru",
                         "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/CDFB9F776306458064BA308908C0AD65FCDC79619D9FE6467FCBCBC01D4109DD",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microctk"
+                    ],
+                    "denom": "uctk",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millictk"
+                    ],
+                    "denom": "mctk",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "ctk",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Shentu Chain.",
+            "display": "ctk",
+            "ibc": {
+                "dst_channel": "channel-18",
+                "source_channel": "channel-111",
+                "source_denom": "uctk"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-111",
+                        "path": "transfer/channel-111/uctk"
+                    },
+                    "counterparty": {
+                        "base_denom": "uctk",
+                        "chain_id": "shentu-2.2",
+                        "chain_name": "shentu",
+                        "channel_id": "channel-18"
                     },
                     "type": "ibc"
                 }
