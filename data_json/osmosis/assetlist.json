@@ -37792,6 +37792,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/38743390114DFE1E8E1365EBD7C8174ECB35DDFD6E28F983D0215BF294C2EFA0",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-1",
+                "source_channel": "channel-251",
+                "source_denom": "ibc/2C962DAB9F57FE0921435426AE75196009FAA1981BF86991203C8411F8980FDB"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-251",
+                        "path": "transfer/channel-251/transfer/channel-253/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2C962DAB9F57FE0921435426AE75196009FAA1981BF86991203C8411F8980FDB",
+                        "chain_id": "phoenix-1",
+                        "chain_name": "terra2",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-253",
+                        "path": "transfer/channel-253/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-30"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/3961C85167E97E3CBF254C5E9D7292526D849FC688BE24282F3113A318E93E17",
             "denom_units": [
                 {
@@ -70031,6 +70084,15 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/C5B46CCD52428294AAAF96145318D1147A1C4569CE9F862D0FEC63BACA7314ED",
+            "ibc": {
+                "dst_channel": "channel-1",
+                "source_channel": "channel-89297",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/C5B9934D930CDDB39A03F6643E22EC0459DBA08D6B90F3DA38654B1EB7657811",
             "denom_units": [
                 {
@@ -77134,6 +77196,30 @@
                     "exponent": 0
                 }
             ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/osmo1gq5hsgc2c4qrs7z274lusfmrx3h4u670lgme8su8j0vsf8zullsss8kepx/ttf",
+            "admin": "osmo1gq5hsgc2c4qrs7z274lusfmrx3h4u670lgme8su8j0vsf8zullsss8kepx",
+            "base": "factory/osmo1gq5hsgc2c4qrs7z274lusfmrx3h4u670lgme8su8j0vsf8zullsss8kepx/ttf",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ttf"
+                    ],
+                    "denom": "factory/osmo1gq5hsgc2c4qrs7z274lusfmrx3h4u670lgme8su8j0vsf8zullsss8kepx/ttf",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "TTF",
+                    "exponent": 6
+                }
+            ],
+            "description": "Governance Token",
+            "display": "TTF",
+            "name": "Test TokenFactory",
+            "symbol": "TTF",
             "type_asset": "factory"
         },
         {
@@ -97052,6 +97138,32 @@
             "display": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/meow",
             "name": "Meow",
             "symbol": "MEOW",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/met",
+            "admin": "osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8",
+            "base": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/met",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/met"
+                    ],
+                    "denom": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/met",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "MET"
+                    ],
+                    "denom": "MET",
+                    "exponent": 6
+                }
+            ],
+            "description": "the ultimate metallica meme",
+            "display": "factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/met",
+            "name": "Memallica",
+            "symbol": "MET",
             "type_asset": "factory"
         },
         {
@@ -130557,6 +130669,26 @@
             ],
             "description": "The share token of the gamm pool 243",
             "display": "GAMM-243",
+            "type_asset": "pool"
+        },
+        {
+            "base": "gamm/pool/2430",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "gamm/pool/2430",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GAMM-2430",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the gamm pool 2430",
+            "display": "GAMM-2430",
             "type_asset": "pool"
         },
         {
