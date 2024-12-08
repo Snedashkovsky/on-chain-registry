@@ -415,11 +415,44 @@
         },
         {
             "base": "ibc/6DE0F51215FD3A0B34BDDC97C78D327A8D8A05E5AD817B34343BDE830D0FC524",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ucosmo"
+                    ],
+                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "COSMO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Don’t be evil",
+            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
+            "name": "Cosmo",
+            "symbol": "COSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -595,8 +628,23 @@
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "peggy0x83E7D0451da91Ac509cd7F545Fb4AA04D4dD3BA8"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/peggy0x83E7D0451da91Ac509cd7F545Fb4AA04D4dD3BA8"
+                    },
+                    "counterparty": {
+                        "base_denom": "peggy0x83E7D0451da91Ac509cd7F545Fb4AA04D4dD3BA8",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1089,8 +1137,23 @@
             "ibc": {
                 "dst_channel": "channel-284",
                 "source_channel": "channel-1",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-284"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1207,42 +1270,11 @@
         },
         {
             "base": "ibc/F8CA5236869F819BC006EEF088E67889A26E4140339757878F0F4E229CDDA858",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "adydx",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "dydx",
-                    "exponent": 18
-                }
-            ],
-            "description": "The native token of the network",
-            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-71",
                 "source_channel": "channel-24",
-                "source_denom": "adydx"
+                "source_denom": ""
             },
-            "name": "DYDX",
-            "symbol": "dydx",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-24",
-                        "path": "transfer/channel-24/adydx"
-                    },
-                    "counterparty": {
-                        "base_denom": "adydx",
-                        "chain_id": "dydx-mainnet-1",
-                        "chain_name": "dydx",
-                        "channel_id": "channel-71"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -1618,10 +1650,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uatom:channel-0:33",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "u:uatom:channel-0:51",
             "type_asset": "sdk.coin"
         },
@@ -1655,10 +1683,6 @@
         },
         {
             "base": "u:uosmo:channel-2:2",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "u:utia:channel-3:23",
             "type_asset": "sdk.coin"
         },
         {
