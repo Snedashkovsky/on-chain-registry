@@ -2503,11 +2503,27 @@
         },
         {
             "base": "ibc/182A88D33CE7E965D96CAD8D475EB5522563D0544B8EC4DFF9B87967BCBC4C98",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-874",
                 "source_channel": "channel-10",
                 "source_denom": "ibc/D8BC23532DA67AF1734A8717BB536E87915998D4647C99BF04807A2029A84197"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -2519,6 +2535,32 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-874"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-6787",
+                        "path": "transfer/channel-6787/transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-33"
                     },
                     "type": "ibc"
                 }
@@ -3709,11 +3751,55 @@
         },
         {
             "base": "ibc/518A9CB2E31F0623F3FAA9BF8FF8F48D320DD4E5CECE0D80BEBA50F089F26982",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-11",
                 "source_channel": "channel-48",
-                "source_denom": ""
+                "source_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-48",
+                        "path": "transfer/channel-48/transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-11"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-33"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -7715,6 +7801,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/23CA9F3A9625348C3C2CBF1DC4C27597448235E92E5E17D5AA4B50E4D0DCFC42",
+            "ibc": {
+                "dst_channel": "channel-569",
+                "source_channel": "channel-1",
+                "source_denom": "cosmosvaloper1usvshtypjw57edkwxq3tagme665398f0hf4wuc/67352"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/cosmosvaloper1usvshtypjw57edkwxq3tagme665398f0hf4wuc/67352"
+                    },
+                    "counterparty": {
+                        "base_denom": "cosmosvaloper1usvshtypjw57edkwxq3tagme665398f0hf4wuc/67352",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-569"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/251959A001F7F2891B843F09926F28DEEB5479181D9D80743FC1C35B62275EFD",
             "ibc": {
                 "dst_channel": "channel-569",
@@ -8214,11 +8324,42 @@
         },
         {
             "base": "ibc/2CB87BCE0937B1D1DFCEE79BE4501AAF3C265E923509AEAC410AD85D27F35130",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-11",
                 "source_channel": "channel-48",
-                "source_denom": ""
+                "source_denom": "adydx"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-48",
+                        "path": "transfer/channel-48/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-11"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -9038,6 +9179,30 @@
                     },
                     "counterparty": {
                         "base_denom": "cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/65593",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-569"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/3D17193E08C73DC7E89BCA7F06D162769126BD131871EECE366F6D5B4395060D",
+            "ibc": {
+                "dst_channel": "channel-569",
+                "source_channel": "channel-1",
+                "source_denom": "cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/67365"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/67365"
+                    },
+                    "counterparty": {
+                        "base_denom": "cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/67365",
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-569"
@@ -10849,6 +11014,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/59DCBD794FBB1053425C431838E755BE42BFC74C50E784455707B95017B70F38",
+            "ibc": {
+                "dst_channel": "channel-569",
+                "source_channel": "channel-1",
+                "source_denom": "cosmosvaloper103agss48504gkk3la5xcg5kxplaf6ttnuv234h/65993"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/cosmosvaloper103agss48504gkk3la5xcg5kxplaf6ttnuv234h/65993"
+                    },
+                    "counterparty": {
+                        "base_denom": "cosmosvaloper103agss48504gkk3la5xcg5kxplaf6ttnuv234h/65993",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-569"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/5C2981D5B3741B829333F8E4935458BE750FA552875C859E964065EFAC5F73C8",
             "ibc": {
                 "dst_channel": "channel-569",
@@ -11401,6 +11590,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/665E39EA16E04A7C980838FF4BB89AA07BC90EA98EB21DB0FD1E164D981EA703",
+            "ibc": {
+                "dst_channel": "channel-569",
+                "source_channel": "channel-1",
+                "source_denom": "cosmosvaloper1yh089p0cre4nhpdqw35uzde5amg3qzexkeggdn/67356"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/cosmosvaloper1yh089p0cre4nhpdqw35uzde5amg3qzexkeggdn/67356"
+                    },
+                    "counterparty": {
+                        "base_denom": "cosmosvaloper1yh089p0cre4nhpdqw35uzde5amg3qzexkeggdn/67356",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-569"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/66A08532780306EEA983F447F7DA1A5E910C30D23359B543194F14D47EBDE5F7",
             "ibc": {
                 "dst_channel": "channel-569",
@@ -11583,30 +11796,6 @@
                     },
                     "counterparty": {
                         "base_denom": "cosmosvaloper1nxe3gnztx8wvayj260dp6yw7jg797m8up02h7z/59627",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/6A9C4A81A6252B7789E0A8A84E9F17045B63A2EC7BDD8852E154D75DD0AC2A82",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/59465"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/59465"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/59465",
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-569"
@@ -12745,54 +12934,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/7D8FB2FC1E17DCD2D4D8A83A995274327B086108572791A17974E094DFF125D4",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/67152"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/67152"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/67152",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/7D939C23868BB8089A4E22526A53C809B76B4036DDA5B98AA2D16A73EFB135C7",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper1lzhlnpahvznwfv4jmay2tgaha5kmz5qxerarrl/59524"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper1lzhlnpahvznwfv4jmay2tgaha5kmz5qxerarrl/59524"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1lzhlnpahvznwfv4jmay2tgaha5kmz5qxerarrl/59524",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/7DA39F5140741177846FCF3CFAB14450EE7F57B7794E5A94BEF73825D3741958",
             "denom_units": [
                 {
@@ -12889,6 +13030,30 @@
                     },
                     "counterparty": {
                         "base_denom": "cosmosvaloper1fsg635n5vgc7jazz9sx5725wnc3xqgr7awxaag/56624",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-569"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/7EC67A749401BFD3D2B6EEA37976080B8FDCF8AE9F88DAD7F8881874D75F053B",
+            "ibc": {
+                "dst_channel": "channel-569",
+                "source_channel": "channel-1",
+                "source_denom": "cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/67539"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/67539"
+                    },
+                    "counterparty": {
+                        "base_denom": "cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/67539",
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-569"
@@ -15775,54 +15940,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/B8A1F93C3B7BFA1E844E82089C48166A32A95BCE6E8688568A3DC845DD74CA22",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/59554"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/59554"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/59554",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/B9500098E3D2B6FA1C1ACD8EDB2DF29FEE7021A51997456D3735F7552A3C0987",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/59553"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/59553"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1k2d9ed9vgfuk2m58a2d80q9u6qljkh4vfaqjfq/59553",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/B9CF28BB84356E93500E87B2D6259E994CD0FD8480D529B933501F7B2909DAE4",
             "ibc": {
                 "dst_channel": "channel-569",
@@ -17776,30 +17893,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/DC0ED150E7C6419EFA3FD4224DA0B1C0C64C030BDA1185C4E713697431CCD99D",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper103agss48504gkk3la5xcg5kxplaf6ttnuv234h/67105"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper103agss48504gkk3la5xcg5kxplaf6ttnuv234h/67105"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper103agss48504gkk3la5xcg5kxplaf6ttnuv234h/67105",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/DC21E442674915ED916F77201833A4502E21D65DE6AE2483FE9F2C37094EEF90",
             "ibc": {
                 "dst_channel": "channel-569",
@@ -18451,30 +18544,6 @@
                     },
                     "counterparty": {
                         "base_denom": "cosmosvaloper196ax4vc0lwpxndu9dyhvca7jhxp70rmcvrj90c/65574",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-569"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/E99C3AC28A9B734F512C8E9415339CFEAF991734CD0E88235D2F61FEA34D724D",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": "cosmosvaloper18sqvyf4ss84qree7gndph5chmm82fglsqfylwn/67137"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/cosmosvaloper18sqvyf4ss84qree7gndph5chmm82fglsqfylwn/67137"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper18sqvyf4ss84qree7gndph5chmm82fglsqfylwn/67137",
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
                         "channel_id": "channel-569"

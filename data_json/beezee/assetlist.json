@@ -35,6 +35,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/4AA3B163580B4377250CD4486FB6AD098EB27822EE056949EC4A39B09C5E3B4E",
+            "ibc": {
+                "dst_channel": "channel-142",
+                "source_channel": "channel-4",
+                "source_denom": "ujkl"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/ujkl"
+                    },
+                    "counterparty": {
+                        "base_denom": "ujkl",
+                        "chain_id": "jackal-1",
+                        "chain_name": "jackal",
+                        "channel_id": "channel-142"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4",
             "denom_units": [
                 {
@@ -154,6 +178,55 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-340"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/FF39851E73089ACBD0B09BDF62FA3C67FBD77A2CD97CD159DBCE9C770561F8AF",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microflix"
+                    ],
+                    "denom": "uflix",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliflix"
+                    ],
+                    "denom": "mflix",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "flix",
+                    "exponent": 6
+                }
+            ],
+            "description": "FLIX is the native token of the OmniFlix Hub which powers the OmniFlix Network.",
+            "display": "flix",
+            "ibc": {
+                "dst_channel": "channel-50",
+                "source_channel": "channel-5",
+                "source_denom": "uflix"
+            },
+            "name": "FLIX",
+            "symbol": "uflix",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/uflix"
+                    },
+                    "counterparty": {
+                        "base_denom": "uflix",
+                        "chain_id": "omniflixhub-1",
+                        "chain_name": "omniflixhub",
+                        "channel_id": "channel-50"
                     },
                     "type": "ibc"
                 }
