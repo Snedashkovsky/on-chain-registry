@@ -5123,27 +5123,11 @@
         },
         {
             "base": "ibc/3E4C16E6D177A5FD3F416E6622898887FD194D158F740212F286669B8CD577DB",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "adydx",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "dydx",
-                    "exponent": 18
-                }
-            ],
-            "description": "The native token of the network",
-            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-122",
                 "source_channel": "channel-8",
                 "source_denom": "ibc/831F0B1BBB1D08A2B75311892876D71565478C532967545476DF4C2D7492E48C"
             },
-            "name": "DYDX",
-            "symbol": "dydx",
             "traces": [
                 {
                     "chain": {
@@ -5155,19 +5139,6 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-122"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-6787",
-                        "path": "transfer/channel-6787/adydx"
-                    },
-                    "counterparty": {
-                        "base_denom": "adydx",
-                        "chain_id": "dydx-mainnet-1",
-                        "chain_name": "dydx",
-                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
@@ -7379,6 +7350,59 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/E980A772941ECD045723273A4289A295CA4935A6A6D5A8207AA98025634964D0",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "wormhole/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3/8",
+                    "exponent": 8
+                }
+            ],
+            "description": "Wrapped Ether (Wormhole), WETH, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3",
+            "display": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3",
+            "ibc": {
+                "dst_channel": "channel-54",
+                "source_channel": "channel-98",
+                "source_denom": "ibc/AA76A0726569BE0F173165AA6DD05B58F168262B429FE15693BFFD10CCF910D5"
+            },
+            "name": "Wrapped Ether (Wormhole)",
+            "symbol": "WETH",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-98",
+                        "path": "transfer/channel-98/transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/AA76A0726569BE0F173165AA6DD05B58F168262B429FE15693BFFD10CCF910D5",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-54"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-113",
+                        "path": "transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5XoUg8dQF1CeEDCiYP6rXdKAyKpy2bALAAuvLbidN6o3",
+                        "chain_id": "wormchain",
+                        "chain_name": "gateway",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/E9BBE9BBF0925155892D6E47553E83B8476C880F65DEB33859E751C0B107B0B1",
             "ibc": {
                 "dst_channel": "channel-220",
@@ -9465,6 +9489,30 @@
                         "chain_id": "wormchain",
                         "chain_name": "gateway",
                         "channel_id": "channel-13"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/6D821F3CFAE78E9EBD872FAEC61C400C0D9B72E77FA14614CF1B775A528854FD",
+            "ibc": {
+                "dst_channel": "channel-6",
+                "source_channel": "channel-89",
+                "source_denom": "stuosmo"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-89",
+                        "path": "transfer/channel-89/stuosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "stuosmo",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-6"
                     },
                     "type": "ibc"
                 }
@@ -18377,6 +18425,19 @@
             "display": "trempboden",
             "name": "TrempBoden",
             "symbol": "TrempBoden",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/inj169a3xg33e7sjd2sj9te47hner2n4j2dwlykqwf/astroport/share",
+            "admin": "inj169a3xg33e7sjd2sj9te47hner2n4j2dwlykqwf",
+            "base": "factory/inj169a3xg33e7sjd2sj9te47hner2n4j2dwlykqwf/astroport/share",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/inj169a3xg33e7sjd2sj9te47hner2n4j2dwlykqwf/astroport/share",
+                    "exponent": 0
+                }
+            ],
             "type_asset": "factory"
         },
         {

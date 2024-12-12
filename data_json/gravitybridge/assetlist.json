@@ -11925,6 +11925,61 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/A430DAD34D77D877B252CD539E8ACEEB7E445D3C395B85AE09240220528111F5",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ygata"
+                    ],
+                    "denom": "factory/omniflix1fwphj5p6qd8gtkehkzfgac38eur4uqzgz97uwvf6hsc0vjl004gqfj0xnv/ygata",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "yGATA",
+                    "exponent": 6
+                }
+            ],
+            "description": "Governance Token",
+            "display": "yGATA",
+            "ibc": {
+                "dst_channel": "channel-50",
+                "source_channel": "channel-107",
+                "source_denom": "ibc/629E23E1D9D462F3E778A2F27E53E339FD6EBE44D1A79B6AA189C67D74D361CC"
+            },
+            "name": "Yield GATA",
+            "symbol": "yGATA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-107",
+                        "path": "transfer/channel-107/transfer/channel-70/factory/omniflix1fwphj5p6qd8gtkehkzfgac38eur4uqzgz97uwvf6hsc0vjl004gqfj0xnv/ygata"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/629E23E1D9D462F3E778A2F27E53E339FD6EBE44D1A79B6AA189C67D74D361CC",
+                        "chain_id": "kaiyo-1",
+                        "chain_name": "kujira",
+                        "channel_id": "channel-50"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-70",
+                        "path": "transfer/channel-70/factory/omniflix1fwphj5p6qd8gtkehkzfgac38eur4uqzgz97uwvf6hsc0vjl004gqfj0xnv/ygata"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/omniflix1fwphj5p6qd8gtkehkzfgac38eur4uqzgz97uwvf6hsc0vjl004gqfj0xnv/ygata",
+                        "chain_id": "omniflixhub-1",
+                        "chain_name": "omniflixhub",
+                        "channel_id": "channel-26"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/A6CF48A57F04F0FC5B9128628B47DDC1C94BE20516358BCDB6B636132F1FBA9E",
             "ibc": {
                 "dst_channel": "channel-0",
@@ -13614,27 +13669,11 @@
         },
         {
             "base": "ibc/D79FFEEE90104F020647B7EB05CF80EA1091E858A4B0645F5C24A5395C18954C",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "adydx",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "dydx",
-                    "exponent": 18
-                }
-            ],
-            "description": "The native token of the network",
-            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-144",
                 "source_channel": "channel-10",
                 "source_denom": "ibc/831F0B1BBB1D08A2B75311892876D71565478C532967545476DF4C2D7492E48C"
             },
-            "name": "DYDX",
-            "symbol": "dydx",
             "traces": [
                 {
                     "chain": {
@@ -13646,19 +13685,6 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-144"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-6787",
-                        "path": "transfer/channel-6787/adydx"
-                    },
-                    "counterparty": {
-                        "base_denom": "adydx",
-                        "chain_id": "dydx-mainnet-1",
-                        "chain_name": "dydx",
-                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
