@@ -1,25 +1,7 @@
 {
     "assets": [
         {
-            "base": "ibc/FA7775734CC73176B7425910DE001A1D2AD9B6D9E93129A5D0750EAD13E4E63A",
-            "ibc": {
-                "dst_channel": "channel-2012",
-                "source_channel": "channel-1",
-                "source_denom": ""
-            },
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "ibc": {
-                "dst_channel": "channel-2012",
-                "source_channel": "channel-1",
-                "source_denom": ""
-            },
-            "type_asset": "ics20"
-        },
-        {
-            "base": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+            "base": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9",
             "denom_units": [
                 {
                     "aliases": [
@@ -44,8 +26,8 @@
             "description": "The native staking token of the Cosmos Hub.",
             "display": "atom",
             "ibc": {
-                "dst_channel": "channel-641",
-                "source_channel": "channel-0",
+                "dst_channel": "channel-1266",
+                "source_channel": "channel-1",
                 "source_denom": "uatom"
             },
             "name": "Cosmos Hub Atom",
@@ -53,14 +35,14 @@
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uatom"
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
                     },
                     "counterparty": {
                         "base_denom": "uatom",
                         "chain_id": "cosmoshub-4",
                         "chain_name": "cosmoshub",
-                        "channel_id": "channel-641"
+                        "channel_id": "channel-1266"
                     },
                     "type": "ibc"
                 }
@@ -68,23 +50,39 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/D7E00A6C8B5616358FE5A0CFF2D3B3CDA5DEA3D4432B6CC767A52A5C296302D5",
+            "base": "ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
-                "dst_channel": "channel-123",
+                "dst_channel": "channel-117",
                 "source_channel": "channel-2",
-                "source_denom": "ukava"
+                "source_denom": "uusdc"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
                         "channel_id": "channel-2",
-                        "path": "transfer/channel-2/ukava"
+                        "path": "transfer/channel-2/uusdc"
                     },
                     "counterparty": {
-                        "base_denom": "ukava",
-                        "chain_id": "kava_2222-10",
-                        "chain_name": "kava",
-                        "channel_id": "channel-123"
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-117"
                     },
                     "type": "ibc"
                 }
@@ -92,10 +90,10 @@
             "type_asset": "ics20"
         },
         {
-            "base": "umun",
+            "base": "uelys",
             "type_asset": "sdk.coin"
         }
     ],
-    "chain_id": "mun-1",
-    "chain_name": "mun"
+    "chain_id": "elys-1",
+    "chain_name": "elys"
 }
