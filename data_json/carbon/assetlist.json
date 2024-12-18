@@ -186,6 +186,71 @@
                         "channel_id": "channel-188"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-6787",
+                        "path": "transfer/channel-6787/transfer/channel-1/transfer/channel-5/transfer/channel-188/transfer/channel-8/stadydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/5BDD4B299B329FAF831989C160C9D4CBAC17A5132FF1DF98AB8575A322DAB413",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-3"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-5/transfer/channel-188/transfer/channel-8/stadydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/A0E80C96D950A1366D54502F58486797B8B22F1F05D9465BAAC2FD132598C979",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-160"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/transfer/channel-188/transfer/channel-8/stadydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D07B01D5D2A1BCA670A68F92085241992B14B88C0A9717D281116A4A9EA91902",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-326"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-188",
+                        "path": "transfer/channel-188/transfer/channel-8/stadydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BAA1D21893B1D36865C6CA44D18F4ACF08BAD70CB6863C4722E0A61703808F77",
+                        "chain_id": "carbon-1",
+                        "chain_name": "carbon",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/stadydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "stadydx",
+                        "chain_id": "stride-1",
+                        "chain_name": "stride",
+                        "channel_id": "channel-47"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -877,29 +942,11 @@
         },
         {
             "base": "ibc/D4A1112CC821CE10FCCE3FBC8F222F07CE276BAEBF7929ACE8EC4A3E08C8BCA4",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "microtia"
-                    ],
-                    "denom": "utia",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "TIA",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of the Celestia network.",
-            "display": "TIA",
             "ibc": {
                 "dst_channel": "channel-188",
                 "source_channel": "channel-0",
                 "source_denom": "ibc/39CAB3483680C6C57FC8017314B340118A45F2800D8FDF7A197F3313A9D430B1"
             },
-            "name": "TIA",
-            "symbol": "TIA",
             "traces": [
                 {
                     "chain": {
@@ -911,32 +958,6 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-188"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-122",
-                        "path": "transfer/channel-122/transfer/channel-152/utia"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/F51BB221BAA275F2EBF654F70B005627D7E713AFFD6D86AFD1E43CAA886149F4",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-8"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-152",
-                        "path": "transfer/channel-152/utia"
-                    },
-                    "counterparty": {
-                        "base_denom": "utia",
-                        "chain_id": "celestia",
-                        "chain_name": "celestia",
-                        "channel_id": "channel-7"
                     },
                     "type": "ibc"
                 }
@@ -1123,11 +1144,27 @@
         },
         {
             "base": "ibc/600B25179189228A9799D9DF301488A4B7B9FCB4B21CCEB2E1D2AD881953FF94",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-6",
                 "source_channel": "channel-30",
                 "source_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -1149,9 +1186,9 @@
                     },
                     "counterparty": {
                         "base_denom": "uusdc",
-                        "chain_id": "axelar-dojo-1",
-                        "chain_name": "axelar",
-                        "channel_id": "channel-156"
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-33"
                     },
                     "type": "ibc"
                 }
@@ -2178,44 +2215,11 @@
         },
         {
             "base": "ibc/2BA82F4B4989AA0781CE548CA09B68BCDD2D52E52125AE22A55C29471EA29464",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "ucosmo"
-                    ],
-                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "COSMO",
-                    "exponent": 6
-                }
-            ],
-            "description": "Don’t be evil",
-            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-217",
                 "source_channel": "channel-37",
-                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                "source_denom": ""
             },
-            "name": "Cosmo",
-            "symbol": "COSMO",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-37",
-                        "path": "transfer/channel-37/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-217"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -3076,11 +3080,42 @@
         },
         {
             "base": "ibc/9DC57FF60E125F9B976EB0DF4F2122C580AD1DB8E27BA71E6D2C1AA56A5FD312",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-6",
                 "source_channel": "channel-30",
-                "source_denom": ""
+                "source_denom": "adydx"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-30",
+                        "path": "transfer/channel-30/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-6"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -3346,23 +3381,8 @@
             "ibc": {
                 "dst_channel": "channel-217",
                 "source_channel": "channel-37",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-37",
-                        "path": "transfer/channel-37/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-217"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -3884,6 +3904,10 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "brdg/d8c3db91ad4ba11fe52971b4c387b0110c8951ec0f5b8f0fb445ef0306a349e1",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "brdg/e3877e2c8ed05e404e04417747e2f430285c11dc839663b943b39ff7cbb56377",
             "type_asset": "sdk.coin"
         },
@@ -4340,6 +4364,10 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "clpt/129",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "clpt/42",
             "type_asset": "sdk.coin"
         },
@@ -4584,6 +4612,10 @@
             "type_asset": "sdk.coin"
         },
         {
+            "base": "cplt/11",
+            "type_asset": "sdk.coin"
+        },
+        {
             "base": "cplt/2",
             "type_asset": "sdk.coin"
         },
@@ -4669,10 +4701,6 @@
         },
         {
             "base": "evow.1.17.610786",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "ezil.1.2.f1b7e4",
             "type_asset": "sdk.coin"
         },
         {
@@ -4864,10 +4892,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "swth.1.18.4ef38b",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "swth.1.18.94d5fe",
             "type_asset": "sdk.coin"
         },
@@ -4877,10 +4901,6 @@
         },
         {
             "base": "swthb.1.6.d04123",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "swthn.1.4.2624e1",
             "type_asset": "sdk.coin"
         },
         {
@@ -4901,10 +4921,6 @@
         },
         {
             "base": "usc",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "usdc.1.17.851a3a",
             "type_asset": "sdk.coin"
         },
         {
@@ -5020,10 +5036,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "zeth.1.18.54437c",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "zil.1.18.1a4a06",
             "type_asset": "sdk.coin"
         },
@@ -5036,19 +5048,11 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "zil.1.19.0f16f8",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "zil.1.6.52c256",
             "type_asset": "sdk.coin"
         },
         {
             "base": "zil.1.6.dfde0e",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "zusdt.1.18.1728e9",
             "type_asset": "sdk.coin"
         },
         {
@@ -5065,10 +5069,6 @@
         },
         {
             "base": "zwap.1.18.393529-50-swth-50-lp41",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "zwbtc.1.18.a9cb60",
             "type_asset": "sdk.coin"
         },
         {
