@@ -1,6 +1,59 @@
 {
     "assets": [
         {
+            "base": "ibc/4795C86F72EC2CB54E885A4A5B401BED9C333E008311ED9C4DE01BF546B44A21",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/neutron1ut4c6pv4u6vyu97yw48y8g7mle0cat54848v6m97k977022lzxtsaqsgmq/udtia",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "udtia",
+                    "exponent": 6
+                }
+            ],
+            "description": "Staked",
+            "display": "udtia",
+            "ibc": {
+                "dst_channel": "channel-89298",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/C7A810C6ED1FC3FFC7C834A534D400EADC94FF7D3BE13DDD4C042AEF1816DFB4"
+            },
+            "name": "Staked",
+            "symbol": "dTIA",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-874/factory/neutron1ut4c6pv4u6vyu97yw48y8g7mle0cat54848v6m97k977022lzxtsaqsgmq/udtia"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/C7A810C6ED1FC3FFC7C834A534D400EADC94FF7D3BE13DDD4C042AEF1816DFB4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-89298"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-874",
+                        "path": "transfer/channel-874/factory/neutron1ut4c6pv4u6vyu97yw48y8g7mle0cat54848v6m97k977022lzxtsaqsgmq/udtia"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/neutron1ut4c6pv4u6vyu97yw48y8g7mle0cat54848v6m97k977022lzxtsaqsgmq/udtia",
+                        "chain_id": "neutron-1",
+                        "chain_name": "neutron",
+                        "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/6C349F0EB135C5FA99301758F35B87DB88403D690E5E314AB080401FEE4066E5",
             "denom_units": [
                 {
@@ -167,6 +220,21 @@
                 }
             ],
             "type_asset": "ics20"
+        },
+        {
+            "base": "locked/ibc/F1183DB3D428313A6FD329DF18219F9D6B83257D07D292EA9EC1D877E89EC2B0",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "locked/ibc/F1183DB3D428313A6FD329DF18219F9D6B83257D07D292EA9EC1D877E89EC2B0",
+                    "exponent": 0
+                }
+            ],
+            "description": "Locked representation of ibc/F1183DB3D428313A6FD329DF18219F9D6B83257D07D292EA9EC1D877E89EC2B0",
+            "display": "locked/ibc/F1183DB3D428313A6FD329DF18219F9D6B83257D07D292EA9EC1D877E89EC2B0",
+            "name": "locked/ibc/F1183DB3D428313A6FD329DF18219F9D6B83257D07D292EA9EC1D877E89EC2B0",
+            "symbol": "locked/ibc/F1183DB3D428313A6FD329DF18219F9D6B83257D07D292EA9EC1D877E89EC2B0",
+            "type_asset": "sdk.coin"
         },
         {
             "base": "ugas",

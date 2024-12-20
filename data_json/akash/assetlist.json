@@ -349,6 +349,107 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/27C164AA5D98A3DD1AD7A32044628D514417A8E0769BF07D8776EFA17193864C",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
+            "ibc": {
+                "dst_channel": "channel-1",
+                "source_channel": "channel-9",
+                "source_denom": "ibc/CC3EC7E53C74F3153021B1A8E3C802A41324F51C88082DF78CF93C0F8B17A26F"
+            },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/transfer/channel-0/transfer/channel-623/transfer/channel-20/transfer/channel-5/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/CC3EC7E53C74F3153021B1A8E3C802A41324F51C88082DF78CF93C0F8B17A26F",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-623/transfer/channel-20/transfer/channel-5/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/D66C8AB33D2E8DEDA86638105234683995C522917CFC38705F5A342BF9495561",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-623",
+                        "path": "transfer/channel-623/transfer/channel-20/transfer/channel-5/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/43931282E363F581CC89371ABADA2AAE99A244D882A68A49698068893C2ADFF7",
+                        "chain_id": "archway-1",
+                        "chain_name": "archway",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-20",
+                        "path": "transfer/channel-20/transfer/channel-5/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/BA313C4A19DFBF943586C0387E6B11286F9E416B4DD27574E6909CABE0E342FA",
+                        "chain_id": "agoric-3",
+                        "chain_name": "agoric",
+                        "channel_id": "channel-60"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-405"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/1621C3FEF70C180A242D2AF4A8AA931C2E65BECD5262E645A77F88245BD5EA60",
             "ibc": {
                 "dst_channel": "channel-1",
@@ -366,6 +467,45 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/transfer/channel-1/transfer/channel-184/uakt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/3BADB97E59D4BB8A26AD5E5485EF0AF123982363D1174AA1C6DEA9BE9C7E934D",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/transfer/channel-184/uakt"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/2181AAB0218EAC24BC9F86BD1364FBBFA3E6E3FCC25E88E3E68C15DC6E752D86",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-184",
+                        "path": "transfer/channel-184/uakt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uakt",
+                        "chain_id": "akashnet-2",
+                        "chain_name": "akash",
+                        "channel_id": "channel-17"
                     },
                     "type": "ibc"
                 }
@@ -1576,6 +1716,19 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-122",
+                        "path": "transfer/channel-122/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-8"
                     },
                     "type": "ibc"
                 }
