@@ -2368,6 +2368,19 @@
                         "channel_id": "channel-143"
                     },
                     "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-88",
+                        "path": "transfer/channel-88/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -10811,8 +10824,23 @@
             "ibc": {
                 "dst_channel": "channel-20",
                 "source_channel": "channel-12",
-                "source_denom": ""
+                "source_denom": "uscrt"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-12",
+                        "path": "transfer/channel-12/uscrt"
+                    },
+                    "counterparty": {
+                        "base_denom": "uscrt",
+                        "chain_id": "secret-4",
+                        "chain_name": "secretnetwork",
+                        "channel_id": "channel-20"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -10873,6 +10901,30 @@
                         "chain_id": "xstaxy-1",
                         "chain_name": "aura1",
                         "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/62EED9812C9184F2EA24F8008D9D2C05AD23CEA2632958B6D5906F478FA1DBA6",
+            "ibc": {
+                "dst_channel": "channel-3",
+                "source_channel": "channel-163",
+                "source_denom": "uelys"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-163",
+                        "path": "transfer/channel-163/uelys"
+                    },
+                    "counterparty": {
+                        "base_denom": "uelys",
+                        "chain_id": "elys-1",
+                        "chain_name": "elys",
+                        "channel_id": "channel-3"
                     },
                     "type": "ibc"
                 }
