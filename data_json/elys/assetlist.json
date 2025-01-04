@@ -55,11 +55,120 @@
         },
         {
             "base": "ibc/F7DEAB173D82F970E364DFF28E2EF7868D589D2D9303598AE4546A99DCEFE827",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-91017",
                 "source_channel": "channel-6",
-                "source_denom": ""
+                "source_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4"
             },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-91017"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-750",
+                        "path": "transfer/channel-750/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/421AE2B1D80E42890BF227DBC56C3CADEDA050F21AD1B5DDC1EBE9B9737A4DC6",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "FET",
+                    "exponent": 18
+                },
+                {
+                    "aliases": [],
+                    "denom": "mfet",
+                    "exponent": 15
+                },
+                {
+                    "aliases": [],
+                    "denom": "ufet",
+                    "exponent": 12
+                },
+                {
+                    "aliases": [],
+                    "denom": "nfet",
+                    "exponent": 9
+                },
+                {
+                    "aliases": [],
+                    "denom": "pfet",
+                    "exponent": 6
+                },
+                {
+                    "aliases": [],
+                    "denom": "ffet",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "afet",
+                    "exponent": 0
+                }
+            ],
+            "description": "Fetch-ai Network token",
+            "display": "FET",
+            "ibc": {
+                "dst_channel": "channel-34",
+                "source_channel": "channel-7",
+                "source_denom": "afet"
+            },
+            "name": "FET",
+            "symbol": "FET",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/afet"
+                    },
+                    "counterparty": {
+                        "base_denom": "afet",
+                        "chain_id": "fetchhub-4",
+                        "chain_name": "fetchhub",
+                        "channel_id": "channel-34"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -106,11 +215,91 @@
         },
         {
             "base": "ibc/646315E3B0461F5FA4C5C8968A88FC45D4D5D04A45B98F1B8294DD82F386DD85",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-91017",
                 "source_channel": "channel-6",
-                "source_denom": ""
+                "source_denom": "uosmo"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-91017"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/6BFB09FE2464A7681645610F56BBEFF555A00B8AE146339FEB4609BF40FB0F4A",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microxion"
+                    ],
+                    "denom": "uxion",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millixion"
+                    ],
+                    "denom": "mxion",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "xion"
+                    ],
+                    "denom": "XION",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of the Xion network.",
+            "display": "XION",
+            "ibc": {
+                "dst_channel": "channel-9",
+                "source_channel": "channel-8",
+                "source_denom": "uxion"
+            },
+            "name": "xion",
+            "symbol": "XION",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-8",
+                        "path": "transfer/channel-8/uxion"
+                    },
+                    "counterparty": {
+                        "base_denom": "uxion",
+                        "chain_id": "xion-mainnet-1",
+                        "chain_name": "xion",
+                        "channel_id": "channel-9"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -155,6 +344,48 @@
                         "chain_id": "axelar-dojo-1",
                         "chain_name": "axelar",
                         "channel_id": "channel-163"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B88C39AD6C8550716DFD64C3AD28F355633554821249AC9F8BCC21341641CD18",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsaga"
+                    ],
+                    "denom": "usaga",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "saga",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Saga Security Chain.",
+            "display": "saga",
+            "ibc": {
+                "dst_channel": "channel-35",
+                "source_channel": "channel-9",
+                "source_denom": "usaga"
+            },
+            "name": "saga",
+            "symbol": "saga",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/usaga"
+                    },
+                    "counterparty": {
+                        "base_denom": "usaga",
+                        "chain_id": "ssc-1",
+                        "chain_name": "saga",
+                        "channel_id": "channel-35"
                     },
                     "type": "ibc"
                 }
