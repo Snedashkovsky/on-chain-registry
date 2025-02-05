@@ -1510,6 +1510,56 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/EA5E5A3574E94A17A2036A99B96408D88BF2DAC920815DC6A201E1E3D810021B",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "HYDROGEN"
+                    ],
+                    "denom": "hydrogen",
+                    "exponent": 0
+                }
+            ],
+            "description": "The liquid staking token of Bostrom",
+            "display": "hydrogen",
+            "ibc": {
+                "dst_channel": "channel-6",
+                "source_channel": "channel-3",
+                "source_denom": "ibc/4F3B0EC2FE2D370D10C3671A1B7B06D2A964C721470C305CBB846ED60E6CAA20"
+            },
+            "name": "Bostrom Hydrogen",
+            "symbol": "HYDROGEN",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-3",
+                        "path": "transfer/channel-3/transfer/channel-95/hydrogen"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4F3B0EC2FE2D370D10C3671A1B7B06D2A964C721470C305CBB846ED60E6CAA20",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-6"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-95",
+                        "path": "transfer/channel-95/hydrogen"
+                    },
+                    "counterparty": {
+                        "base_denom": "hydrogen",
+                        "chain_id": "bostrom",
+                        "chain_name": "bostrom",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/EF9B097B0BF0E1CD55CEF1095DDE5518A201C99B8A8E82C183F8433E343C2A9E",
             "denom_units": [
                 {

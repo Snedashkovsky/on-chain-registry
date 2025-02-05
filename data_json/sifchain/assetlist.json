@@ -1421,6 +1421,53 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/CB8E142D3A4854AD4637D595BA9FBB9BD6EC61709DA4FE7AFEA01122B904EF4A",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "dvpn",
+                    "exponent": 6
+                },
+                {
+                    "aliases": [
+                        "millidvpn"
+                    ],
+                    "denom": "mdvpn",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "microdvpn"
+                    ],
+                    "denom": "udvpn",
+                    "exponent": 0
+                }
+            ],
+            "description": "The native staking token of the Sentinel Hub.",
+            "display": "dvpn",
+            "ibc": {
+                "dst_channel": "channel-95",
+                "source_channel": "channel-93",
+                "source_denom": "udvpn"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-93",
+                        "path": "transfer/channel-93/udvpn"
+                    },
+                    "counterparty": {
+                        "base_denom": "udvpn",
+                        "chain_id": "sentinelhub-2",
+                        "chain_name": "sentinel",
+                        "channel_id": "channel-95"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/D87BC708A791246AA683D514C273736F07579CBD56C9CA79B7823F9A01C16270",
             "denom_units": [
                 {
