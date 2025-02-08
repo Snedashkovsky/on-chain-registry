@@ -1216,6 +1216,68 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/B92B80E837E4B1665024B7674D382AF07FE5D8D89797A0FEAF5356C8F173425C",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microom"
+                    ],
+                    "denom": "uom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliom"
+                    ],
+                    "denom": "mom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "om",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Mantrachain.",
+            "display": "om",
+            "ibc": {
+                "dst_channel": "channel-783",
+                "source_channel": "channel-0",
+                "source_denom": "ibc/164807F6226F91990F358C6467EEE8B162E437BDCD3DADEC3F0CE20693720795"
+            },
+            "name": "om",
+            "symbol": "OM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/transfer/channel-85077/uom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/164807F6226F91990F358C6467EEE8B162E437BDCD3DADEC3F0CE20693720795",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-783"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-85077",
+                        "path": "transfer/channel-85077/uom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uom",
+                        "chain_id": "mantra-1",
+                        "chain_name": "mantrachain",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/BB9810E7FE8836311126F15BE0B20E7463189751840F8C3FEF3AC8F87D8AB7C8",
             "denom_units": [
                 {
