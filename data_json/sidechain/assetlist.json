@@ -1,0 +1,90 @@
+{
+    "assets": [
+        {
+            "base": "ibc/65D0BEC6DAD96C7F5043D1E54E54B6BB5D5B3AEC3FF6CEBB75B9E059F3580EA3",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-123",
+                "source_channel": "channel-1",
+                "source_denom": "uusdc"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-123"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "runes/840000:3",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "sat",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "sat",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "sBTC",
+                    "exponent": 8
+                }
+            ],
+            "description": "BTC pegged token via the Side btc bridge",
+            "display": "sBTC",
+            "name": "BTC pegged token on Side",
+            "symbol": "SBTC",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "uside",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uside",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "side",
+                    "exponent": 6
+                }
+            ],
+            "description": "Side Chain native token",
+            "display": "side",
+            "name": "Side Chain native token",
+            "symbol": "SIDE",
+            "type_asset": "sdk.coin"
+        }
+    ],
+    "chain_id": "sidechain-1",
+    "chain_name": "sidechain"
+}
