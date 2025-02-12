@@ -2,11 +2,64 @@
     "assets": [
         {
             "base": "ibc/5F78C42BCC76287AE6B3185C6C1455DFFF8D805B1847F94B9B625384B93885C7",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-75755",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75755"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-141"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -713,30 +766,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/1113182006B2B940AB5661F891336ED33DE5AD47DC259FA58E4751AB8E310F9F",
-            "ibc": {
-                "dst_channel": "channel-859",
-                "source_channel": "channel-0",
-                "source_denom": "cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/76639"
-            },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/76639"
-                    },
-                    "counterparty": {
-                        "base_denom": "cosmosvaloper1clpqr4nrk4khgkxj78fcwwh6dl3uw4epsluffn/76639",
-                        "chain_id": "cosmoshub-4",
-                        "chain_name": "cosmoshub",
-                        "channel_id": "channel-859"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/120DC39B61CC121E91525C1D51624E41BBE74C537D7B0BE50BBFF9A00E37B6EE",
             "ibc": {
                 "dst_channel": "channel-257",
@@ -762,11 +791,40 @@
         },
         {
             "base": "ibc/13B2C536BB057AC79D5616B8EA1B9540EC1F2170718CAFF6F0083C966FFFED0B",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "uosmo",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "osmo",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Osmosis",
+            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-75755",
                 "source_channel": "channel-2",
-                "source_denom": ""
+                "source_denom": "uosmo"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-2",
+                        "path": "transfer/channel-2/uosmo"
+                    },
+                    "counterparty": {
+                        "base_denom": "uosmo",
+                        "chain_id": "osmosis-1",
+                        "chain_name": "osmosis",
+                        "channel_id": "channel-75755"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -8186,10 +8244,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:inj:channel-1:88",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "u:inj:channel-1:91",
             "type_asset": "sdk.coin"
         },
@@ -8306,10 +8360,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uluna:channel-4:76",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "u:uluna:channel-4:81",
             "type_asset": "sdk.coin"
         },
@@ -8350,10 +8400,6 @@
             "type_asset": "sdk.coin"
         },
         {
-            "base": "u:uosmo:channel-2:122",
-            "type_asset": "sdk.coin"
-        },
-        {
             "base": "u:uosmo:channel-2:123",
             "type_asset": "sdk.coin"
         },
@@ -8391,10 +8437,6 @@
         },
         {
             "base": "u:utia:channel-3:34",
-            "type_asset": "sdk.coin"
-        },
-        {
-            "base": "u:utia:channel-3:36",
             "type_asset": "sdk.coin"
         },
         {
