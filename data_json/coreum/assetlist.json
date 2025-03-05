@@ -4958,6 +4958,57 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/8B479D352C19AE1EE7EB36C13B74B61BA074348FA9B9B6BEDBDC3D065D893082",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microxion"
+                    ],
+                    "denom": "uxion",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millixion"
+                    ],
+                    "denom": "mxion",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "xion"
+                    ],
+                    "denom": "XION",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of the Xion network.",
+            "display": "XION",
+            "ibc": {
+                "dst_channel": "channel-15",
+                "source_channel": "channel-32",
+                "source_denom": "uxion"
+            },
+            "name": "xion",
+            "symbol": "XION",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-32",
+                        "path": "transfer/channel-32/uxion"
+                    },
+                    "counterparty": {
+                        "base_denom": "uxion",
+                        "chain_id": "xion-mainnet-1",
+                        "chain_name": "xion",
+                        "channel_id": "channel-15"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/A46E618711FC1790F7497A2B419E1D3B46ACC47CBA97410F9F9B800B47BDE283",
             "denom_units": [
                 {
@@ -5217,6 +5268,30 @@
                         "chain_id": "osmosis-1",
                         "chain_name": "osmosis",
                         "channel_id": "channel-2169"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/EF3A8A0642F865E753994B3CE35D6DBD2DA2E81EF83EDCBD197DDB90DD09E1DD",
+            "ibc": {
+                "dst_channel": "channel-430",
+                "source_channel": "channel-33",
+                "source_denom": "inj"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-33",
+                        "path": "transfer/channel-33/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-430"
                     },
                     "type": "ibc"
                 }
