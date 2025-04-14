@@ -805,58 +805,6 @@
                         "channel_id": "channel-98"
                     },
                     "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-89",
-                        "path": "transfer/channel-89/transfer/channel-40/transfer/channel-22/transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/DA7E22B04C04FB7D93CD43FBB7964A324F46785CBF9E3F1D9C196C5817207CCC",
-                        "chain_id": "stride-1",
-                        "chain_name": "stride",
-                        "channel_id": "channel-6"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-40",
-                        "path": "transfer/channel-40/transfer/channel-22/transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/3B97315FE7A2DBAA1C18E486F689350F2F2939177153046966FAF7BA5D485998",
-                        "chain_id": "secret-4",
-                        "chain_name": "secretnetwork",
-                        "channel_id": "channel-37"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-22",
-                        "path": "transfer/channel-22/transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/C19813F6D22F91CC64D2EEDF8702904DD61E0D022972EDFE0039F70C8A6EAD24",
-                        "chain_id": "kaiyo-1",
-                        "chain_name": "kujira",
-                        "channel_id": "channel-10"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-32",
-                        "path": "transfer/channel-32/stinj"
-                    },
-                    "counterparty": {
-                        "base_denom": "stinj",
-                        "chain_id": "stride-1",
-                        "chain_name": "stride",
-                        "channel_id": "channel-8"
-                    },
-                    "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
@@ -3454,11 +3402,36 @@
         },
         {
             "base": "ibc/6D3634157A51B1EE48847CBDD32B42F0811A11B9012E56F9496A9713CC33C389",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-54",
                 "source_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -3470,6 +3443,19 @@
                         "chain_id": "injective-1",
                         "chain_name": "injective",
                         "channel_id": "channel-98"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
                     },
                     "type": "ibc"
                 }
@@ -6820,27 +6806,11 @@
         },
         {
             "base": "ibc/423DE4133F8676069BC9550FF251F1F870F6885621C8E363A9F70257BF3AA638",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "AUTISM",
-                    "exponent": 6
-                }
-            ],
-            "description": "The Autist Token",
-            "display": "AUTISM",
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-54",
                 "source_denom": "factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism"
             },
-            "name": "AUTISM",
-            "symbol": "AUTISM",
             "traces": [
                 {
                     "chain": {
@@ -7943,13 +7913,6 @@
         },
         {
             "base": "ibc/6F8A3946F249E725EEF75926140F49884484BE86E29661DE9681218F212C4B1A",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1cdwt8g7nxgtg2k4fn8sj363mh9ahkw2qt0vrnc/ampINJ",
-                    "exponent": 0
-                }
-            ],
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-54",
@@ -8201,28 +8164,11 @@
         },
         {
             "base": "ibc/786FFE69231839A18414FB32ACFCBB1B82C0FE76BC14CCBE8022D2C1727240C0",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "uusdt"
-                    ],
-                    "denom": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "USDT",
-                    "exponent": 6
-                }
-            ],
-            "display": "USDT",
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-54",
                 "source_denom": "peggy0xdAC17F958D2ee523a2206206994597C13D831ec7"
             },
-            "name": "Tether",
-            "symbol": "USDT",
             "traces": [
                 {
                     "chain": {
@@ -8242,26 +8188,11 @@
         },
         {
             "base": "ibc/799725F4D580DCBBC4F1ACFB8C3C5791A480A88D5D310BB77FB61BCD9BECF504",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj18nm3q7r2rckklp7h8hgfzu2dlc20sftvd2893w/nUSD",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "nUSD",
-                    "exponent": 18
-                }
-            ],
-            "display": "nUSD",
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-54",
                 "source_denom": "factory/inj18nm3q7r2rckklp7h8hgfzu2dlc20sftvd2893w/nUSD"
             },
-            "name": "nUSD",
-            "symbol": "nUSD",
             "traces": [
                 {
                     "chain": {
@@ -10810,29 +10741,11 @@
         },
         {
             "base": "ibc/E0C7F36BFCEE38D8B2BF70B12046B7B3388B2D603EABD547DC5CCF99D160294E",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "ucosmo"
-                    ],
-                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "COSMO",
-                    "exponent": 6
-                }
-            ],
-            "description": "Don’t be evil",
-            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-98",
                 "source_channel": "channel-54",
                 "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
-            "name": "Cosmo",
-            "symbol": "COSMO",
             "traces": [
                 {
                     "chain": {

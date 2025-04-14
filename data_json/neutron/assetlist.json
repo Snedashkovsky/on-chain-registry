@@ -1348,11 +1348,36 @@
         },
         {
             "base": "ibc/8FDD22798ACE2D6F40238DB88C6EEB3F02FE0175555983C32156973E4D521073",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -1364,6 +1389,19 @@
                         "chain_id": "injective-1",
                         "chain_name": "injective",
                         "channel_id": "channel-177"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
                     },
                     "type": "ibc"
                 }
@@ -2667,31 +2705,11 @@
         },
         {
             "base": "ibc/0757D43FE751DDC1CA63289C42FA986979FCBA4A3647485EAE58262948584673",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "uhdro"
-                    ],
-                    "denom": "factory/inj1etz0laas6h7vemg3qtd67jpr6lh8v7xz7gfzqw/hdro",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [
-                        "hdro"
-                    ],
-                    "denom": "HDRO",
-                    "exponent": 6
-                }
-            ],
-            "description": "Hydro",
-            "display": "HDRO",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj1etz0laas6h7vemg3qtd67jpr6lh8v7xz7gfzqw/hdro"
             },
-            "name": "HDRO",
-            "symbol": "HDRO",
             "traces": [
                 {
                     "chain": {
@@ -4522,29 +4540,11 @@
         },
         {
             "base": "ibc/1DE83E1C15D9186DE46BC396F1384A9E687756B445410549A468EDB10E4FA728",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "ucosmo"
-                    ],
-                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "COSMO",
-                    "exponent": 6
-                }
-            ],
-            "description": "Don’t be evil",
-            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
-            "name": "Cosmo",
-            "symbol": "COSMO",
             "traces": [
                 {
                     "chain": {
@@ -12121,15 +12121,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/794A44AE6289291EA6292823213197BAD52B9CE7ED7096636E6BBBF97DB0A137",
-            "ibc": {
-                "dst_channel": "channel-569",
-                "source_channel": "channel-1",
-                "source_denom": ""
-            },
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/797D89D33032E35C57472273768FF437A8CCD514440CD5A027884E729F6ED56B",
             "ibc": {
                 "dst_channel": "channel-569",
@@ -15482,48 +15473,6 @@
             "type_asset": "ics20"
         },
         {
-            "base": "ibc/A0A081FFC6A13B8F502079F3A8420F5B4FC3007D9AA696E371B9A7B39B90EADF",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "attousdy"
-                    ],
-                    "denom": "ausdy",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "usdy",
-                    "exponent": 18
-                }
-            ],
-            "description": "Ondo US Dollar Yield",
-            "display": "usdy",
-            "ibc": {
-                "dst_channel": "channel-18",
-                "source_channel": "channel-30",
-                "source_denom": "ausdy"
-            },
-            "name": "Ondo US Dollar Yield",
-            "symbol": "USDY",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-30",
-                        "path": "transfer/channel-30/ausdy"
-                    },
-                    "counterparty": {
-                        "base_denom": "ausdy",
-                        "chain_id": "noble-1",
-                        "chain_name": "noble",
-                        "channel_id": "channel-18"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/A0D3A4A443E253817F949EBE4BB3FC2B4DADDF103766397A85B7CF84E67B4F4B",
             "ibc": {
                 "dst_channel": "channel-874",
@@ -16080,29 +16029,11 @@
         },
         {
             "base": "ibc/A79E35F2418EB26FA8D72B9AA5EDF28C0C2CF475E8CF4CAEBB25FA5C858D4D22",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "unbz"
-                    ],
-                    "denom": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZ",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "NBZ",
-                    "exponent": 6
-                }
-            ],
-            "description": "Ninja Blaze Token",
-            "display": "NBZ",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZ"
             },
-            "name": "Ninja Blaze",
-            "symbol": "NBZ",
             "traces": [
                 {
                     "chain": {
@@ -17420,27 +17351,11 @@
         },
         {
             "base": "ibc/B4C0F9BCB087D78ED8660D2824C4B81682840D0B69E83C62A78CA5874DD742A8",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "AUTISM",
-                    "exponent": 6
-                }
-            ],
-            "description": "The Autist Token",
-            "display": "AUTISM",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism"
             },
-            "name": "AUTISM",
-            "symbol": "AUTISM",
             "traces": [
                 {
                     "chain": {
@@ -18430,26 +18345,11 @@
         },
         {
             "base": "ibc/C084B31AB4906CD6CC65CB779B1527A66B6C98629259E3548B2F20D2753D5837",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1v3a4zznudwpukpr8y987pu5gnh4xuf7v36jhva/nept",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "NEPT",
-                    "exponent": 6
-                }
-            ],
-            "display": "NEPT",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj1v3a4zznudwpukpr8y987pu5gnh4xuf7v36jhva/nept"
             },
-            "name": "Neptune",
-            "symbol": "NEPT",
             "traces": [
                 {
                     "chain": {
@@ -19404,27 +19304,11 @@
         },
         {
             "base": "ibc/CCD676A501897583884E68318499E079C47CD336B48E168BB6DAD84831B10E36",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "HAVA",
-                    "exponent": 6
-                }
-            ],
-            "description": "Hava Coin is the lifeblood of the Cosmos & Injective networks, rewarding builders and welcoming supporters. https://havacoin.xyz/",
-            "display": "HAVA",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava"
             },
-            "name": "Hava Coin",
-            "symbol": "HAVA",
             "traces": [
                 {
                     "chain": {
@@ -21561,29 +21445,11 @@
         },
         {
             "base": "ibc/E6EF652229CB94141E9CED6359AFEF3FCB279CB6E4D82B1678C5B28BAB2DB638",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "udrugs"
-                    ],
-                    "denom": "factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "DRUGS",
-                    "exponent": 6
-                }
-            ],
-            "description": "Distributing happiness, is a serious business",
-            "display": "DRUGS",
             "ibc": {
                 "dst_channel": "channel-177",
                 "source_channel": "channel-60",
                 "source_denom": "factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS"
             },
-            "name": "DRUGS",
-            "symbol": "DRUGS",
             "traces": [
                 {
                     "chain": {
@@ -26100,6 +25966,28 @@
             "type_asset": "factory"
         },
         {
+            "address": "factory/neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn/CFTDROPS",
+            "admin": "neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn",
+            "base": "factory/neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn/CFTDROPS",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn/CFTDROPS",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "CFTDROPS",
+                    "exponent": 6
+                }
+            ],
+            "description": "CFTDROPS is an Asteroid CFT-20 token bridged from the Cosmos Hub",
+            "display": "CFTDROPS",
+            "name": "CFT-20 Airdrop Token",
+            "symbol": "CFTDROPS",
+            "type_asset": "factory"
+        },
+        {
             "address": "factory/neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn/CLPCOIN",
             "admin": "neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn",
             "base": "factory/neutron1d59rkwmkt6f46aeyra6zfk6ghehlsqc2qevw96c6x4xfmyk4qxhsjh8ajn/CLPCOIN",
@@ -28770,6 +28658,19 @@
                 {
                     "aliases": [],
                     "denom": "factory/neutron1ncuu3mqc7kj6eh0hxgwe3x7v2lftehu63940lfkcag6ctdzjjg6qrhrng3/astroport/share",
+                    "exponent": 0
+                }
+            ],
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/neutron1nd4ecfqu52r6kf0tpxf7mtgfpxjcvprfvtk25jell0pv3j3serrsnhgr3z/astroport/share",
+            "admin": "neutron1nd4ecfqu52r6kf0tpxf7mtgfpxjcvprfvtk25jell0pv3j3serrsnhgr3z",
+            "base": "factory/neutron1nd4ecfqu52r6kf0tpxf7mtgfpxjcvprfvtk25jell0pv3j3serrsnhgr3z/astroport/share",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/neutron1nd4ecfqu52r6kf0tpxf7mtgfpxjcvprfvtk25jell0pv3j3serrsnhgr3z/astroport/share",
                     "exponent": 0
                 }
             ],

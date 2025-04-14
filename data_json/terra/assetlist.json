@@ -3258,11 +3258,36 @@
         },
         {
             "base": "ibc/763E49A7BBF4CDD21F3AF3BFB3566A25A846B77B6E091B75BA8A8E6B7EE34297",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatom"
+                    ],
+                    "denom": "uatom",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatom"
+                    ],
+                    "denom": "matom",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "atom",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Cosmos Hub.",
+            "display": "atom",
             "ibc": {
                 "dst_channel": "channel-4",
                 "source_channel": "channel-17",
                 "source_denom": "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
             },
+            "name": "Cosmos Hub Atom",
+            "symbol": "ATOM",
             "traces": [
                 {
                     "chain": {
@@ -3274,6 +3299,19 @@
                         "chain_id": "injective-1",
                         "chain_name": "injective",
                         "channel_id": "channel-4"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-1",
+                        "path": "transfer/channel-1/uatom"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatom",
+                        "chain_id": "cosmoshub-4",
+                        "chain_name": "cosmoshub",
+                        "channel_id": "channel-220"
                     },
                     "type": "ibc"
                 }
