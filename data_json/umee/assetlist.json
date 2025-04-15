@@ -319,11 +319,27 @@
         },
         {
             "base": "ibc/0B701D4A611944994C54BF6F7BD2183C72D007F77FAC1BF78E31CCD4ADDF0D20",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-126",
                 "source_channel": "channel-123",
                 "source_denom": "ibc/007F5EB5C29FF8BB23133B099B4A3D68326BD02B05E20590287746FAFF29E3CD"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
             "traces": [
                 {
                     "chain": {
@@ -335,6 +351,19 @@
                         "chain_id": "secret-4",
                         "chain_name": "secretnetwork",
                         "channel_id": "channel-126"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-89",
+                        "path": "transfer/channel-89/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-2"
                     },
                     "type": "ibc"
                 }
@@ -756,11 +785,27 @@
         },
         {
             "base": "ibc/AF62E69333BAF0AB427E36B00166E6A317660BCDB949631A6DA006B231D28FD8",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
             "ibc": {
                 "dst_channel": "channel-8",
                 "source_channel": "channel-118",
                 "source_denom": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5"
             },
+            "name": "usdc",
             "traces": [
                 {
                     "chain": {
@@ -782,9 +827,9 @@
                     },
                     "counterparty": {
                         "base_denom": "uusdc",
-                        "chain_id": "axelar-dojo-1",
-                        "chain_name": "axelar",
-                        "channel_id": "channel-156"
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-33"
                     },
                     "type": "ibc"
                 }
@@ -955,11 +1000,51 @@
         },
         {
             "base": "ibc/09C1ACBE292A5DF3DEC77B56DB4B12813263178DD86CDB6AC754036E9578E7B4",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsomm"
+                    ],
+                    "denom": "usomm",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisomm"
+                    ],
+                    "denom": "msomm",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "somm",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Sommelier Chain",
+            "display": "somm",
             "ibc": {
                 "dst_channel": "channel-64",
                 "source_channel": "channel-106",
-                "source_denom": ""
+                "source_denom": "usomm"
             },
+            "name": "Somm",
+            "symbol": "SOMM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-106",
+                        "path": "transfer/channel-106/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "usomm",
+                        "chain_id": "sommelier-3",
+                        "chain_name": "sommelier",
+                        "channel_id": "channel-64"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1225,23 +1310,8 @@
             "ibc": {
                 "dst_channel": "channel-159",
                 "source_channel": "channel-116",
-                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-116",
-                        "path": "transfer/channel-116/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
-                    },
-                    "counterparty": {
-                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-159"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -1819,23 +1889,8 @@
             "ibc": {
                 "dst_channel": "channel-154",
                 "source_channel": "channel-113",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-113",
-                        "path": "transfer/channel-113/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-154"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -2007,11 +2062,42 @@
         },
         {
             "base": "ibc/6A4CEDCEA40B587A4BCF7FDFB1D5A13D13F8A807A22A4E759EA702640CE086B0",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "adydx",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "dydx",
+                    "exponent": 18
+                }
+            ],
+            "description": "The native token of the network",
+            "display": "dydx",
             "ibc": {
                 "dst_channel": "channel-8",
                 "source_channel": "channel-118",
-                "source_denom": ""
+                "source_denom": "adydx"
             },
+            "name": "DYDX",
+            "symbol": "dydx",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-118",
+                        "path": "transfer/channel-118/adydx"
+                    },
+                    "counterparty": {
+                        "base_denom": "adydx",
+                        "chain_id": "dydx-mainnet-1",
+                        "chain_name": "dydx",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -3130,23 +3216,8 @@
             "ibc": {
                 "dst_channel": "channel-159",
                 "source_channel": "channel-116",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-116",
-                        "path": "transfer/channel-116/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-159"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -3359,23 +3430,8 @@
             "ibc": {
                 "dst_channel": "channel-158",
                 "source_channel": "channel-115",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-115",
-                        "path": "transfer/channel-115/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-158"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {

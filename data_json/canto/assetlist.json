@@ -1772,23 +1772,8 @@
             "ibc": {
                 "dst_channel": "channel-99",
                 "source_channel": "channel-8",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-8",
-                        "path": "transfer/channel-8/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-99"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -1976,23 +1961,8 @@
             "ibc": {
                 "dst_channel": "channel-101",
                 "source_channel": "channel-12",
-                "source_denom": "inj"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-12",
-                        "path": "transfer/channel-12/inj"
-                    },
-                    "counterparty": {
-                        "base_denom": "inj",
-                        "chain_id": "injective-1",
-                        "chain_name": "injective",
-                        "channel_id": "channel-101"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -2388,11 +2358,51 @@
         },
         {
             "base": "ibc/E341F178AB30AC89CF18B9559D90EF830419B5A4B50945EF800FD68DE840A91E",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsomm"
+                    ],
+                    "denom": "usomm",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisomm"
+                    ],
+                    "denom": "msomm",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "somm",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Sommelier Chain",
+            "display": "somm",
             "ibc": {
                 "dst_channel": "channel-2",
                 "source_channel": "channel-10",
-                "source_denom": ""
+                "source_denom": "usomm"
             },
+            "name": "Somm",
+            "symbol": "SOMM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "usomm",
+                        "chain_id": "sommelier-3",
+                        "chain_name": "sommelier",
+                        "channel_id": "channel-2"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
