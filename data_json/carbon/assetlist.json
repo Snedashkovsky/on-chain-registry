@@ -1014,11 +1014,44 @@
         },
         {
             "base": "ibc/2BA82F4B4989AA0781CE548CA09B68BCDD2D52E52125AE22A55C29471EA29464",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "ucosmo"
+                    ],
+                    "denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "COSMO",
+                    "exponent": 6
+                }
+            ],
+            "description": "Don’t be evil",
+            "display": "COSMO",
             "ibc": {
                 "dst_channel": "channel-217",
                 "source_channel": "channel-37",
-                "source_denom": ""
+                "source_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
             },
+            "name": "Cosmo",
+            "symbol": "COSMO",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-37",
+                        "path": "transfer/channel-37/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+                    },
+                    "counterparty": {
+                        "base_denom": "factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-217"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1791,6 +1824,30 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/9CCCFA44CA6F74517C3E3416971EF2B7EC8506F2A00C62C660935DD9CB5E1C63",
+            "ibc": {
+                "dst_channel": "channel-37",
+                "source_channel": "channel-7",
+                "source_denom": "wbtc-satoshi"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/wbtc-satoshi"
+                    },
+                    "counterparty": {
+                        "base_denom": "wbtc-satoshi",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-37"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/9DC57FF60E125F9B976EB0DF4F2122C580AD1DB8E27BA71E6D2C1AA56A5FD312",
             "denom_units": [
                 {
@@ -2093,8 +2150,23 @@
             "ibc": {
                 "dst_channel": "channel-217",
                 "source_channel": "channel-37",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-37",
+                        "path": "transfer/channel-37/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-217"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -2288,6 +2360,30 @@
                         "chain_id": "neutron-1",
                         "chain_name": "neutron",
                         "channel_id": "channel-4892"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/DF9C9A15AB22971A4F65FB8F471459A757745F9709905A599D5011E69FE3C375",
+            "ibc": {
+                "dst_channel": "channel-37",
+                "source_channel": "channel-7",
+                "source_denom": "wbnb-wei"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/wbnb-wei"
+                    },
+                    "counterparty": {
+                        "base_denom": "wbnb-wei",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-37"
                     },
                     "type": "ibc"
                 }
