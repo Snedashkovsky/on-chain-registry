@@ -475,8 +475,23 @@
             "ibc": {
                 "dst_channel": "channel-421",
                 "source_channel": "channel-10",
-                "source_denom": ""
+                "source_denom": "inj"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-10",
+                        "path": "transfer/channel-10/inj"
+                    },
+                    "counterparty": {
+                        "base_denom": "inj",
+                        "chain_id": "injective-1",
+                        "chain_name": "injective",
+                        "channel_id": "channel-421"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -868,6 +883,28 @@
             "display": "AMM-15",
             "name": "amm/pool/15",
             "symbol": "AMM-15",
+            "type_asset": "sdk.coin"
+        },
+        {
+            "base": "amm/pool/16",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "attopoolshare"
+                    ],
+                    "denom": "amm/pool/16",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "AMM-16",
+                    "exponent": 18
+                }
+            ],
+            "description": "The share token of the amm pool 16",
+            "display": "AMM-16",
+            "name": "amm/pool/16",
+            "symbol": "AMM-16",
             "type_asset": "sdk.coin"
         },
         {
