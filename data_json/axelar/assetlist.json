@@ -3773,11 +3773,51 @@
         },
         {
             "base": "ibc/12A9901F2B585B3563C2AD4919D20ED478CCAB3D7F9ACBB76E829583B99B1DAA",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsomm"
+                    ],
+                    "denom": "usomm",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisomm"
+                    ],
+                    "denom": "msomm",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "somm",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Sommelier Chain",
+            "display": "somm",
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-72",
-                "source_denom": ""
+                "source_denom": "usomm"
             },
+            "name": "Somm",
+            "symbol": "SOMM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-72",
+                        "path": "transfer/channel-72/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "usomm",
+                        "chain_id": "sommelier-3",
+                        "chain_name": "sommelier",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -5647,44 +5687,11 @@
         },
         {
             "base": "ibc/A139C0E0B5E87CBA8EAEEB12B9BEE13AC7C814CFBBFA87BBCADD67E31003466C",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "microstars"
-                    ],
-                    "denom": "ustars",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "stars",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Stargaze",
-            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-50",
                 "source_channel": "channel-18",
-                "source_denom": "ustars"
+                "source_denom": ""
             },
-            "name": "Stargaze STARS",
-            "symbol": "STARS",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-18",
-                        "path": "transfer/channel-18/ustars"
-                    },
-                    "counterparty": {
-                        "base_denom": "ustars",
-                        "chain_id": "stargaze-1",
-                        "chain_name": "stargaze",
-                        "channel_id": "channel-50"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
