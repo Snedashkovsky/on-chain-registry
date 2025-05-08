@@ -9987,11 +9987,51 @@
         },
         {
             "base": "ibc/B86EFF6D227E3E33D7E3B5E65D0C1BB5BD79CCB56D35A9D824F0DD5D52CA43BA",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microsomm"
+                    ],
+                    "denom": "usomm",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "millisomm"
+                    ],
+                    "denom": "msomm",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "somm",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of the Sommelier Chain",
+            "display": "somm",
             "ibc": {
                 "dst_channel": "channel-71",
                 "source_channel": "channel-150",
-                "source_denom": ""
+                "source_denom": "usomm"
             },
+            "name": "Somm",
+            "symbol": "SOMM",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-150",
+                        "path": "transfer/channel-150/usomm"
+                    },
+                    "counterparty": {
+                        "base_denom": "usomm",
+                        "chain_id": "sommelier-3",
+                        "chain_name": "sommelier",
+                        "channel_id": "channel-71"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
