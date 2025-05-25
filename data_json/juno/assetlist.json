@@ -874,8 +874,23 @@
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-20",
-                "source_denom": ""
+                "source_denom": "ibc/4F3E83AB35529435E4BFEA001F5D935E7250133347C4E1010A9C77149EF0394C"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-20",
+                        "path": "transfer/channel-20/transfer/channel-0/transfer/channel-42/ujuno"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/4F3E83AB35529435E4BFEA001F5D935E7250133347C4E1010A9C77149EF0394C",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -1794,8 +1809,23 @@
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-20",
-                "source_denom": ""
+                "source_denom": "ibc/12C0B8B561AFCFDA3C73DEE0F7F84AA2B860D48493C27E8E81A5D14724FAB08B"
             },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-20",
+                        "path": "transfer/channel-20/transfer/channel-0/transfer/channel-169/cw20:juno1rws84uz7969aaa7pej303udhlkt3j9ca0l3egpcae98jwak9quzq8szn2l"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/12C0B8B561AFCFDA3C73DEE0F7F84AA2B860D48493C27E8E81A5D14724FAB08B",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -2700,11 +2730,55 @@
         },
         {
             "base": "ibc/70F14FE2B8425CBDB2125BEFC2A688017AA1251EE9E88A1D19A4842C31181D8C",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "unois",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "nois",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Nois",
+            "display": "nois",
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-20",
-                "source_denom": ""
+                "source_denom": "ibc/0F181D9F5BB18A8496153C1666E934169515592C135E8E9FCCC355889858EAF9"
             },
+            "name": "NOIS",
+            "symbol": "NOIS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-20",
+                        "path": "transfer/channel-20/transfer/channel-137/unois"
+                    },
+                    "counterparty": {
+                        "base_denom": "ibc/0F181D9F5BB18A8496153C1666E934169515592C135E8E9FCCC355889858EAF9",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-137",
+                        "path": "transfer/channel-137/unois"
+                    },
+                    "counterparty": {
+                        "base_denom": "unois",
+                        "chain_id": "nois-1",
+                        "chain_name": "nois",
+                        "channel_id": "channel-0"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -3183,11 +3257,29 @@
         },
         {
             "base": "ibc/A8810A0013582CDDBEE751FD6BA644E39823EB0306BE5D4C5C30A0948CEABEC7",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-8",
                 "source_channel": "channel-31",
                 "source_denom": "ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602"
             },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
             "traces": [
                 {
                     "chain": {
@@ -3199,6 +3291,19 @@
                         "chain_id": "gravity-bridge-3",
                         "chain_name": "gravitybridge",
                         "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                },
+                {
+                    "chain": {
+                        "channel_id": "channel-7",
+                        "path": "transfer/channel-7/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-6"
                     },
                     "type": "ibc"
                 }
@@ -4405,11 +4510,44 @@
         },
         {
             "base": "ibc/151B0A393E5FBD3813F013402F6A26F114491D643204AAD0439E46C86175D15B",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-10",
                 "source_channel": "channel-35",
-                "source_denom": ""
+                "source_denom": "ustars"
             },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-35",
+                        "path": "transfer/channel-35/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-10"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -4539,11 +4677,44 @@
         },
         {
             "base": "ibc/1D9CF90F392F4DB1FC6EFD930A8BCB4CAC4D52C74E9B651F32AF52C76A17A604",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-8",
                 "source_channel": "channel-34",
-                "source_denom": ""
+                "source_denom": "ustars"
             },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-34",
+                        "path": "transfer/channel-34/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-8"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
@@ -7399,11 +7570,44 @@
         },
         {
             "base": "ibc/F6B367385300865F654E110976B838502504231705BAC0849B0651C226385885",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microstars"
+                    ],
+                    "denom": "ustars",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "stars",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native token of Stargaze",
+            "display": "stars",
             "ibc": {
                 "dst_channel": "channel-5",
                 "source_channel": "channel-20",
-                "source_denom": ""
+                "source_denom": "ustars"
             },
+            "name": "Stargaze STARS",
+            "symbol": "STARS",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-20",
+                        "path": "transfer/channel-20/ustars"
+                    },
+                    "counterparty": {
+                        "base_denom": "ustars",
+                        "chain_id": "stargaze-1",
+                        "chain_name": "stargaze",
+                        "channel_id": "channel-5"
+                    },
+                    "type": "ibc"
+                }
+            ],
             "type_asset": "ics20"
         },
         {
