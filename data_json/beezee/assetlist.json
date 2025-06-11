@@ -1,6 +1,57 @@
 {
     "assets": [
         {
+            "base": "ibc/12C0B8B561AFCFDA3C73DEE0F7F84AA2B860D48493C27E8E81A5D14724FAB08B",
+            "ibc": {
+                "dst_channel": "channel-340",
+                "source_channel": "channel-0",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/02EE50AB3A4B7540FA001B24CB75E688016F65547CABE885EA184338440080B2",
+            "ibc": {
+                "dst_channel": "channel-340",
+                "source_channel": "channel-0",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/08EAEAB525E59C611D5BD8FAC4BE65DF65A69E62874377F6889BBD01A33F385F",
+            "ibc": {
+                "dst_channel": "channel-340",
+                "source_channel": "channel-0",
+                "source_denom": ""
+            },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/4AA3B163580B4377250CD4486FB6AD098EB27822EE056949EC4A39B09C5E3B4E",
+            "ibc": {
+                "dst_channel": "channel-142",
+                "source_channel": "channel-4",
+                "source_denom": "ujkl"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-4",
+                        "path": "transfer/channel-4/ujkl"
+                    },
+                    "counterparty": {
+                        "base_denom": "ujkl",
+                        "chain_id": "jackal-1",
+                        "chain_name": "jackal",
+                        "channel_id": "channel-142"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4",
             "denom_units": [
                 {
@@ -65,6 +116,57 @@
             "type_asset": "ics20"
         },
         {
+            "base": "ibc/B2219CA05421EA988F83E5E824BF69362E80A6A87503EFD18B92C91C9E03763D",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microatone"
+                    ],
+                    "denom": "uatone",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliatone"
+                    ],
+                    "denom": "matone",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [
+                        "atone"
+                    ],
+                    "denom": "atone",
+                    "exponent": 6
+                }
+            ],
+            "description": "The native staking token of AtomOne Hub",
+            "display": "atone",
+            "ibc": {
+                "dst_channel": "channel-1",
+                "source_channel": "channel-6",
+                "source_denom": "uatone"
+            },
+            "name": "AtomOne Atone",
+            "symbol": "ATONE",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-6",
+                        "path": "transfer/channel-6/uatone"
+                    },
+                    "counterparty": {
+                        "base_denom": "uatone",
+                        "chain_id": "atomone-1",
+                        "chain_name": "atomone",
+                        "channel_id": "channel-1"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
             "base": "ibc/C00D101A3572A5374E23F11944463D1325319E255D7C824B33AF2F927F532348",
             "ibc": {
                 "dst_channel": "channel-147",
@@ -90,41 +192,83 @@
         },
         {
             "base": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-340",
                 "source_channel": "channel-0",
-                "source_denom": "uosmo"
+                "source_denom": ""
             },
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/FF39851E73089ACBD0B09BDF62FA3C67FBD77A2CD97CD159DBCE9C770561F8AF",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microflix"
+                    ],
+                    "denom": "uflix",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [
+                        "milliflix"
+                    ],
+                    "denom": "mflix",
+                    "exponent": 3
+                },
+                {
+                    "aliases": [],
+                    "denom": "flix",
+                    "exponent": 6
+                }
+            ],
+            "description": "FLIX is the native token of the OmniFlix Hub which powers the OmniFlix Network.",
+            "display": "flix",
+            "ibc": {
+                "dst_channel": "channel-50",
+                "source_channel": "channel-5",
+                "source_denom": "uflix"
+            },
+            "name": "FLIX",
+            "symbol": "uflix",
             "traces": [
                 {
                     "chain": {
-                        "channel_id": "channel-0",
-                        "path": "transfer/channel-0/uosmo"
+                        "channel_id": "channel-5",
+                        "path": "transfer/channel-5/uflix"
                     },
                     "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-340"
+                        "base_denom": "uflix",
+                        "chain_id": "omniflixhub-1",
+                        "chain_name": "omniflixhub",
+                        "channel_id": "channel-50"
                     },
                     "type": "ibc"
                 }
             ],
             "type_asset": "ics20"
+        },
+        {
+            "address": "factory/bze12gyp30f29zg26nuqrwdhl26ej4q066pt572fhm/GGE",
+            "admin": "bze12gyp30f29zg26nuqrwdhl26ej4q066pt572fhm",
+            "base": "factory/bze12gyp30f29zg26nuqrwdhl26ej4q066pt572fhm/GGE",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/bze12gyp30f29zg26nuqrwdhl26ej4q066pt572fhm/GGE",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "GGE",
+                    "exponent": 6
+                }
+            ],
+            "description": "GEEGEE (GGE) on Cosmos is a community driven meme coin. Sharing knowledge and create visibility. How strong can we be? ☀️",
+            "display": "GGE",
+            "name": "GEEGEE",
+            "symbol": "GGE",
+            "type_asset": "factory"
         },
         {
             "address": "factory/bze13gzq40che93tgfm9kzmkpjamah5nj0j73pyhqk/uvdl",
@@ -168,6 +312,50 @@
             "display": "C2M",
             "name": "Crypto 2 Mars",
             "symbol": "C2M",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/bze1972aqfzdg29ugjln74edx0xvcg4ehvysjptk77/CTL",
+            "admin": "bze1972aqfzdg29ugjln74edx0xvcg4ehvysjptk77",
+            "base": "factory/bze1972aqfzdg29ugjln74edx0xvcg4ehvysjptk77/CTL",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/bze1972aqfzdg29ugjln74edx0xvcg4ehvysjptk77/CTL",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "CTL",
+                    "exponent": 6
+                }
+            ],
+            "description": "$CryptoTrtl is fun, join on T.me/CryptoTrtlCoin",
+            "display": "CTL",
+            "name": "CryptoTrtl",
+            "symbol": "CTL",
+            "type_asset": "factory"
+        },
+        {
+            "address": "factory/bze1f0qgels0eu96ev6a67znu70q7rquy9eragn8nw/ucorey",
+            "admin": "bze1f0qgels0eu96ev6a67znu70q7rquy9eragn8nw",
+            "base": "factory/bze1f0qgels0eu96ev6a67znu70q7rquy9eragn8nw/ucorey",
+            "denom_units": [
+                {
+                    "aliases": [],
+                    "denom": "factory/bze1f0qgels0eu96ev6a67znu70q7rquy9eragn8nw/ucorey",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "COREY",
+                    "exponent": 6
+                }
+            ],
+            "description": "Everything Me",
+            "display": "COREY",
+            "name": "Corey",
+            "symbol": "COREY",
             "type_asset": "factory"
         },
         {

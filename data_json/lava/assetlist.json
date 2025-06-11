@@ -1,96 +1,12 @@
 {
     "assets": [
         {
-            "base": "ibc/D033E88EB94ADB1845E0EF65FAECB9269846EBA5B1C32831FFCFB5B270759DCD",
-            "denom_units": [
-                {
-                    "aliases": [
-                        "attoevmos"
-                    ],
-                    "denom": "aevmos",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "evmos",
-                    "exponent": 18
-                }
-            ],
-            "description": "The native EVM, governance and staking token of the Evmos Hub",
-            "display": "evmos",
-            "ibc": {
-                "dst_channel": "channel-76971",
-                "source_channel": "channel-1",
-                "source_denom": "ibc/6AE98883D4D5D5FF9E50D7130F1305DA2FFA0C652D1DD9C123657C6B4EB2DF8A"
-            },
-            "name": "Evmos",
-            "symbol": "EVMOS",
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/transfer/channel-204/aevmos"
-                    },
-                    "counterparty": {
-                        "base_denom": "ibc/6AE98883D4D5D5FF9E50D7130F1305DA2FFA0C652D1DD9C123657C6B4EB2DF8A",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-76971"
-                    },
-                    "type": "ibc"
-                },
-                {
-                    "chain": {
-                        "channel_id": "channel-204",
-                        "path": "transfer/channel-204/aevmos"
-                    },
-                    "counterparty": {
-                        "base_denom": "aevmos",
-                        "chain_id": "evmos_9001-2",
-                        "chain_name": "evmos",
-                        "channel_id": "channel-0"
-                    },
-                    "type": "ibc"
-                }
-            ],
-            "type_asset": "ics20"
-        },
-        {
             "base": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-            "denom_units": [
-                {
-                    "aliases": [],
-                    "denom": "uosmo",
-                    "exponent": 0
-                },
-                {
-                    "aliases": [],
-                    "denom": "osmo",
-                    "exponent": 6
-                }
-            ],
-            "description": "The native token of Osmosis",
-            "display": "osmo",
             "ibc": {
                 "dst_channel": "channel-76971",
                 "source_channel": "channel-1",
-                "source_denom": "uosmo"
+                "source_denom": ""
             },
-            "traces": [
-                {
-                    "chain": {
-                        "channel_id": "channel-1",
-                        "path": "transfer/channel-1/uosmo"
-                    },
-                    "counterparty": {
-                        "base_denom": "uosmo",
-                        "chain_id": "osmosis-1",
-                        "chain_name": "osmosis",
-                        "channel_id": "channel-76971"
-                    },
-                    "type": "ibc"
-                }
-            ],
             "type_asset": "ics20"
         },
         {
@@ -129,6 +45,46 @@
                         "chain_id": "evmos_9001-2",
                         "chain_name": "evmos",
                         "channel_id": "channel-117"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+            "denom_units": [
+                {
+                    "aliases": [
+                        "microusdc"
+                    ],
+                    "denom": "uusdc",
+                    "exponent": 0
+                },
+                {
+                    "aliases": [],
+                    "denom": "usdc",
+                    "exponent": 6
+                }
+            ],
+            "description": "USD Coin",
+            "ibc": {
+                "dst_channel": "channel-105",
+                "source_channel": "channel-9",
+                "source_denom": "uusdc"
+            },
+            "name": "usdc",
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-9",
+                        "path": "transfer/channel-9/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "noble-1",
+                        "chain_name": "noble",
+                        "channel_id": "channel-105"
                     },
                     "type": "ibc"
                 }
@@ -195,6 +151,54 @@
                         "chain_id": "stargaze-1",
                         "chain_name": "stargaze",
                         "channel_id": "channel-391"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5",
+            "ibc": {
+                "dst_channel": "channel-156",
+                "source_channel": "channel-0",
+                "source_denom": "uusdc"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/uusdc"
+                    },
+                    "counterparty": {
+                        "base_denom": "uusdc",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-156"
+                    },
+                    "type": "ibc"
+                }
+            ],
+            "type_asset": "ics20"
+        },
+        {
+            "base": "ibc/B905670D022392D97E08EFDA1C427454ACE169CF33298E1D9AB03058A8736EE9",
+            "ibc": {
+                "dst_channel": "channel-156",
+                "source_channel": "channel-0",
+                "source_denom": "unit-move"
+            },
+            "traces": [
+                {
+                    "chain": {
+                        "channel_id": "channel-0",
+                        "path": "transfer/channel-0/unit-move"
+                    },
+                    "counterparty": {
+                        "base_denom": "unit-move",
+                        "chain_id": "axelar-dojo-1",
+                        "chain_name": "axelar",
+                        "channel_id": "channel-156"
                     },
                     "type": "ibc"
                 }
